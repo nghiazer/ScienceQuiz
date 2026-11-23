@@ -1,0 +1,40 @@
+import { motion } from 'framer-motion'
+import { Lightbulb } from 'lucide-react'
+import BilingualText from './BilingualText'
+import { useLang } from '../context/LanguageContext'
+import SpeakButton from './SpeakButton'
+import { speak } from '../utils/speech'
+import type { Question } from '../types/quiz'
+
+export default function ExplanationBox({ question, correct }: { question: Question; correct: boolean }) {
+  const { mode } = useLang()
+  const readExplanation = () => {
+    if (mode === 'en') speak(question.explanation_en, 'en')
+    else speak(question.explanation_vi, 'vi')
+  }
+  return (
+    <motion.section
+      initial={{ opacity: 0, y: 24 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ type: 'spring', stiffness: 160, damping: 18 }}
+      aria-live="polite"
+      className={`rounded-3xl border-4 p-4 sm:p-5 shadow-soft ${correct ? 'bg-green-50 border-green-300' : 'bg-amber-50 border-amber-300'}`}
+    >
+      <div className="flex items-center gap-3 mb-2">
+        <span className="grid size-11 place-items-center rounded-xl bg-amber-400 text-white"><Lightbulb className="size-6" /></span>
+        <h3 className="flex-1 text-lg sm:text-xl font-black text-amber-800">
+          <BilingualText vi="Góc giải thích khoa học" en="Science Explanation Corner" subClassName="text-amber-700/80" />
+        </h3>
+        <SpeakButton onClick={readExplanation} label="Đọc giải thích / Read explanation" />
+      </div>
+      <p className={`font-extrabold mb-1 ${correct ? 'text-green-700' : 'text-rose-600'}`}>
+        <BilingualText
+          vi={correct ? '🎉 Chính xác! Giỏi quá!' : '💪 Chưa đúng rồi, nhưng không sao! Cùng học nhé.'}
+          en={correct ? 'Correct! Great job!' : 'Not quite, but that is okay! Let’s learn.'}
+          subClassName="font-semibold"
+        />
+      </p>
+      <BilingualText as="p" vi={question.explanation_vi} en={question.explanation_en} className="text-base sm:text-lg font-semibold text-slate-700 leading-relaxed" />
+    </motion.section>
+  )
+}
