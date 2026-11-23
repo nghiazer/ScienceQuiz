@@ -1,5 +1,5 @@
 import { QUESTIONS, TOPIC_ORDER } from '../data/questions'
-import type { AnswerRecord, Difficulty, Question, Topic } from '../types/quiz'
+import type { AnswerRecord, Difficulty, OptionIndex, Options, Question, Topic } from '../types/quiz'
 
 export function shuffle<T>(arr: readonly T[]): T[] {
   const a = [...arr]
@@ -8,6 +8,28 @@ export function shuffle<T>(arr: readonly T[]): T[] {
     ;[a[i], a[j]] = [a[j], a[i]]
   }
   return a
+}
+
+// Câu mà thứ tự đáp án có ý nghĩa: không được xáo.
+const LETTER_REF = /^(Hình |Picture )?[A-D]($|\s*[—(–-])/ // đáp án tham chiếu nhãn A–D trên hình
+const GROUPED = /^(Cả hai|Tất cả|Không có|Không ai|Both|All |None|Neither)/i // "Cả hai…", "Không có gì…"
+const NUMERIC = /^[\d.,]+(\s*(°C|cm|bạn|children|giờ|hours))?$/ // dãy số xếp tăng dần
+
+export function isOrderSensitive(q: Question): boolean {
+  const all = [...q.options_vi, ...q.options_en].map((o) => o.trim())
+  return all.some((o) => LETTER_REF.test(o) || GROUPED.test(o)) || q.options_vi.every((o) => NUMERIC.test(o.trim()))
+}
+
+/** Trả về bản sao có thứ tự đáp án xáo trộn (vi và en cùng một phép hoán vị), để đáp án đúng không luôn ở cùng vị trí. */
+export function shuffleOptions(q: Question): Question {
+  if (isOrderSensitive(q)) return q
+  const order = shuffle([0, 1, 2, 3])
+  return {
+    ...q,
+    options_vi: order.map((i) => q.options_vi[i]) as Options,
+    options_en: order.map((i) => q.options_en[i]) as Options,
+    correctIndex: order.indexOf(q.correctIndex) as OptionIndex,
+  }
 }
 
 export const MOCK_SIZE = 15
@@ -29,7 +51,7 @@ function unseenFirst(pool: Question[], seen: ReadonlySet<string>): Question[] {
 
 export function buildTopicQuiz(topic: Topic, seen: ReadonlySet<string>): Question[] {
   const pool = QUESTIONS.filter((q) => q.topic === topic)
-  return unseenFirst(pool, seen).slice(0, TOPIC_SESSION_SIZE)
+  return unseenFirst(pool, seen).slice(0, TOPIC_SESSION_SIZE).map(shuffleOptions)
 }
 
 /**
@@ -59,11 +81,16 @@ export function buildMockTest(seen: ReadonlySet<string>): Question[] {
     if (sameTopic.some((q) => !used.has(q.id))) return take(sameTopic)
     take(QUESTIONS)
   })
-  return shuffle(picked)
+  return shuffle(picked).map(shuffleOptions)
 }
 
-/** Các câu sai hoặc chưa làm, xáo trộn thứ tự để bé luyện lại. */
-export function buildRetryQuiz(questions: Question[], answers: AnswerRecord[]): Question[] {
+/** Các câu sai hoặc chưa làm, giữ nguyên thứ tự và đáp án như bé đã thấy (dùng để hiển thị ôn tập). */
+export function findMissed(questions: Question[], answers: AnswerRecord[]): Question[] {
   const okIds = new Set(answers.filter((a) => a.correct).map((a) => a.questionId))
-  return shuffle(questions.filter((q) => !okIds.has(q.id)))
+  return questions.filter((q) => !okIds.has(q.id))
+}
+
+/** Lượt làm lại: xáo cả thứ tự câu lẫn thứ tự đáp án. */
+export function buildRetryQuiz(questions: Question[], answers: AnswerRecord[]): Question[] {
+  return shuffle(findMissed(questions, answers)).map(shuffleOptions)
 }

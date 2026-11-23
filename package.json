@@ -8,7 +8,9 @@
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview",
-    "check:data": "tsx scripts/check-data.ts"
+    "check:data": "tsx scripts/check-data.ts",
+    "check:dupes": "tsx scripts/check-dupes.ts",
+    "ledger": "tsx scripts/ledger.ts"
   },
   "dependencies": {
     "canvas-confetti": "^1.9.4",

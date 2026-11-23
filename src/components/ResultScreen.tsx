@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { Home, RotateCcw, Star } from 'lucide-react'
 import type { Question, QuizResult } from '../types/quiz'
 import { TOPICS, TOPIC_ORDER } from '../data/questions'
-import { buildRetryQuiz } from '../utils/quiz'
+import { buildRetryQuiz, findMissed } from '../utils/quiz'
 import { playComplete } from '../utils/sound'
 import BilingualText from './BilingualText'
 import BadgeGrid from './BadgeGrid'
@@ -37,7 +37,7 @@ export default function ResultScreen({ result, onRetryWrong, onReplay, onHome }:
     if (passed) fireConfetti()
   }, [passed])
 
-  const wrong = useMemo(() => buildRetryQuiz(questions, answers), [questions, answers])
+  const wrong = useMemo(() => findMissed(questions, answers), [questions, answers])
   const answerOf = (id: string) => answers.find((a) => a.questionId === id)
 
   const byTopic = TOPIC_ORDER.map((t) => {
@@ -152,7 +152,7 @@ export default function ResultScreen({ result, onRetryWrong, onReplay, onHome }:
         {wrong.length > 0 && (
           <button
             type="button"
-            onClick={() => onRetryWrong(wrong)}
+            onClick={() => onRetryWrong(buildRetryQuiz(questions, answers))}
             className="flex min-h-14 flex-1 items-center justify-center gap-2 rounded-2xl bg-orange-500 px-6 text-lg font-black text-white shadow-pop hover:bg-orange-600"
           >
             <RotateCcw className="size-6" />
