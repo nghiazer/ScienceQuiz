@@ -574,7 +574,7 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | ear-095 | vừa |  | Trên hành tinh nào, nhiệt độ bề mặt cao nhất trong Hệ Mặt Trời? | Sao Kim | ☐ |
 | ear-124 | vừa |  | Hành tinh nào có một cơn bão đỏ khổng lồ đã tồn tại hàng trăm năm? | Sao Mộc | ☐ |
 
-## Tư duy thực nghiệm (60 câu)
+## Tư duy thực nghiệm (90 câu)
 
 ### Quan sát (8 câu)
 
@@ -675,6 +675,66 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | inq-56 | khó |  | Một bạn nói: “Cây cao vì được nghe nhạc”. Để kiểm tra, cần làm gì? | So sánh hai nhóm cây: một nhóm nghe nhạc, một nhóm không, c… | ☐ |
 | inq-57 | vừa |  | Trong thí nghiệm hai cốc đá, yếu tố nào là nguyên nhân khiến đá tan nhanh hơn? | Nhiệt độ môi trường cao hơn | ☐ |
 | inq-58 | vừa |  | Vì sao nhà khoa học thường lặp lại thí nghiệm nhiều lần? | Để kết quả đáng tin hơn và không do may rủi | ☐ |
+
+### Quy luật và dãy số (5 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| inq-064 | dễ |  | Dãy số 2, 4, 6, 8 thì số tiếp theo là số nào? | 10 | ☐ |
+| inq-065 | dễ |  | Dãy màu đỏ, xanh, đỏ, xanh, đỏ… thì màu tiếp theo là màu gì? | Xanh | ☐ |
+| inq-066 | vừa |  | Một cây cao 10 cm và mỗi tuần cao thêm 5 cm. Sau 3 tuần cây cao bao nhiêu cm? | 25 cm | ☐ |
+| inq-067 | vừa |  | Nếu hôm nay là thứ Tư, thì ba ngày sau là thứ mấy? | Thứ Bảy | ☐ |
+| inq-068 | vừa |  | Nhiệt độ đo hằng ngày là 20 °C, 22 °C, 24 °C, 26 °C. Nếu quy luật tiếp tục, ngày thứ 5 nh… | 28 °C | ☐ |
+
+### Ước lượng và đơn vị đo (5 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| inq-069 | dễ |  | Đơn vị nào dùng để đo độ dài ngắn như chiều dài của bút chì? | Centimét (cm) | ☐ |
+| inq-070 | dễ |  | Đơn vị nào thường dùng để đo khối lượng của một quả táo? | Gam (g) | ☐ |
+| inq-071 | vừa |  | Một cốc nước thường có thể tích khoảng bao nhiêu? | Khoảng 200 mililít | ☐ |
+| inq-072 | vừa |  | Nhiệt độ của một ngày nắng ở Việt Nam thường khoảng bao nhiêu độ C? | Khoảng 30 °C | ☐ |
+| inq-073 | khó |  | Bạn muốn ước lượng chiều cao của lớp học. Cách nào hợp lý nhất? | Đo chiều cao tường bằng thước dây hoặc so với chiều cao của… | ☐ |
+
+### An toàn khi làm thí nghiệm (5 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| inq-074 | dễ |  | Khi làm thí nghiệm có hóa chất hoặc nước nóng, em nên làm gì đầu tiên? | Hỏi và làm theo hướng dẫn của người lớn | ☐ |
+| inq-075 | dễ |  | Vì sao nên đeo kính bảo hộ khi làm thí nghiệm? | Để bảo vệ mắt khỏi hóa chất hoặc vật nhỏ bắn vào | ☐ |
+| inq-076 | vừa |  | Khi nước rất nóng làm bỏng tay, em nên làm gì trước tiên? | Rửa tay dưới vòi nước mát và báo người lớn ngay | ☐ |
+| inq-077 | vừa |  | Vì sao không nên nếm thử bất kỳ chất nào trong phòng thí nghiệm? | Vì nhiều chất có thể gây hại hoặc có độc | ☐ |
+| inq-078 | khó |  | Khi dùng đèn cồn để đun nước, điều gì quan trọng nhất để đảm bảo an toàn? | Đặt đèn xa vật dễ cháy và có người lớn hỗ trợ | ☐ |
+
+### Biểu đồ đường (5 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| inq-079 | dễ |  | Biểu đồ đường thường dùng để làm gì? | Cho thấy sự thay đổi của một đại lượng theo thời gian | ☐ |
+| inq-080 | vừa |  | Trên biểu đồ đường, nhiệt độ buổi sáng là 20 °C, buổi trưa là 30 °C, buổi tối là 24 °C. N… | Buổi trưa | ☐ |
+| inq-081 | vừa |  | Nhiệt độ buổi trưa là 30 °C, buổi tối là 24 °C. Nhiệt độ đã giảm bao nhiêu độ? | 6 °C | ☐ |
+| inq-082 | khó |  | Một biểu đồ đường cho thấy chiều cao của cây tăng dần qua các tuần. Điều gì làm cho đường… | Cây càng ngày càng cao hơn | ☐ |
+| inq-083 | vừa |  | Vì sao nên vẽ đường nối các điểm dữ liệu theo thứ tự thời gian? | Để thấy xu hướng tăng hoặc giảm rõ ràng | ☐ |
+
+### Thiết kế thí nghiệm (5 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| inq-084 | dễ |  | Muốn làm thí nghiệm, em nên bắt đầu bằng việc gì? | Đặt một câu hỏi rõ ràng cần kiểm tra | ☐ |
+| inq-085 | vừa |  | Trong thí nghiệm thả bóng xuống dốc, em muốn xem độ cao của dốc ảnh hưởng đến quãng đường… | Độ cao của dốc | ☐ |
+| inq-086 | vừa |  | Em muốn xem loại đất nào giữ nước tốt hơn. Em nên làm gì? | Dùng cùng lượng nước và cùng loại cốc cho mỗi loại đất, rồi… | ☐ |
+| inq-087 | khó |  | Trong một thí nghiệm, em ghi “nước ấm làm đường tan nhanh hơn”. Câu này là gì? | Một giả thuyết cần được kiểm tra | ☐ |
+| inq-088 | dễ |  | Bảng ghi kết quả thí nghiệm nên có những gì? | Tên thí nghiệm, các số đo và ngày làm | ☐ |
+
+### Bằng chứng và ý kiến (5 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| inq-089 | dễ |  | Câu nào là ý kiến, không phải điều có thể kiểm chứng? | Bông hoa này là đẹp nhất | ☐ |
+| inq-090 | vừa |  | Một bạn nói “Tôi nghĩ mèo thông minh hơn chó”. Đây là bằng chứng hay ý kiến? | Ý kiến cá nhân, cần thí nghiệm để kiểm chứng | ☐ |
+| inq-091 | vừa |  | Điều nào là bằng chứng tốt để kết luận “cây cần nước”? | Cây được tưới nước thì xanh tốt, cây không được tưới thì hé… | ☐ |
+| inq-092 | khó |  | Một quảng cáo nói “Sản phẩm này làm tóc mọc nhanh gấp 10 lần”. Điều gì nên làm trước khi … | Tìm bằng chứng từ thí nghiệm có kiểm soát và so sánh với nh… | ☐ |
+| inq-093 | vừa |  | Vì sao khoa học cần bằng chứng mà người khác có thể lặp lại được? | Để người khác kiểm tra lại và tin vào kết quả | ☐ |
 
 # Tiếng Anh (Cambridge KET / PET)
 

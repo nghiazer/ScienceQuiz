@@ -15,6 +15,7 @@ export type ScienceSubtopicId =
   | 'sun' | 'moon' | 'day-night' | 'shadows-time' | 'water-cycle' | 'weather-seasons' | 'earth-shape' | 'rocks-soil'
   | 'stars-sky' | 'air-wind' | 'resources-pollution' | 'landforms' | 'planets-order'
   | 'observation' | 'measuring-tools' | 'reading-numbers' | 'charts' | 'fair-test' | 'predict-compare' | 'classify' | 'variables-cause'
+  | 'patterns-sequences' | 'estimating-units' | 'lab-safety' | 'line-graphs' | 'experiment-design' | 'evidence-opinion'
 
 export type EnglishSubtopicId =
   | 'ps-routines' | 'ps-third-person' | 'ps-frequency' | 'ps-negative' | 'ps-questions'
