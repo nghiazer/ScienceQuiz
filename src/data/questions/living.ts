@@ -664,7 +664,7 @@ export const LIVING_QUESTIONS: ScienceQuestionInput[] = [
     explanation_en: 'The seed stores food to feed the young plant. Once its leaves and roots are strong, the plant makes its own food using light.',
   },
   {
-    id: 'liv-63', topic: 'living', subtopic: 'seeds-growth', difficulty: 'medium',
+    id: 'liv-63', topic: 'living', subtopic: 'seeds-growth', difficulty: 'medium', illustrationId: 'seed-sprout',
     question_vi: 'Khi hạt nảy mầm, bộ phận nào thường mọc ra đầu tiên?',
     question_en: 'When a seed sprouts, which part usually appears first?',
     options_vi: ['Lá', 'Hoa', 'Rễ', 'Quả'],
@@ -694,7 +694,7 @@ export const LIVING_QUESTIONS: ScienceQuestionInput[] = [
     explanation_en: 'Seeds need water and warmth to sprout. Box 2 lacks water and box 3 is too cold, so only the seeds in box 1 sprout.',
   },
   {
-    id: 'liv-66', topic: 'living', subtopic: 'feeding-teeth', difficulty: 'easy',
+    id: 'liv-66', topic: 'living', subtopic: 'feeding-teeth', difficulty: 'easy', illustrationId: 'animal-teeth',
     question_vi: 'Con vật nào ăn cỏ?',
     question_en: 'Which animal eats grass?',
     options_vi: ['Con sư tử', 'Con bò', 'Con cá mập', 'Con diều hâu'],
@@ -714,7 +714,7 @@ export const LIVING_QUESTIONS: ScienceQuestionInput[] = [
     explanation_en: 'A tiger is a meat-eater with sharp canine teeth to grip and tear prey. Rabbits, buffalo and horses eat grass and leaves.',
   },
   {
-    id: 'liv-68', topic: 'living', subtopic: 'feeding-teeth', difficulty: 'medium',
+    id: 'liv-68', topic: 'living', subtopic: 'feeding-teeth', difficulty: 'medium', illustrationId: 'animal-teeth',
     question_vi: 'Răng nanh nhọn và sắc của sư tử dùng để làm gì?',
     question_en: 'What are a lion’s sharp canine teeth used for?',
     options_vi: ['Nhai cỏ thật mịn', 'Ngửi mùi thức ăn', 'Đào hang trong đất', 'Xé thịt con mồi'],
@@ -794,7 +794,7 @@ export const LIVING_QUESTIONS: ScienceQuestionInput[] = [
     explanation_en: 'Eggs must be kept warm for the chick inside to develop. Hidden or enclosed nests protect eggs from predators.',
   },
   {
-    id: 'liv-76', topic: 'living', subtopic: 'decomposers', difficulty: 'easy',
+    id: 'liv-76', topic: 'living', subtopic: 'decomposers', difficulty: 'easy', illustrationId: 'compost-cycle',
     question_vi: 'Vi khuẩn và nấm trong đất có vai trò gì với lá rụng?',
     question_en: 'What do bacteria and fungi in soil do to fallen leaves?',
     options_vi: ['Biến lá thành đá cứng', 'Làm lá bay đi xa', 'Giữ lá nguyên như mới mãi mãi', 'Phân hủy lá thành chất dinh dưỡng cho đất'],
@@ -804,7 +804,7 @@ export const LIVING_QUESTIONS: ScienceQuestionInput[] = [
     explanation_en: 'Bacteria and fungi are decomposers. They eat dead leaves and return nutrients to the soil for other plants to use.',
   },
   {
-    id: 'liv-77', topic: 'living', subtopic: 'decomposers', difficulty: 'medium',
+    id: 'liv-77', topic: 'living', subtopic: 'decomposers', difficulty: 'medium', illustrationId: 'compost-cycle',
     question_vi: 'Vì sao người ta ủ phân từ vỏ rau và lá cây?',
     question_en: 'Why do people compost vegetable peelings and leaves?',
     options_vi: ['Để vi sinh vật phân hủy thành phân bón cho cây', 'Để đốt lên làm nóng nhà', 'Để làm đá cho tủ lạnh', 'Để lá tự bay đi'],

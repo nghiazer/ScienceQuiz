@@ -685,7 +685,7 @@ export const EARTH_QUESTIONS: ScienceQuestionInput[] = [
     explanation_en: 'A star is an extremely hot ball of gas that makes its own light, like the Sun but very far away.',
   },
   {
-    id: 'ear-066', topic: 'earth', subtopic: 'stars-sky', difficulty: 'medium',
+    id: 'ear-066', topic: 'earth', subtopic: 'stars-sky', difficulty: 'medium', illustrationId: 'constellation',
     question_vi: 'Một nhóm sao tạo thành hình dễ nhận ra trên bầu trời được gọi là gì?',
     question_en: 'What is a group of stars that forms an easy-to-recognise shape in the sky called?',
     options_vi: ['Thiên hà nhỏ', 'Chòm sao', 'Vệ tinh', 'Sao chổi'],
@@ -705,7 +705,7 @@ export const EARTH_QUESTIONS: ScienceQuestionInput[] = [
     explanation_en: 'Earth spins, so the sky seems to turn around us. This makes the stars appear to move too.',
   },
   {
-    id: 'ear-068', topic: 'earth', subtopic: 'stars-sky', difficulty: 'hard',
+    id: 'ear-068', topic: 'earth', subtopic: 'stars-sky', difficulty: 'hard', illustrationId: 'constellation',
     question_vi: 'Vì sao sao Bắc Cực dường như đứng yên ở gần một hướng trên bầu trời?',
     question_en: 'Why does the North Star seem to stay in almost the same place in the sky?',
     options_vi: ['Vì nó không bao giờ di chuyển', 'Vì nó là một Mặt Trời nhỏ', 'Vì nó luôn bị mây che', 'Vì nó nằm gần trục quay kéo dài của Trái Đất'],
@@ -735,7 +735,7 @@ export const EARTH_QUESTIONS: ScienceQuestionInput[] = [
     explanation_en: 'Wind is air moving from one place to another. Differences in temperature between places are the main cause.',
   },
   {
-    id: 'ear-071', topic: 'earth', subtopic: 'air-wind', difficulty: 'medium',
+    id: 'ear-071', topic: 'earth', subtopic: 'air-wind', difficulty: 'medium', illustrationId: 'sea-breeze',
     question_vi: 'Vì sao ban ngày thường có gió thổi từ biển vào đất liền?',
     question_en: 'Why does the wind often blow from the sea towards the land during the day?',
     options_vi: ['Biển tạo ra gió bằng sóng', 'Đất hút gió từ biển vào', 'Đất nóng nhanh hơn biển, không khí nóng trên đất bốc lên nên không khí mát từ biển tràn vào', 'Chim làm gió thổi vào bờ'],
@@ -825,7 +825,7 @@ export const EARTH_QUESTIONS: ScienceQuestionInput[] = [
     explanation_en: 'Electricity is made from fuels and other resources. Switching off unused lights is a simple way to save them.',
   },
   {
-    id: 'ear-080', topic: 'earth', subtopic: 'landforms', difficulty: 'easy',
+    id: 'ear-080', topic: 'earth', subtopic: 'landforms', difficulty: 'easy', illustrationId: 'landforms',
     question_vi: 'Vùng đất cao nhô lên rất cao khỏi mặt đất được gọi là gì?',
     question_en: 'What is a very high area of land rising above the ground called?',
     options_vi: ['Biển', 'Sông', 'Hồ', 'Núi'],
@@ -835,7 +835,7 @@ export const EARTH_QUESTIONS: ScienceQuestionInput[] = [
     explanation_en: 'A mountain is a large mass of land and rock that rises clearly above the surrounding area.',
   },
   {
-    id: 'ear-081', topic: 'earth', subtopic: 'landforms', difficulty: 'medium',
+    id: 'ear-081', topic: 'earth', subtopic: 'landforms', difficulty: 'medium', illustrationId: 'landforms',
     question_vi: 'Sông thường chảy theo hướng nào?',
     question_en: 'Which way does a river usually flow?',
     options_vi: ['Từ vùng cao xuống vùng thấp, rồi ra biển hoặc hồ', 'Từ biển lên núi', 'Từ vùng thấp lên đồi', 'Không chảy đi đâu cả'],
@@ -845,7 +845,7 @@ export const EARTH_QUESTIONS: ScienceQuestionInput[] = [
     explanation_en: 'Rainwater runs down from the mountains into valleys, gathers into rivers and finally flows into the sea or a lake.',
   },
   {
-    id: 'ear-082', topic: 'earth', subtopic: 'landforms', difficulty: 'medium',
+    id: 'ear-082', topic: 'earth', subtopic: 'landforms', difficulty: 'medium', illustrationId: 'volcano',
     question_vi: 'Núi lửa là gì?',
     question_en: 'What is a volcano?',
     options_vi: ['Ngọn đồi phủ đầy tuyết', 'Lỗ hở trên vỏ Trái Đất, qua đó dung nham và khí có thể phun ra', 'Hòn đảo nổi trên biển', 'Cái hồ có nước nóng'],
@@ -865,7 +865,7 @@ export const EARTH_QUESTIONS: ScienceQuestionInput[] = [
     explanation_en: 'Earth’s crust is made of large rock plates. When they slip or collide, energy is released as shaking.',
   },
   {
-    id: 'ear-084', topic: 'earth', subtopic: 'landforms', difficulty: 'easy',
+    id: 'ear-084', topic: 'earth', subtopic: 'landforms', difficulty: 'easy', illustrationId: 'landforms',
     question_vi: 'Vùng đất bằng phẳng, rộng lớn và ít đồi núi được gọi là gì?',
     question_en: 'What is a large, flat area of land with few hills or mountains called?',
     options_vi: ['Thác nước', 'Vực sâu', 'Hang động', 'Đồng bằng'],
@@ -875,7 +875,7 @@ export const EARTH_QUESTIONS: ScienceQuestionInput[] = [
     explanation_en: 'A plain is a flat, low area often built up by rivers and good for growing crops such as rice.',
   },
   {
-    id: 'ear-085', topic: 'earth', subtopic: 'planets-order', difficulty: 'easy',
+    id: 'ear-085', topic: 'earth', subtopic: 'planets-order', difficulty: 'easy', illustrationId: 'planets-order',
     question_vi: 'Hành tinh nào gần Mặt Trời nhất?',
     question_en: 'Which planet is closest to the Sun?',
     options_vi: ['Sao Thủy', 'Sao Kim', 'Trái Đất', 'Sao Hỏa'],
@@ -885,7 +885,7 @@ export const EARTH_QUESTIONS: ScienceQuestionInput[] = [
     explanation_en: 'Mercury is the planet closest to the Sun in the Solar System.',
   },
   {
-    id: 'ear-086', topic: 'earth', subtopic: 'planets-order', difficulty: 'medium',
+    id: 'ear-086', topic: 'earth', subtopic: 'planets-order', difficulty: 'medium', illustrationId: 'planets-order',
     question_vi: 'Trái Đất là hành tinh thứ mấy tính từ Mặt Trời?',
     question_en: 'What position is Earth from the Sun?',
     options_vi: ['Thứ hai', 'Thứ ba', 'Thứ tư', 'Thứ năm'],

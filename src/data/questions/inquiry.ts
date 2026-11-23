@@ -676,7 +676,7 @@ export const INQUIRY_QUESTIONS: ScienceQuestionInput[] = [
     explanation_en: 'Repeating helps catch measuring mistakes and shows whether the results are consistent.',
   },
   {
-    id: 'inq-064', topic: 'inquiry', subtopic: 'patterns-sequences', difficulty: 'easy',
+    id: 'inq-064', topic: 'inquiry', subtopic: 'patterns-sequences', difficulty: 'easy', illustrationId: 'pattern-sequence',
     question_vi: 'Dãy số 2, 4, 6, 8 thì số tiếp theo là số nào?',
     question_en: 'What number comes next in the sequence 2, 4, 6, 8?',
     options_vi: ['10', '9', '12', '7'],
@@ -746,7 +746,7 @@ export const INQUIRY_QUESTIONS: ScienceQuestionInput[] = [
     explanation_en: 'An apple weighs a few hundred grams, so we weigh it in grams.',
   },
   {
-    id: 'inq-071', topic: 'inquiry', subtopic: 'estimating-units', difficulty: 'medium',
+    id: 'inq-071', topic: 'inquiry', subtopic: 'estimating-units', difficulty: 'medium', illustrationId: 'measuring-cup',
     question_vi: 'Một cốc nước thường có thể tích khoảng bao nhiêu?',
     question_en: 'About how much liquid does a typical cup hold?',
     options_vi: ['Khoảng 200 lít', 'Khoảng 2 mililít', 'Khoảng 2 giọt', 'Khoảng 200 mililít'],
@@ -786,7 +786,7 @@ export const INQUIRY_QUESTIONS: ScienceQuestionInput[] = [
     explanation_en: 'Grown-ups know how to work safely. Always ask before doing any risky experiment.',
   },
   {
-    id: 'inq-075', topic: 'inquiry', subtopic: 'lab-safety', difficulty: 'easy',
+    id: 'inq-075', topic: 'inquiry', subtopic: 'lab-safety', difficulty: 'easy', illustrationId: 'lab-goggles',
     question_vi: 'Vì sao nên đeo kính bảo hộ khi làm thí nghiệm?',
     question_en: 'Why should you wear safety goggles during an experiment?',
     options_vi: ['Để trông ngầu hơn', 'Để mắt sáng hơn', 'Để không phải rửa tay', 'Để bảo vệ mắt khỏi hóa chất hoặc vật nhỏ bắn vào'],
@@ -836,7 +836,7 @@ export const INQUIRY_QUESTIONS: ScienceQuestionInput[] = [
     explanation_en: 'A line graph joins data points over time, so you can see whether something is going up or down.',
   },
   {
-    id: 'inq-080', topic: 'inquiry', subtopic: 'line-graphs', difficulty: 'medium',
+    id: 'inq-080', topic: 'inquiry', subtopic: 'line-graphs', difficulty: 'medium', illustrationId: 'line-graph',
     question_vi: 'Trên biểu đồ đường, nhiệt độ buổi sáng là 20 °C, buổi trưa là 30 °C, buổi tối là 24 °C. Nhiệt độ cao nhất xuất hiện lúc nào?',
     question_en: 'On a line graph, the morning temperature is 20 °C, the midday temperature is 30 °C and the evening temperature is 24 °C. When is it highest?',
     options_vi: ['Buổi trưa', 'Buổi sáng', 'Buổi tối', 'Nửa đêm'],
@@ -846,7 +846,7 @@ export const INQUIRY_QUESTIONS: ScienceQuestionInput[] = [
     explanation_en: 'The highest point on the graph is 30 °C at midday.',
   },
   {
-    id: 'inq-081', topic: 'inquiry', subtopic: 'line-graphs', difficulty: 'medium',
+    id: 'inq-081', topic: 'inquiry', subtopic: 'line-graphs', difficulty: 'medium', illustrationId: 'line-graph',
     question_vi: 'Nhiệt độ buổi trưa là 30 °C, buổi tối là 24 °C. Nhiệt độ đã giảm bao nhiêu độ?',
     question_en: 'The midday temperature is 30 °C and the evening temperature is 24 °C. By how many degrees did it fall?',
     options_vi: ['4 °C', '6 °C', '10 °C', '12 °C'],
@@ -856,7 +856,7 @@ export const INQUIRY_QUESTIONS: ScienceQuestionInput[] = [
     explanation_en: '30 − 24 = 6, so the temperature fell by 6 °C.',
   },
   {
-    id: 'inq-082', topic: 'inquiry', subtopic: 'line-graphs', difficulty: 'hard',
+    id: 'inq-082', topic: 'inquiry', subtopic: 'line-graphs', difficulty: 'hard', illustrationId: 'line-graph',
     question_vi: 'Một biểu đồ đường cho thấy chiều cao của cây tăng dần qua các tuần. Điều gì làm cho đường đi lên?',
     question_en: 'A line graph shows a plant getting taller week by week. What makes the line go upwards?',
     options_vi: ['Cây đang thu nhỏ lại', 'Cây không thay đổi gì', 'Cây càng ngày càng cao hơn', 'Cây đang rụng lá'],
@@ -1216,7 +1216,7 @@ export const INQUIRY_QUESTIONS: ScienceQuestionInput[] = [
     explanation_en: 'The height of a bar shows its value. The taller the bar, the larger the amount.',
   },
   {
-    id: 'inq-118', topic: 'inquiry', subtopic: 'charts', difficulty: 'medium',
+    id: 'inq-118', topic: 'inquiry', subtopic: 'charts', difficulty: 'medium', illustrationId: 'pictograph',
     question_vi: 'Bảng ghi: Lan 4 quả, Minh 6 quả, Hoa 4 quả. Ai ăn nhiều quả nhất?',
     question_en: 'The table shows: Lan 4 fruits, Minh 6 fruits, Hoa 4 fruits. Who ate the most fruit?',
     options_vi: ['Minh', 'Lan', 'Hoa', 'Cả ba bằng nhau'],
@@ -1256,7 +1256,7 @@ export const INQUIRY_QUESTIONS: ScienceQuestionInput[] = [
     explanation_en: 'A figure is only trustworthy when you know how many people it came from and how the questions were asked.',
   },
   {
-    id: 'inq-122', topic: 'inquiry', subtopic: 'patterns-sequences', difficulty: 'easy',
+    id: 'inq-122', topic: 'inquiry', subtopic: 'patterns-sequences', difficulty: 'easy', illustrationId: 'pattern-sequence',
     question_vi: 'Dãy số 5, 10, 15, 20… số tiếp theo là số nào?',
     question_en: 'What number comes next in the sequence 5, 10, 15, 20…?',
     options_vi: ['25', '30', '22', '21'],

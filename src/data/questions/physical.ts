@@ -675,7 +675,7 @@ export const PHYSICAL_QUESTIONS: ScienceQuestionInput[] = [
     explanation_en: 'Water slowly evaporates at room temperature and drifts into the air as vapour.',
   },
   {
-    id: 'phy-061', topic: 'physical', subtopic: 'heat-transfer', difficulty: 'easy',
+    id: 'phy-061', topic: 'physical', subtopic: 'heat-transfer', difficulty: 'easy', illustrationId: 'heat-spoon',
     question_vi: 'Khi để muỗng kim loại trong cốc nước nóng, điều gì xảy ra với tay cầm muỗng?',
     question_en: 'When a metal spoon is left in a hot cup of tea, what happens to the handle?',
     options_vi: ['Tay cầm nóng lên dần', 'Tay cầm lạnh đi', 'Tay cầm đổi màu', 'Tay cầm nổi lên mặt nước'],
@@ -755,7 +755,7 @@ export const PHYSICAL_QUESTIONS: ScienceQuestionInput[] = [
     explanation_en: 'Energy from food powers your leg muscles when you pedal. This energy turns into kinetic energy that moves the bicycle.',
   },
   {
-    id: 'phy-069', topic: 'physical', subtopic: 'energy-forms', difficulty: 'medium',
+    id: 'phy-069', topic: 'physical', subtopic: 'energy-forms', difficulty: 'medium', illustrationId: 'energy-ball',
     question_vi: 'Một quả bóng được giữ trên cao rồi thả rơi. Trước khi rơi, năng lượng của bóng ở dạng nào?',
     question_en: 'A ball is held high and then dropped. Before it falls, what form of energy does it have?',
     options_vi: ['Thế năng, vì nó đang ở độ cao', 'Điện năng', 'Năng lượng âm thanh', 'Năng lượng từ nam châm'],
@@ -775,7 +775,7 @@ export const PHYSICAL_QUESTIONS: ScienceQuestionInput[] = [
     explanation_en: 'Wind turns the blades. The generator converts the turning motion (kinetic energy) into electrical energy.',
   },
   {
-    id: 'phy-071', topic: 'physical', subtopic: 'simple-machines', difficulty: 'easy',
+    id: 'phy-071', topic: 'physical', subtopic: 'simple-machines', difficulty: 'easy', illustrationId: 'simple-machines',
     question_vi: 'Mặt phẳng nghiêng, chẳng hạn như con dốc, giúp chúng ta điều gì?',
     question_en: 'What does an inclined plane, such as a ramp, help us do?',
     options_vi: ['Làm vật nhẹ đi', 'Làm vật biến mất', 'Đưa vật nặng lên cao với lực nhỏ hơn', 'Làm nước sôi nhanh hơn'],
@@ -795,7 +795,7 @@ export const PHYSICAL_QUESTIONS: ScienceQuestionInput[] = [
     explanation_en: 'Scissors are two levers joined at a pivot in the middle. This lets a small hand force cut through material.',
   },
   {
-    id: 'phy-073', topic: 'physical', subtopic: 'simple-machines', difficulty: 'medium',
+    id: 'phy-073', topic: 'physical', subtopic: 'simple-machines', difficulty: 'medium', illustrationId: 'simple-machines',
     question_vi: 'Bập bênh trên sân chơi là ví dụ của máy đơn giản nào?',
     question_en: 'A seesaw in a playground is an example of which simple machine?',
     options_vi: ['Đòn bẩy có điểm tựa ở giữa', 'Ròng rọc', 'Bánh xe và trục', 'Cái nêm'],
@@ -815,7 +815,7 @@ export const PHYSICAL_QUESTIONS: ScienceQuestionInput[] = [
     explanation_en: 'When something rolls, less of its surface rubs against the ground, so friction is smaller. Less force is needed to move it.',
   },
   {
-    id: 'phy-075', topic: 'physical', subtopic: 'simple-machines', difficulty: 'hard',
+    id: 'phy-075', topic: 'physical', subtopic: 'simple-machines', difficulty: 'hard', illustrationId: 'simple-machines',
     question_vi: 'Một ròng rọc cố định được dùng để kéo thùng nặng lên cao. Ròng rọc này giúp điều gì?',
     question_en: 'A fixed pulley is used to lift a heavy box. What does the fixed pulley help with?',
     options_vi: ['Làm thùng nhẹ đi', 'Tăng khối lượng của thùng', 'Đổi hướng lực kéo, nên có thể kéo từ trên xuống dễ hơn', 'Làm thùng bay lên'],
@@ -825,7 +825,7 @@ export const PHYSICAL_QUESTIONS: ScienceQuestionInput[] = [
     explanation_en: 'A fixed pulley does not reduce the force needed, but it lets you stand on the ground and pull downwards, which is much more convenient.',
   },
   {
-    id: 'phy-076', topic: 'physical', subtopic: 'dissolving-mixtures', difficulty: 'easy',
+    id: 'phy-076', topic: 'physical', subtopic: 'dissolving-mixtures', difficulty: 'easy', illustrationId: 'dissolve-cup',
     question_vi: 'Khi khuấy đường vào nước, điều gì xảy ra với đường?',
     question_en: 'When you stir sugar into water, what happens to the sugar?',
     options_vi: ['Nổi lên mặt nước mãi', 'Biến thành đá', 'Bốc hơi thành khí', 'Tan vào nước và không còn nhìn thấy các hạt'],
@@ -845,7 +845,7 @@ export const PHYSICAL_QUESTIONS: ScienceQuestionInput[] = [
     explanation_en: 'A saturated solution cannot dissolve any more solute at that temperature.',
   },
   {
-    id: 'phy-078', topic: 'physical', subtopic: 'dissolving-mixtures', difficulty: 'medium',
+    id: 'phy-078', topic: 'physical', subtopic: 'dissolving-mixtures', difficulty: 'medium', illustrationId: 'dissolve-cup',
     question_vi: 'Cát trộn với nước rồi để yên, cát lắng xuống đáy. Đây là loại hỗn hợp nào?',
     question_en: 'Sand mixed with water settles to the bottom when left still. What kind of mixture is this?',
     options_vi: ['Hòa tan hoàn toàn như đường', 'Không hòa tan, có thể lọc được', 'Không phải hỗn hợp', 'Chỉ gồm khí'],
@@ -865,7 +865,7 @@ export const PHYSICAL_QUESTIONS: ScienceQuestionInput[] = [
     explanation_en: 'When heated, the water evaporates but salt does not, so the salt stays in the pan. Paper filters cannot catch salt because salt dissolves in water.',
   },
   {
-    id: 'phy-080', topic: 'physical', subtopic: 'dissolving-mixtures', difficulty: 'hard',
+    id: 'phy-080', topic: 'physical', subtopic: 'dissolving-mixtures', difficulty: 'hard', illustrationId: 'dissolve-cup',
     question_vi: 'Trong ba chất đường, cát và dầu ăn, chất nào tan trong nước?',
     question_en: 'Of sugar, sand and cooking oil, which dissolves in water?',
     options_vi: ['Chỉ cát', 'Chỉ dầu ăn', 'Cả ba đều tan', 'Chỉ đường'],
@@ -985,7 +985,7 @@ export const PHYSICAL_QUESTIONS: ScienceQuestionInput[] = [
     explanation_en: 'Magnetic pull weakens as the distance increases, so the magnet pulls the nail less when it is far away.',
   },
   {
-    id: 'phy-092', topic: 'physical', subtopic: 'magnets', difficulty: 'easy',
+    id: 'phy-092', topic: 'physical', subtopic: 'magnets', difficulty: 'easy', illustrationId: 'compass',
     question_vi: 'La bàn hoạt động dựa trên điều gì?',
     question_en: 'How does a compass work?',
     options_vi: ['Kim luôn chỉ về phía Mặt Trời', 'Kim nam châm quay theo từ trường Trái Đất', 'Kim tự quay theo gió', 'Kim bằng gỗ được gió đẩy'],
@@ -1015,7 +1015,7 @@ export const PHYSICAL_QUESTIONS: ScienceQuestionInput[] = [
     explanation_en: 'Magnets only pull on materials such as iron, nickel and cobalt. Plastic is not pulled, whatever its weight.',
   },
   {
-    id: 'phy-095', topic: 'physical', subtopic: 'electricity', difficulty: 'medium',
+    id: 'phy-095', topic: 'physical', subtopic: 'electricity', difficulty: 'medium', illustrationId: 'series-circuit',
     question_vi: 'Trong chuỗi đèn trang trí nối tiếp, khi một bóng hỏng thì cả chuỗi tắt. Vì sao?',
     question_en: 'In a string of lights wired in series, when one bulb fails the whole string goes out. Why?',
     options_vi: ['Điện phải đi qua tất cả các bóng, nên một chỗ đứt làm mạch hở', 'Điện tự bay sang bóng khác', 'Các bóng cùng hỏng một lúc', 'Pin hết ngay khi một bóng tắt'],
@@ -1115,7 +1115,7 @@ export const PHYSICAL_QUESTIONS: ScienceQuestionInput[] = [
     explanation_en: 'Dark lenses absorb some of the light, so the eyes are not dazzled. Good sunglasses also block ultraviolet rays to protect the eyes.',
   },
   {
-    id: 'phy-105', topic: 'physical', subtopic: 'light-shadow', difficulty: 'hard',
+    id: 'phy-105', topic: 'physical', subtopic: 'light-shadow', difficulty: 'hard', illustrationId: 'rainbow',
     question_vi: 'Vì sao sau cơn mưa có thể thấy cầu vồng?',
     question_en: 'Why can a rainbow appear after rain?',
     options_vi: ['Mây tự tô màu lên trời', 'Gió thổi màu từ đất lên trời', 'Ánh sáng Mặt Trời bị tách thành nhiều màu khi đi qua giọt nước', 'Đất phản chiếu màu lên mây'],

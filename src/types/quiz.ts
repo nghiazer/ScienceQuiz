@@ -33,6 +33,7 @@ export type IllustrationId =
   | 'plant-parts' | 'frog-life-cycle' | 'animal-panel' | 'conductor-test' | 'drum-sound' | 'flashlight-shadow'
   | 'push-pull' | 'float-sink' | 'water-states' | 'earth-rotation' | 'weather-icons' | 'soil-layers'
   | 'ruler-pencil' | 'balance-scale' | 'magnifier-ant'
+  | 'seed-sprout' | 'animal-teeth' | 'compost-cycle' | 'heat-spoon' | 'dissolve-cup' | 'simple-machines' | 'planets-order' | 'constellation' | 'sea-breeze' | 'landforms' | 'volcano' | 'rainbow' | 'line-graph' | 'pictograph' | 'measuring-cup' | 'pattern-sequence' | 'lab-goggles' | 'energy-ball' | 'series-circuit' | 'compass'
   | 'en-timeline-past' | 'en-timeline-now' | 'en-timeline-habit' | 'en-dialogue' | 'en-daily-routine' | 'en-look-listen'
 
 interface BaseQuestion {

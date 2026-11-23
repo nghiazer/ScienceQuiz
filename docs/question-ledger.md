@@ -141,7 +141,7 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | --- | --- | --- | --- | --- | --- |
 | liv-61 | dễ |  | Hạt đậu cần những gì để nảy mầm? | Nước, không khí và hơi ấm | ☐ |
 | liv-62 | vừa |  | Vì sao cây con mới nảy mầm vẫn lớn lên được khi chưa có lá xanh? | Nhờ chất dinh dưỡng được dự trữ sẵn trong hạt | ☐ |
-| liv-63 | vừa |  | Khi hạt nảy mầm, bộ phận nào thường mọc ra đầu tiên? | Rễ | ☐ |
+| liv-63 | vừa | seed-sprout | Khi hạt nảy mầm, bộ phận nào thường mọc ra đầu tiên? | Rễ | ☐ |
 | liv-64 | vừa |  | Vì sao không nên gieo hạt quá sâu trong đất? | Mầm yếu không đủ sức vươn lên mặt đất | ☐ |
 | liv-65 | khó |  | Ba hộp đều có hạt giống: hộp 1 ẩm và ấm, hộp 2 khô ráo, hộp 3 đông lạnh trong tủ lạnh. Hạ… | Chỉ hạt trong hộp 1 | ☐ |
 
@@ -149,9 +149,9 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
-| liv-66 | dễ |  | Con vật nào ăn cỏ? | Con bò | ☐ |
+| liv-66 | dễ | animal-teeth | Con vật nào ăn cỏ? | Con bò | ☐ |
 | liv-67 | dễ |  | Con vật nào dưới đây là loài săn mồi? | Con hổ | ☐ |
-| liv-68 | vừa |  | Răng nanh nhọn và sắc của sư tử dùng để làm gì? | Xé thịt con mồi | ☐ |
+| liv-68 | vừa | animal-teeth | Răng nanh nhọn và sắc của sư tử dùng để làm gì? | Xé thịt con mồi | ☐ |
 | liv-69 | vừa |  | Vì sao em nên đánh răng sau khi ăn? | Để loại bỏ thức ăn thừa và vi khuẩn gây sâu răng | ☐ |
 | liv-70 | khó |  | Gà không có răng nhưng vẫn nghiền được thức ăn cứng. Gà làm điều đó bằng cách nào? | Nuốt sỏi nhỏ để sỏi nghiền thức ăn trong dạ dày cơ | ☐ |
 
@@ -169,8 +169,8 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
-| liv-76 | dễ |  | Vi khuẩn và nấm trong đất có vai trò gì với lá rụng? | Phân hủy lá thành chất dinh dưỡng cho đất | ☐ |
-| liv-77 | vừa |  | Vì sao người ta ủ phân từ vỏ rau và lá cây? | Để vi sinh vật phân hủy thành phân bón cho cây | ☐ |
+| liv-76 | dễ | compost-cycle | Vi khuẩn và nấm trong đất có vai trò gì với lá rụng? | Phân hủy lá thành chất dinh dưỡng cho đất | ☐ |
+| liv-77 | vừa | compost-cycle | Vì sao người ta ủ phân từ vỏ rau và lá cây? | Để vi sinh vật phân hủy thành phân bón cho cây | ☐ |
 | liv-78 | vừa |  | Sinh vật nào dưới đây là sinh vật phân hủy? | Nấm mốc trên bánh mì | ☐ |
 | liv-79 | khó |  | Nếu không có sinh vật phân hủy, điều gì sẽ xảy ra với lá rụng và xác động vật? | Chúng chất đống mãi và chất dinh dưỡng không quay lại đất | ☐ |
 | liv-80 | vừa |  | Tái chế giấy và nhựa giúp ích gì cho môi trường? | Giảm rác thải và tiết kiệm tài nguyên | ☐ |
@@ -210,7 +210,7 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | phy-13 | khó |  | Bạn có một thanh nam châm đã biết cực N. Muốn biết đầu nào của thanh khác là cực N, bạn l… | Đưa cực N đã biết lại gần, đầu nào đẩy ra thì đầu đó là cực… | ☐ |
 | phy-58 | dễ |  | Nam châm có thể hút đinh sắt qua lớp giấy hoặc vải mỏng. Điều này cho thấy gì? | Lực từ đi xuyên qua giấy và vải mỏng | ☐ |
 | phy-091 | vừa |  | Khi đưa nam châm ra xa một đinh sắt, lực hút thay đổi thế nào? | Yếu đi | ☐ |
-| phy-092 | dễ |  | La bàn hoạt động dựa trên điều gì? | Kim nam châm quay theo từ trường Trái Đất | ☐ |
+| phy-092 | dễ | compass | La bàn hoạt động dựa trên điều gì? | Kim nam châm quay theo từ trường Trái Đất | ☐ |
 | phy-093 | khó |  | Hai nam châm đang hút nhau. Nếu xoay một thanh nam châm 180 độ, điều gì xảy ra? | Chúng đẩy nhau ra vì hai cực cùng tên đối diện | ☐ |
 | phy-094 | dễ |  | Vì sao nam châm hút được đinh sắt nhưng không hút được quả bóng nhựa? | Đinh làm bằng sắt, còn nhựa không bị từ lực hút | ☐ |
 
@@ -227,7 +227,7 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | phy-18 | khó |  | Vì sao người ta thường bọc dây điện bằng nhựa hoặc cao su? | Để điện không thoát ra ngoài và tránh điện giật cho người | ☐ |
 | phy-19 | khó |  | Nếu em chạm vào dây điện bị hở vỏ bọc, điều gì nguy hiểm nhất? | Điện có thể chạy qua người và gây nguy hiểm | ☐ |
 | phy-60 | dễ | circuit-closed | Để đèn pin sáng, em cần gì? | Pin và bóng đèn được nối kín thành mạch | ☐ |
-| phy-095 | vừa |  | Trong chuỗi đèn trang trí nối tiếp, khi một bóng hỏng thì cả chuỗi tắt. Vì sao? | Điện phải đi qua tất cả các bóng, nên một chỗ đứt làm mạch … | ☐ |
+| phy-095 | vừa | series-circuit | Trong chuỗi đèn trang trí nối tiếp, khi một bóng hỏng thì cả chuỗi tắt. Vì sao? | Điện phải đi qua tất cả các bóng, nên một chỗ đứt làm mạch … | ☐ |
 | phy-096 | dễ |  | Vì sao cần tắt công tắc điện trước khi thay bóng đèn? | Để tránh bị điện giật khi chạm vào chỗ có điện | ☐ |
 
 ### Vật dẫn và cách điện (10 câu)
@@ -272,7 +272,7 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | phy-36 | vừa |  | Trong phòng kín không có đèn và không có cửa sổ, vì sao ta không nhìn thấy gì? | Vì không có ánh sáng đi vào mắt | ☐ |
 | phy-37 | khó |  | Em chiếu đèn pin vào một chiếc gương. Ánh sáng sẽ đi thế nào? | Bật lại theo đường thẳng | ☐ |
 | phy-104 | vừa |  | Vì sao kính râm giúp mắt đỡ chói khi ra nắng? | Kính giảm bớt lượng ánh sáng đi vào mắt | ☐ |
-| phy-105 | khó |  | Vì sao sau cơn mưa có thể thấy cầu vồng? | Ánh sáng Mặt Trời bị tách thành nhiều màu khi đi qua giọt n… | ☐ |
+| phy-105 | khó | rainbow | Vì sao sau cơn mưa có thể thấy cầu vồng? | Ánh sáng Mặt Trời bị tách thành nhiều màu khi đi qua giọt n… | ☐ |
 | phy-106 | vừa |  | Vì sao ta nhìn thấy quả táo có màu đỏ? | Quả táo phản xạ ánh sáng đỏ và hấp thụ các màu khác | ☐ |
 
 ### Lực đẩy và lực kéo (11 câu)
@@ -322,7 +322,7 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
-| phy-061 | dễ |  | Khi để muỗng kim loại trong cốc nước nóng, điều gì xảy ra với tay cầm muỗng? | Tay cầm nóng lên dần | ☐ |
+| phy-061 | dễ | heat-spoon | Khi để muỗng kim loại trong cốc nước nóng, điều gì xảy ra với tay cầm muỗng? | Tay cầm nóng lên dần | ☐ |
 | phy-062 | dễ |  | Vật liệu nào dẫn nhiệt kém, thường được dùng làm tay cầm nồi? | Nhựa hoặc gỗ | ☐ |
 | phy-063 | vừa |  | Không khí nóng nhẹ hơn bốc lên cao, rồi không khí lạnh hơn chìm xuống. Kiểu truyền nhiệt … | Đối lưu | ☐ |
 | phy-064 | vừa |  | Vì sao áo màu sáng thường giúp người mặc đỡ nóng hơn áo màu tối khi trời nắng? | Màu sáng phản xạ nhiều ánh sáng và hấp thụ ít nhiệt hơn | ☐ |
@@ -337,7 +337,7 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | phy-066 | dễ |  | Năng lượng nào đến từ Mặt Trời và giúp cây làm ra thức ăn? | Năng lượng ánh sáng | ☐ |
 | phy-067 | dễ |  | Pin của đèn pin biến năng lượng hóa học thành dạng năng lượng nào? | Điện năng, rồi thành ánh sáng và nhiệt | ☐ |
 | phy-068 | vừa |  | Khi em đạp xe, năng lượng từ thức ăn trong cơ thể chuyển thành dạng nào để bánh xe quay? | Động năng (chuyển động) | ☐ |
-| phy-069 | vừa |  | Một quả bóng được giữ trên cao rồi thả rơi. Trước khi rơi, năng lượng của bóng ở dạng nào? | Thế năng, vì nó đang ở độ cao | ☐ |
+| phy-069 | vừa | energy-ball | Một quả bóng được giữ trên cao rồi thả rơi. Trước khi rơi, năng lượng của bóng ở dạng nào? | Thế năng, vì nó đang ở độ cao | ☐ |
 | phy-070 | khó |  | Trong máy phát điện gió, dạng năng lượng nào được chuyển thành điện năng? | Động năng của gió làm cánh quạt quay | ☐ |
 | phy-116 | dễ |  | Khi bật bếp điện, điện năng chuyển thành dạng nào để nấu chín thức ăn? | Nhiệt năng | ☐ |
 | phy-117 | vừa |  | Khi lò xo bị nén rồi thả ra, năng lượng nào làm đồ chơi nhảy lên? | Thế năng đàn hồi của lò xo chuyển thành động năng | ☐ |
@@ -346,22 +346,22 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
-| phy-071 | dễ |  | Mặt phẳng nghiêng, chẳng hạn như con dốc, giúp chúng ta điều gì? | Đưa vật nặng lên cao với lực nhỏ hơn | ☐ |
+| phy-071 | dễ | simple-machines | Mặt phẳng nghiêng, chẳng hạn như con dốc, giúp chúng ta điều gì? | Đưa vật nặng lên cao với lực nhỏ hơn | ☐ |
 | phy-072 | vừa |  | Kéo là ví dụ của máy đơn giản nào? | Đòn bẩy | ☐ |
-| phy-073 | vừa |  | Bập bênh trên sân chơi là ví dụ của máy đơn giản nào? | Đòn bẩy có điểm tựa ở giữa | ☐ |
+| phy-073 | vừa | simple-machines | Bập bênh trên sân chơi là ví dụ của máy đơn giản nào? | Đòn bẩy có điểm tựa ở giữa | ☐ |
 | phy-074 | vừa |  | Vì sao đặt vật lên bánh xe rồi đẩy lại dễ hơn là kéo lê trên mặt đất? | Bánh xe lăn thay vì trượt, nên giảm ma sát | ☐ |
-| phy-075 | khó |  | Một ròng rọc cố định được dùng để kéo thùng nặng lên cao. Ròng rọc này giúp điều gì? | Đổi hướng lực kéo, nên có thể kéo từ trên xuống dễ hơn | ☐ |
+| phy-075 | khó | simple-machines | Một ròng rọc cố định được dùng để kéo thùng nặng lên cao. Ròng rọc này giúp điều gì? | Đổi hướng lực kéo, nên có thể kéo từ trên xuống dễ hơn | ☐ |
 | phy-118 | dễ |  | Xe cút kít là ví dụ của máy đơn giản nào? | Đòn bẩy có điểm tựa ở bánh xe | ☐ |
 
 ### Hòa tan và hỗn hợp (7 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
-| phy-076 | dễ |  | Khi khuấy đường vào nước, điều gì xảy ra với đường? | Tan vào nước và không còn nhìn thấy các hạt | ☐ |
+| phy-076 | dễ | dissolve-cup | Khi khuấy đường vào nước, điều gì xảy ra với đường? | Tan vào nước và không còn nhìn thấy các hạt | ☐ |
 | phy-077 | vừa |  | Hòa tan muối vào nước cho đến khi muối không tan thêm được nữa. Dung dịch này gọi là gì? | Dung dịch bão hòa | ☐ |
-| phy-078 | vừa |  | Cát trộn với nước rồi để yên, cát lắng xuống đáy. Đây là loại hỗn hợp nào? | Không hòa tan, có thể lọc được | ☐ |
+| phy-078 | vừa | dissolve-cup | Cát trộn với nước rồi để yên, cát lắng xuống đáy. Đây là loại hỗn hợp nào? | Không hòa tan, có thể lọc được | ☐ |
 | phy-079 | vừa |  | Muốn lấy lại muối từ nước muối, cách nào dễ nhất? | Đun cho nước bốc hơi hết, muối còn lại đáy nồi | ☐ |
-| phy-080 | khó |  | Trong ba chất đường, cát và dầu ăn, chất nào tan trong nước? | Chỉ đường | ☐ |
+| phy-080 | khó | dissolve-cup | Trong ba chất đường, cát và dầu ăn, chất nào tan trong nước? | Chỉ đường | ☐ |
 | phy-119 | dễ |  | Khi pha đường vào nước chanh và khuấy đều đến khi đường biến mất, hỗn hợp thu được gọi là… | Dung dịch | ☐ |
 | phy-120 | khó |  | Nước đường đã bão hòa. Khi để nước bốc hơi bớt, điều gì xảy ra với đường? | Đường kết tinh và lắng xuống đáy | ☐ |
 
@@ -520,9 +520,9 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
 | ear-065 | dễ |  | Ban đêm, các ngôi sao trông lấp lánh. Thật ra ngôi sao là gì? | Những khối khí cực nóng tự phát sáng | ☐ |
-| ear-066 | vừa |  | Một nhóm sao tạo thành hình dễ nhận ra trên bầu trời được gọi là gì? | Chòm sao | ☐ |
+| ear-066 | vừa | constellation | Một nhóm sao tạo thành hình dễ nhận ra trên bầu trời được gọi là gì? | Chòm sao | ☐ |
 | ear-067 | vừa |  | Vì sao các ngôi sao ban đêm dường như di chuyển trên bầu trời? | Vì Trái Đất tự quay | ☐ |
-| ear-068 | khó |  | Vì sao sao Bắc Cực dường như đứng yên ở gần một hướng trên bầu trời? | Vì nó nằm gần trục quay kéo dài của Trái Đất | ☐ |
+| ear-068 | khó | constellation | Vì sao sao Bắc Cực dường như đứng yên ở gần một hướng trên bầu trời? | Vì nó nằm gần trục quay kéo dài của Trái Đất | ☐ |
 | ear-069 | dễ |  | Vì sao ban ngày ta không nhìn thấy các ngôi sao? | Vì ánh sáng Mặt Trời làm chúng bị lấn át | ☐ |
 | ear-114 | vừa |  | Sao băng là gì? | Một mảnh đá nhỏ từ vũ trụ cháy sáng khi lao vào khí quyển | ☐ |
 | ear-115 | khó |  | Vì sao các ngôi sao có màu xanh, vàng hoặc đỏ khác nhau? | Vì nhiệt độ bề mặt khác nhau; sao xanh nóng hơn sao đỏ | ☐ |
@@ -532,7 +532,7 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
 | ear-070 | dễ |  | Gió là gì? | Không khí đang chuyển động | ☐ |
-| ear-071 | vừa |  | Vì sao ban ngày thường có gió thổi từ biển vào đất liền? | Đất nóng nhanh hơn biển, không khí nóng trên đất bốc lên nê… | ☐ |
+| ear-071 | vừa | sea-breeze | Vì sao ban ngày thường có gió thổi từ biển vào đất liền? | Đất nóng nhanh hơn biển, không khí nóng trên đất bốc lên nê… | ☐ |
 | ear-072 | vừa |  | Không khí có khối lượng không? Quả bóng bơm đầy không khí so với quả bóng xẹp thì thế nào? | Bóng đầy không khí nặng hơn một chút | ☐ |
 | ear-073 | khó |  | Vì sao khi bơm xe đạp, không khí bị nén lại nóng lên? | Khi bị nén, các phân tử không khí va chạm nhiều hơn và sinh… | ☐ |
 | ear-074 | vừa |  | Khí nào chiếm phần lớn nhất trong không khí chúng ta đang thở? | Nitơ | ☐ |
@@ -555,11 +555,11 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
-| ear-080 | dễ |  | Vùng đất cao nhô lên rất cao khỏi mặt đất được gọi là gì? | Núi | ☐ |
-| ear-081 | vừa |  | Sông thường chảy theo hướng nào? | Từ vùng cao xuống vùng thấp, rồi ra biển hoặc hồ | ☐ |
-| ear-082 | vừa |  | Núi lửa là gì? | Lỗ hở trên vỏ Trái Đất, qua đó dung nham và khí có thể phun… | ☐ |
+| ear-080 | dễ | landforms | Vùng đất cao nhô lên rất cao khỏi mặt đất được gọi là gì? | Núi | ☐ |
+| ear-081 | vừa | landforms | Sông thường chảy theo hướng nào? | Từ vùng cao xuống vùng thấp, rồi ra biển hoặc hồ | ☐ |
+| ear-082 | vừa | volcano | Núi lửa là gì? | Lỗ hở trên vỏ Trái Đất, qua đó dung nham và khí có thể phun… | ☐ |
 | ear-083 | khó |  | Động đất thường xảy ra khi nào? | Khi các mảng đá dưới lòng đất dịch chuyển đột ngột | ☐ |
-| ear-084 | dễ |  | Vùng đất bằng phẳng, rộng lớn và ít đồi núi được gọi là gì? | Đồng bằng | ☐ |
+| ear-084 | dễ | landforms | Vùng đất bằng phẳng, rộng lớn và ít đồi núi được gọi là gì? | Đồng bằng | ☐ |
 | ear-120 | dễ |  | Thung lũng là gì? | Vùng trũng thấp nằm giữa hai sườn núi hoặc đồi | ☐ |
 | ear-121 | khó |  | Hang động trong núi đá vôi thường hình thành như thế nào? | Nước mưa có chút axit hòa tan đá vôi dần dần qua hàng nghìn… | ☐ |
 
@@ -567,8 +567,8 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
-| ear-085 | dễ |  | Hành tinh nào gần Mặt Trời nhất? | Sao Thủy | ☐ |
-| ear-086 | vừa |  | Trái Đất là hành tinh thứ mấy tính từ Mặt Trời? | Thứ ba | ☐ |
+| ear-085 | dễ | planets-order | Hành tinh nào gần Mặt Trời nhất? | Sao Thủy | ☐ |
+| ear-086 | vừa | planets-order | Trái Đất là hành tinh thứ mấy tính từ Mặt Trời? | Thứ ba | ☐ |
 | ear-087 | vừa |  | Hành tinh nào nổi tiếng với những vành đai sáng đẹp quanh mình? | Sao Thổ | ☐ |
 | ear-088 | khó |  | Sao Kim thường được gọi là gì vì nó là vật sáng nhất trên bầu trời lúc gần bình minh hoặc… | Sao Mai hoặc sao Hôm | ☐ |
 | ear-095 | vừa |  | Trên hành tinh nào, nhiệt độ bề mặt cao nhất trong Hệ Mặt Trời? | Sao Kim | ☐ |
@@ -638,7 +638,7 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | inq-33 | vừa |  | Vì sao biểu đồ cần có tiêu đề và tên các cột? | Để người xem hiểu biểu đồ nói về điều gì | ☐ |
 | inq-62 | vừa |  | Trong bảng số liệu có hàng và cột. Để biết có bao nhiêu bạn thích cam, em đọc ở đâu? | Hàng “cam” và cột “số bạn” | ☐ |
 | inq-117 | dễ |  | Trên biểu đồ cột, cột cao hơn nghĩa là gì? | Số lượng lớn hơn | ☐ |
-| inq-118 | vừa |  | Bảng ghi: Lan 4 quả, Minh 6 quả, Hoa 4 quả. Ai ăn nhiều quả nhất? | Minh | ☐ |
+| inq-118 | vừa | pictograph | Bảng ghi: Lan 4 quả, Minh 6 quả, Hoa 4 quả. Ai ăn nhiều quả nhất? | Minh | ☐ |
 | inq-119 | khó |  | Một biểu đồ cột có 5 cột với số liệu: 2, 6, 3, 8, 1. Tổng của tất cả các cột là bao nhiêu? | 20 | ☐ |
 
 ### Thí nghiệm công bằng (9 câu)
@@ -706,12 +706,12 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
-| inq-064 | dễ |  | Dãy số 2, 4, 6, 8 thì số tiếp theo là số nào? | 10 | ☐ |
+| inq-064 | dễ | pattern-sequence | Dãy số 2, 4, 6, 8 thì số tiếp theo là số nào? | 10 | ☐ |
 | inq-065 | dễ |  | Dãy màu đỏ, xanh, đỏ, xanh, đỏ… thì màu tiếp theo là màu gì? | Xanh | ☐ |
 | inq-066 | vừa |  | Một cây cao 10 cm và mỗi tuần cao thêm 5 cm. Sau 3 tuần cây cao bao nhiêu cm? | 25 cm | ☐ |
 | inq-067 | vừa |  | Nếu hôm nay là thứ Tư, thì ba ngày sau là thứ mấy? | Thứ Bảy | ☐ |
 | inq-068 | vừa |  | Nhiệt độ đo hằng ngày là 20 °C, 22 °C, 24 °C, 26 °C. Nếu quy luật tiếp tục, ngày thứ 5 nh… | 28 °C | ☐ |
-| inq-122 | dễ |  | Dãy số 5, 10, 15, 20… số tiếp theo là số nào? | 25 | ☐ |
+| inq-122 | dễ | pattern-sequence | Dãy số 5, 10, 15, 20… số tiếp theo là số nào? | 25 | ☐ |
 | inq-123 | dễ |  | Chữ cái nào nối tiếp sau G trong dãy A, C, E, G? | I | ☐ |
 
 ### Ước lượng và đơn vị đo (5 câu)
@@ -720,7 +720,7 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | --- | --- | --- | --- | --- | --- |
 | inq-069 | dễ |  | Đơn vị nào dùng để đo độ dài ngắn như chiều dài của bút chì? | Centimét (cm) | ☐ |
 | inq-070 | dễ |  | Đơn vị nào thường dùng để đo khối lượng của một quả táo? | Gam (g) | ☐ |
-| inq-071 | vừa |  | Một cốc nước thường có thể tích khoảng bao nhiêu? | Khoảng 200 mililít | ☐ |
+| inq-071 | vừa | measuring-cup | Một cốc nước thường có thể tích khoảng bao nhiêu? | Khoảng 200 mililít | ☐ |
 | inq-072 | vừa |  | Nhiệt độ của một ngày nắng ở Việt Nam thường khoảng bao nhiêu độ C? | Khoảng 30 °C | ☐ |
 | inq-073 | khó |  | Bạn muốn ước lượng chiều cao của lớp học. Cách nào hợp lý nhất? | Đo chiều cao tường bằng thước dây hoặc so với chiều cao của… | ☐ |
 
@@ -729,7 +729,7 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
 | inq-074 | dễ |  | Khi làm thí nghiệm có hóa chất hoặc nước nóng, em nên làm gì đầu tiên? | Hỏi và làm theo hướng dẫn của người lớn | ☐ |
-| inq-075 | dễ |  | Vì sao nên đeo kính bảo hộ khi làm thí nghiệm? | Để bảo vệ mắt khỏi hóa chất hoặc vật nhỏ bắn vào | ☐ |
+| inq-075 | dễ | lab-goggles | Vì sao nên đeo kính bảo hộ khi làm thí nghiệm? | Để bảo vệ mắt khỏi hóa chất hoặc vật nhỏ bắn vào | ☐ |
 | inq-076 | vừa |  | Khi nước rất nóng làm bỏng tay, em nên làm gì trước tiên? | Rửa tay dưới vòi nước mát và báo người lớn ngay | ☐ |
 | inq-077 | vừa |  | Vì sao không nên nếm thử bất kỳ chất nào trong phòng thí nghiệm? | Vì nhiều chất có thể gây hại hoặc có độc | ☐ |
 | inq-078 | khó |  | Khi dùng đèn cồn để đun nước, điều gì quan trọng nhất để đảm bảo an toàn? | Đặt đèn xa vật dễ cháy và có người lớn hỗ trợ | ☐ |
@@ -739,9 +739,9 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
 | inq-079 | dễ |  | Biểu đồ đường thường dùng để làm gì? | Cho thấy sự thay đổi của một đại lượng theo thời gian | ☐ |
-| inq-080 | vừa |  | Trên biểu đồ đường, nhiệt độ buổi sáng là 20 °C, buổi trưa là 30 °C, buổi tối là 24 °C. N… | Buổi trưa | ☐ |
-| inq-081 | vừa |  | Nhiệt độ buổi trưa là 30 °C, buổi tối là 24 °C. Nhiệt độ đã giảm bao nhiêu độ? | 6 °C | ☐ |
-| inq-082 | khó |  | Một biểu đồ đường cho thấy chiều cao của cây tăng dần qua các tuần. Điều gì làm cho đường… | Cây càng ngày càng cao hơn | ☐ |
+| inq-080 | vừa | line-graph | Trên biểu đồ đường, nhiệt độ buổi sáng là 20 °C, buổi trưa là 30 °C, buổi tối là 24 °C. N… | Buổi trưa | ☐ |
+| inq-081 | vừa | line-graph | Nhiệt độ buổi trưa là 30 °C, buổi tối là 24 °C. Nhiệt độ đã giảm bao nhiêu độ? | 6 °C | ☐ |
+| inq-082 | khó | line-graph | Một biểu đồ đường cho thấy chiều cao của cây tăng dần qua các tuần. Điều gì làm cho đường… | Cây càng ngày càng cao hơn | ☐ |
 | inq-083 | vừa |  | Vì sao nên vẽ đường nối các điểm dữ liệu theo thứ tự thời gian? | Để thấy xu hướng tăng hoặc giảm rõ ràng | ☐ |
 
 ### Thiết kế thí nghiệm (6 câu)

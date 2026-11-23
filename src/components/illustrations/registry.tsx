@@ -31,6 +31,27 @@ import KidsDialogue from './KidsDialogue'
 import DailyRoutine from './DailyRoutine'
 import LookListen from './LookListen'
 
+import SeedSprout from './SeedSprout'
+import AnimalTeeth from './AnimalTeeth'
+import CompostCycle from './CompostCycle'
+import HeatSpoon from './HeatSpoon'
+import DissolveCup from './DissolveCup'
+import SimpleMachines from './SimpleMachines'
+import PlanetsOrder from './PlanetsOrder'
+import Constellation from './Constellation'
+import SeaBreeze from './SeaBreeze'
+import Landforms from './Landforms'
+import Volcano from './Volcano'
+import Rainbow from './Rainbow'
+import LineGraph from './LineGraph'
+import Pictograph from './Pictograph'
+import MeasuringCup from './MeasuringCup'
+import PatternSequence from './PatternSequence'
+import LabGoggles from './LabGoggles'
+import EnergyBall from './EnergyBall'
+import SeriesCircuit from './SeriesCircuit'
+import Compass from './Compass'
+
 /** Bảng tra illustrationId -> component. Record buộc phải có đủ mọi id. */
 export const ILLUSTRATIONS: Record<IllustrationId, ComponentType> = {
   magnets: Magnets,
@@ -67,4 +88,24 @@ export const ILLUSTRATIONS: Record<IllustrationId, ComponentType> = {
   'en-dialogue': KidsDialogue,
   'en-daily-routine': DailyRoutine,
   'en-look-listen': LookListen,
+  'seed-sprout': SeedSprout,
+  'animal-teeth': AnimalTeeth,
+  'compost-cycle': CompostCycle,
+  'heat-spoon': HeatSpoon,
+  'dissolve-cup': DissolveCup,
+  'simple-machines': SimpleMachines,
+  'planets-order': PlanetsOrder,
+  'constellation': Constellation,
+  'sea-breeze': SeaBreeze,
+  'landforms': Landforms,
+  'volcano': Volcano,
+  'rainbow': Rainbow,
+  'line-graph': LineGraph,
+  'pictograph': Pictograph,
+  'measuring-cup': MeasuringCup,
+  'pattern-sequence': PatternSequence,
+  'lab-goggles': LabGoggles,
+  'energy-ball': EnergyBall,
+  'series-circuit': SeriesCircuit,
+  'compass': Compass,
 }
