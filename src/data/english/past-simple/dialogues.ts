@@ -1,0 +1,43 @@
+import type { EnglishQuestionInput } from '../../../types/quiz'
+import { section } from '../helpers'
+
+const dialogues = section('past-simple', 'pa-dialogues')
+
+export const DIALOGUES: EnglishQuestionInput[] = [
+  dialogues('easy', 'd', 'A: "Did you have a good weekend?"\nB: "Yes, I ___ to the beach with my family."', ['went', 'go', 'goed', 'gone'],
+    ['Câu hỏi dùng Did → chuyện cuối tuần đã qua.', 'Quá khứ đơn: go → went.'],
+    ['The question uses Did → the weekend is over.', 'Past simple: go → went.'], { ill: 'en-dialogue' }),
+  dialogues('easy', 'd', 'A: "What did you eat for lunch?"\nB: "I ___ rice and fish."', ['ate', 'eated', 'eat', 'eaten'],
+    ['Câu hỏi dùng did → bữa trưa đã qua.', 'Quá khứ đơn: eat → ate.'],
+    ['The question uses did → lunch is over.', 'Past simple: eat → ate.']),
+  dialogues('easy', 'd', 'A: "Were you at school yesterday?"\nB: "No, I ___. I was ill."', ['wasn’t', 'didn’t', 'weren’t', 'don’t'],
+    ['Câu hỏi bắt đầu bằng Were you.', 'Trả lời ngắn với I: No, I wasn’t.'],
+    ['The question starts with Were you.', 'Short answer with I: No, I wasn’t.']),
+  dialogues('easy', 'd', 'A: "Did you do your homework?"\nB: "Yes, I ___ it before dinner."', ['did', 'do', 'done', 'doed'],
+    ['Câu hỏi dùng Did → đã làm xong.', 'Quá khứ đơn: do → did.'],
+    ['The question uses Did → it is finished.', 'Past simple: do → did.']),
+  dialogues('easy', 'd', 'A: "Who did you play with?"\nB: "I ___ with my cousin."', ['played', 'play', 'plays', 'playd'],
+    ['Câu hỏi dùng did → đã chơi.', 'Quá khứ đơn: play + ed → played.'],
+    ['The question uses did → it happened.', 'Past simple: play + ed → played.']),
+  dialogues('medium', 'd', 'A: "Where did Tom go on holiday?"\nB: "He ___ to Italy."', ['went', 'go', 'goes', 'goed'],
+    ['Câu hỏi dùng did → kỳ nghỉ đã qua.', 'Quá khứ đơn: go → went.'],
+    ['The question uses did → the holiday is over.', 'Past simple: go → went.']),
+  dialogues('medium', 'd', 'A: "Why were you late?"\nB: "I ___ my bus."', ['missed', 'miss', 'missd', 'was miss'],
+    ['Hỏi lý do đã đến muộn (chuyện đã qua).', 'Quá khứ đơn: miss + ed → missed.'],
+    ['It asks why you were late (a past event).', 'Past simple: miss + ed → missed.']),
+  dialogues('medium', 'd', 'A: "Did Lily buy a present?"\nB: "Yes, she ___ a book."', ['bought', 'buyed', 'buy', 'buys'],
+    ['Câu hỏi dùng Did.', 'Quá khứ đơn: buy → bought.'],
+    ['The question uses Did.', 'Past simple: buy → bought.']),
+  dialogues('medium', 'd', 'A: "How was the film?"\nB: "It ___ really good. I loved it."', ['was', 'were', 'is', 'did'],
+    ['Câu hỏi dùng was → phim đã xem xong.', 'it + was.'],
+    ['The question uses was → the film is over.', 'it + was.'], { trap: true }),
+  dialogues('medium', 'd', 'A: "Did your parents come to the match?"\nB: "No, they ___. They were at work."', ['didn’t', 'weren’t', 'don’t', 'hadn’t'],
+    ['Câu hỏi bắt đầu bằng Did.', 'Trả lời ngắn: No, they didn’t.'],
+    ['The question starts with Did.', 'Short answer: No, they didn’t.']),
+  dialogues('hard', 'd', 'A: "What time did you wake up this morning?"\nB: "I ___ at six, but I stayed in bed until seven."', ['woke', 'waked', 'wake', 'wakes'],
+    ['Câu hỏi dùng did → sáng nay đã qua.', 'Quá khứ đơn: wake → woke.'],
+    ['The question uses did → this morning is over.', 'Past simple: wake → woke.']),
+  dialogues('hard', 'd', 'A: "Did you enjoy the concert?"\nB: "Yes! We ___ all our favourite songs."', ['heard', 'hear', 'heared', 'hears'],
+    ['Câu hỏi dùng Did → buổi hòa nhạc đã xong.', 'Quá khứ đơn: hear → heard.'],
+    ['The question uses Did → the concert is over.', 'Past simple: hear → heard.']),
+]

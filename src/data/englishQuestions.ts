@@ -1,9 +1,9 @@
 import type { EnglishQuestion } from '../types/quiz'
-import { PRESENT_SIMPLE_QUESTIONS } from './english/presentSimple'
-import { PRESENT_CONTINUOUS_QUESTIONS } from './english/presentContinuous'
-import { PAST_SIMPLE_QUESTIONS } from './english/pastSimple'
+import { PRESENT_SIMPLE_QUESTIONS } from './english/present-simple'
+import { PRESENT_CONTINUOUS_QUESTIONS } from './english/present-continuous'
+import { PAST_SIMPLE_QUESTIONS } from './english/past-simple'
 
-/** 360 câu Tiếng Anh chuẩn Cambridge KET (A2) / PET (B1): 3 thì × 10 chủ điểm × 12 câu. */
+/** Câu Tiếng Anh chuẩn Cambridge KET (A2) / PET (B1): 3 thì × 10 chủ điểm; mục tiêu 100 câu mỗi chủ điểm (1000 câu mỗi thì). */
 export const ENGLISH_QUESTIONS: EnglishQuestion[] = [
   ...PRESENT_SIMPLE_QUESTIONS,
   ...PRESENT_CONTINUOUS_QUESTIONS,

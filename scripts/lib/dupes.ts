@@ -30,28 +30,49 @@ const viText = (q: Question) => (q.subject === 'english' ? `${q.passage_en ?? ''
 const enText = (q: Question) => (q.subject === 'english' ? `${q.passage_en ?? ''} ${q.question_en}` : q.question_en)
 const answerText = (q: Question) => (q.subject === 'english' ? q.options_en[q.correctIndex] : q.options_vi[q.correctIndex])
 
+interface Prepared {
+  q: Question
+  nvi: string
+  nen: string
+  viTok: Set<string>
+  enTok: Set<string>
+}
+
 export function findDupes(qs: Question[], allow: AllowEntry[]): DupeReport {
   const errors: string[] = []
   const warnings: string[] = []
   const allowed = (a: string, b: string) =>
     allow.some((e) => (e.a === a && e.b === b) || (e.a === b && e.b === a))
 
-  for (let i = 0; i < qs.length; i++) {
-    for (let j = i + 1; j < qs.length; j++) {
-      const p = qs[i]
-      const q = qs[j]
-      const pair = `${p.id} / ${q.id}`
+  // Chuẩn hoá và tách từ một lần cho mỗi câu (kho Tiếng Anh lên tới hàng nghìn câu).
+  const prep: Prepared[] = qs.map((q) => ({
+    q,
+    nvi: normalize(viText(q)),
+    nen: normalize(enText(q)),
+    viTok: tokens(viText(q)),
+    enTok: tokens(enText(q)),
+  }))
+
+  for (let i = 0; i < prep.length; i++) {
+    for (let j = i + 1; j < prep.length; j++) {
+      const a = prep[i]
+      const b = prep[j]
+      const p = a.q
+      const q = b.q
       if (p.subject !== q.subject) continue
       const english = p.subject === 'english'
+      // Tiếng Anh: so sánh gần-trùng trong cùng một thì; trùng nguyên văn được kiểm tra riêng toàn kho bên dưới.
+      if (english && p.topic !== q.topic) continue
+      const pair = `${p.id} / ${q.id}`
       const sameSub = p.subtopic === q.subtopic
 
       // 1) Cùng nội dung câu hỏi: không cho phép allowlist.
-      if (normalize(viText(p)) === normalize(viText(q)) || normalize(enText(p)) === normalize(enText(q))) {
+      if (a.nvi === b.nvi || a.nen === b.nen) {
         errors.push(`${pair}: trùng nguyên văn câu hỏi (không được allowlist)`)
         continue
       }
 
-      const sim = Math.max(jaccard(tokens(viText(p)), tokens(viText(q))), jaccard(tokens(enText(p)), tokens(enText(q))))
+      const sim = Math.max(jaccard(a.viTok, b.viTok), jaccard(a.enTok, b.enTok))
       const sameAnswer = !english && sameSub && normalize(answerText(p)) === normalize(answerText(q))
 
       if (sameSub && sim >= (english ? SIM_ERROR_EN : SIM_ERROR) && !allowed(p.id, q.id)) {
@@ -63,5 +84,14 @@ export function findDupes(qs: Question[], allow: AllowEntry[]): DupeReport {
       }
     }
   }
-  return { errors, warnings }
+
+  // Tiếng Anh: không được trùng nguyên văn (kể cả khác thì) trên toàn kho.
+  const seen = new Map<string, string>()
+  for (const x of prep) {
+    if (x.q.subject !== 'english') continue
+    const first = seen.get(x.nen)
+    if (first && first !== x.q.id) errors.push(`${first} / ${x.q.id}: trùng nguyên văn câu hỏi (không được allowlist)`)
+    else seen.set(x.nen, x.q.id)
+  }
+  return { errors: Array.from(new Set(errors)), warnings }
 }

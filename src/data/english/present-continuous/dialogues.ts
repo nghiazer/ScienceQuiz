@@ -1,0 +1,43 @@
+import type { EnglishQuestionInput } from '../../../types/quiz'
+import { section } from '../helpers'
+
+const dialogues = section('present-continuous', 'pc-dialogues')
+
+export const DIALOGUES: EnglishQuestionInput[] = [
+  dialogues('easy', 'd', 'A: "Where is Tom?"\nB: "He ___ his bike in the garden."', ['is riding', 'rides', 'ride', 'riding'],
+    ['Hỏi Tom đang ở đâu, làm gì lúc này.', 'he + is + V-ing → is riding.'],
+    ['It asks what Tom is doing right now.', 'he + is + V-ing → is riding.'], { ill: 'en-dialogue' }),
+  dialogues('easy', 'd', 'A: "What are you doing?"\nB: "I ___ a picture of my dog."', ['am painting', 'paint', 'paints', 'painting'],
+    ['“What are you doing?” → hỏi việc đang làm.', 'I + am + V-ing → am painting.'],
+    ['“What are you doing?” → asks about now.', 'I + am + V-ing → am painting.'], { ill: 'en-dialogue' }),
+  dialogues('easy', 'd', 'A: "Are you watching TV?"\nB: "No, I ___. I’m reading a comic."', ['am not', 'don’t', 'isn’t', 'not'],
+    ['Câu hỏi bắt đầu bằng Are you.', 'Trả lời ngắn: No, I’m not.'],
+    ['The question starts with Are you.', 'Short answer: No, I’m not.']),
+  dialogues('easy', 'd', 'A: "Is it raining?"\nB: "No, it ___. We can go out."', ['isn’t', 'doesn’t', 'aren’t', 'not'],
+    ['Câu hỏi bắt đầu bằng Is it.', 'Trả lời ngắn: No, it isn’t.'],
+    ['The question starts with Is it.', 'Short answer: No, it isn’t.']),
+  dialogues('easy', 'd', 'A: "Who is she talking to?"\nB: "She ___ to her aunt."', ['is talking', 'talks', 'talk', 'talking'],
+    ['Câu hỏi dùng is … talking.', 'Trả lời cũng dùng is + V-ing.'],
+    ['The question uses is … talking.', 'The answer also uses is + V-ing.']),
+  dialogues('medium', 'd', 'A: "Hello, Jack! Are you busy?"\nB: "Yes, I ___ dinner. Can I call you later?"', ['am cooking', 'cook', 'cooks', 'cooking'],
+    ['“Are you busy?” → đang bận lúc này.', 'I + am + V-ing → am cooking.'],
+    ['“Are you busy?” → busy right now.', 'I + am + V-ing → am cooking.']),
+  dialogues('medium', 'd', 'A: "What are those boys doing?"\nB: "They ___ a robot for the school show."', ['are making', 'make', 'makes', 'is making'],
+    ['Câu hỏi dùng are … doing.', 'They + are + V-ing → are making.'],
+    ['The question uses are … doing.', 'They + are + V-ing → are making.']),
+  dialogues('medium', 'd', 'A: "Why isn’t Lucy here?"\nB: "She ___ her grandma in hospital today."', ['is visiting', 'visits', 'visit', 'visiting'],
+    ['“today” → hôm nay khác thường lệ.', 'She + is + V-ing → is visiting.'],
+    ['“today” → not her usual routine.', 'She + is + V-ing → is visiting.']),
+  dialogues('medium', 'd', 'A: "What’s that noise?"\nB: "The neighbours ___ a party."', ['are having', 'have', 'has', 'having'],
+    ['“What’s that noise?” → đang nghe thấy lúc này.', 'The neighbours (they) + are + V-ing → are having.'],
+    ['“What’s that noise?” → we hear it now.', 'The neighbours (they) + are + V-ing → are having.']),
+  dialogues('medium', 'd', 'A: "Are you and Dan playing tennis today?"\nB: "No, we ___. It’s too hot."', ['aren’t', 'don’t', 'isn’t', 'haven’t'],
+    ['Câu hỏi bắt đầu bằng Are you.', 'Trả lời ngắn với we: No, we aren’t.'],
+    ['The question starts with Are you.', 'Short answer with we: No, we aren’t.']),
+  dialogues('hard', 'd', 'A: "What time ___ your cousins arriving on Saturday?"\nB: "At about six o’clock."', ['are', 'do', 'is', 'does'],
+    ['“on Saturday” → kế hoạch đã biết trước.', 'What time + are + they + V-ing?'],
+    ['“on Saturday” → a known plan.', 'What time + are + they + V-ing?']),
+  dialogues('hard', 'd', 'A: "You look tired."\nB: "I know. I ___ very well at the moment because my baby brother cries all night."', ['am not sleeping', 'don’t sleep', 'not sleeping', 'doesn’t sleep'],
+    ['“at the moment” → dạo này, tạm thời.', 'I + am not + V-ing → am not sleeping.'],
+    ['“at the moment” → just for now.', 'I + am not + V-ing → am not sleeping.'], { trap: true }),
+]

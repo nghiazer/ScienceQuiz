@@ -1,0 +1,43 @@
+import type { EnglishQuestionInput } from '../../../types/quiz'
+import { section } from '../helpers'
+
+const spelling = section('present-continuous', 'pc-spelling')
+
+export const SPELLING: EnglishQuestionInput[] = [
+  spelling('easy', 's', 'Look! The boy is ___ very fast.', ['running', 'runing', 'runeing', 'runnning'],
+    ['run: tận cùng nguyên âm + phụ âm.', 'Gấp đôi phụ âm cuối rồi thêm -ing: running.'],
+    ['run: short vowel + consonant.', 'Double the last consonant, then add -ing: running.']),
+  spelling('easy', 's', 'My mother is ___ a cake now.', ['making', 'makeing', 'makking', 'maaking'],
+    ['make tận cùng -e.', 'Bỏ e rồi thêm -ing: making.'],
+    ['make ends in -e.', 'Drop the e, then add -ing: making.']),
+  spelling('easy', 's', 'Tom is ___ a letter to his friend.', ['writing', 'writting', 'writeing', 'writeting'],
+    ['write tận cùng -e.', 'Bỏ e rồi thêm -ing: writing.'],
+    ['write ends in -e.', 'Drop the e, then add -ing: writing.']),
+  spelling('easy', 's', 'The cat is ___ on the sofa.', ['sitting', 'siting', 'sitiing', 'sittting'],
+    ['sit: nguyên âm ngắn + phụ âm.', 'Gấp đôi phụ âm cuối rồi thêm -ing: sitting.'],
+    ['sit: short vowel + consonant.', 'Double the last consonant, then add -ing: sitting.']),
+  spelling('easy', 's', 'We are ___ English now.', ['learning', 'learnning', 'lerning', 'learneing'],
+    ['learn tận cùng hai phụ âm.', 'Thêm -ing trực tiếp: learning.'],
+    ['learn ends in two consonants.', 'Just add -ing: learning.']),
+  spelling('medium', 's', 'The baby is ___ a lot today.', ['crying', 'cring', 'criing', 'cryiing'],
+    ['cry tận cùng -y.', 'Giữ nguyên y rồi thêm -ing: crying.'],
+    ['cry ends in -y.', 'Keep the y and add -ing: crying.']),
+  spelling('medium', 's', 'Look! The children are ___ in the lake.', ['swimming', 'swiming', 'swimmming', 'swimeing'],
+    ['swim: nguyên âm ngắn + phụ âm.', 'Gấp đôi m rồi thêm -ing: swimming.'],
+    ['swim: short vowel + consonant.', 'Double the m, then add -ing: swimming.']),
+  spelling('medium', 's', 'Dad is ___ the car into the garage.', ['driving', 'driveing', 'drivving', 'driiving'],
+    ['drive tận cùng -e.', 'Bỏ e rồi thêm -ing: driving.'],
+    ['drive ends in -e.', 'Drop the e, then add -ing: driving.']),
+  spelling('medium', 's', 'The dog is ___ the ball.', ['chasing', 'chaseing', 'chassing', 'chaising'],
+    ['chase tận cùng -e.', 'Bỏ e rồi thêm -ing: chasing.'],
+    ['chase ends in -e.', 'Drop the e, then add -ing: chasing.']),
+  spelling('medium', 'd', 'A: "What’s Lisa doing?"\nB: "She’s ___ in her bedroom."', ['studying', 'studing', 'studdying', 'studyying'],
+    ['study tận cùng -y.', 'Giữ nguyên y rồi thêm -ing: studying.'],
+    ['study ends in -y.', 'Keep the y and add -ing: studying.'], { ill: 'en-dialogue' }),
+  spelling('hard', 's', 'The old man is ___ on the grass.', ['lying', 'lieing', 'laying', 'liying'],
+    ['lie (nằm) tận cùng -ie.', 'Đổi -ie thành -y rồi thêm -ing: lying.'],
+    ['lie (rest flat) ends in -ie.', 'Change -ie to -y, then add -ing: lying.']),
+  spelling('hard', 's', 'Hurry up! The film is ___ now.', ['beginning', 'begining', 'beginnning', 'beginneing'],
+    ['begin: âm tiết cuối được nhấn mạnh.', 'Gấp đôi n rồi thêm -ing: beginning.'],
+    ['begin: the last syllable is stressed.', 'Double the n, then add -ing: beginning.']),
+]

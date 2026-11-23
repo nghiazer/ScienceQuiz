@@ -15,7 +15,7 @@ export interface Extra {
 
 /**
  * Tạo hàm soạn câu cho một chủ điểm. Cách dùng: đáp án ĐÚNG viết đầu tiên trong `opts`;
- * hàm tự xếp đáp án đúng luân phiên vào A, B, C, D (12 câu → mỗi vị trí 3 lần).
+ * hàm tự xếp đáp án đúng luân phiên vào A, B, C, D (100 câu → mỗi vị trí 25 lần).
  * Khi làm bài, thứ tự đáp án còn được xáo ngẫu nhiên thêm một lần nữa.
  */
 export function section(topic: EnglishTopic, subtopic: EnglishSubtopicId) {

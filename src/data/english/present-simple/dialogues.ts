@@ -1,0 +1,43 @@
+import type { EnglishQuestionInput } from '../../../types/quiz'
+import { section } from '../helpers'
+
+const dialogues = section('present-simple', 'ps-dialogues')
+
+export const DIALOGUES: EnglishQuestionInput[] = [
+  dialogues('easy', 'd', 'A: "Where do you live?"\nB: "I ___ in a small flat near the park."', ['live', 'lives', 'living', 'am live'],
+    ['Hỏi nơi ở thường xuyên.', 'I → động từ nguyên mẫu: live.'],
+    ['Asking where you usually live.', 'I → base verb: live.'], { ill: 'en-dialogue' }),
+  dialogues('easy', 'd', 'A: "What does your father do?"\nB: "He ___ a taxi driver."', ['is', 'does', 'has', 'works'],
+    ['Hỏi nghề nghiệp.', 'Nói nghề: He is a… (dùng động từ to be).'],
+    ['Asking about a job.', 'To say a job: He is a… (use the verb to be).']),
+  dialogues('easy', 'd', 'A: "Do you like English?"\nB: "Yes, I ___. It’s my favourite subject."', ['do', 'like', 'am', 'does'],
+    ['Câu hỏi bắt đầu bằng Do.', 'Trả lời ngắn: Yes, I do.'],
+    ['The question starts with Do.', 'Short answer: Yes, I do.']),
+  dialogues('easy', 'd', 'A: "What time do you get up?"\nB: "I ___ up at half past six."', ['get', 'gets', 'am get', 'getting'],
+    ['Hỏi giờ thức dậy hằng ngày.', 'I → động từ nguyên mẫu: get.'],
+    ['Asking about your daily wake-up time.', 'I → base verb: get.'], { ill: 'en-daily-routine' }),
+  dialogues('easy', 'd', 'A: "Does Anna live near here?"\nB: "No, she ___. She lives in London."', ['doesn’t', 'don’t', 'isn’t', 'hasn’t'],
+    ['Câu hỏi bắt đầu bằng Does.', 'Trả lời ngắn: No, she doesn’t.'],
+    ['The question starts with Does.', 'Short answer: No, she doesn’t.']),
+  dialogues('medium', 'd', 'A: "How do you go to school?"\nB: "I ___ my bike."', ['ride', 'rides', 'am ride', 'riding'],
+    ['Hỏi cách đi học hằng ngày.', 'I → động từ nguyên mẫu: ride.'],
+    ['Asking how you go to school every day.', 'I → base verb: ride.']),
+  dialogues('medium', 'd', 'A: "Do your parents work on Saturdays?"\nB: "My dad does, but my mum ___."', ['doesn’t', 'don’t', 'isn’t', 'not'],
+    ['“My dad does” → mẹ thì không.', 'my mum = she → doesn’t.'],
+    ['“My dad does” → but mum does not.', 'my mum = she → doesn’t.']),
+  dialogues('medium', 'd', 'A: "What do you usually have for lunch?"\nB: "I usually ___ rice and fish."', ['have', 'has', 'am having', 'having'],
+    ['“usually” → thói quen.', 'I → động từ nguyên mẫu: have.'],
+    ['“usually” → a habit.', 'I → base verb: have.']),
+  dialogues('medium', 'd', 'A: "Does Tom play the guitar?"\nB: "Yes, he ___ it every evening."', ['plays', 'play', 'is play', 'playing'],
+    ['“every evening” là thói quen.', 'he → thêm -s: plays.'],
+    ['“every evening” is a habit.', 'he → add -s: plays.']),
+  dialogues('medium', 'd', 'A: "Why ___ you always wear a hat?"\nB: "Because the sun is hot."', ['do', 'does', 'are', 'is'],
+    ['“always wear” → thói quen, chủ ngữ you.', 'Why + do + you + động từ nguyên mẫu?'],
+    ['“always wear” → a habit, subject you.', 'Why + do + you + base verb?']),
+  dialogues('hard', 'd', 'A: "Does your sister like swimming?"\nB: "No, she ___ swimming. She prefers dancing."', ['doesn’t like', 'isn’t liking', 'don’t like', 'not likes'],
+    ['“prefers dancing” → không thích bơi.', 'like là động từ chỉ trạng thái. she → doesn’t like.'],
+    ['“prefers dancing” → she does not like swimming.', 'like is a state verb. she → doesn’t like.']),
+  dialogues('hard', 'd', 'A: "Excuse me. Does this bus go to the station?"\nB: "No, it ___. You need bus number five."', ['doesn’t', 'isn’t', 'don’t', 'not'],
+    ['Câu hỏi bắt đầu bằng Does.', 'Trả lời ngắn: No, it doesn’t.'],
+    ['The question starts with Does.', 'Short answer: No, it doesn’t.']),
+]

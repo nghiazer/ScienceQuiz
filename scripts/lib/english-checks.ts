@@ -3,9 +3,10 @@ import { ENGLISH_QUESTIONS, SUBJECT_TOPICS, SUBTOPICS, TOPICS } from '../../src/
 import { ILLUSTRATIONS } from '../../src/components/illustrations/registry'
 import type { EnglishQuestion, EnglishTopic } from '../../src/types/quiz'
 
-export const ENGLISH_PER_TOPIC = 120
-export const ENGLISH_PER_SUBTOPIC = 12
-const MIN_TRAPS = 15
+export const ENGLISH_PER_TOPIC = 1000
+export const ENGLISH_PER_SUBTOPIC = 100
+/** Tối thiểu 12% số câu mỗi thì là câu bẫy phân biệt các thì. */
+const MIN_TRAP_SHARE = 0.12
 const MAX_POSITION_SHARE = 0.4
 const VI_CHARS = /[ăâđêôơưáàảãạấầẩẫậắằẳẵặéèẻẽẹếềểễệíìỉĩịóòỏõọốồổỗộớờởỡợúùủũụứừửữựýỳỷỹỵ]/i
 
@@ -48,14 +49,17 @@ export function checkEnglish(): { errors: string[]; lines: string[] } {
   for (const [id, meta] of Object.entries(SUBTOPICS)) {
     if (!topics.includes(meta.topic as EnglishTopic)) continue
     const n = perSub[id] ?? 0
-    if (n !== ENGLISH_PER_SUBTOPIC) fail(`chủ điểm ${id}: ${n} câu, cần đúng ${ENGLISH_PER_SUBTOPIC}`)
+    // Đang bổ sung dần tới mục tiêu: thiếu chỉ báo tiến độ, vượt mục tiêu mới là lỗi.
+    if (n > ENGLISH_PER_SUBTOPIC) fail(`chủ điểm ${id}: ${n} câu, vượt mục tiêu ${ENGLISH_PER_SUBTOPIC}`)
+    else if (n < ENGLISH_PER_SUBTOPIC) lines.push(`  tiến độ: ${id} ${n}/${ENGLISH_PER_SUBTOPIC}`)
   }
 
   for (const t of topics) {
     const qs = ENGLISH_QUESTIONS.filter((q) => q.topic === t)
-    if (qs.length !== ENGLISH_PER_TOPIC) fail(`thì ${t}: ${qs.length} câu, cần đúng ${ENGLISH_PER_TOPIC}`)
+    if (qs.length > ENGLISH_PER_TOPIC) fail(`thì ${t}: ${qs.length} câu, vượt mục tiêu ${ENGLISH_PER_TOPIC}`)
     const traps = qs.filter((q) => q.trap).length
-    if (traps < MIN_TRAPS) fail(`thì ${t}: chỉ ${traps} câu bẫy (cần ≥ ${MIN_TRAPS})`)
+    const minTraps = Math.ceil(qs.length * MIN_TRAP_SHARE)
+    if (traps < minTraps) fail(`thì ${t}: chỉ ${traps} câu bẫy (cần ≥ ${minTraps})`)
     ;[0, 1, 2, 3].forEach((i) => {
       const share = qs.filter((q) => q.correctIndex === i).length / Math.max(qs.length, 1)
       if (share > MAX_POSITION_SHARE) fail(`thì ${t}: đáp án ở vị trí ${'ABCD'[i]} chiếm ${Math.round(share * 100)}% (tối đa 40%)`)
