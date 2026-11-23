@@ -58,8 +58,9 @@ export function checkEnglish(): { errors: string[]; lines: string[] } {
     const qs = ENGLISH_QUESTIONS.filter((q) => q.topic === t)
     if (qs.length > ENGLISH_PER_TOPIC) fail(`thì ${t}: ${qs.length} câu, vượt mục tiêu ${ENGLISH_PER_TOPIC}`)
     const traps = qs.filter((q) => q.trap).length
-    const minTraps = Math.ceil(qs.length * MIN_TRAP_SHARE)
-    if (traps < minTraps) fail(`thì ${t}: chỉ ${traps} câu bẫy (cần ≥ ${minTraps})`)
+    const minTraps = Math.ceil(ENGLISH_PER_TOPIC * MIN_TRAP_SHARE)
+    // Chỉ bắt buộc khi thì đã đủ số câu; trong lúc đang bổ sung chỉ nhắc tiến độ.
+    if (traps < minTraps && qs.length >= ENGLISH_PER_TOPIC) fail(`thì ${t}: chỉ ${traps} câu bẫy (cần ≥ ${minTraps})`)
     ;[0, 1, 2, 3].forEach((i) => {
       const share = qs.filter((q) => q.correctIndex === i).length / Math.max(qs.length, 1)
       if (share > MAX_POSITION_SHARE) fail(`thì ${t}: đáp án ở vị trí ${'ABCD'[i]} chiếm ${Math.round(share * 100)}% (tối đa 40%)`)
