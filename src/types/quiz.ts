@@ -13,6 +13,7 @@ export type ScienceSubtopicId =
   | 'magnets' | 'electricity' | 'conductors' | 'sound' | 'light-shadow' | 'forces-motion' | 'float-sink' | 'materials-states'
   | 'heat-transfer' | 'energy-forms' | 'simple-machines' | 'dissolving-mixtures' | 'material-properties' | 'sound-pitch'
   | 'sun' | 'moon' | 'day-night' | 'shadows-time' | 'water-cycle' | 'weather-seasons' | 'earth-shape' | 'rocks-soil'
+  | 'stars-sky' | 'air-wind' | 'resources-pollution' | 'landforms' | 'planets-order'
   | 'observation' | 'measuring-tools' | 'reading-numbers' | 'charts' | 'fair-test' | 'predict-compare' | 'classify' | 'variables-cause'
 
 export type EnglishSubtopicId =
