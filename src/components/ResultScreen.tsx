@@ -6,6 +6,7 @@ import type { Question, QuizResult } from '../types/quiz'
 import { SUBJECT_TOPICS, TOPICS } from '../data/questions'
 import { buildRetryQuiz, findMissed } from '../utils/quiz'
 import { playComplete } from '../utils/sound'
+import { launchFireworks } from '../utils/fireworks'
 import BilingualText from './BilingualText'
 import BadgeGrid from './BadgeGrid'
 
@@ -37,6 +38,13 @@ export default function ResultScreen({ result, onRetryWrong, onReplay, onHome }:
     playComplete()
     if (passed) fireConfetti()
   }, [passed])
+
+  // Có huy hiệu mới → bắn pháo hoa toàn màn hình (độc lập với việc đạt ≥70%).
+  const hasNewBadge = newBadges.length > 0
+  useEffect(() => {
+    if (!hasNewBadge) return
+    return launchFireworks()
+  }, [hasNewBadge])
 
   const wrong = useMemo(() => findMissed(questions, answers), [questions, answers])
   const answerOf = (id: string) => answers.find((a) => a.questionId === id)
