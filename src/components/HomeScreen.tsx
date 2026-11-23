@@ -4,7 +4,7 @@ import { ChevronDown, Flame, GraduationCap, Medal, Star } from 'lucide-react'
 import type { Progress, Topic } from '../types/quiz'
 import { QUESTIONS_BY_SUBJECT, SUBJECTS, SUBJECT_TOPICS, TOPICS } from '../data/questions'
 import { useSubject } from '../context/SubjectContext'
-import { BADGES } from '../data/badges'
+import { badgesFor } from '../data/badges'
 import { currentStreak } from '../utils/storage'
 import { ENGLISH_MOCK_SIZE, MOCK_MINUTES, MOCK_SIZE } from '../utils/quiz'
 import { playClick, unlockAudio } from '../utils/sound'
@@ -38,6 +38,7 @@ export default function HomeScreen({ progress, onStartTopic, onStartMock }: Prop
   const isEnglish = subject === 'english'
   const meta = SUBJECTS[subject]
   const topicIds = SUBJECT_TOPICS[subject]
+  const visibleBadges = badgesFor(subject)
   const mockSize = isEnglish ? ENGLISH_MOCK_SIZE : MOCK_SIZE
   const subjectTotals = topicIds.reduce(
     (acc, id) => ({ correct: acc.correct + progress.topicStats[id].correct, total: acc.total + progress.topicStats[id].total }),
@@ -63,7 +64,7 @@ export default function HomeScreen({ progress, onStartTopic, onStartMock }: Prop
         <div className="mt-5 flex flex-col gap-3 sm:flex-row">
           <Stat tone="bg-amber-100 text-amber-800" icon={<Star className="size-7 fill-amber-400 text-amber-500" />} value={progress.totalStars} vi="Tổng số sao" en="Total stars" />
           <Stat tone="bg-orange-100 text-orange-800" icon={<Flame className="size-7 fill-orange-400 text-orange-500" />} value={streak} vi="Ngày học liên tiếp" en="Day streak" />
-          <Stat tone="bg-violet-100 text-violet-800" icon={<Medal className="size-7 text-violet-500" />} value={`${progress.unlockedBadges.length}/${BADGES.length}`} vi="Huy hiệu" en="Badges" />
+          <Stat tone="bg-violet-100 text-violet-800" icon={<Medal className="size-7 text-violet-500" />} value={`${visibleBadges.filter((b) => progress.unlockedBadges.includes(b.id)).length}/${visibleBadges.length}`} vi="Huy hiệu" en="Badges" />
         </div>
         <button
           type="button"

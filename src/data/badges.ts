@@ -1,4 +1,8 @@
-import type { BadgeDef, Topic } from '../types/quiz'
+import type { BadgeDef, Subject, Topic } from '../types/quiz'
+import { SUBJECT_TOPICS } from './topics'
+
+const SUBJECT_PLAYED = (subject: Subject) => (p: Parameters<BadgeDef['check']>[0]) =>
+  SUBJECT_TOPICS[subject].some((t) => p.topicStats[t].total > 0)
 
 const TOPIC_MASTER = (t: Topic) => (p: Parameters<BadgeDef['check']>[0]) => {
   const s = p.topicStats[t]
@@ -7,10 +11,16 @@ const TOPIC_MASTER = (t: Topic) => (p: Parameters<BadgeDef['check']>[0]) => {
 
 export const BADGES: BadgeDef[] = [
   {
-    id: 'first-quiz', emoji: '🚀',
+    id: 'first-quiz', emoji: '🚀', subject: 'science',
     name_vi: 'Phi hành gia nhí', name_en: 'Little Astronaut',
-    desc_vi: 'Hoàn thành bài đầu tiên', desc_en: 'Finish your first quiz',
-    check: (p) => p.quizzesCompleted >= 1,
+    desc_vi: 'Hoàn thành bài Khoa học đầu tiên', desc_en: 'Finish your first science quiz',
+    check: SUBJECT_PLAYED('science'),
+  },
+  {
+    id: 'first-english-quiz', emoji: '📖', subject: 'english',
+    name_vi: 'Học trò nhí', name_en: 'Little Learner',
+    desc_vi: 'Hoàn thành bài Tiếng Anh đầu tiên', desc_en: 'Finish your first English quiz',
+    check: SUBJECT_PLAYED('english'),
   },
   {
     id: 'stars-10', emoji: '⭐',
@@ -43,57 +53,60 @@ export const BADGES: BadgeDef[] = [
     check: (p) => p.streak >= 7,
   },
   {
-    id: 'mock-done', emoji: '🎓',
+    id: 'mock-done', subject: 'science', emoji: '🎓',
     name_vi: 'Thí sinh ASMO', name_en: 'ASMO Contestant',
     desc_vi: 'Hoàn thành bài thi thử', desc_en: 'Finish a mock test',
     check: (p) => p.mockCompleted >= 1,
   },
   {
-    id: 'master-living', emoji: '🌱',
+    id: 'master-living', subject: 'science', emoji: '🌱',
     name_vi: 'Bậc thầy Sinh học', name_en: 'Living Things Master',
     desc_vi: 'Đúng từ 80% ở mảng Sinh học (ít nhất 5 câu)', desc_en: '80%+ correct in Living Things (5+ questions)',
     check: TOPIC_MASTER('living'),
   },
   {
-    id: 'master-physical', emoji: '🧲',
+    id: 'master-physical', subject: 'science', emoji: '🧲',
     name_vi: 'Bậc thầy Vật lý', name_en: 'Physical Science Master',
     desc_vi: 'Đúng từ 80% ở mảng Vật lý (ít nhất 5 câu)', desc_en: '80%+ correct in Physical Science (5+ questions)',
     check: TOPIC_MASTER('physical'),
   },
   {
-    id: 'master-earth', emoji: '🌍',
+    id: 'master-earth', subject: 'science', emoji: '🌍',
     name_vi: 'Bậc thầy Trái đất', name_en: 'Earth & Space Master',
     desc_vi: 'Đúng từ 80% ở mảng Trái đất (ít nhất 5 câu)', desc_en: '80%+ correct in Earth & Space (5+ questions)',
     check: TOPIC_MASTER('earth'),
   },
   {
-    id: 'master-inquiry', emoji: '🔬',
+    id: 'master-inquiry', subject: 'science', emoji: '🔬',
     name_vi: 'Bậc thầy Thực nghiệm', name_en: 'Inquiry Master',
     desc_vi: 'Đúng từ 80% ở mảng Thực nghiệm (ít nhất 5 câu)', desc_en: '80%+ correct in Scientific Inquiry (5+ questions)',
     check: TOPIC_MASTER('inquiry'),
   },
   {
-    id: 'english-mock-done', emoji: '🇬🇧',
+    id: 'english-mock-done', subject: 'english', emoji: '🇬🇧',
     name_vi: 'Thí sinh Cambridge', name_en: 'Cambridge Contestant',
     desc_vi: 'Hoàn thành bài thi thử Tiếng Anh', desc_en: 'Finish an English mock test',
     check: (p) => p.englishMockCompleted >= 1,
   },
   {
-    id: 'master-present-simple', emoji: '🔁',
+    id: 'master-present-simple', subject: 'english', emoji: '🔁',
     name_vi: 'Bậc thầy Hiện tại đơn', name_en: 'Present Simple Master',
     desc_vi: 'Đúng từ 80% ở Hiện tại đơn (ít nhất 5 câu)', desc_en: '80%+ correct in Present Simple (5+ questions)',
     check: TOPIC_MASTER('present-simple'),
   },
   {
-    id: 'master-present-continuous', emoji: '🏃',
+    id: 'master-present-continuous', subject: 'english', emoji: '🏃',
     name_vi: 'Bậc thầy Hiện tại tiếp diễn', name_en: 'Present Continuous Master',
     desc_vi: 'Đúng từ 80% ở Hiện tại tiếp diễn (ít nhất 5 câu)', desc_en: '80%+ correct in Present Continuous (5+ questions)',
     check: TOPIC_MASTER('present-continuous'),
   },
   {
-    id: 'master-past-simple', emoji: '🕰️',
+    id: 'master-past-simple', subject: 'english', emoji: '🕰️',
     name_vi: 'Bậc thầy Quá khứ đơn', name_en: 'Past Simple Master',
     desc_vi: 'Đúng từ 80% ở Quá khứ đơn (ít nhất 5 câu)', desc_en: '80%+ correct in Past Simple (5+ questions)',
     check: TOPIC_MASTER('past-simple'),
   },
 ]
+
+/** Huy hiệu hiển thị cho một môn: các huy hiệu dùng chung và huy hiệu riêng của môn đó. */
+export const badgesFor = (subject: Subject): BadgeDef[] => BADGES.filter((b) => !b.subject || b.subject === subject)

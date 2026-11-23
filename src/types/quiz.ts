@@ -120,6 +120,8 @@ export interface Progress {
 
 export interface BadgeDef {
   id: string
+  /** Huy hiệu riêng của một môn; bỏ trống = dùng chung cho mọi môn */
+  subject?: Subject
   emoji: string
   name_vi: string
   name_en: string

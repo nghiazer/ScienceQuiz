@@ -3,9 +3,9 @@
 Sinh tự động từ `src/data/questions` bằng `npm run ledger`. Không sửa tay file này.
 Dùng để chọn khái niệm chưa có trước khi soạn câu mới và làm phiếu review nội dung khoa học.
 
-## Sinh học (90 câu)
+## Sinh học (120 câu)
 
-### Bộ phận của cây (7 câu)
+### Bộ phận của cây (11 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -16,8 +16,12 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | liv-12 | vừa |  | Cây khoai tây có thể mọc lại từ phần nào? | Củ có mầm | ☐ |
 | liv-13 | vừa | plant-parts | Nhìn hình cây, số 1 chỉ bộ phận nào? | Rễ | ☐ |
 | liv-14 | khó | plant-parts | Nếu rễ của cây bị đứt hết, điều gì dễ xảy ra nhất? | Cây không hút được nước từ đất nên dần héo đi | ☐ |
+| liv-110 | dễ |  | Phần nào của hoa tạo ra phấn hoa? | Nhị hoa | ☐ |
+| liv-111 | vừa |  | Cánh hoa thường có nhiệm vụ gì? | Thu hút côn trùng và chim đến giúp thụ phấn | ☐ |
+| liv-112 | vừa |  | Lá cây thông có hình kim nhỏ. Lá kim giúp cây điều gì? | Giảm mất nước và chịu được thời tiết lạnh | ☐ |
+| liv-113 | dễ |  | Bắp cải là rau ăn lá. Phần ăn được của bắp cải là gì? | Lá cuộn lại thành đầu | ☐ |
 
-### Cây cần gì để sống (8 câu)
+### Cây cần gì để sống (10 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -29,8 +33,10 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | liv-20 | vừa |  | Một bạn để cây dưới nắng nhưng quên tưới nước trong 2 tuần. Điều gì sẽ xảy ra? | Cây héo và yếu đi vì thiếu nước | ☐ |
 | liv-21 | khó |  | Vì sao cây xanh được ví như “nhà máy thức ăn” của thế giới? | Vì cây tự làm ra thức ăn, và nhiều loài khác dựa vào đó để … | ☐ |
 | liv-22 | khó |  | Vì sao nhiều cây rụng lá vào mùa đông ở một số nơi? | Vì trời lạnh và ít nắng, cây giảm hoạt động để tiết kiệm nă… | ☐ |
+| liv-117 | vừa |  | Vì sao nên tưới cây vào buổi sáng sớm hoặc chiều mát? | Để nước không bốc hơi quá nhanh và rễ kịp hút nước | ☐ |
+| liv-118 | khó |  | Lá cây bị vàng dù đã được tưới đủ nước. Thiếu chất nào trong đất có thể là nguyên nhân? | Chất dinh dưỡng như nitơ | ☐ |
 
-### Các nhóm động vật (8 câu)
+### Các nhóm động vật (12 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -42,8 +48,12 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | liv-58 | vừa |  | Con mèo thuộc nhóm động vật nào? | Động vật có vú | ☐ |
 | liv-59 | vừa |  | Con nhện có 8 chân. Vậy nhện có phải là côn trùng không? | Không, nhện thuộc nhóm khác vì côn trùng có 6 chân | ☐ |
 | liv-60 | khó |  | Động vật có xương sống khác với động vật không có xương sống ở điểm nào? | Động vật có xương sống có khung xương bên trong; con không … | ☐ |
+| liv-100 | dễ |  | Ếch có thể sống cả dưới nước lẫn trên cạn. Ếch được xếp vào nhóm nào? | Lưỡng cư | ☐ |
+| liv-101 | vừa |  | Rắn có vảy khô và không có chân. Rắn thuộc nhóm động vật nào? | Bò sát | ☐ |
+| liv-102 | khó |  | Tôm và cua có lớp vỏ cứng bên ngoài cơ thể. Lớp vỏ này có tác dụng gì? | Là bộ xương ngoài, bảo vệ cơ thể và chống mất nước | ☐ |
+| liv-103 | khó |  | Loài thú nào vừa đẻ trứng vừa cho con non bú sữa? | Thú mỏ vịt | ☐ |
 
-### Vòng đời (7 câu)
+### Vòng đời (11 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -54,8 +64,12 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | liv-26 | vừa |  | Nhóm động vật nào dưới đây đều đẻ trứng? | Cá, ếch, chim | ☐ |
 | liv-27 | khó |  | Vì sao sâu bướm và bướm trông rất khác nhau? | Vì chúng là hai giai đoạn khác nhau của cùng một vòng đời | ☐ |
 | liv-28 | vừa | butterfly-life-cycle | Giai đoạn nào trong vòng đời bướm ăn nhiều lá nhất? | Sâu bướm | ☐ |
+| liv-096 | dễ |  | Hầu hết cây bắt đầu đời sống của mình từ đâu? | Từ hạt | ☐ |
+| liv-097 | vừa |  | Trong vòng đời cây đậu, sau khi nảy mầm, cây con phát triển thành gì trước khi ra hoa? | Cây con có lá và thân | ☐ |
+| liv-098 | vừa |  | Vì sao người ta nói con người có vòng đời dài hơn con ruồi? | Vì con người trưởng thành sau nhiều năm, còn ruồi chỉ sống … | ☐ |
+| liv-099 | dễ |  | Cây dâu tây mọc được cây con từ những sợi dài bò trên mặt đất. Đây là cách sinh sản nào? | Sinh sản bằng thân bò, không cần hạt | ☐ |
 
-### Môi trường sống & thích nghi (7 câu)
+### Môi trường sống & thích nghi (12 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -66,8 +80,13 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | liv-32 | vừa |  | Vì sao chân sau của con ếch dài và khỏe? | Để nhảy xa và bơi tốt | ☐ |
 | liv-33 | khó |  | Ở sa mạc, nhiều loài động vật hoạt động vào ban đêm. Vì sao? | Để tránh cái nóng ban ngày | ☐ |
 | liv-34 | vừa |  | Một số loài thằn lằn có màu giống với môi trường xung quanh. Điều này giúp chúng điều gì? | Trốn kẻ thù hoặc rình bắt mồi dễ hơn | ☐ |
+| liv-091 | dễ |  | Ếch sống được ở cả nước và trên cạn. Trứng ếch cần được đặt ở đâu để nở? | Trong ao hoặc vũng nước | ☐ |
+| liv-092 | vừa |  | Vì sao gấu trúc sống chủ yếu trong rừng tre? | Vì tre là thức ăn chính và rừng có khí hậu mát | ☐ |
+| liv-093 | vừa |  | Cá nước ngọt và cá biển khác nhau ở điểm nào? | Cá biển sống trong nước mặn, cá nước ngọt sống trong nước n… | ☐ |
+| liv-094 | khó |  | Chim cánh cụt không bay được nhưng vẫn sống khỏe. Điều gì giúp chúng? | Chúng bơi giỏi và kiếm được thức ăn dưới nước | ☐ |
+| liv-095 | khó |  | Ở trong hang động tối, nhiều loài cá và côn trùng có đặc điểm gì? | Mắt tiêu biến hoặc không có mắt, tìm đường bằng xúc giác | ☐ |
 
-### Chuỗi thức ăn (8 câu)
+### Chuỗi thức ăn (11 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -79,8 +98,11 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | liv-39 | dễ |  | Con vật nào ăn được cả thực vật và động vật? | Gấu | ☐ |
 | liv-40 | khó | food-chain | Trong chuỗi thức ăn có 5 con số, số 1 chỉ sinh vật nào? | Cỏ (sinh vật sản xuất) | ☐ |
 | liv-41 | khó | food-chain | Trong chuỗi thức ăn, năng lượng đi theo hướng nào? | Từ cỏ đến đại bàng, theo chiều mũi tên | ☐ |
+| liv-114 | dễ |  | Con sâu ăn lá cây, chim ăn sâu. Mối quan hệ giữa chim và sâu là gì? | Ăn và bị ăn | ☐ |
+| liv-115 | vừa |  | Các loài cùng ăn một loại thức ăn sẽ có quan hệ gì với nhau? | Cạnh tranh thức ăn với nhau | ☐ |
+| liv-116 | khó |  | Trong chuỗi thức ăn, sinh vật ở cuối chuỗi thường có số lượng thế nào so với sinh vật ở đ… | Ít hơn nhiều | ☐ |
 
-### Vật sống và vật không sống (8 câu)
+### Vật sống và vật không sống (10 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -92,8 +114,10 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | liv-45 | vừa |  | Ngọn lửa có phải là sinh vật sống không? | Không, lửa không lớn lên, không sinh sản như sinh vật | ☐ |
 | liv-46 | vừa |  | Chiếc xe đạp có đặc điểm nào của sinh vật sống không? | Không có đặc điểm sống nào | ☐ |
 | liv-47 | khó |  | Vì sao ta nói cây và cá là sinh vật sống, còn đá thì không? | Vì cây và cá lớn lên, ăn, sinh sản và phản ứng với môi trườ… | ☐ |
+| liv-119 | dễ |  | Cây hướng lá về phía ánh sáng. Điều này cho thấy gì? | Cây phản ứng với môi trường, nên là sinh vật sống | ☐ |
+| liv-120 | vừa |  | Nấm có phải là thực vật không? | Không, nấm không phải thực vật nhưng vẫn là sinh vật sống | ☐ |
 
-### Cơ thể và giác quan (7 câu)
+### Cơ thể và giác quan (13 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -104,6 +128,12 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | liv-52 | khó |  | Da bảo vệ cơ thể bằng cách nào? | Ngăn vi khuẩn và chất độc xâm nhập vào cơ thể | ☐ |
 | liv-53 | khó |  | Vì sao chúng ta cần ngủ đủ giấc? | Để cơ thể nghỉ ngơi, phát triển và tập trung học tốt | ☐ |
 | liv-54 | vừa |  | Nếu bạn bị đau bụng sau khi ăn thức ăn đã ôi thiu, bạn nên làm gì? | Báo người lớn và nghỉ ngơi | ☐ |
+| liv-104 | dễ |  | Xương giúp cơ thể làm gì? | Nâng đỡ và bảo vệ cơ thể | ☐ |
+| liv-105 | vừa |  | Tim có nhiệm vụ gì? | Bơm máu đi khắp cơ thể | ☐ |
+| liv-106 | vừa |  | Khi em chạy nhanh, tim thường đập thế nào? | Đập nhanh hơn | ☐ |
+| liv-107 | dễ |  | Mũi giúp chúng ta làm gì? | Ngửi mùi và làm ấm, lọc không khí trước khi vào phổi | ☐ |
+| liv-108 | khó |  | Vì sao khi cơ bắp làm việc nhiều, người ta thấy mệt? | Vì cơ dùng nhiều năng lượng và cần được nghỉ ngơi | ☐ |
+| liv-109 | vừa |  | Cơ quan nào giúp cơ thể lấy oxi từ không khí? | Phổi | ☐ |
 
 ### Hạt và sự nảy mầm (5 câu)
 

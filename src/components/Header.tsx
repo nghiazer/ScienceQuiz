@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Volume2, VolumeX } from 'lucide-react'
 import LanguageSwitcher from './LanguageSwitcher'
 import { useSubject } from '../context/SubjectContext'
@@ -9,6 +9,9 @@ export default function Header() {
   const [muted, setMutedState] = useState(isMuted())
   const { subject } = useSubject()
   const meta = SUBJECTS[subject]
+  useEffect(() => {
+    document.title = `${meta.headerVi} – ${meta.headerSub.split(' · ')[0]}`
+  }, [meta])
   const toggle = () => {
     const next = !muted
     setMuted(next)

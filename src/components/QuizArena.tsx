@@ -237,7 +237,7 @@ export default function QuizArena({ config, onFinish, onExit }: Props) {
       )}
       {confirmExit && (
         <Modal>
-          <p className="text-5xl">🚀</p>
+          <p className="text-5xl">{subject === 'english' ? '👋' : '🚀'}</p>
           <h3 className="mt-2 text-2xl font-black text-slate-800">
             <BilingualText vi="Thoát bài làm?" en="Leave this quiz?" />
           </h3>

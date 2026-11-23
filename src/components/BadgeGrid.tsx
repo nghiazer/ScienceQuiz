@@ -1,11 +1,13 @@
 import { Lock } from 'lucide-react'
-import { BADGES } from '../data/badges'
+import { badgesFor } from '../data/badges'
+import { useSubject } from '../context/SubjectContext'
 import BilingualText from './BilingualText'
 
 export default function BadgeGrid({ unlocked, highlight = [], onlyUnlocked = false }: { unlocked: string[]; highlight?: string[]; onlyUnlocked?: boolean }) {
+  const { subject } = useSubject()
   return (
     <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
-      {BADGES.filter((b) => !onlyUnlocked || unlocked.includes(b.id)).map((b) => {
+      {badgesFor(subject).filter((b) => !onlyUnlocked || unlocked.includes(b.id)).map((b) => {
         const on = unlocked.includes(b.id)
         const isNew = highlight.includes(b.id)
         return (
