@@ -54,7 +54,7 @@ export const BADGES: BadgeDef[] = [
   },
   {
     id: 'mock-done', subject: 'science', emoji: '🎓',
-    name_vi: 'Thí sinh ASMO', name_en: 'ASMO Contestant',
+    name_vi: 'Thí sinh thi thử', name_en: 'Mock Test Contestant',
     desc_vi: 'Hoàn thành bài thi thử', desc_en: 'Finish a mock test',
     check: (p) => p.mockCompleted >= 1,
   },

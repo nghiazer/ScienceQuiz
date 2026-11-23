@@ -202,15 +202,15 @@ export const SUBJECTS: Record<
 > = {
   science: {
     emoji: '🔬',
-    label_vi: 'Khoa học (ASMO)',
-    label_en: 'Science (ASMO)',
+    label_vi: 'Khoa học',
+    label_en: 'Science',
     short_vi: 'Khoa học',
     short_en: 'Science',
-    mock_vi: 'Thi thử ASMO',
-    mock_en: 'ASMO Mock Test',
+    mock_vi: 'Thi thử Khoa học',
+    mock_en: 'Science Mock Test',
     gradient: 'from-sky-400 via-sky-500 to-indigo-500',
     headerVi: 'Nhà Khoa Học Nhí',
-    headerSub: 'ASMO Science · Lớp 2–3',
+    headerSub: 'Nhà khoa học nhí · Lớp 2–3',
   },
   english: {
     emoji: '🇬🇧',
