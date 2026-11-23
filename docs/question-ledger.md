@@ -195,9 +195,9 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | liv-89 | vừa |  | Vì sao nên hạn chế ăn đồ ngọt nhiều? | Vì đường giúp vi khuẩn tạo axit làm hại răng | ☐ |
 | liv-90 | khó |  | Khi bị sốt, em nên làm gì để cơ thể hồi phục? | Nghỉ ngơi, uống đủ nước và báo người lớn | ☐ |
 
-## Vật lý & Năng lượng (90 câu)
+## Vật lý & Năng lượng (120 câu)
 
-### Nam châm (8 câu)
+### Nam châm (12 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -209,8 +209,12 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | phy-12 | vừa | magnets | Trong hình, hai đầu nào của hai thanh nam châm đang đối diện nhau? | N và N | ☐ |
 | phy-13 | khó |  | Bạn có một thanh nam châm đã biết cực N. Muốn biết đầu nào của thanh khác là cực N, bạn l… | Đưa cực N đã biết lại gần, đầu nào đẩy ra thì đầu đó là cực… | ☐ |
 | phy-58 | dễ |  | Nam châm có thể hút đinh sắt qua lớp giấy hoặc vải mỏng. Điều này cho thấy gì? | Lực từ đi xuyên qua giấy và vải mỏng | ☐ |
+| phy-091 | vừa |  | Khi đưa nam châm ra xa một đinh sắt, lực hút thay đổi thế nào? | Yếu đi | ☐ |
+| phy-092 | dễ |  | La bàn hoạt động dựa trên điều gì? | Kim nam châm quay theo từ trường Trái Đất | ☐ |
+| phy-093 | khó |  | Hai nam châm đang hút nhau. Nếu xoay một thanh nam châm 180 độ, điều gì xảy ra? | Chúng đẩy nhau ra vì hai cực cùng tên đối diện | ☐ |
+| phy-094 | dễ |  | Vì sao nam châm hút được đinh sắt nhưng không hút được quả bóng nhựa? | Đinh làm bằng sắt, còn nhựa không bị từ lực hút | ☐ |
 
-### Điện và mạch điện (9 câu)
+### Điện và mạch điện (11 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -223,8 +227,10 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | phy-18 | khó |  | Vì sao người ta thường bọc dây điện bằng nhựa hoặc cao su? | Để điện không thoát ra ngoài và tránh điện giật cho người | ☐ |
 | phy-19 | khó |  | Nếu em chạm vào dây điện bị hở vỏ bọc, điều gì nguy hiểm nhất? | Điện có thể chạy qua người và gây nguy hiểm | ☐ |
 | phy-60 | dễ | circuit-closed | Để đèn pin sáng, em cần gì? | Pin và bóng đèn được nối kín thành mạch | ☐ |
+| phy-095 | vừa |  | Trong chuỗi đèn trang trí nối tiếp, khi một bóng hỏng thì cả chuỗi tắt. Vì sao? | Điện phải đi qua tất cả các bóng, nên một chỗ đứt làm mạch … | ☐ |
+| phy-096 | dễ |  | Vì sao cần tắt công tắc điện trước khi thay bóng đèn? | Để tránh bị điện giật khi chạm vào chỗ có điện | ☐ |
 
-### Vật dẫn và cách điện (7 câu)
+### Vật dẫn và cách điện (10 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -235,8 +241,11 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | phy-23 | khó |  | Vì sao chim đậu trên dây điện trần thường không bị điện giật? | Vì chim chỉ chạm một dây, không tạo thành đường đi qua người | ☐ |
 | phy-24 | vừa |  | Dây đèn trang trí có lõi bằng đồng và vỏ bằng nhựa. Lõi và vỏ làm nhiệm vụ gì? | Lõi dẫn điện, vỏ cách điện | ☐ |
 | phy-59 | vừa |  | Vì sao dây điện trong nhà thường làm bằng đồng? | Đồng dẫn điện tốt và dễ kéo thành sợi | ☐ |
+| phy-097 | vừa |  | Nước muối có dẫn điện không? | Có, vì nước muối chứa các hạt mang điện | ☐ |
+| phy-098 | vừa |  | Vì sao không nên chạm tay ướt vào ổ điện? | Vì nước dẫn điện, có thể làm điện chạy qua người | ☐ |
+| phy-099 | vừa |  | Thìa nhôm và thìa nhựa, cái nào giúp đèn sáng khi nối vào mạch? | Thìa nhôm | ☐ |
 
-### Âm thanh (8 câu)
+### Âm thanh (10 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -248,8 +257,10 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | phy-29 | vừa |  | Khi em nói to hơn, điều gì thay đổi ở âm thanh? | Âm thanh to hơn vì cổ họng rung mạnh hơn | ☐ |
 | phy-30 | khó |  | Bạn áp tai xuống đường ray để nghe tàu từ xa. Vì sao có thể nghe sớm hơn? | Âm thanh truyền qua kim loại tốt hơn không khí nên đến tai … | ☐ |
 | phy-31 | khó |  | Khi em bịt tai bằng hai bàn tay, âm thanh nhỏ đi. Vì sao? | Tay chặn bớt đường truyền âm thanh vào tai | ☐ |
+| phy-100 | vừa |  | Vì sao ta thường thấy chớp trước rồi mới nghe tiếng sấm? | Vì ánh sáng đến nhanh hơn âm thanh rất nhiều | ☐ |
+| phy-101 | khó |  | Vì sao mèo nghe được những tiếng rất cao mà người không nghe được? | Vì tai mèo nhạy hơn với âm có tần số cao | ☐ |
 
-### Ánh sáng và bóng (7 câu)
+### Ánh sáng và bóng (10 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -260,8 +271,11 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | phy-35 | vừa |  | Vật nào cho hầu hết ánh sáng đi qua và tạo ra ít bóng nhất? | Tấm kính trong | ☐ |
 | phy-36 | vừa |  | Trong phòng kín không có đèn và không có cửa sổ, vì sao ta không nhìn thấy gì? | Vì không có ánh sáng đi vào mắt | ☐ |
 | phy-37 | khó |  | Em chiếu đèn pin vào một chiếc gương. Ánh sáng sẽ đi thế nào? | Bật lại theo đường thẳng | ☐ |
+| phy-104 | vừa |  | Vì sao kính râm giúp mắt đỡ chói khi ra nắng? | Kính giảm bớt lượng ánh sáng đi vào mắt | ☐ |
+| phy-105 | khó |  | Vì sao sau cơn mưa có thể thấy cầu vồng? | Ánh sáng Mặt Trời bị tách thành nhiều màu khi đi qua giọt n… | ☐ |
+| phy-106 | vừa |  | Vì sao ta nhìn thấy quả táo có màu đỏ? | Quả táo phản xạ ánh sáng đỏ và hấp thụ các màu khác | ☐ |
 
-### Lực đẩy và lực kéo (7 câu)
+### Lực đẩy và lực kéo (11 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -272,6 +286,10 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | phy-42 | vừa | push-pull | Một bạn đẩy cửa mạnh hơn và cửa mở nhanh hơn. Điều này cho thấy gì? | Lực càng mạnh, vật chuyển động càng nhanh | ☐ |
 | phy-43 | khó |  | Hai bạn kéo co với lực bằng nhau ở hai đầu sợi dây. Sợi dây sẽ thế nào? | Dây đứng yên | ☐ |
 | phy-44 | khó |  | Bạn đẩy một chiếc hộp nặng nhưng hộp không nhúc nhích. Nguyên nhân có thể là gì? | Lực đẩy chưa đủ mạnh để thắng ma sát | ☐ |
+| phy-107 | dễ |  | Lực nào kéo quả táo rơi xuống đất khi nó rụng? | Lực hút của Trái Đất | ☐ |
+| phy-108 | vừa |  | Khi xe phanh gấp, người ngồi trên xe nghiêng về phía trước. Vì sao? | Cơ thể vẫn muốn tiếp tục chuyển động | ☐ |
+| phy-109 | khó |  | Vì sao ô tô phải đi chậm hơn trên đường trơn? | Ma sát giữa lốp và mặt đường nhỏ nên khó phanh | ☐ |
+| phy-110 | vừa |  | Vì sao cần tác dụng một lực liên tục để thùng gỗ trượt đều trên sàn? | Vì ma sát luôn cản chuyển động, nên phải có lực bù lại | ☐ |
 
 ### Nổi và chìm (7 câu)
 
@@ -285,7 +303,7 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | phy-49 | vừa |  | Một quả trứng nổi trong cốc nước muối nhưng chìm trong cốc nước lọc. Vì sao? | Nước muối đặc hơn nên đẩy trứng lên | ☐ |
 | phy-50 | vừa |  | Phát biểu nào về việc vật nổi hay chìm là đúng? | Vật nổi hay chìm phụ thuộc vào cả khối lượng và thể tích so… | ☐ |
 
-### Vật liệu và trạng thái (7 câu)
+### Vật liệu và trạng thái (10 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -296,8 +314,11 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | phy-55 | vừa | water-states | Khi để nước vào ngăn đá tủ lạnh, nước sẽ biến thành gì? | Đá rắn | ☐ |
 | phy-56 | vừa |  | Vì sao quần áo ướt phơi ngoài nắng khô nhanh hơn trong bóng râm? | Nắng làm nước trong quần áo bốc hơi nhanh hơn | ☐ |
 | phy-57 | khó |  | Một cốc nước để trên bàn vài ngày thì nước bớt đi. Nước đã đi đâu? | Bốc hơi thành hơi nước bay vào không khí | ☐ |
+| phy-111 | dễ |  | Vật nào dễ bị vỡ hơn khi rơi xuống nền cứng? | Ly thủy tinh | ☐ |
+| phy-112 | vừa |  | Khi nến cháy, sáp nến chảy thành chất lỏng. Khi nguội, sáp đổi thành gì? | Đông đặc lại thành chất rắn | ☐ |
+| phy-113 | khó |  | Vì sao em có thể ngửi thấy mùi nước hoa dù đứng xa chai? | Các phân tử mùi lan trong không khí và đến mũi em | ☐ |
 
-### Nóng, lạnh và truyền nhiệt (5 câu)
+### Nóng, lạnh và truyền nhiệt (7 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -306,8 +327,10 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | phy-063 | vừa |  | Không khí nóng nhẹ hơn bốc lên cao, rồi không khí lạnh hơn chìm xuống. Kiểu truyền nhiệt … | Đối lưu | ☐ |
 | phy-064 | vừa |  | Vì sao áo màu sáng thường giúp người mặc đỡ nóng hơn áo màu tối khi trời nắng? | Màu sáng phản xạ nhiều ánh sáng và hấp thụ ít nhiệt hơn | ☐ |
 | phy-065 | khó |  | Một ly nước đá đặt trên bàn gỗ, bên ngoài ly xuất hiện các giọt nước. Nước này đến từ đâu? | Hơi nước trong không khí ngưng tụ trên thành ly lạnh | ☐ |
+| phy-114 | dễ |  | Vì sao chăn bông giữ ấm cho cơ thể? | Lớp không khí trong sợi bông giữ nhiệt cơ thể | ☐ |
+| phy-115 | dễ |  | Vì sao mặc nhiều lớp áo mỏng thường ấm hơn một áo dày vào mùa lạnh? | Lớp không khí giữa các lớp áo giữ nhiệt tốt hơn | ☐ |
 
-### Các dạng năng lượng (5 câu)
+### Các dạng năng lượng (7 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -316,8 +339,10 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | phy-068 | vừa |  | Khi em đạp xe, năng lượng từ thức ăn trong cơ thể chuyển thành dạng nào để bánh xe quay? | Động năng (chuyển động) | ☐ |
 | phy-069 | vừa |  | Một quả bóng được giữ trên cao rồi thả rơi. Trước khi rơi, năng lượng của bóng ở dạng nào? | Thế năng, vì nó đang ở độ cao | ☐ |
 | phy-070 | khó |  | Trong máy phát điện gió, dạng năng lượng nào được chuyển thành điện năng? | Động năng của gió làm cánh quạt quay | ☐ |
+| phy-116 | dễ |  | Khi bật bếp điện, điện năng chuyển thành dạng nào để nấu chín thức ăn? | Nhiệt năng | ☐ |
+| phy-117 | vừa |  | Khi lò xo bị nén rồi thả ra, năng lượng nào làm đồ chơi nhảy lên? | Thế năng đàn hồi của lò xo chuyển thành động năng | ☐ |
 
-### Máy đơn giản (5 câu)
+### Máy đơn giản (6 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -326,8 +351,9 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | phy-073 | vừa |  | Bập bênh trên sân chơi là ví dụ của máy đơn giản nào? | Đòn bẩy có điểm tựa ở giữa | ☐ |
 | phy-074 | vừa |  | Vì sao đặt vật lên bánh xe rồi đẩy lại dễ hơn là kéo lê trên mặt đất? | Bánh xe lăn thay vì trượt, nên giảm ma sát | ☐ |
 | phy-075 | khó |  | Một ròng rọc cố định được dùng để kéo thùng nặng lên cao. Ròng rọc này giúp điều gì? | Đổi hướng lực kéo, nên có thể kéo từ trên xuống dễ hơn | ☐ |
+| phy-118 | dễ |  | Xe cút kít là ví dụ của máy đơn giản nào? | Đòn bẩy có điểm tựa ở bánh xe | ☐ |
 
-### Hòa tan và hỗn hợp (5 câu)
+### Hòa tan và hỗn hợp (7 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -336,6 +362,8 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | phy-078 | vừa |  | Cát trộn với nước rồi để yên, cát lắng xuống đáy. Đây là loại hỗn hợp nào? | Không hòa tan, có thể lọc được | ☐ |
 | phy-079 | vừa |  | Muốn lấy lại muối từ nước muối, cách nào dễ nhất? | Đun cho nước bốc hơi hết, muối còn lại đáy nồi | ☐ |
 | phy-080 | khó |  | Trong ba chất đường, cát và dầu ăn, chất nào tan trong nước? | Chỉ đường | ☐ |
+| phy-119 | dễ |  | Khi pha đường vào nước chanh và khuấy đều đến khi đường biến mất, hỗn hợp thu được gọi là… | Dung dịch | ☐ |
+| phy-120 | khó |  | Nước đường đã bão hòa. Khi để nước bốc hơi bớt, điều gì xảy ra với đường? | Đường kết tinh và lắng xuống đáy | ☐ |
 
 ### Tính chất vật liệu (5 câu)
 
@@ -347,7 +375,7 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | phy-084 | vừa |  | Vật nào bị gỉ khi để ngoài trời ẩm lâu ngày? | Sắt | ☐ |
 | phy-085 | khó |  | Vì sao khi chạm tay vào, sắt thường có cảm giác lạnh hơn gỗ dù cả hai đều ở cùng nhiệt độ… | Sắt dẫn nhiệt tốt nên lấy nhiệt từ tay nhanh hơn | ☐ |
 
-### Âm cao và âm thấp (5 câu)
+### Âm cao và âm thấp (7 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -356,6 +384,8 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | phy-088 | khó |  | Trong ống sáo, khi bịt bớt lỗ để cột không khí trong ống dài hơn, âm thanh sẽ thế nào? | Thấp hơn | ☐ |
 | phy-089 | vừa |  | Vật nhỏ và nhẹ thường rung nhanh hơn vật to và nặng. Điều này có nghĩa là gì với âm thanh? | Vật nhỏ thường tạo âm cao hơn | ☐ |
 | phy-090 | khó |  | Khi gõ vào một cái cốc thủy tinh có ít nước hơn, âm thanh sẽ cao hơn hay thấp hơn? | Âm cao hơn, vì cốc rung nhanh hơn | ☐ |
+| phy-102 | vừa |  | Tiếng ong bay thường cao hơn tiếng gấu gầm. Vì sao? | Cánh ong rung nhanh hơn nên tạo âm cao hơn | ☐ |
+| phy-103 | vừa |  | Hai thanh thép cùng loại, một ngắn và một dài, cùng được gõ. Thanh nào rung nhanh hơn và … | Thanh ngắn | ☐ |
 
 ## Trái đất & Vũ trụ (60 câu)
 
