@@ -9,6 +9,7 @@ export type Options = [string, string, string, string]
 
 export type ScienceSubtopicId =
   | 'plant-parts' | 'plant-needs' | 'animal-groups' | 'life-cycles' | 'habitats-adapt' | 'food-chains' | 'living-vs-nonliving' | 'human-body'
+  | 'seeds-growth' | 'feeding-teeth' | 'caring-young' | 'decomposers' | 'survival-strategies' | 'healthy-habits'
   | 'magnets' | 'electricity' | 'conductors' | 'sound' | 'light-shadow' | 'forces-motion' | 'float-sink' | 'materials-states'
   | 'sun' | 'moon' | 'day-night' | 'shadows-time' | 'water-cycle' | 'weather-seasons' | 'earth-shape' | 'rocks-soil'
   | 'observation' | 'measuring-tools' | 'reading-numbers' | 'charts' | 'fair-test' | 'predict-compare' | 'classify' | 'variables-cause'

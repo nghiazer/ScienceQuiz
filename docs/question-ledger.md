@@ -3,7 +3,7 @@
 Sinh tự động từ `src/data/questions` bằng `npm run ledger`. Không sửa tay file này.
 Dùng để chọn khái niệm chưa có trước khi soạn câu mới và làm phiếu review nội dung khoa học.
 
-## Sinh học (60 câu)
+## Sinh học (90 câu)
 
 ### Bộ phận của cây (7 câu)
 
@@ -104,6 +104,66 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | liv-52 | khó |  | Da bảo vệ cơ thể bằng cách nào? | Ngăn vi khuẩn và chất độc xâm nhập vào cơ thể | ☐ |
 | liv-53 | khó |  | Vì sao chúng ta cần ngủ đủ giấc? | Để cơ thể nghỉ ngơi, phát triển và tập trung học tốt | ☐ |
 | liv-54 | vừa |  | Nếu bạn bị đau bụng sau khi ăn thức ăn đã ôi thiu, bạn nên làm gì? | Báo người lớn và nghỉ ngơi | ☐ |
+
+### Hạt và sự nảy mầm (5 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| liv-61 | dễ |  | Hạt đậu cần những gì để nảy mầm? | Nước, không khí và hơi ấm | ☐ |
+| liv-62 | vừa |  | Vì sao cây con mới nảy mầm vẫn lớn lên được khi chưa có lá xanh? | Nhờ chất dinh dưỡng được dự trữ sẵn trong hạt | ☐ |
+| liv-63 | vừa |  | Khi hạt nảy mầm, bộ phận nào thường mọc ra đầu tiên? | Rễ | ☐ |
+| liv-64 | vừa |  | Vì sao không nên gieo hạt quá sâu trong đất? | Mầm yếu không đủ sức vươn lên mặt đất | ☐ |
+| liv-65 | khó |  | Ba hộp đều có hạt giống: hộp 1 ẩm và ấm, hộp 2 khô ráo, hộp 3 đông lạnh trong tủ lạnh. Hạ… | Chỉ hạt trong hộp 1 | ☐ |
+
+### Ăn uống và răng (5 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| liv-66 | dễ |  | Con vật nào ăn cỏ? | Con bò | ☐ |
+| liv-67 | dễ |  | Con vật nào dưới đây là loài săn mồi? | Con hổ | ☐ |
+| liv-68 | vừa |  | Răng nanh nhọn và sắc của sư tử dùng để làm gì? | Xé thịt con mồi | ☐ |
+| liv-69 | vừa |  | Vì sao em nên đánh răng sau khi ăn? | Để loại bỏ thức ăn thừa và vi khuẩn gây sâu răng | ☐ |
+| liv-70 | khó |  | Gà không có răng nhưng vẫn nghiền được thức ăn cứng. Gà làm điều đó bằng cách nào? | Nuốt sỏi nhỏ để sỏi nghiền thức ăn trong dạ dày cơ | ☐ |
+
+### Chăm sóc con non (5 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| liv-71 | dễ |  | Mèo mẹ chăm con nhỏ bằng cách nào? | Cho con bú sữa và liếm sạch cho con | ☐ |
+| liv-72 | dễ |  | Chim bố mẹ thường làm gì khi nuôi chim non trong tổ? | Mang thức ăn về mớm cho con | ☐ |
+| liv-73 | vừa |  | Con non nào có thể đứng và đi theo mẹ ngay vài giờ sau khi sinh? | Ngựa con | ☐ |
+| liv-74 | dễ |  | Động vật có vú nuôi con non bằng gì? | Sữa mẹ | ☐ |
+| liv-75 | khó |  | Vì sao nhiều loài chim làm tổ kín hoặc giấu trứng rất kỹ? | Để giữ trứng ấm và tránh kẻ thù | ☐ |
+
+### Sinh vật phân hủy và tái chế (5 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| liv-76 | dễ |  | Vi khuẩn và nấm trong đất có vai trò gì với lá rụng? | Phân hủy lá thành chất dinh dưỡng cho đất | ☐ |
+| liv-77 | vừa |  | Vì sao người ta ủ phân từ vỏ rau và lá cây? | Để vi sinh vật phân hủy thành phân bón cho cây | ☐ |
+| liv-78 | vừa |  | Sinh vật nào dưới đây là sinh vật phân hủy? | Nấm mốc trên bánh mì | ☐ |
+| liv-79 | khó |  | Nếu không có sinh vật phân hủy, điều gì sẽ xảy ra với lá rụng và xác động vật? | Chúng chất đống mãi và chất dinh dưỡng không quay lại đất | ☐ |
+| liv-80 | vừa |  | Tái chế giấy và nhựa giúp ích gì cho môi trường? | Giảm rác thải và tiết kiệm tài nguyên | ☐ |
+
+### Ngủ đông, di cư, ngụy trang (5 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| liv-81 | dễ |  | Nhiều loài động vật ngủ đông vào mùa lạnh. Ngủ đông giúp chúng điều gì? | Tiết kiệm năng lượng khi thiếu thức ăn | ☐ |
+| liv-82 | vừa |  | Chim én bay về phía nam vào mùa đông ở nhiều nước. Hành động này gọi là gì? | Di cư | ☐ |
+| liv-83 | vừa |  | Con bọ que có hình dáng và màu sắc giống cành cây. Kiểu ngụy trang này gọi là gì? | Ngụy trang | ☐ |
+| liv-84 | khó |  | Một số con sâu không có nọc độc nhưng có vằn vàng đen giống ong bắp cày. Điều này giúp ch… | Làm kẻ thù tưởng nhầm là ong nên tránh ăn | ☐ |
+| liv-85 | vừa |  | Ngủ đông khác với ngủ bình thường ở điểm nào? | Cơ thể chậm lại rất nhiều và gần như không ăn trong thời gi… | ☐ |
+
+### Thói quen lành mạnh (5 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| liv-86 | dễ |  | Vì sao em cần uống đủ nước mỗi ngày? | Để cơ thể hoạt động tốt và không bị mất nước | ☐ |
+| liv-87 | dễ |  | Vận động và tập thể dục thường xuyên có lợi gì? | Giúp xương và cơ khỏe mạnh | ☐ |
+| liv-88 | vừa |  | Khi xem màn hình lâu, em nên làm gì để bảo vệ mắt? | Nghỉ mắt đều đặn và ngồi xa màn hình | ☐ |
+| liv-89 | vừa |  | Vì sao nên hạn chế ăn đồ ngọt nhiều? | Vì đường giúp vi khuẩn tạo axit làm hại răng | ☐ |
+| liv-90 | khó |  | Khi bị sốt, em nên làm gì để cơ thể hồi phục? | Nghỉ ngơi, uống đủ nước và báo người lớn | ☐ |
 
 ## Vật lý & Năng lượng (60 câu)
 
