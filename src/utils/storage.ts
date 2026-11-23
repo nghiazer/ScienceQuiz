@@ -1,4 +1,4 @@
-import { BADGES } from '../data/badges'
+import { DRESSES, unlockedCount } from '../data/dresses'
 import type { AnswerRecord, Progress, Question, QuizKind, Subject, Topic } from '../types/quiz'
 
 const KEY = 'asmo-quiz-progress-v1'
@@ -22,7 +22,6 @@ export const defaultProgress = (): Progress => ({
     'present-continuous': emptyStats(),
     'past-simple': emptyStats(),
   },
-  unlockedBadges: [],
   seenIds: [],
 })
 
@@ -36,7 +35,6 @@ export function loadProgress(): Progress {
       ...base,
       ...parsed,
       topicStats: { ...base.topicStats, ...(parsed.topicStats ?? {}) },
-      unlockedBadges: Array.isArray(parsed.unlockedBadges) ? parsed.unlockedBadges : [],
       seenIds: Array.isArray(parsed.seenIds) ? parsed.seenIds : [],
     }
   } catch {
@@ -84,7 +82,8 @@ export interface RecordOutput {
   progress: Progress
   stars: number
   percent: number
-  newBadges: string[]
+  /** id các váy vừa mở khóa */
+  newDresses: string[]
 }
 
 /** Số sao nhận được = số câu đúng (+ thưởng 3 sao nếu đạt từ 90%). */
@@ -131,20 +130,16 @@ export function recordQuizResult(prev: Progress, input: RecordInput, today = tod
     englishMockCompleted: prev.englishMockCompleted + (input.kind === 'mock' && input.subject === 'english' ? 1 : 0),
     perfectCount: prev.perfectCount + (percent === 100 && total > 0 ? 1 : 0),
     topicStats,
-    unlockedBadges: [...prev.unlockedBadges],
     seenIds: Array.from(new Set([
       ...prev.seenIds,
       ...input.answers.filter((a) => a.selectedIndex !== null).map((a) => a.questionId),
     ])),
   }
 
-  const newBadges: string[] = []
-  for (const b of BADGES) {
-    if (!next.unlockedBadges.includes(b.id) && b.check(next, { percent, kind: input.kind })) {
-      next.unlockedBadges.push(b.id)
-      newBadges.push(b.id)
-    }
-  }
+  // Cứ 10 câu đúng của một môn thì mở thêm một váy của môn đó.
+  const before = unlockedCount(prev, input.subject)
+  const after = unlockedCount(next, input.subject)
+  const newDresses = DRESSES[input.subject].slice(before, after).map((d) => d.id)
   saveProgress(next)
-  return { progress: next, stars, percent, newBadges }
+  return { progress: next, stars, percent, newDresses }
 }

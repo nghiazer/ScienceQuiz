@@ -9,8 +9,9 @@ import Header from './components/Header'
 import HomeScreen from './components/HomeScreen'
 import QuizArena from './components/QuizArena'
 import ResultScreen from './components/ResultScreen'
+import WardrobeScreen from './components/wardrobe/WardrobeScreen'
 
-type Screen = { name: 'home' } | { name: 'quiz'; config: QuizConfig; runId: number } | { name: 'result'; result: QuizResult }
+type Screen = { name: 'home' } | { name: 'wardrobe' } | { name: 'quiz'; config: QuizConfig; runId: number } | { name: 'result'; result: QuizResult }
 
 export default function App() {
   const { subject } = useSubject()
@@ -36,7 +37,7 @@ export default function App() {
     setProgress(out.progress)
     setScreen({
       name: 'result',
-      result: { config, answers, stars: out.stars, percent: out.percent, newBadges: out.newBadges },
+      result: { config, answers, stars: out.stars, percent: out.percent, newDresses: out.newDresses },
     })
     window.scrollTo({ top: 0 })
   }
@@ -46,12 +47,18 @@ export default function App() {
     window.scrollTo({ top: 0 })
   }
 
+  const openWardrobe = () => {
+    setScreen({ name: 'wardrobe' })
+    window.scrollTo({ top: 0 })
+  }
+
   return (
     <>
       <MotionConfig reducedMotion="user">
-        <Header />
+        <Header inQuiz={screen.name === 'quiz'} inWardrobe={screen.name === 'wardrobe'} onOpenWardrobe={openWardrobe} />
         <main>
           {screen.name === 'home' && <HomeScreen progress={progress} onStartTopic={startTopic} onStartMock={startMock} />}
+          {screen.name === 'wardrobe' && <WardrobeScreen progress={progress} onHome={goHome} />}
           {screen.name === 'quiz' && (
             <QuizArena
               key={screen.runId}
@@ -71,6 +78,7 @@ export default function App() {
                 else goHome()
               }}
               onHome={goHome}
+              onOpenWardrobe={openWardrobe}
             />
           )}
         </main>

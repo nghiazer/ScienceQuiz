@@ -8,13 +8,16 @@ import { buildRetryQuiz, findMissed } from '../utils/quiz'
 import { playComplete } from '../utils/sound'
 import { launchFireworks } from '../utils/fireworks'
 import BilingualText from './BilingualText'
-import BadgeGrid from './BadgeGrid'
+import DressCard from './wardrobe/DressCard'
+import { dressById } from '../data/dresses'
+import { useWardrobe } from '../utils/wardrobe'
 
 interface Props {
   result: QuizResult
   onRetryWrong: (qs: Question[]) => void
   onReplay: () => void
   onHome: () => void
+  onOpenWardrobe: () => void
 }
 
 function fireConfetti() {
@@ -27,8 +30,8 @@ function fireConfetti() {
   frame()
 }
 
-export default function ResultScreen({ result, onRetryWrong, onReplay, onHome }: Props) {
-  const { config, answers, percent, stars, newBadges } = result
+export default function ResultScreen({ result, onRetryWrong, onReplay, onHome, onOpenWardrobe }: Props) {
+  const { config, answers, percent, stars, newDresses } = result
   const { questions, subject } = config
   const isEnglish = subject === 'english'
   const correctCount = answers.filter((a) => a.correct).length
@@ -39,12 +42,13 @@ export default function ResultScreen({ result, onRetryWrong, onReplay, onHome }:
     if (passed) fireConfetti()
   }, [passed])
 
-  // Có huy hiệu mới → bắn pháo hoa toàn màn hình (độc lập với việc đạt ≥70%).
-  const hasNewBadge = newBadges.length > 0
+  // Có váy mới → bắn pháo hoa toàn màn hình (độc lập với việc đạt ≥70%).
+  const hasNewDress = newDresses.length > 0
   useEffect(() => {
-    if (!hasNewBadge) return
+    if (!hasNewDress) return
     return launchFireworks()
-  }, [hasNewBadge])
+  }, [hasNewDress])
+  const { bankSeconds } = useWardrobe()
 
   const wrong = useMemo(() => findMissed(questions, answers), [questions, answers])
   const answerOf = (id: string) => answers.find((a) => a.questionId === id)
@@ -91,12 +95,33 @@ export default function ResultScreen({ result, onRetryWrong, onReplay, onHome }:
         <BilingualText as="p" vi={message.vi} en={message.en} className="mt-4 text-lg sm:text-xl font-extrabold" subClassName="!text-white/90 !not-italic" />
       </motion.section>
 
-      {newBadges.length > 0 && (
-        <section className="rounded-3xl bg-white p-4 shadow-soft">
-          <h2 className="mb-3 text-xl font-black text-amber-700">
-            <BilingualText vi="🎖️ Huy hiệu mới!" en="🎖️ New badge!" />
+      {newDresses.length > 0 && (
+        <section className="rounded-3xl bg-gradient-to-br from-pink-100 to-fuchsia-100 p-4 shadow-soft ring-4 ring-pink-200">
+          <h2 className="mb-3 text-xl font-black text-fuchsia-700">
+            <BilingualText vi="👗 Con vừa mở được váy mới!" en="👗 You unlocked a new dress!" />
           </h2>
-          <BadgeGrid unlocked={newBadges} highlight={newBadges} onlyUnlocked />
+          <ul className="mx-auto grid max-w-xl grid-cols-2 gap-3 sm:grid-cols-3">
+            {newDresses.map((id) => {
+              const d = dressById(id)
+              return d ? (
+                <li key={id}>
+                  <DressCard dress={d} unlocked highlight />
+                </li>
+              ) : null
+            })}
+          </ul>
+          <button
+            type="button"
+            onClick={onOpenWardrobe}
+            disabled={bankSeconds <= 0}
+            className="mt-4 min-h-14 w-full rounded-2xl bg-fuchsia-500 px-6 text-lg font-black text-white shadow-pop hover:bg-fuchsia-600 disabled:bg-slate-300 disabled:text-slate-500"
+          >
+            {bankSeconds > 0 ? (
+              <BilingualText vi="Mặc thử ngay!" en="Try it on now!" subClassName="!text-white/80 !not-italic !text-xs" />
+            ) : (
+              <BilingualText vi="Học đủ 15 phút để mở tủ quần áo" en="Learn for 15 minutes to open the wardrobe" subClassName="!not-italic !text-xs" />
+            )}
+          </button>
         </section>
       )}
 

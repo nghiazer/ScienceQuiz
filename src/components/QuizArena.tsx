@@ -7,6 +7,7 @@ import { useLang } from '../context/LanguageContext'
 import { MOCK_MINUTES } from '../utils/quiz'
 import { playClick, playCorrect, playWrong, unlockAudio } from '../utils/sound'
 import { speakQuestion, stopSpeaking } from '../utils/speech'
+import { useStudyTimer } from '../utils/useStudyTimer'
 import { Illustration } from './illustrations'
 import BilingualText from './BilingualText'
 import EnglishPrompt from './EnglishPrompt'
@@ -40,6 +41,7 @@ export default function QuizArena({ config, onFinish, onExit }: Props) {
   const [timerVisible, setTimerVisible] = useState(true)
   const [paused, setPaused] = useState(false)
   const [confirmExit, setConfirmExit] = useState(false)
+  const [rewardToast, setRewardToast] = useState(false)
   const topRef = useRef<HTMLDivElement>(null)
 
   const q = questions[index]
@@ -47,6 +49,14 @@ export default function QuizArena({ config, onFinish, onExit }: Props) {
   const stars = answers.filter((a) => a.correct).length
   const timeUp = timerEnabled && remaining === 0
   const modalOpen = timeUp || confirmExit
+
+  // Giờ làm bài đổi thành giờ chơi tủ quần áo: mỗi 15 phút được thêm 5 phút.
+  useStudyTimer(!modalOpen && !paused, () => setRewardToast(true))
+  useEffect(() => {
+    if (!rewardToast) return
+    const id = window.setTimeout(() => setRewardToast(false), 5000)
+    return () => window.clearTimeout(id)
+  }, [rewardToast])
 
   // Đồng hồ đếm ngược
   useEffect(() => {
@@ -220,6 +230,20 @@ export default function QuizArena({ config, onFinish, onExit }: Props) {
           </button>
         </motion.div>
       )}
+
+      <AnimatePresence>
+        {rewardToast && (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 30 }}
+            role="status"
+            className="fixed inset-x-4 bottom-6 z-40 mx-auto max-w-sm rounded-2xl bg-pink-500 px-5 py-3 text-center text-lg font-black text-white shadow-2xl"
+          >
+            <BilingualText vi="👗 +5 phút chơi tủ quần áo!" en="👗 +5 minutes in the wardrobe!" subClassName="!text-white/85 !not-italic !text-xs" />
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {timeUp && (
         <Modal>

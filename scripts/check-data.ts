@@ -6,6 +6,7 @@ import { ILLUSTRATIONS } from '../src/components/illustrations/registry'
 import type { Difficulty, Topic } from '../src/types/quiz'
 import { findDupes, type AllowEntry } from './lib/dupes'
 import { readFileSync } from 'node:fs'
+import { DRESSES, DRESSES_PER_SUBJECT } from '../src/data/dresses'
 
 const errors: string[] = []
 const fail = (msg: string) => errors.push(msg)
@@ -90,6 +91,21 @@ const allow = JSON.parse(readFileSync('scripts/dupes-allowlist.json', 'utf8')) a
 const dupes = findDupes(ALL_QUESTIONS, allow)
 errors.push(...dupes.errors)
 for (const w of dupes.warnings) console.warn('  cảnh báo: ' + w)
+
+// Váy dạ hội: mỗi môn đúng 30 váy, thứ tự 1–30, tên đủ, độ đẹp (tier) không giảm
+const dressIds = new Set<string>()
+for (const [subj, list] of Object.entries(DRESSES)) {
+  if (list.length !== DRESSES_PER_SUBJECT) fail(`váy ${subj}: ${list.length} váy, cần ${DRESSES_PER_SUBJECT}`)
+  list.forEach((d, i) => {
+    if (d.index !== i + 1) fail(`váy ${d.id}: index ${d.index} không đúng thứ tự (cần ${i + 1})`)
+    if (dressIds.has(d.id)) fail(`váy trùng id: ${d.id}`)
+    dressIds.add(d.id)
+    if (!d.name_vi.trim() || !d.name_en.trim()) fail(`váy ${d.id}: thiếu tên`)
+    if (i > 0 && d.tier < list[i - 1].tier) fail(`váy ${d.id}: tier giảm so với váy trước`)
+    if (d.subject !== subj) fail(`váy ${d.id}: sai môn`)
+  })
+}
+console.log(`Váy dạ hội: ${Object.entries(DRESSES).map(([k, v]) => `${k} ${v.length}`).join(', ')}`)
 
 // Tiếng Anh
 const en = checkEnglish()

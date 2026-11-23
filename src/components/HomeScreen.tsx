@@ -1,15 +1,16 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { ChevronDown, Flame, GraduationCap, Medal, Star } from 'lucide-react'
+import { Flame, GraduationCap, Shirt, Star } from 'lucide-react'
 import type { Progress, Topic } from '../types/quiz'
 import { QUESTIONS_BY_SUBJECT, SUBJECTS, SUBJECT_TOPICS, TOPICS } from '../data/questions'
 import { useSubject } from '../context/SubjectContext'
-import { badgesFor } from '../data/badges'
+import { DRESSES, DRESSES_PER_SUBJECT, nextDressIn, unlockedCount } from '../data/dresses'
+import { STUDY_BLOCK_SECONDS, formatClock, useWardrobe } from '../utils/wardrobe'
 import { currentStreak } from '../utils/storage'
 import { ENGLISH_MOCK_SIZE, MOCK_MINUTES, MOCK_SIZE } from '../utils/quiz'
 import { playClick, unlockAudio } from '../utils/sound'
 import BilingualText from './BilingualText'
-import BadgeGrid from './BadgeGrid'
+import DressCard from './wardrobe/DressCard'
 import SubjectSwitcher from './SubjectSwitcher'
 
 interface Props {
@@ -32,13 +33,15 @@ function Stat({ icon, value, vi, en, tone }: { icon: React.ReactNode; value: num
 
 export default function HomeScreen({ progress, onStartTopic, onStartMock }: Props) {
   const [timerOn, setTimerOn] = useState(true)
-  const [showBadges, setShowBadges] = useState(false)
   const streak = currentStreak(progress)
   const { subject } = useSubject()
   const isEnglish = subject === 'english'
   const meta = SUBJECTS[subject]
   const topicIds = SUBJECT_TOPICS[subject]
-  const visibleBadges = badgesFor(subject)
+  const dressCount = unlockedCount(progress, subject)
+  const dressesLeft = nextDressIn(progress, subject)
+  const nextDress = DRESSES[subject][dressCount]
+  const { studySeconds, bankSeconds } = useWardrobe()
   const mockSize = isEnglish ? ENGLISH_MOCK_SIZE : MOCK_SIZE
   const subjectTotals = topicIds.reduce(
     (acc, id) => ({ correct: acc.correct + progress.topicStats[id].correct, total: acc.total + progress.topicStats[id].total }),
@@ -64,22 +67,35 @@ export default function HomeScreen({ progress, onStartTopic, onStartMock }: Prop
         <div className="mt-5 flex flex-col gap-3 sm:flex-row">
           <Stat tone="bg-amber-100 text-amber-800" icon={<Star className="size-7 fill-amber-400 text-amber-500" />} value={progress.totalStars} vi="Tổng số sao" en="Total stars" />
           <Stat tone="bg-orange-100 text-orange-800" icon={<Flame className="size-7 fill-orange-400 text-orange-500" />} value={streak} vi="Ngày học liên tiếp" en="Day streak" />
-          <Stat tone="bg-violet-100 text-violet-800" icon={<Medal className="size-7 text-violet-500" />} value={`${visibleBadges.filter((b) => progress.unlockedBadges.includes(b.id)).length}/${visibleBadges.length}`} vi="Huy hiệu" en="Badges" />
+          <Stat tone="bg-pink-100 text-pink-800" icon={<Shirt className="size-7 text-pink-500" />} value={`${dressCount}/${DRESSES_PER_SUBJECT}`} vi="Váy dạ hội" en="Ball gowns" />
         </div>
-        <button
-          type="button"
-          onClick={() => setShowBadges((s) => !s)}
-          aria-expanded={showBadges}
-          className="mt-4 flex min-h-12 items-center gap-2 rounded-2xl bg-white/20 px-4 font-extrabold hover:bg-white/30"
-        >
-          <BilingualText vi="Xem bộ sưu tập huy hiệu" en="See my badge collection" subClassName="!text-white/80 !not-italic !text-xs" />
-          <ChevronDown className={`size-5 transition ${showBadges ? 'rotate-180' : ''}`} />
-        </button>
-        {showBadges && (
-          <div className="mt-4 rounded-2xl bg-white p-3 text-slate-800">
-            <BadgeGrid unlocked={progress.unlockedBadges} />
+        <div className="mt-4 flex items-center gap-4 rounded-2xl bg-white/20 p-3">
+          {nextDress ? (
+            <div className="w-16 shrink-0 sm:w-20">
+              <DressCard dress={nextDress} unlocked={false} />
+            </div>
+          ) : (
+            <span className="text-5xl" aria-hidden>👑</span>
+          )}
+          <div className="min-w-0 flex-1 font-extrabold">
+            {nextDress ? (
+              <BilingualText
+                vi={`Còn ${dressesLeft} câu đúng nữa để mở váy mới!`}
+                en={`${dressesLeft} more correct answers to unlock a new dress!`}
+                subClassName="!text-white/80 !not-italic !text-xs"
+              />
+            ) : (
+              <BilingualText vi="Con đã mở hết váy của môn này! 🎉" en="You unlocked every dress in this subject! 🎉" subClassName="!text-white/80 !not-italic !text-xs" />
+            )}
+            <p className="mt-1 text-xs font-bold text-white/90">
+              👗 Học {formatClock(STUDY_BLOCK_SECONDS - studySeconds)} nữa → +5 phút tủ quần áo
+              {bankSeconds > 0 ? ` · đang có ${formatClock(bankSeconds)}` : ''}
+            </p>
+            <div className="mt-1 h-2 overflow-hidden rounded-full bg-white/30">
+              <div className="h-full rounded-full bg-white" style={{ width: `${(studySeconds / STUDY_BLOCK_SECONDS) * 100}%` }} />
+            </div>
           </div>
-        )}
+        </div>
       </motion.section>
 
       <section aria-labelledby="topics-h">

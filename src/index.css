@@ -32,3 +32,23 @@ button:focus-visible, [role="switch"]:focus-visible {
   outline-offset: 2px;
 }
 button:disabled { cursor: default; }
+
+/* ── Tủ quần áo công chúa ── */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.15; transform: scale(0.6); }
+  50% { opacity: 1; transform: scale(1.25); }
+}
+.twinkle {
+  animation: twinkle 1.9s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+@keyframes aura-pulse {
+  0%, 100% { opacity: 0.75; }
+  50% { opacity: 1; }
+}
+.aura-pulse { animation: aura-pulse 3s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .twinkle { animation: none; opacity: 0.8; }
+  .aura-pulse { animation: none; }
+}

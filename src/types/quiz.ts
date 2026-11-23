@@ -99,7 +99,8 @@ export interface QuizResult {
   answers: AnswerRecord[]
   stars: number
   percent: number
-  newBadges: string[]
+  /** id các váy vừa mở khóa nhờ bài này */
+  newDresses: string[]
 }
 
 export interface TopicStat {
@@ -117,21 +118,8 @@ export interface Progress {
   englishMockCompleted: number
   perfectCount: number
   topicStats: Record<Topic, TopicStat>
-  unlockedBadges: string[]
   /** id các câu đã trả lời, dùng để ưu tiên câu mới ở các lượt sau */
   seenIds: string[]
-}
-
-export interface BadgeDef {
-  id: string
-  /** Huy hiệu riêng của một môn; bỏ trống = dùng chung cho mọi môn */
-  subject?: Subject
-  emoji: string
-  name_vi: string
-  name_en: string
-  desc_vi: string
-  desc_en: string
-  check: (p: Progress, last?: { percent: number; kind: QuizKind }) => boolean
 }
 
 export interface TopicMeta {
