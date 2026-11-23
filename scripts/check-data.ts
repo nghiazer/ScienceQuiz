@@ -1,5 +1,6 @@
 /* Kiểm tra cấu trúc ngân hàng câu hỏi. Chạy: npm run check:data */
-import { QUESTIONS, TOPIC_ORDER } from '../src/data/questions'
+import { ALL_QUESTIONS, QUESTIONS, SUBJECT_TOPICS, TOPIC_ORDER } from '../src/data/questions'
+import { checkEnglish, ENGLISH_PER_TOPIC } from './lib/english-checks'
 import { SUBTOPICS } from '../src/data/topics'
 import { ILLUSTRATIONS } from '../src/components/illustrations/registry'
 import type { Difficulty, Topic } from '../src/types/quiz'
@@ -56,7 +57,7 @@ for (const t of TOPIC_ORDER as Topic[]) {
   if ((perTopic[t] ?? 0) < PER_TOPIC) console.warn(`  tiến độ: chủ đề ${t} ${perTopic[t] ?? 0}/${PER_TOPIC} câu`)
   if ((perTopic[t] ?? 0) > PER_TOPIC) fail(`chủ đề ${t}: ${perTopic[t]} câu, vượt mục tiêu ${PER_TOPIC}`)
 }
-for (const [s, n] of Object.entries(SUBTOPICS)) {
+for (const [s, n] of Object.entries(SUBTOPICS).filter(([, v]) => SUBJECT_TOPICS.science.includes(v.topic))) {
   const count = perSub[s] ?? 0
   if (count < MIN_PER_SUBTOPIC) fail(`chủ điểm ${s}: ${count} câu, cần tối thiểu ${MIN_PER_SUBTOPIC}`)
   void n
@@ -64,12 +65,14 @@ for (const [s, n] of Object.entries(SUBTOPICS)) {
 
 const usedIllus = new Set(QUESTIONS.map((q) => q.illustrationId).filter(Boolean))
 const illusCoverage = QUESTIONS.filter((q) => q.illustrationId).length
-const unusedIllus = Object.keys(ILLUSTRATIONS).filter((k) => !usedIllus.has(k as never))
+const ENGLISH_ILLUS = new Set(['en-timeline-past', 'en-timeline-now', 'en-timeline-habit', 'en-dialogue', 'en-daily-routine', 'en-look-listen'])
+const scienceIllus = Object.keys(ILLUSTRATIONS).filter((k) => !ENGLISH_ILLUS.has(k))
+const unusedIllus = scienceIllus.filter((k) => !usedIllus.has(k as never))
 
 console.log(`Tổng số câu: ${QUESTIONS.length}`)
 for (const t of TOPIC_ORDER) console.log(`  ${t.padEnd(9)} ${perTopic[t] ?? 0} câu  dễ/vừa/khó = ${perDiff[t]?.easy}/${perDiff[t]?.medium}/${perDiff[t]?.hard}`)
-console.log(`Chủ điểm: ${Object.keys(SUBTOPICS).length}, câu có hình: ${illusCoverage} (${Math.round((illusCoverage / QUESTIONS.length) * 100)}%)`)
-console.log(`Hình minh họa: ${Object.keys(ILLUSTRATIONS).length} (chưa dùng: ${unusedIllus.length ? unusedIllus.join(', ') : 'không có'})`)
+console.log(`Chủ điểm: ${Object.values(SUBTOPICS).filter((v) => SUBJECT_TOPICS.science.includes(v.topic)).length}, câu có hình: ${illusCoverage} (${Math.round((illusCoverage / QUESTIONS.length) * 100)}%)`)
+console.log(`Hình minh họa Khoa học: ${scienceIllus.length} (chưa dùng: ${unusedIllus.length ? unusedIllus.join(', ') : 'không có'})`)
 
 // Vị trí đáp án đúng không được lệch: mỗi vị trí tối đa 40% (toàn kho và từng chủ đề).
 const posShare = (qs: typeof QUESTIONS) =>
@@ -84,9 +87,15 @@ console.log(`Vị trí đáp án đúng A/B/C/D: ${posShare(QUESTIONS).map((x) =
 
 // Trùng lặp (xem scripts/lib/dupes.ts và scripts/dupes-allowlist.json)
 const allow = JSON.parse(readFileSync('scripts/dupes-allowlist.json', 'utf8')) as AllowEntry[]
-const dupes = findDupes(QUESTIONS, allow)
+const dupes = findDupes(ALL_QUESTIONS, allow)
 errors.push(...dupes.errors)
 for (const w of dupes.warnings) console.warn('  cảnh báo: ' + w)
+
+// Tiếng Anh
+const en = checkEnglish()
+errors.push(...en.errors)
+console.log(`\nTiếng Anh (Cambridge KET/PET): mục tiêu ${ENGLISH_PER_TOPIC} câu mỗi thì`)
+for (const l of en.lines) console.log(l)
 
 if (errors.length) {
   console.error(`\n✗ ${errors.length} lỗi:`)

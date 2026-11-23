@@ -1,35 +1,50 @@
 import { createContext, useCallback, useContext, useMemo, useState, type ReactNode } from 'react'
-import type { LangMode } from '../types/quiz'
+import type { LangMode, Subject } from '../types/quiz'
+import { useSubject } from './SubjectContext'
 
-const KEY = 'asmo-quiz-lang'
+const KEYS: Record<Subject, string> = {
+  science: 'asmo-quiz-lang',
+  english: 'asmo-quiz-lang-english',
+}
 
 interface Ctx {
+  /** Chế độ ngôn ngữ của môn đang học. Môn Tiếng Anh chỉ dùng 'vi' hoặc 'bi' (cho phần giải thích). */
   mode: LangMode
   setMode: (m: LangMode) => void
 }
 
 const LanguageContext = createContext<Ctx | null>(null)
 
-function readInitial(): LangMode {
+function readInitial(subject: Subject): LangMode {
   try {
-    const v = localStorage.getItem(KEY)
-    if (v === 'vi' || v === 'en' || v === 'bi') return v
+    const v = localStorage.getItem(KEYS[subject])
+    if (subject === 'english') {
+      if (v === 'vi' || v === 'bi') return v
+    } else if (v === 'vi' || v === 'en' || v === 'bi') return v
   } catch {
     /* ignore */
   }
-  return 'bi'
+  return subject === 'english' ? 'vi' : 'bi'
 }
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [mode, setModeState] = useState<LangMode>(readInitial)
-  const setMode = useCallback((m: LangMode) => {
-    setModeState(m)
-    try {
-      localStorage.setItem(KEY, m)
-    } catch {
-      /* ignore */
-    }
-  }, [])
+  const { subject } = useSubject()
+  const [modes, setModes] = useState<Record<Subject, LangMode>>(() => ({
+    science: readInitial('science'),
+    english: readInitial('english'),
+  }))
+  const setMode = useCallback(
+    (m: LangMode) => {
+      setModes((prev) => ({ ...prev, [subject]: m }))
+      try {
+        localStorage.setItem(KEYS[subject], m)
+      } catch {
+        /* ignore */
+      }
+    },
+    [subject],
+  )
+  const mode = modes[subject]
   const value = useMemo(() => ({ mode, setMode }), [mode, setMode])
   return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>
 }

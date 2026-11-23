@@ -411,3 +411,521 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | inq-57 | vừa |  | Trong thí nghiệm hai cốc đá, yếu tố nào là nguyên nhân khiến đá tan nhanh hơn? | Nhiệt độ môi trường cao hơn | ☐ |
 | inq-58 | vừa |  | Vì sao nhà khoa học thường lặp lại thí nghiệm nhiều lần? | Để kết quả đáng tin hơn và không do may rủi | ☐ |
 
+# Tiếng Anh (Cambridge KET / PET)
+
+## Hiện tại đơn – Present Simple (120 câu)
+
+### Thói quen hằng ngày (12 câu)
+
+| id | độ khó | hình | bẫy | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- | --- |
+| ps-routines-01 | dễ | en-daily-routine |  | Tom ___ up at seven o’clock every day. | gets | ☐ |
+| ps-routines-02 | dễ |  |  | I ___ my teeth every morning. | brush | ☐ |
+| ps-routines-03 | dễ |  |  | My sister and I ___ to school by bus every day. | go | ☐ |
+| ps-routines-04 | dễ | en-timeline-habit |  | The school bus ___ at half past seven every morning. | comes | ☐ |
+| ps-routines-05 | dễ | en-dialogue |  | A: "What do you do after school?" / B: "I ___ my homework at the kitchen table." | do | ☐ |
+| ps-routines-06 | vừa |  |  | My dad ___ the dishes after dinner every evening. | washes | ☐ |
+| ps-routines-07 | vừa |  |  | On Saturdays, we ___ football in the park. | play | ☐ |
+| ps-routines-08 | vừa |  |  | Dear Ben, / Every day I get up at six and ___ my dog before school. → Complete the messag… | walk | ☐ |
+| ps-routines-09 | vừa |  |  | My grandma ___ tea in the garden every afternoon. | drinks | ☐ |
+| ps-routines-10 | vừa |  |  | A: "Does your brother help at home?" / B: "Yes, he ___ the table every evening." | sets | ☐ |
+| ps-routines-11 | khó |  | ⚠ | Every Sunday my cousins ___ to our house, and we all have lunch together. | come | ☐ |
+| ps-routines-12 | khó |  |  | Sam’s week: / Monday – swimming / Wednesday – piano → Sam ___ piano on Wednesdays. | plays | ☐ |
+
+### Ngôi thứ 3 số ít (-s/-es) (12 câu)
+
+| id | độ khó | hình | bẫy | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- | --- |
+| ps-third-person-01 | dễ |  |  | My mum ___ in a hospital in the city. | works | ☐ |
+| ps-third-person-02 | dễ |  |  | My cat ___ milk every morning. | drinks | ☐ |
+| ps-third-person-03 | dễ |  |  | My dog ___ a lot every day. | sleeps | ☐ |
+| ps-third-person-04 | dễ |  |  | The teacher ___ us a story every Friday. | tells | ☐ |
+| ps-third-person-05 | dễ |  |  | Lucy ___ to music on her phone every evening. | listens | ☐ |
+| ps-third-person-06 | vừa |  |  | Grandpa ___ the news at nine o’clock every night. | watches | ☐ |
+| ps-third-person-07 | vừa |  |  | My little sister ___ to bed at eight o’clock. | goes | ☐ |
+| ps-third-person-08 | vừa |  |  | The baby ___ a lot at night. | cries | ☐ |
+| ps-third-person-09 | vừa | en-dialogue |  | A: "What does Sue do on Sundays?" / B: "She ___ her grandma." | visits | ☐ |
+| ps-third-person-10 | vừa |  |  | Emma ___ her homework before dinner every day. | finishes | ☐ |
+| ps-third-person-11 | khó |  |  | The shop assistant ___ the shelves every morning. | tidies | ☐ |
+| ps-third-person-12 | khó |  |  | My uncle is a pilot. He ___ to many countries. → Complete the blog post. | flies | ☐ |
+
+### Trạng từ tần suất (12 câu)
+
+| id | độ khó | hình | bẫy | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- | --- |
+| ps-frequency-01 | dễ |  |  | I ___ eat breakfast. I eat it every single morning. | always | ☐ |
+| ps-frequency-02 | dễ |  |  | Tom ___ walks to school. He goes by bus every day. | never | ☐ |
+| ps-frequency-03 | dễ |  |  | My grandma ___ gets up early. She wakes up at five o’clock every day. | always | ☐ |
+| ps-frequency-04 | dễ |  |  | My brother ___ late for school. | is never | ☐ |
+| ps-frequency-05 | dễ |  |  | We ___ our grandparents on Sundays. | always visit | ☐ |
+| ps-frequency-06 | vừa |  |  | Jack ___ plays computer games on school days. He plays about once a month. | rarely | ☐ |
+| ps-frequency-07 | vừa |  |  | How ___ do you swim? – Twice a week. | often | ☐ |
+| ps-frequency-08 | vừa |  |  | A: "Do you ever eat fish?" / B: "No, I ___ eat fish. I don’t like it." | never | ☐ |
+| ps-frequency-09 | vừa |  |  | My uncle ___ drinks coffee in the morning. Sometimes he drinks tea. | usually | ☐ |
+| ps-frequency-10 | vừa |  |  | CLASS RULES / 1. Always say hello. / 2. Never run in the corridor. → Pupils ___ run in th… | never | ☐ |
+| ps-frequency-11 | khó |  |  | My cousin ___ eats vegetables. He doesn’t like them, so he eats them about twice a year. | hardly ever | ☐ |
+| ps-frequency-12 | khó |  |  | Sports Club / Swimming – Monday and Thursday / Tennis – every Saturday → Anna goes swimmi… | twice | ☐ |
+
+### Phủ định (don’t/doesn’t) (12 câu)
+
+| id | độ khó | hình | bẫy | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- | --- |
+| ps-negative-01 | dễ |  |  | I ___ like carrots. | don’t | ☐ |
+| ps-negative-02 | dễ |  |  | My cat ___ eat fish. It only likes chicken. | doesn’t | ☐ |
+| ps-negative-03 | dễ |  |  | We ___ go to school on Sundays. | don’t | ☐ |
+| ps-negative-04 | dễ |  |  | She doesn’t ___ milk. | drink | ☐ |
+| ps-negative-05 | dễ |  |  | They ___ have a car. | don’t | ☐ |
+| ps-negative-06 | vừa |  |  | Tom doesn’t ___ his homework at weekends. | do | ☐ |
+| ps-negative-07 | vừa | en-dialogue |  | A: "Let’s play tennis." / B: "Sorry, I ___ play tennis. I only play football." | don’t | ☐ |
+| ps-negative-08 | vừa |  |  | The shop doesn’t ___ on Mondays. | open | ☐ |
+| ps-negative-09 | vừa |  |  | He doesn’t ___ any brothers or sisters. | have | ☐ |
+| ps-negative-10 | vừa |  |  | NO PHONES / Phones stay in your bag during lessons. → Students ___ use phones in the clas… | don’t | ☐ |
+| ps-negative-11 | khó |  | ⚠ | Max ___ know the answer, so he is asking his teacher. | doesn’t | ☐ |
+| ps-negative-12 | khó |  |  | The tickets are free, so you ___ pay. | don’t have to | ☐ |
+
+### Câu hỏi Do/Does (12 câu)
+
+| id | độ khó | hình | bẫy | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- | --- |
+| ps-questions-01 | dễ |  |  | ___ you like pizza? | Do | ☐ |
+| ps-questions-02 | dễ |  |  | ___ your sister play the piano? | Does | ☐ |
+| ps-questions-03 | dễ |  |  | Does Tom have a bike? – Yes, he ___. | does | ☐ |
+| ps-questions-04 | dễ | en-dialogue |  | A: "Do you walk to school?" / B: "No, I ___. I go by bike." | don’t | ☐ |
+| ps-questions-05 | dễ |  |  | What time ___ the film start? | does | ☐ |
+| ps-questions-06 | vừa |  |  | Where ___ your grandparents live? | do | ☐ |
+| ps-questions-07 | vừa |  |  | Does your teacher speak French? – No, she ___. | doesn’t | ☐ |
+| ps-questions-08 | vừa |  |  | A: "How often ___ you go swimming?" / B: "Twice a week." | do | ☐ |
+| ps-questions-09 | vừa |  |  | Why ___ Bill go to bed so early? | does | ☐ |
+| ps-questions-10 | vừa |  |  | BIKE SHOP / Open every day, 9 – 6 / We repair all bikes! → Does the shop repair bikes? – … | does | ☐ |
+| ps-questions-11 | khó |  |  | How much money ___ your brother get every week? | does | ☐ |
+| ps-questions-12 | khó |  |  | ___ your parents let you stay up late on Fridays? | Do | ☐ |
+
+### Động từ to be (12 câu)
+
+| id | độ khó | hình | bẫy | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- | --- |
+| ps-to-be-01 | dễ |  |  | I ___ eight years old. | am | ☐ |
+| ps-to-be-02 | dễ |  |  | My friends ___ in the park. | are | ☐ |
+| ps-to-be-03 | dễ |  |  | Our teacher ___ very kind. | is | ☐ |
+| ps-to-be-04 | dễ |  |  | The books ___ on the table. | are | ☐ |
+| ps-to-be-05 | dễ | en-dialogue |  | A: "___ you hungry?" / B: "Yes, I am. Can I have a sandwich?" | Are | ☐ |
+| ps-to-be-06 | vừa |  |  | These shoes ___ too big for me. | are | ☐ |
+| ps-to-be-07 | vừa |  |  | There ___ two cats in the garden. | are | ☐ |
+| ps-to-be-08 | vừa |  |  | How old ___ your sister? | is | ☐ |
+| ps-to-be-09 | vừa |  |  | Tom and I ___ in the same class. | are | ☐ |
+| ps-to-be-10 | vừa |  |  | LOST DOG / Small and brown / Name: Max / Please call 555-0123 → The dog’s name ___ Max. | is | ☐ |
+| ps-to-be-11 | khó |  |  | Every student in Class 3A ___ here today. | is | ☐ |
+| ps-to-be-12 | khó |  |  | My glasses ___ on my desk. | are | ☐ |
+
+### Động từ chỉ trạng thái (12 câu)
+
+| id | độ khó | hình | bẫy | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- | --- |
+| ps-state-verbs-01 | dễ |  | ⚠ | I ___ this song. It’s my favourite! | love | ☐ |
+| ps-state-verbs-02 | dễ |  | ⚠ | Anna ___ a new bike. She is saving money. | wants | ☐ |
+| ps-state-verbs-03 | dễ |  | ⚠ | I ___ the answer. It’s twelve. | know | ☐ |
+| ps-state-verbs-04 | dễ |  | ⚠ | Tom ___ his grandmother very much. | loves | ☐ |
+| ps-state-verbs-05 | dễ |  | ⚠ | We ___ some water, please. We are very thirsty. | need | ☐ |
+| ps-state-verbs-06 | vừa |  | ⚠ | Do you ___ the question? It is difficult. | understand | ☐ |
+| ps-state-verbs-07 | vừa | en-dialogue | ⚠ | A: "What does this word mean?" / B: "Sorry, I don’t ___." | know | ☐ |
+| ps-state-verbs-08 | vừa |  | ⚠ | She ___ pizza, so she never eats it. | hates | ☐ |
+| ps-state-verbs-09 | vừa |  | ⚠ | My brother ___ a lot of toy cars. He has fifty! | has | ☐ |
+| ps-state-verbs-10 | vừa |  | ⚠ | Hi Sue, / Sorry, I ___ your address. Can you send it again? → Complete the message. | don’t know | ☐ |
+| ps-state-verbs-11 | khó |  | ⚠ | Tom is very quiet. I think he ___ the lesson. | doesn’t understand | ☐ |
+| ps-state-verbs-12 | khó |  | ⚠ | This soup ___ delicious! Can I have some more? | tastes | ☐ |
+
+### Sự thật & lịch trình (12 câu)
+
+| id | độ khó | hình | bẫy | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- | --- |
+| ps-facts-timetables-01 | dễ |  |  | The sun ___ in the east. | rises | ☐ |
+| ps-facts-timetables-02 | dễ |  |  | Water ___ at 100 degrees. | boils | ☐ |
+| ps-facts-timetables-03 | dễ |  |  | A week ___ seven days. | has | ☐ |
+| ps-facts-timetables-04 | dễ |  |  | Fish ___ in water. | live | ☐ |
+| ps-facts-timetables-05 | dễ |  |  | Bees ___ honey. | make | ☐ |
+| ps-facts-timetables-06 | vừa |  | ⚠ | The train to London ___ at 9.15 tomorrow. | leaves | ☐ |
+| ps-facts-timetables-07 | vừa |  | ⚠ | BUS TIMETABLE / Bus 12 leaves at 8:00 and 9:00 → The bus ___ at eight o’clock. | leaves | ☐ |
+| ps-facts-timetables-08 | vừa |  | ⚠ | The film ___ at seven o’clock tonight. | starts | ☐ |
+| ps-facts-timetables-09 | vừa |  | ⚠ | Our English lesson ___ at 10.30 on Mondays. | begins | ☐ |
+| ps-facts-timetables-10 | vừa |  |  | The shops in this town ___ at six o’clock every evening. | close | ☐ |
+| ps-facts-timetables-11 | khó |  | ⚠ | The museum ___ at 5 p.m. every day, so we must hurry. | closes | ☐ |
+| ps-facts-timetables-12 | khó |  |  | Ice ___ when it gets warm. | melts | ☐ |
+
+### Hội thoại ngắn (12 câu)
+
+| id | độ khó | hình | bẫy | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- | --- |
+| ps-dialogues-01 | dễ | en-dialogue |  | A: "Where do you live?" / B: "I ___ in a small flat near the park." | live | ☐ |
+| ps-dialogues-02 | dễ |  |  | A: "What does your father do?" / B: "He ___ a taxi driver." | is | ☐ |
+| ps-dialogues-03 | dễ |  |  | A: "Do you like English?" / B: "Yes, I ___. It’s my favourite subject." | do | ☐ |
+| ps-dialogues-04 | dễ | en-daily-routine |  | A: "What time do you get up?" / B: "I ___ up at half past six." | get | ☐ |
+| ps-dialogues-05 | dễ |  |  | A: "Does Anna live near here?" / B: "No, she ___. She lives in London." | doesn’t | ☐ |
+| ps-dialogues-06 | vừa |  |  | A: "How do you go to school?" / B: "I ___ my bike." | ride | ☐ |
+| ps-dialogues-07 | vừa |  |  | A: "Do your parents work on Saturdays?" / B: "My dad does, but my mum ___." | doesn’t | ☐ |
+| ps-dialogues-08 | vừa |  |  | A: "What do you usually have for lunch?" / B: "I usually ___ rice and fish." | have | ☐ |
+| ps-dialogues-09 | vừa |  |  | A: "Does Tom play the guitar?" / B: "Yes, he ___ it every evening." | plays | ☐ |
+| ps-dialogues-10 | vừa |  |  | A: "Why ___ you always wear a hat?" / B: "Because the sun is hot." | do | ☐ |
+| ps-dialogues-11 | khó |  |  | A: "Does your sister like swimming?" / B: "No, she ___ swimming. She prefers dancing." | doesn’t like | ☐ |
+| ps-dialogues-12 | khó |  |  | A: "Excuse me. Does this bus go to the station?" / B: "No, it ___. You need bus number fi… | doesn’t | ☐ |
+
+### Biển báo & tin nhắn (12 câu)
+
+| id | độ khó | hình | bẫy | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- | --- |
+| ps-notices-01 | dễ |  |  | OPEN / Monday – Friday / 9 a.m. – 5 p.m. → The shop ___ at nine o’clock. | opens | ☐ |
+| ps-notices-02 | dễ |  |  | CLASS 3B / Every day we read for twenty minutes. → The children in Class 3B ___ for twent… | read | ☐ |
+| ps-notices-03 | dễ |  |  | Hi Lan! I live in Hue. My school starts at 7:30. → Lan’s friend ___ in Hue. | lives | ☐ |
+| ps-notices-04 | dễ |  |  | Hi! I work at the hospital. I finish at six. → Mum ___ at six o’clock. | finishes | ☐ |
+| ps-notices-05 | dễ |  |  | SWIMMING POOL / Children under 8 must have an adult. → Small children ___ an adult with t… | need | ☐ |
+| ps-notices-06 | vừa |  |  | Hi Jack, / Every Saturday I ___ my grandparents. We have lunch together. → Complete the m… | visit | ☐ |
+| ps-notices-07 | vừa |  |  | PIZZA PALACE / We cook our pizzas fresh every day. → The restaurant ___ its pizzas fresh … | cooks | ☐ |
+| ps-notices-08 | vừa |  |  | ZOO NOTICE / The elephants eat at 2 p.m. → The elephants ___ at two o’clock. | eat | ☐ |
+| ps-notices-09 | vừa |  |  | Hi Mia! My brother plays in a band. He ___ the drums. → Complete the message. | plays | ☐ |
+| ps-notices-10 | vừa |  |  | STAR CLUB / We meet every Thursday at 4 p.m. → The club members ___ every Thursday. | meet | ☐ |
+| ps-notices-11 | khó |  | ⚠ | Dear Ann, / My cousin Pete is great at sport. He ___ in the football team and he trains t… | plays | ☐ |
+| ps-notices-12 | khó |  |  | Message from Dad: / I’m late again! My boss never ___ me leave early. → Complete the mess… | lets | ☐ |
+
+## Hiện tại tiếp diễn – Present Continuous (120 câu)
+
+### Đang diễn ra bây giờ (12 câu)
+
+| id | độ khó | hình | bẫy | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- | --- |
+| pc-now-01 | dễ | en-timeline-now |  | My mum ___ dinner in the kitchen right now. | is cooking | ☐ |
+| pc-now-02 | dễ |  |  | I ___ my homework at the moment. | am doing | ☐ |
+| pc-now-03 | dễ |  |  | The children ___ in the garden now. | are playing | ☐ |
+| pc-now-04 | dễ |  |  | Dad ___ the car at the moment. He is in the garage. | is washing | ☐ |
+| pc-now-05 | dễ | en-dialogue |  | A: "Can you help me?" / B: "Sorry, I ___ my homework." | am doing | ☐ |
+| pc-now-06 | vừa |  |  | We can’t go out now because it ___. | is raining | ☐ |
+| pc-now-07 | vừa |  |  | Be quiet! The baby ___ at the moment. | is sleeping | ☐ |
+| pc-now-08 | vừa |  |  | My sister ___ to her friend on the phone right now. | is talking | ☐ |
+| pc-now-09 | vừa |  |  | A: "Is Mum at home?" / B: "Yes, she ___ the floor in the living room." | is cleaning | ☐ |
+| pc-now-10 | vừa |  |  | PLEASE WAIT / The doctor is seeing a patient. → The doctor ___ a patient now. | is seeing | ☐ |
+| pc-now-11 | khó |  | ⚠ | Don’t call Jim now. He ___ a shower. | is having | ☐ |
+| pc-now-12 | khó |  |  | Where are Anna and Lucy? – They ___ for the bus at the bus stop. | are waiting | ☐ |
+
+### Look! Listen! (12 câu)
+
+| id | độ khó | hình | bẫy | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- | --- |
+| pc-look-listen-01 | dễ | en-look-listen |  | Look! The dog ___ in the river. | is swimming | ☐ |
+| pc-look-listen-02 | dễ | en-look-listen |  | Listen! Someone ___ the piano. | is playing | ☐ |
+| pc-look-listen-03 | dễ |  |  | Look! Those birds ___ high in the sky. | are flying | ☐ |
+| pc-look-listen-04 | dễ |  |  | Listen! The teacher ___ a story. | is telling | ☐ |
+| pc-look-listen-05 | dễ |  |  | Look! My cat ___ onto the table. | is jumping | ☐ |
+| pc-look-listen-06 | vừa |  |  | Listen! Our neighbours ___ loudly again. | are singing | ☐ |
+| pc-look-listen-07 | vừa |  |  | Look! Dad ___ a big fish! | is catching | ☐ |
+| pc-look-listen-08 | vừa | en-dialogue |  | A: "Listen! What’s that noise?" / B: "The children ___ in the music room." | are dancing | ☐ |
+| pc-look-listen-09 | vừa |  |  | Look at that girl! She ___ a beautiful red dress. | is wearing | ☐ |
+| pc-look-listen-10 | vừa |  |  | Look! The bus ___. Run! | is coming | ☐ |
+| pc-look-listen-11 | khó |  |  | Listen! I think someone ___ at the door. | is knocking | ☐ |
+| pc-look-listen-12 | khó |  |  | Message from Mia: / Look outside! The sun ___ and the sky is blue! → Complete the message. | is shining | ☐ |
+
+### Quy tắc thêm -ing (12 câu)
+
+| id | độ khó | hình | bẫy | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- | --- |
+| pc-spelling-01 | dễ |  |  | Look! The boy is ___ very fast. | running | ☐ |
+| pc-spelling-02 | dễ |  |  | My mother is ___ a cake now. | making | ☐ |
+| pc-spelling-03 | dễ |  |  | Tom is ___ a letter to his friend. | writing | ☐ |
+| pc-spelling-04 | dễ |  |  | The cat is ___ on the sofa. | sitting | ☐ |
+| pc-spelling-05 | dễ |  |  | We are ___ English now. | learning | ☐ |
+| pc-spelling-06 | vừa |  |  | The baby is ___ a lot today. | crying | ☐ |
+| pc-spelling-07 | vừa |  |  | Look! The children are ___ in the lake. | swimming | ☐ |
+| pc-spelling-08 | vừa |  |  | Dad is ___ the car into the garage. | driving | ☐ |
+| pc-spelling-09 | vừa |  |  | The dog is ___ the ball. | chasing | ☐ |
+| pc-spelling-10 | vừa | en-dialogue |  | A: "What’s Lisa doing?" / B: "She’s ___ in her bedroom." | studying | ☐ |
+| pc-spelling-11 | khó |  |  | The old man is ___ on the grass. | lying | ☐ |
+| pc-spelling-12 | khó |  |  | Hurry up! The film is ___ now. | beginning | ☐ |
+
+### Phủ định (12 câu)
+
+| id | độ khó | hình | bẫy | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- | --- |
+| pc-negative-01 | dễ |  |  | I ___ watching TV now. I’m reading a book. | am not | ☐ |
+| pc-negative-02 | dễ |  |  | He ___ sleeping. He is playing games. | isn’t | ☐ |
+| pc-negative-03 | dễ |  |  | They ___ playing football. It’s raining. | aren’t | ☐ |
+| pc-negative-04 | dễ |  |  | My dad isn’t ___ today. He’s at home. | working | ☐ |
+| pc-negative-05 | dễ |  |  | We aren’t ___ to school today. It’s a holiday. | going | ☐ |
+| pc-negative-06 | vừa |  |  | My sister ___ listening to me. She’s looking at her phone. | isn’t | ☐ |
+| pc-negative-07 | vừa | en-dialogue |  | A: "Is Tom doing his homework?" / B: "No, he ___. He’s playing a game." | isn’t | ☐ |
+| pc-negative-08 | vừa |  |  | You ___ wearing your coat. Aren’t you cold? | aren’t | ☐ |
+| pc-negative-09 | vừa |  |  | The students ___ talking now. The teacher is explaining something. | aren’t | ☐ |
+| pc-negative-10 | vừa |  |  | SORRY! / The lift is not working today. Please use the stairs. → The lift ___ today. | isn’t working | ☐ |
+| pc-negative-11 | khó |  | ⚠ | We usually go by bus, but today we ___ going by bus. Dad is driving us. | aren’t | ☐ |
+| pc-negative-12 | khó |  |  | Tom and Lily ___ coming to my party next week. They are on holiday. | aren’t | ☐ |
+
+### Câu hỏi (12 câu)
+
+| id | độ khó | hình | bẫy | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- | --- |
+| pc-questions-01 | dễ |  |  | ___ you reading a book? | Are | ☐ |
+| pc-questions-02 | dễ |  |  | ___ Tom playing football now? | Is | ☐ |
+| pc-questions-03 | dễ |  |  | What ___ you doing? | are | ☐ |
+| pc-questions-04 | dễ |  |  | Is it raining? – Yes, it ___. | is | ☐ |
+| pc-questions-05 | dễ |  |  | Are they watching TV? – No, they ___. | aren’t | ☐ |
+| pc-questions-06 | vừa |  |  | Where ___ Lucy going? | is | ☐ |
+| pc-questions-07 | vừa |  |  | A: "What ___ the children doing?" / B: "They’re building a sandcastle." | are | ☐ |
+| pc-questions-08 | vừa |  |  | Why ___ you laughing? | are | ☐ |
+| pc-questions-09 | vừa |  |  | Who ___ Anna talking to? | is | ☐ |
+| pc-questions-10 | vừa |  |  | Hi Eva, / I’m at the shopping centre. ___ you coming to meet me? → Complete the message. | Are | ☐ |
+| pc-questions-11 | khó |  |  | What ___ your brother doing in the kitchen at the moment? | is | ☐ |
+| pc-questions-12 | khó |  |  | Excuse me, ___ you waiting for the 9.30 train? | are | ☐ |
+
+### Kế hoạch tương lai gần (12 câu)
+
+| id | độ khó | hình | bẫy | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- | --- |
+| pc-future-plans-01 | dễ |  |  | I ___ my grandma tomorrow. We are having lunch together. | am visiting | ☐ |
+| pc-future-plans-02 | dễ |  |  | We ___ to the cinema on Saturday. | are going | ☐ |
+| pc-future-plans-03 | dễ |  |  | My parents ___ a new car next week. | are buying | ☐ |
+| pc-future-plans-04 | dễ |  |  | Tom ___ football with his friends tomorrow afternoon. | is playing | ☐ |
+| pc-future-plans-05 | dễ | en-dialogue |  | A: "What are you doing on Sunday?" / B: "I ___ my cousin at the station at six." | am meeting | ☐ |
+| pc-future-plans-06 | vừa |  |  | Anna ___ her birthday party on Sunday. She has invited ten friends. | is having | ☐ |
+| pc-future-plans-07 | vừa |  |  | Our teacher ___ us to the zoo next Monday. | is taking | ☐ |
+| pc-future-plans-08 | vừa |  |  | I can’t come at six. I ___ my dentist then. | am seeing | ☐ |
+| pc-future-plans-09 | vừa |  |  | What time ___ you meeting Jack tomorrow? | are | ☐ |
+| pc-future-plans-10 | vừa |  |  | Hi Sam, / Mum has booked a hotel by the sea. On Friday we ___ to the beach. → Complete th… | are driving | ☐ |
+| pc-future-plans-11 | khó |  |  | We’ve got tickets, so we ___ the concert on Saturday night. | are seeing | ☐ |
+| pc-future-plans-12 | khó |  |  | My cousins ___ to stay with us next week. They’ve already told us. | are coming | ☐ |
+
+### Việc tạm thời (12 câu)
+
+| id | độ khó | hình | bẫy | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- | --- |
+| pc-temporary-01 | dễ |  |  | My brother ___ at a hotel this summer. | is working | ☐ |
+| pc-temporary-02 | dễ |  |  | This week, we ___ about animals in class. | are learning | ☐ |
+| pc-temporary-03 | dễ |  | ⚠ | Anna usually walks to school, but this week she ___ the bus because her leg hurts. | is taking | ☐ |
+| pc-temporary-04 | dễ |  |  | My cousins ___ with us for a few days. | are staying | ☐ |
+| pc-temporary-05 | dễ |  |  | I ___ English at a summer school this month. | am studying | ☐ |
+| pc-temporary-06 | vừa |  |  | Mum ___ to paint these days. | is learning | ☐ |
+| pc-temporary-07 | vừa |  |  | It’s very hot this week, so we ___ shorts at school. | are wearing | ☐ |
+| pc-temporary-08 | vừa |  | ⚠ | Our teacher is ill, so Mr Brown ___ our class this week. | is teaching | ☐ |
+| pc-temporary-09 | vừa |  |  | A: "Is Jim still living in London?" / B: "No, he ___ in Paris at the moment." | is living | ☐ |
+| pc-temporary-10 | vừa |  | ⚠ | These days I ___ breakfast at school because I get up late. | am having | ☐ |
+| pc-temporary-11 | khó |  |  | Dear Mum, / I’m on holiday in Italy. I ___ lots of pasta and ice cream these days! → Comp… | am eating | ☐ |
+| pc-temporary-12 | khó |  |  | The weather ___ colder and colder this month. | is getting | ☐ |
+
+### Phân biệt với hiện tại đơn (12 câu)
+
+| id | độ khó | hình | bẫy | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- | --- |
+| pc-vs-simple-01 | dễ |  | ⚠ | Anna usually ___ to school, but today she is taking the bus. | walks | ☐ |
+| pc-vs-simple-02 | dễ |  | ⚠ | I always drink milk for breakfast, but today I ___ juice. | am drinking | ☐ |
+| pc-vs-simple-03 | dễ |  | ⚠ | Tom ___ football on Saturdays, but he isn’t playing now. | plays | ☐ |
+| pc-vs-simple-04 | dễ |  | ⚠ | My mum ___ coffee every morning. | drinks | ☐ |
+| pc-vs-simple-05 | dễ |  | ⚠ | Be quiet! Dad ___ on the phone. | is talking | ☐ |
+| pc-vs-simple-06 | vừa |  | ⚠ | We ___ in Hanoi. It’s our home. | live | ☐ |
+| pc-vs-simple-07 | vừa |  | ⚠ | My cousin ___ in London this year. He is at university there. | is living | ☐ |
+| pc-vs-simple-08 | vừa |  | ⚠ | Jack’s uncle is a farmer. He ___ vegetables on a big farm. | grows | ☐ |
+| pc-vs-simple-09 | vừa |  | ⚠ | A: "What are you doing?" / B: "I ___ for my keys. I can’t find them!" | am looking | ☐ |
+| pc-vs-simple-10 | vừa |  | ⚠ | A: "Do you like this song?" / B: "Yes, I ___ it. It’s great!" | love | ☐ |
+| pc-vs-simple-11 | khó |  | ⚠ | The sun ___ in the east, but it isn’t shining now because it’s night. | rises | ☐ |
+| pc-vs-simple-12 | khó |  | ⚠ | Hi Ben, I’m at the sports centre. Usually I ___ swimming on Mondays, but today I’m playin… | go | ☐ |
+
+### Hội thoại ngắn (12 câu)
+
+| id | độ khó | hình | bẫy | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- | --- |
+| pc-dialogues-01 | dễ | en-dialogue |  | A: "Where is Tom?" / B: "He ___ his bike in the garden." | is riding | ☐ |
+| pc-dialogues-02 | dễ | en-dialogue |  | A: "What are you doing?" / B: "I ___ a picture of my dog." | am painting | ☐ |
+| pc-dialogues-03 | dễ |  |  | A: "Are you watching TV?" / B: "No, I ___. I’m reading a comic." | am not | ☐ |
+| pc-dialogues-04 | dễ |  |  | A: "Is it raining?" / B: "No, it ___. We can go out." | isn’t | ☐ |
+| pc-dialogues-05 | dễ |  |  | A: "Who is she talking to?" / B: "She ___ to her aunt." | is talking | ☐ |
+| pc-dialogues-06 | vừa |  |  | A: "Hello, Jack! Are you busy?" / B: "Yes, I ___ dinner. Can I call you later?" | am cooking | ☐ |
+| pc-dialogues-07 | vừa |  |  | A: "What are those boys doing?" / B: "They ___ a robot for the school show." | are making | ☐ |
+| pc-dialogues-08 | vừa |  |  | A: "Why isn’t Lucy here?" / B: "She ___ her grandma in hospital today." | is visiting | ☐ |
+| pc-dialogues-09 | vừa |  |  | A: "What’s that noise?" / B: "The neighbours ___ a party." | are having | ☐ |
+| pc-dialogues-10 | vừa |  |  | A: "Are you and Dan playing tennis today?" / B: "No, we ___. It’s too hot." | aren’t | ☐ |
+| pc-dialogues-11 | khó |  |  | A: "What time ___ your cousins arriving on Saturday?" / B: "At about six o’clock." | are | ☐ |
+| pc-dialogues-12 | khó |  | ⚠ | A: "You look tired." / B: "I know. I ___ very well at the moment because my baby brother … | am not sleeping | ☐ |
+
+### Biển báo & tin nhắn (12 câu)
+
+| id | độ khó | hình | bẫy | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- | --- |
+| pc-notices-01 | dễ |  |  | CLOSED TODAY / We are painting the shop. → The workers ___ the shop today. | are painting | ☐ |
+| pc-notices-02 | dễ |  |  | Hi Mum! I’m at Lucy’s house. We are baking a cake. → The girls ___ a cake. | are baking | ☐ |
+| pc-notices-03 | dễ |  |  | WET FLOOR / Cleaners are working. → Cleaners ___ here now. | are working | ☐ |
+| pc-notices-04 | dễ |  |  | Dear Tom, / I’m in Spain. The sun is shining. → The sun ___ in Spain now. | is shining | ☐ |
+| pc-notices-05 | dễ |  |  | Message from Dad: / I’m at the supermarket. I’m buying milk. → Dad ___ milk now. | is buying | ☐ |
+| pc-notices-06 | vừa |  |  | Hi Eva, / We ___ a picnic in the park now. Come and join us! → Complete the message. | are having | ☐ |
+| pc-notices-07 | vừa |  |  | Hello Anna, / Great news! My family ___ to Canada next month. → Complete the message. | is moving | ☐ |
+| pc-notices-08 | vừa |  |  | Dear parents, / Our class is going to the zoo next Friday. → The class ___ to the zoo nex… | is going | ☐ |
+| pc-notices-09 | vừa |  |  | Hi Max, / I’m at the park. Some children are flying kites. → Some children ___ kites. | are flying | ☐ |
+| pc-notices-10 | vừa |  |  | ART CLUB / This week we are drawing animals. → Club members ___ animals this week. | are drawing | ☐ |
+| pc-notices-11 | khó |  |  | Message from Mum: / I’m late. I ___ in a traffic jam, so start dinner without me. → Compl… | am sitting | ☐ |
+| pc-notices-12 | khó |  |  | Dear Sue, / My brother and I ___ our grandparents next weekend. Do you want to come? → Co… | are visiting | ☐ |
+
+## Quá khứ đơn – Past Simple (120 câu)
+
+### Dấu hiệu thời gian (12 câu)
+
+| id | độ khó | hình | bẫy | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- | --- |
+| pa-time-words-01 | dễ | en-timeline-past |  | We ___ to the beach yesterday. | went | ☐ |
+| pa-time-words-02 | dễ | en-timeline-past |  | I ___ a birthday cake last Sunday. | made | ☐ |
+| pa-time-words-03 | dễ |  |  | My grandparents ___ here two days ago. | came | ☐ |
+| pa-time-words-04 | dễ |  |  | Tom ___ his new bike last weekend. | bought | ☐ |
+| pa-time-words-05 | dễ | en-dialogue |  | A: "When did you see the film?" / B: "I ___ it last night." | saw | ☐ |
+| pa-time-words-06 | vừa |  |  | In 2024, my family ___ to a new house. | moved | ☐ |
+| pa-time-words-07 | vừa |  |  | It ___ a lot last night, so the streets are wet. | rained | ☐ |
+| pa-time-words-08 | vừa |  |  | Lisa ___ her friend a message ten minutes ago. | sent | ☐ |
+| pa-time-words-09 | vừa |  |  | We ___ a great film on Friday evening. | watched | ☐ |
+| pa-time-words-10 | vừa |  |  | Dear Sam, / Last summer we ___ a holiday in Italy. It was wonderful! → Complete the messa… | had | ☐ |
+| pa-time-words-11 | khó |  |  | Mozart ___ his first music when he was only five years old. | wrote | ☐ |
+| pa-time-words-12 | khó |  | ⚠ | My brother ___ his phone on the bus the day before yesterday. | lost | ☐ |
+
+### Động từ có quy tắc (-ed) (12 câu)
+
+| id | độ khó | hình | bẫy | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- | --- |
+| pa-regular-ed-01 | dễ |  |  | We ___ football after school yesterday. | played | ☐ |
+| pa-regular-ed-02 | dễ |  |  | She ___ the window because it was cold. | closed | ☐ |
+| pa-regular-ed-03 | dễ |  |  | Tom ___ for the bus for ten minutes yesterday. | waited | ☐ |
+| pa-regular-ed-04 | dễ |  |  | The children ___ in the park last Sunday. | walked | ☐ |
+| pa-regular-ed-05 | dễ |  |  | My mum ___ dinner for us last night. | cooked | ☐ |
+| pa-regular-ed-06 | vừa |  |  | The baby ___ all night, so we didn’t sleep. | cried | ☐ |
+| pa-regular-ed-07 | vừa |  |  | The bus ___ at the corner a minute ago. | stopped | ☐ |
+| pa-regular-ed-08 | vừa |  |  | I ___ my teeth before bed last night. | brushed | ☐ |
+| pa-regular-ed-09 | vừa |  |  | My dad ___ the car in front of the house. | parked | ☐ |
+| pa-regular-ed-10 | vừa | en-dialogue |  | A: "Why are you so tired?" / B: "I ___ for the test until midnight yesterday." | studied | ☐ |
+| pa-regular-ed-11 | khó |  |  | When he was young, he ___ tea to coffee. | preferred | ☐ |
+| pa-regular-ed-12 | khó |  |  | Hi Mia, / Last week our class ___ a surprise party for our teacher. → Complete the messag… | planned | ☐ |
+
+### Bất quy tắc (nhóm 1) (12 câu)
+
+| id | độ khó | hình | bẫy | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- | --- |
+| pa-irregular-1-01 | dễ |  |  | Yesterday I ___ an apple for lunch. | ate | ☐ |
+| pa-irregular-1-02 | dễ |  |  | She ___ a glass of milk this morning. | drank | ☐ |
+| pa-irregular-1-03 | dễ |  |  | We ___ a lion at the zoo last weekend. | saw | ☐ |
+| pa-irregular-1-04 | dễ |  |  | My dad ___ me a new bag yesterday. | bought | ☐ |
+| pa-irregular-1-05 | dễ |  |  | They ___ to Hue last summer. | went | ☐ |
+| pa-irregular-1-06 | vừa |  |  | We ___ home very late last night. | got | ☐ |
+| pa-irregular-1-07 | vừa |  |  | I ___ a headache yesterday, so I stayed in bed. | had | ☐ |
+| pa-irregular-1-08 | vừa |  |  | Grandma ___ me a lovely scarf for my birthday. | gave | ☐ |
+| pa-irregular-1-09 | vừa | en-dialogue |  | A: "What did you do last night?" / B: "I ___ pizza with my cousins." | ate | ☐ |
+| pa-irregular-1-10 | vừa |  |  | We ___ our homework before dinner yesterday. | did | ☐ |
+| pa-irregular-1-11 | khó |  |  | My uncle ___ his old car last week and bought a new one. | sold | ☐ |
+| pa-irregular-1-12 | khó |  |  | Hi Ann, / Thanks for last night! Tom ___ his guitar and we all sang songs. → Complete the… | brought | ☐ |
+
+### Bất quy tắc (nhóm 2) (12 câu)
+
+| id | độ khó | hình | bẫy | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- | --- |
+| pa-irregular-2-01 | dễ |  |  | Tom ___ a letter to his grandma last week. | wrote | ☐ |
+| pa-irregular-2-02 | dễ |  |  | I ___ the bus to school yesterday. | took | ☐ |
+| pa-irregular-2-03 | dễ |  |  | We ___ our teacher in the supermarket on Sunday. | met | ☐ |
+| pa-irregular-2-04 | dễ |  |  | Anna ___ her keys under the sofa yesterday. | found | ☐ |
+| pa-irregular-2-05 | dễ |  |  | A: "Why are you sad?" / B: "I ___ my phone at the park." | lost | ☐ |
+| pa-irregular-2-06 | vừa |  |  | The boy ___ down and hurt his knee yesterday. | fell | ☐ |
+| pa-irregular-2-07 | vừa |  |  | She ___ a beautiful song at the school concert last night. | sang | ☐ |
+| pa-irregular-2-08 | vừa |  |  | I ___ very well last night, so I’m not tired. | slept | ☐ |
+| pa-irregular-2-09 | vừa |  |  | He ___ the race and got a gold medal. | won | ☐ |
+| pa-irregular-2-10 | vừa |  |  | I ___ about the problem for an hour and then found the answer. | thought | ☐ |
+| pa-irregular-2-11 | khó |  |  | Mia ___ her umbrella on the train, so she got wet. | left | ☐ |
+| pa-irregular-2-12 | khó |  |  | SCHOOL NEWS / Last Friday a bird ___ into our classroom through the window. → Complete th… | flew | ☐ |
+
+### Was / Were (12 câu)
+
+| id | độ khó | hình | bẫy | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- | --- |
+| pa-was-were-01 | dễ |  |  | I ___ at home yesterday. | was | ☐ |
+| pa-was-were-02 | dễ |  |  | They ___ at school last Monday. | were | ☐ |
+| pa-was-were-03 | dễ |  |  | My mum ___ very happy yesterday. | was | ☐ |
+| pa-was-were-04 | dễ |  |  | The shops ___ closed last Sunday. | were | ☐ |
+| pa-was-were-05 | dễ | en-dialogue |  | A: "Where were you last night?" / B: "I ___ at my grandma’s house." | was | ☐ |
+| pa-was-were-06 | vừa |  |  | It ___ very cold last winter. | was | ☐ |
+| pa-was-were-07 | vừa |  |  | We ___ tired after the long walk yesterday. | were | ☐ |
+| pa-was-were-08 | vừa |  |  | ___ you at the party last Saturday? | Were | ☐ |
+| pa-was-were-09 | vừa |  |  | The film ___ really funny. We laughed a lot. | was | ☐ |
+| pa-was-were-10 | vừa |  |  | Dear Mia, / The hotel ___ great last night, and the beds were very comfortable! → Complet… | was | ☐ |
+| pa-was-were-11 | khó |  |  | There ___ a lot of people at the concert last night. | were | ☐ |
+| pa-was-were-12 | khó |  |  | My grandparents ___ born in a small village. | were | ☐ |
+
+### Phủ định (didn’t + V) (12 câu)
+
+| id | độ khó | hình | bẫy | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- | --- |
+| pa-negative-01 | dễ |  |  | I ___ go to school yesterday. I was ill. | didn’t | ☐ |
+| pa-negative-02 | dễ |  |  | She didn’t ___ her homework last night. | do | ☐ |
+| pa-negative-03 | dễ |  |  | We ___ watch TV last night. | didn’t | ☐ |
+| pa-negative-04 | dễ |  |  | He didn’t ___ the bus. He walked. | take | ☐ |
+| pa-negative-05 | dễ |  |  | The shop ___ open yesterday. It was closed. | wasn’t | ☐ |
+| pa-negative-06 | vừa |  |  | They didn’t ___ to the party last Saturday. | come | ☐ |
+| pa-negative-07 | vừa |  |  | A: "Did you see Tom?" / B: "No, I ___ see him at the party." | didn’t | ☐ |
+| pa-negative-08 | vừa |  |  | My sister ___ eat breakfast this morning, so she is hungry. | didn’t | ☐ |
+| pa-negative-09 | vừa |  |  | We ___ at home last night. We were at the cinema. | weren’t | ☐ |
+| pa-negative-10 | vừa |  |  | Lucy didn’t ___ her keys, so she couldn’t open the door. | find | ☐ |
+| pa-negative-11 | khó |  | ⚠ | I ___ hear the phone because I was in the shower. | didn’t | ☐ |
+| pa-negative-12 | khó |  |  | Hi Dan, sorry about yesterday. I ___ remember your birthday until the evening. → Complete… | didn’t | ☐ |
+
+### Câu hỏi Did / Wh- (12 câu)
+
+| id | độ khó | hình | bẫy | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- | --- |
+| pa-questions-01 | dễ |  |  | ___ you play football yesterday? | Did | ☐ |
+| pa-questions-02 | dễ |  |  | Did she ___ her homework? | do | ☐ |
+| pa-questions-03 | dễ |  |  | What ___ you eat for breakfast? | did | ☐ |
+| pa-questions-04 | dễ |  |  | Where ___ they go last summer? | did | ☐ |
+| pa-questions-05 | dễ |  |  | Did Tom see the film? – Yes, he ___. | did | ☐ |
+| pa-questions-06 | vừa |  |  | How did you get to school this morning? – I ___ by bike. | went | ☐ |
+| pa-questions-07 | vừa | en-dialogue |  | A: "What ___ you do at the weekend?" / B: "I visited my grandparents." | did | ☐ |
+| pa-questions-08 | vừa |  |  | Did your brother ___ the match? | win | ☐ |
+| pa-questions-09 | vừa |  |  | Why ___ Anna leave early yesterday? | did | ☐ |
+| pa-questions-10 | vừa |  |  | Hi Jo, / I hope your trip was great! ___ you see the Eiffel Tower? → Complete the message. | Did | ☐ |
+| pa-questions-11 | khó |  |  | How many people ___ to your party last Saturday? | came | ☐ |
+| pa-questions-12 | khó |  |  | What time ___ the film start last night? | did | ☐ |
+
+### Phân biệt với hiện tại (12 câu)
+
+| id | độ khó | hình | bẫy | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- | --- |
+| pa-vs-present-01 | dễ |  | ⚠ | I ___ to school every day, but yesterday I stayed at home. | go | ☐ |
+| pa-vs-present-02 | dễ |  | ⚠ | Yesterday we ___ pizza for dinner. | had | ☐ |
+| pa-vs-present-03 | dễ |  | ⚠ | Tom ___ breakfast at seven every morning. | has | ☐ |
+| pa-vs-present-04 | dễ |  | ⚠ | Look! My dog ___ in the garden. | is playing | ☐ |
+| pa-vs-present-05 | dễ |  | ⚠ | We ___ a great holiday last August. | had | ☐ |
+| pa-vs-present-06 | vừa |  | ⚠ | Anna ___ her room every Saturday morning. | cleans | ☐ |
+| pa-vs-present-07 | vừa |  | ⚠ | My friends ___ to the cinema last night. | went | ☐ |
+| pa-vs-present-08 | vừa |  | ⚠ | I’m busy now. I ___ my homework. | am doing | ☐ |
+| pa-vs-present-09 | vừa |  | ⚠ | A: "Do you often watch cartoons?" / B: "Yes, but yesterday I ___ a football match instead… | watched | ☐ |
+| pa-vs-present-10 | vừa |  | ⚠ | A: "What did you do last weekend?" / B: "I ___ my grandparents." | visited | ☐ |
+| pa-vs-present-11 | khó |  | ⚠ | Water ___ at 100°C. Yesterday I boiled some for tea. | boils | ☐ |
+| pa-vs-present-12 | khó |  | ⚠ | Hi Jim, / This morning I ___ the bus to school, but usually I walk. → Complete the messag… | took | ☐ |
+
+### Hội thoại ngắn (12 câu)
+
+| id | độ khó | hình | bẫy | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- | --- |
+| pa-dialogues-01 | dễ | en-dialogue |  | A: "Did you have a good weekend?" / B: "Yes, I ___ to the beach with my family." | went | ☐ |
+| pa-dialogues-02 | dễ |  |  | A: "What did you eat for lunch?" / B: "I ___ rice and fish." | ate | ☐ |
+| pa-dialogues-03 | dễ |  |  | A: "Were you at school yesterday?" / B: "No, I ___. I was ill." | wasn’t | ☐ |
+| pa-dialogues-04 | dễ |  |  | A: "Did you do your homework?" / B: "Yes, I ___ it before dinner." | did | ☐ |
+| pa-dialogues-05 | dễ |  |  | A: "Who did you play with?" / B: "I ___ with my cousin." | played | ☐ |
+| pa-dialogues-06 | vừa |  |  | A: "Where did Tom go on holiday?" / B: "He ___ to Italy." | went | ☐ |
+| pa-dialogues-07 | vừa |  |  | A: "Why were you late?" / B: "I ___ my bus." | missed | ☐ |
+| pa-dialogues-08 | vừa |  |  | A: "Did Lily buy a present?" / B: "Yes, she ___ a book." | bought | ☐ |
+| pa-dialogues-09 | vừa |  | ⚠ | A: "How was the film?" / B: "It ___ really good. I loved it." | was | ☐ |
+| pa-dialogues-10 | vừa |  |  | A: "Did your parents come to the match?" / B: "No, they ___. They were at work." | didn’t | ☐ |
+| pa-dialogues-11 | khó |  |  | A: "What time did you wake up this morning?" / B: "I ___ at six, but I stayed in bed unti… | woke | ☐ |
+| pa-dialogues-12 | khó |  |  | A: "Did you enjoy the concert?" / B: "Yes! We ___ all our favourite songs." | heard | ☐ |
+
+### Bưu thiếp & tin nhắn (12 câu)
+
+| id | độ khó | hình | bẫy | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- | --- |
+| pa-notices-01 | dễ |  |  | Dear Gran, / We ___ a lovely day at the zoo yesterday. → Complete the message. | had | ☐ |
+| pa-notices-02 | dễ |  | ⚠ | Diary – Monday / Today I woke up early. I ___ my school bag and ran to the bus stop. → Co… | took | ☐ |
+| pa-notices-03 | dễ |  |  | It was a great party! We ___ games and sang songs. → Complete the message. | played | ☐ |
+| pa-notices-04 | dễ |  |  | Postcard / Last week we visited Hue. We ___ the old city. → Complete the postcard. | saw | ☐ |
+| pa-notices-05 | dễ |  |  | Message: Mum, I ___ my homework at school, so I can play now. → Complete the message. | finished | ☐ |
+| pa-notices-06 | vừa |  |  | Dear Mia, / Yesterday we ___ a small mountain. The view was amazing! → Complete the postc… | climbed | ☐ |
+| pa-notices-07 | vừa |  |  | Diary – Saturday / It was sunny. I ___ my bike to the lake with Tom. → Complete the diary. | rode | ☐ |
+| pa-notices-08 | vừa |  |  | Hi Nick, / Sorry! I ___ your message last night because my phone was off. → Complete the … | didn’t get | ☐ |
+| pa-notices-09 | vừa |  |  | Note for Dad: / I ___ the dog at five o’clock. He is in the garden now. → Complete the no… | fed | ☐ |
+| pa-notices-10 | vừa |  |  | Dear Ben, / On Saturday my cousins ___ to our house and we played board games. → Complete… | came | ☐ |
+| pa-notices-11 | khó |  |  | NEWS / A young girl ___ a lost puppy in the park yesterday and took it to the police. → C… | found | ☐ |
+| pa-notices-12 | khó |  | ⚠ | Dear Gran, / I loved your present. I ___ it for the first time to school yesterday. → Com… | wore | ☐ |
+

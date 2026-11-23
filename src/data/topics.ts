@@ -1,8 +1,9 @@
-import type { SubtopicId, Topic, TopicMeta } from '../types/quiz'
+import type { ScienceTopic, SubtopicId, Subject, Topic, TopicMeta } from '../types/quiz'
 
 export const TOPICS: Record<Topic, TopicMeta> = {
   living: {
     id: 'living',
+    subject: 'science',
     name_vi: 'Sinh học',
     name_en: 'Living Things',
     desc_vi: 'Cây cối, con vật và thức ăn của chúng',
@@ -16,6 +17,7 @@ export const TOPICS: Record<Topic, TopicMeta> = {
   },
   physical: {
     id: 'physical',
+    subject: 'science',
     name_vi: 'Vật lý & Năng lượng',
     name_en: 'Physical Science',
     desc_vi: 'Nam châm, điện, âm thanh và ánh sáng',
@@ -29,6 +31,7 @@ export const TOPICS: Record<Topic, TopicMeta> = {
   },
   earth: {
     id: 'earth',
+    subject: 'science',
     name_vi: 'Trái đất & Vũ trụ',
     name_en: 'Earth & Space',
     desc_vi: 'Mặt Trời, Mặt Trăng và Trái Đất của chúng ta',
@@ -42,6 +45,7 @@ export const TOPICS: Record<Topic, TopicMeta> = {
   },
   inquiry: {
     id: 'inquiry',
+    subject: 'science',
     name_vi: 'Tư duy thực nghiệm',
     name_en: 'Scientific Inquiry',
     desc_vi: 'Quan sát, đo đạc và làm thí nghiệm',
@@ -53,9 +57,51 @@ export const TOPICS: Record<Topic, TopicMeta> = {
     ring: 'ring-violet-400',
     hex: '#8b5cf6',
   },
+  'present-simple': {
+    id: 'present-simple',
+    subject: 'english',
+    name_vi: 'Hiện tại đơn',
+    name_en: 'Present Simple',
+    desc_vi: 'Thói quen, sự thật, lịch trình mỗi ngày',
+    desc_en: 'Habits, facts and daily routines',
+    emoji: '🔁',
+    gradient: 'from-sky-400 to-teal-500',
+    soft: 'bg-teal-100',
+    text: 'text-teal-800',
+    ring: 'ring-teal-400',
+    hex: '#14b8a6',
+  },
+  'present-continuous': {
+    id: 'present-continuous',
+    subject: 'english',
+    name_vi: 'Hiện tại tiếp diễn',
+    name_en: 'Present Continuous',
+    desc_vi: 'Đang diễn ra bây giờ và kế hoạch sắp tới',
+    desc_en: 'Happening now and plans for soon',
+    emoji: '🏃',
+    gradient: 'from-orange-400 to-rose-500',
+    soft: 'bg-rose-100',
+    text: 'text-rose-800',
+    ring: 'ring-rose-400',
+    hex: '#f43f5e',
+  },
+  'past-simple': {
+    id: 'past-simple',
+    subject: 'english',
+    name_vi: 'Quá khứ đơn',
+    name_en: 'Past Simple',
+    desc_vi: 'Chuyện đã xảy ra và kết thúc rồi',
+    desc_en: 'Things that finished in the past',
+    emoji: '🕰️',
+    gradient: 'from-violet-400 to-fuchsia-500',
+    soft: 'bg-fuchsia-100',
+    text: 'text-fuchsia-800',
+    ring: 'ring-fuchsia-400',
+    hex: '#d946ef',
+  },
 }
 
-export const TOPIC_ORDER: Topic[] = ['living', 'physical', 'earth', 'inquiry']
+export const TOPIC_ORDER: ScienceTopic[] = ['living', 'physical', 'earth', 'inquiry']
 
 export const SUBTOPICS: Record<SubtopicId, { topic: Topic; vi: string; en: string }> = {
   'plant-parts': { topic: 'living', vi: 'Bộ phận của cây', en: 'Parts of plants' },
@@ -90,4 +136,69 @@ export const SUBTOPICS: Record<SubtopicId, { topic: Topic; vi: string; en: strin
   'predict-compare': { topic: 'inquiry', vi: 'Dự đoán và so sánh', en: 'Predicting & comparing' },
   classify: { topic: 'inquiry', vi: 'Phân loại', en: 'Classifying' },
   'variables-cause': { topic: 'inquiry', vi: 'Biến số và nguyên nhân', en: 'Variables & cause' },
+  'ps-routines': { topic: 'present-simple', vi: 'Thói quen hằng ngày', en: 'Daily routines' },
+  'ps-third-person': { topic: 'present-simple', vi: 'Ngôi thứ 3 số ít (-s/-es)', en: 'He / she / it (-s, -es)' },
+  'ps-frequency': { topic: 'present-simple', vi: 'Trạng từ tần suất', en: 'Frequency adverbs' },
+  'ps-negative': { topic: 'present-simple', vi: 'Phủ định (don’t/doesn’t)', en: 'Negatives (don’t / doesn’t)' },
+  'ps-questions': { topic: 'present-simple', vi: 'Câu hỏi Do/Does', en: 'Questions with Do / Does' },
+  'ps-to-be': { topic: 'present-simple', vi: 'Động từ to be', en: 'The verb to be' },
+  'ps-state-verbs': { topic: 'present-simple', vi: 'Động từ chỉ trạng thái', en: 'State verbs' },
+  'ps-facts-timetables': { topic: 'present-simple', vi: 'Sự thật & lịch trình', en: 'Facts & timetables' },
+  'ps-dialogues': { topic: 'present-simple', vi: 'Hội thoại ngắn', en: 'Short dialogues' },
+  'ps-notices': { topic: 'present-simple', vi: 'Biển báo & tin nhắn', en: 'Signs & messages' },
+  'pc-now': { topic: 'present-continuous', vi: 'Đang diễn ra bây giờ', en: 'Happening now' },
+  'pc-look-listen': { topic: 'present-continuous', vi: 'Look! Listen!', en: 'Look! Listen!' },
+  'pc-spelling': { topic: 'present-continuous', vi: 'Quy tắc thêm -ing', en: 'Spelling with -ing' },
+  'pc-negative': { topic: 'present-continuous', vi: 'Phủ định', en: 'Negatives' },
+  'pc-questions': { topic: 'present-continuous', vi: 'Câu hỏi', en: 'Questions' },
+  'pc-future-plans': { topic: 'present-continuous', vi: 'Kế hoạch tương lai gần', en: 'Future plans' },
+  'pc-temporary': { topic: 'present-continuous', vi: 'Việc tạm thời', en: 'Temporary actions' },
+  'pc-vs-simple': { topic: 'present-continuous', vi: 'Phân biệt với hiện tại đơn', en: 'Continuous vs simple' },
+  'pc-dialogues': { topic: 'present-continuous', vi: 'Hội thoại ngắn', en: 'Short dialogues' },
+  'pc-notices': { topic: 'present-continuous', vi: 'Biển báo & tin nhắn', en: 'Signs & messages' },
+  'pa-time-words': { topic: 'past-simple', vi: 'Dấu hiệu thời gian', en: 'Past time words' },
+  'pa-regular-ed': { topic: 'past-simple', vi: 'Động từ có quy tắc (-ed)', en: 'Regular verbs (-ed)' },
+  'pa-irregular-1': { topic: 'past-simple', vi: 'Bất quy tắc (nhóm 1)', en: 'Irregular verbs 1' },
+  'pa-irregular-2': { topic: 'past-simple', vi: 'Bất quy tắc (nhóm 2)', en: 'Irregular verbs 2' },
+  'pa-was-were': { topic: 'past-simple', vi: 'Was / Were', en: 'Was / Were' },
+  'pa-negative': { topic: 'past-simple', vi: 'Phủ định (didn’t + V)', en: 'Negatives (didn’t + verb)' },
+  'pa-questions': { topic: 'past-simple', vi: 'Câu hỏi Did / Wh-', en: 'Questions with Did / Wh-' },
+  'pa-vs-present': { topic: 'past-simple', vi: 'Phân biệt với hiện tại', en: 'Past vs present' },
+  'pa-dialogues': { topic: 'past-simple', vi: 'Hội thoại ngắn', en: 'Short dialogues' },
+  'pa-notices': { topic: 'past-simple', vi: 'Bưu thiếp & tin nhắn', en: 'Postcards & messages' },
+}
+
+export const SUBJECT_TOPICS: Record<Subject, Topic[]> = {
+  science: ['living', 'physical', 'earth', 'inquiry'],
+  english: ['present-simple', 'present-continuous', 'past-simple'],
+}
+
+export const SUBJECTS: Record<
+  Subject,
+  { emoji: string; label_vi: string; label_en: string; short_vi: string; short_en: string; mock_vi: string; mock_en: string; gradient: string; headerVi: string; headerSub: string }
+> = {
+  science: {
+    emoji: '🔬',
+    label_vi: 'Khoa học (ASMO)',
+    label_en: 'Science (ASMO)',
+    short_vi: 'Khoa học',
+    short_en: 'Science',
+    mock_vi: 'Thi thử ASMO',
+    mock_en: 'ASMO Mock Test',
+    gradient: 'from-sky-400 via-sky-500 to-indigo-500',
+    headerVi: 'Nhà Khoa Học Nhí',
+    headerSub: 'ASMO Science · Lớp 2–3',
+  },
+  english: {
+    emoji: '🇬🇧',
+    label_vi: 'Tiếng Anh (Cambridge)',
+    label_en: 'English (Cambridge)',
+    short_vi: 'Tiếng Anh',
+    short_en: 'English',
+    mock_vi: 'Thi thử Cambridge',
+    mock_en: 'Cambridge Mock Test',
+    gradient: 'from-teal-400 via-cyan-500 to-blue-500',
+    headerVi: 'Bé Giỏi Tiếng Anh',
+    headerSub: 'Cambridge KET · PET · Lớp 2–3',
+  },
 }

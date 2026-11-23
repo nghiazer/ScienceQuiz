@@ -1,5 +1,5 @@
 /* Chỉ chạy kiểm tra trùng lặp. Chạy: npm run check:dupes */
-import { QUESTIONS } from '../src/data/questions'
+import { ALL_QUESTIONS as QUESTIONS } from '../src/data/questions'
 import { findDupes, type AllowEntry } from './lib/dupes'
 import { readFileSync } from 'node:fs'
 

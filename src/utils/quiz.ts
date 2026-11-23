@@ -1,5 +1,5 @@
-import { QUESTIONS, TOPIC_ORDER } from '../data/questions'
-import type { AnswerRecord, Difficulty, OptionIndex, Options, Question, Topic } from '../types/quiz'
+import { ALL_QUESTIONS, ENGLISH_QUESTIONS, SCIENCE_QUESTIONS, SUBJECT_TOPICS, TOPIC_ORDER } from '../data/questions'
+import type { AnswerRecord, Difficulty, OptionIndex, Options, Question, Subject, Topic } from '../types/quiz'
 
 export function shuffle<T>(arr: readonly T[]): T[] {
   const a = [...arr]
@@ -16,6 +16,7 @@ const GROUPED = /^(Cả hai|Tất cả|Không có|Không ai|Both|All |None|Neith
 const NUMERIC = /^[\d.,]+(\s*(°C|cm|bạn|children|giờ|hours))?$/ // dãy số xếp tăng dần
 
 export function isOrderSensitive(q: Question): boolean {
+  if (q.subject === 'english') return false // đáp án ngữ pháp độc lập, luôn xáo được
   const all = [...q.options_vi, ...q.options_en].map((o) => o.trim())
   return all.some((o) => LETTER_REF.test(o) || GROUPED.test(o)) || q.options_vi.every((o) => NUMERIC.test(o.trim()))
 }
@@ -24,6 +25,13 @@ export function isOrderSensitive(q: Question): boolean {
 export function shuffleOptions(q: Question): Question {
   if (isOrderSensitive(q)) return q
   const order = shuffle([0, 1, 2, 3])
+  if (q.subject === 'english') {
+    return {
+      ...q,
+      options_en: order.map((i) => q.options_en[i]) as Options,
+      correctIndex: order.indexOf(q.correctIndex) as OptionIndex,
+    }
+  }
   return {
     ...q,
     options_vi: order.map((i) => q.options_vi[i]) as Options,
@@ -34,6 +42,7 @@ export function shuffleOptions(q: Question): Question {
 
 export const MOCK_SIZE = 15
 export const MOCK_MINUTES = 20
+export const ENGLISH_MOCK_SIZE = 15
 /** Số câu mỗi lượt luyện theo chủ đề (kho có 60 câu mỗi chủ đề). */
 export const TOPIC_SESSION_SIZE = 10
 
@@ -50,7 +59,7 @@ function unseenFirst(pool: Question[], seen: ReadonlySet<string>): Question[] {
 }
 
 export function buildTopicQuiz(topic: Topic, seen: ReadonlySet<string>): Question[] {
-  const pool = QUESTIONS.filter((q) => q.topic === topic)
+  const pool = ALL_QUESTIONS.filter((q) => q.topic === topic)
   return unseenFirst(pool, seen).slice(0, TOPIC_SESSION_SIZE).map(shuffleOptions)
 }
 
@@ -75,13 +84,55 @@ export function buildMockTest(seen: ReadonlySet<string>): Question[] {
 
   topicSlots.forEach((topic, i) => {
     const diff = diffSlots[i]
-    const exact = QUESTIONS.filter((q) => q.topic === topic && q.difficulty === diff)
+    const exact = SCIENCE_QUESTIONS.filter((q) => q.topic === topic && q.difficulty === diff)
     if (exact.some((q) => !used.has(q.id))) return take(exact)
-    const sameTopic = QUESTIONS.filter((q) => q.topic === topic)
+    const sameTopic = SCIENCE_QUESTIONS.filter((q) => q.topic === topic)
     if (sameTopic.some((q) => !used.has(q.id))) return take(sameTopic)
-    take(QUESTIONS)
+    take(SCIENCE_QUESTIONS)
   })
   return shuffle(picked).map(shuffleOptions)
+}
+
+/**
+ * Đề thi thử Tiếng Anh: 15 câu trộn 3 thì (5 + 5 + 5), phân bổ độ khó 6/6/3,
+ * ưu tiên ít nhất 5 câu "bẫy" phân biệt các thì và câu chưa gặp.
+ */
+export function buildEnglishMockTest(seen: ReadonlySet<string>): Question[] {
+  const TRAPS = 5
+  const topics = SUBJECT_TOPICS.english
+  const used = new Set<string>()
+  const picked: Question[] = []
+
+  const pick = (candidates: Question[]): boolean => {
+    const q = unseenFirst(candidates.filter((x) => !used.has(x.id)), seen)[0]
+    if (!q) return false
+    used.add(q.id)
+    picked.push(q)
+    return true
+  }
+
+  // 1) Câu bẫy: mỗi thì có ít nhất 1 câu, hai thì ngẫu nhiên có thêm 1 câu.
+  const trapTopics = shuffle([topics[0], topics[1], topics[2], ...shuffle(topics).slice(0, 2)])
+  for (const t of trapTopics.slice(0, TRAPS)) {
+    pick(ENGLISH_QUESTIONS.filter((q) => q.topic === t && q.trap))
+  }
+
+  // 2) Phần còn lại: mỗi thì đủ 5 câu, theo kế hoạch độ khó 6/6/3 cho cả đề.
+  const perTopic = (t: Topic) => picked.filter((q) => q.topic === t).length
+  const diffCount = (d: Difficulty) => picked.filter((q) => q.difficulty === d).length
+  const need: Record<Difficulty, number> = { easy: 6, medium: 6, hard: 3 }
+  for (const t of shuffle(topics)) {
+    while (perTopic(t) < ENGLISH_MOCK_SIZE / topics.length) {
+      const wanted = (['easy', 'medium', 'hard'] as Difficulty[]).find((d) => diffCount(d) < need[d]) ?? 'easy'
+      const exact = ENGLISH_QUESTIONS.filter((q) => q.topic === t && q.difficulty === wanted)
+      if (!pick(exact) && !pick(ENGLISH_QUESTIONS.filter((q) => q.topic === t))) break
+    }
+  }
+  return shuffle(picked).map(shuffleOptions)
+}
+
+export function buildMockFor(subject: Subject, seen: ReadonlySet<string>): Question[] {
+  return subject === 'english' ? buildEnglishMockTest(seen) : buildMockTest(seen)
 }
 
 /** Các câu sai hoặc chưa làm, giữ nguyên thứ tự và đáp án như bé đã thấy (dùng để hiển thị ôn tập). */

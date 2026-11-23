@@ -26,6 +26,10 @@ import SoilLayers from './SoilLayers'
 import RulerPencil from './RulerPencil'
 import BalanceScale from './BalanceScale'
 import MagnifierAnt from './MagnifierAnt'
+import { TimelineHabit, TimelineNow, TimelinePast } from './TenseTimeline'
+import KidsDialogue from './KidsDialogue'
+import DailyRoutine from './DailyRoutine'
+import LookListen from './LookListen'
 
 /** Bảng tra illustrationId -> component. Record buộc phải có đủ mọi id. */
 export const ILLUSTRATIONS: Record<IllustrationId, ComponentType> = {
@@ -57,4 +61,10 @@ export const ILLUSTRATIONS: Record<IllustrationId, ComponentType> = {
   'ruler-pencil': RulerPencil,
   'balance-scale': BalanceScale,
   'magnifier-ant': MagnifierAnt,
+  'en-timeline-past': TimelinePast,
+  'en-timeline-now': TimelineNow,
+  'en-timeline-habit': TimelineHabit,
+  'en-dialogue': KidsDialogue,
+  'en-daily-routine': DailyRoutine,
+  'en-look-listen': LookListen,
 }

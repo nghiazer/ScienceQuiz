@@ -2,13 +2,14 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ArrowRight, LogOut, Star } from 'lucide-react'
 import type { AnswerRecord, Difficulty, OptionIndex, QuizConfig } from '../types/quiz'
-import { TOPICS } from '../data/questions'
+import { SUBJECTS, TOPICS } from '../data/questions'
 import { useLang } from '../context/LanguageContext'
 import { MOCK_MINUTES } from '../utils/quiz'
 import { playClick, playCorrect, playWrong, unlockAudio } from '../utils/sound'
 import { speakQuestion, stopSpeaking } from '../utils/speech'
 import { Illustration } from './illustrations'
 import BilingualText from './BilingualText'
+import EnglishPrompt from './EnglishPrompt'
 import ExplanationBox from './ExplanationBox'
 import OptionCard, { type OptionState } from './OptionCard'
 import RocketProgress from './RocketProgress'
@@ -30,7 +31,7 @@ const DIFF: Record<Difficulty, { vi: string; en: string; c: string }> = {
 }
 
 export default function QuizArena({ config, onFinish, onExit }: Props) {
-  const { questions, timerEnabled, kind } = config
+  const { questions, timerEnabled, kind, subject } = config
   const { mode } = useLang()
   const [index, setIndex] = useState(0)
   const [selected, setSelected] = useState<OptionIndex | null>(null)
@@ -99,7 +100,7 @@ export default function QuizArena({ config, onFinish, onExit }: Props) {
   const isLast = index + 1 >= questions.length
   const title =
     kind === 'mock'
-      ? { vi: 'Thi thử ASMO', en: 'ASMO Mock Test' }
+      ? { vi: SUBJECTS[subject].mock_vi, en: SUBJECTS[subject].mock_en }
       : kind === 'retry'
         ? { vi: 'Làm lại câu sai', en: 'Retry Mistakes' }
         : { vi: topic.name_vi, en: topic.name_en }
@@ -157,7 +158,11 @@ export default function QuizArena({ config, onFinish, onExit }: Props) {
         <div className={`grid gap-4 ${q.illustrationId ? 'md:grid-cols-[minmax(0,1fr)_minmax(0,22rem)] items-start' : ''}`}>
           <div className="flex items-start gap-3">
             <SpeakButton onClick={() => speakQuestion(q, mode)} label="Đọc to câu hỏi / Read the question aloud" />
-            <BilingualText as="h2" vi={q.question_vi} en={q.question_en} className="text-xl sm:text-2xl font-black leading-snug text-slate-800" subClassName="font-bold" />
+            {q.subject === 'english' ? (
+              <EnglishPrompt question={q} />
+            ) : (
+              <BilingualText as="h2" vi={q.question_vi} en={q.question_en} className="text-xl sm:text-2xl font-black leading-snug text-slate-800" subClassName="font-bold" />
+            )}
           </div>
           {q.illustrationId && (
             <div className="rounded-2xl border-4 border-sky-100 bg-sky-50 p-1">
@@ -168,12 +173,13 @@ export default function QuizArena({ config, onFinish, onExit }: Props) {
       </motion.article>
 
       <div className="grid gap-3 sm:grid-cols-2" role="group" aria-label="Đáp án / Answers">
-        {q.options_vi.map((vi, i) => (
+        {q.options_en.map((en, i) => (
           <OptionCard
             key={`${q.id}-${i}`}
             letter={LETTERS[i]}
-            vi={vi}
-            en={q.options_en[i]}
+            vi={q.subject === 'science' ? q.options_vi[i] : en}
+            en={en}
+            englishOnly={q.subject === 'english'}
             state={stateOf(i)}
             disabled={answered || modalOpen}
             onSelect={() => choose(i as OptionIndex)}

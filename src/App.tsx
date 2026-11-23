@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import { MotionConfig } from 'framer-motion'
 import type { AnswerRecord, Progress, Question, QuizConfig, QuizResult, Topic } from './types/quiz'
-import { LanguageProvider } from './context/LanguageContext'
-import { buildMockTest, buildTopicQuiz } from './utils/quiz'
+import { useSubject } from './context/SubjectContext'
+import { TOPICS } from './data/topics'
+import { buildMockFor, buildTopicQuiz } from './utils/quiz'
 import { loadProgress, recordQuizResult } from './utils/storage'
 import Header from './components/Header'
 import HomeScreen from './components/HomeScreen'
@@ -12,6 +13,7 @@ import ResultScreen from './components/ResultScreen'
 type Screen = { name: 'home' } | { name: 'quiz'; config: QuizConfig; runId: number } | { name: 'result'; result: QuizResult }
 
 export default function App() {
+  const { subject } = useSubject()
   const [progress, setProgress] = useState<Progress>(loadProgress)
   const [screen, setScreen] = useState<Screen>({ name: 'home' })
   const [runId, setRunId] = useState(0)
@@ -23,14 +25,14 @@ export default function App() {
   }
 
   const startTopic = (topic: Topic) =>
-    start({ kind: 'topic', topic, questions: buildTopicQuiz(topic, new Set(progress.seenIds)), timerEnabled: false })
+    start({ kind: 'topic', subject: TOPICS[topic].subject, topic, questions: buildTopicQuiz(topic, new Set(progress.seenIds)), timerEnabled: false })
   const startMock = (timerEnabled: boolean) =>
-    start({ kind: 'mock', questions: buildMockTest(new Set(progress.seenIds)), timerEnabled })
-  const startRetry = (questions: Question[]) =>
-    start({ kind: 'retry', questions, timerEnabled: false })
+    start({ kind: 'mock', subject, questions: buildMockFor(subject, new Set(progress.seenIds)), timerEnabled })
+  const startRetry = (questions: Question[], retrySubject: QuizConfig['subject']) =>
+    start({ kind: 'retry', subject: retrySubject, questions, timerEnabled: false })
 
   const finish = (config: QuizConfig, answers: AnswerRecord[]) => {
-    const out = recordQuizResult(progress, { kind: config.kind, questions: config.questions, answers })
+    const out = recordQuizResult(progress, { kind: config.kind, subject: config.subject, questions: config.questions, answers })
     setProgress(out.progress)
     setScreen({
       name: 'result',
@@ -45,7 +47,7 @@ export default function App() {
   }
 
   return (
-    <LanguageProvider>
+    <>
       <MotionConfig reducedMotion="user">
         <Header />
         <main>
@@ -61,7 +63,7 @@ export default function App() {
           {screen.name === 'result' && (
             <ResultScreen
               result={screen.result}
-              onRetryWrong={startRetry}
+              onRetryWrong={(qs) => startRetry(qs, screen.result.config.subject)}
               onReplay={() => {
                 const c = screen.result.config
                 if (c.kind === 'mock') startMock(c.timerEnabled)
@@ -73,6 +75,6 @@ export default function App() {
           )}
         </main>
       </MotionConfig>
-    </LanguageProvider>
+    </>
   )
 }

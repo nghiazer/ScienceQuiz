@@ -10,6 +10,8 @@ interface Props {
   en: string
   state: OptionState
   disabled: boolean
+  /** Môn Tiếng Anh: chỉ hiển thị đáp án tiếng Anh, không phụ thuộc chế độ ngôn ngữ */
+  englishOnly?: boolean
   onSelect: () => void
 }
 
@@ -29,7 +31,7 @@ const BADGE: Record<OptionState, string> = {
   dim: 'bg-slate-100 text-slate-500',
 }
 
-export default function OptionCard({ letter, vi, en, state, disabled, onSelect }: Props) {
+export default function OptionCard({ letter, vi, en, state, disabled, englishOnly = false, onSelect }: Props) {
   const animate =
     state === 'wrong'
       ? { x: [0, -10, 10, -8, 8, -4, 0] }
@@ -49,7 +51,11 @@ export default function OptionCard({ letter, vi, en, state, disabled, onSelect }
       <span className={`grid size-11 shrink-0 place-items-center rounded-xl text-xl font-black ${BADGE[state]}`}>
         {state === 'correct' || state === 'reveal' ? <Check className="size-6" strokeWidth={4} /> : state === 'wrong' ? <X className="size-6" strokeWidth={4} /> : letter}
       </span>
-      <BilingualText vi={vi} en={en} className="text-lg sm:text-xl font-bold leading-snug text-slate-800" />
+      {englishOnly ? (
+        <span lang="en" className="text-lg sm:text-xl font-bold leading-snug text-slate-800">{en}</span>
+      ) : (
+        <BilingualText vi={vi} en={en} className="text-lg sm:text-xl font-bold leading-snug text-slate-800" />
+      )}
     </motion.button>
   )
 }

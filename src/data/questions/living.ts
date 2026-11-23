@@ -1,6 +1,6 @@
-import type { Question } from '../../types/quiz'
+import type { ScienceQuestionInput } from '../../types/quiz'
 
-export const LIVING_QUESTIONS: Question[] = [
+export const LIVING_QUESTIONS: ScienceQuestionInput[] = [
   {
     id: 'liv-01',
     topic: 'living',

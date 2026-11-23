@@ -1,5 +1,5 @@
 import { BADGES } from '../data/badges'
-import type { AnswerRecord, Progress, Question, QuizKind, Topic } from '../types/quiz'
+import type { AnswerRecord, Progress, Question, QuizKind, Subject, Topic } from '../types/quiz'
 
 const KEY = 'asmo-quiz-progress-v1'
 
@@ -11,12 +11,16 @@ export const defaultProgress = (): Progress => ({
   lastPlayedDate: null,
   quizzesCompleted: 0,
   mockCompleted: 0,
+  englishMockCompleted: 0,
   perfectCount: 0,
   topicStats: {
     living: emptyStats(),
     physical: emptyStats(),
     earth: emptyStats(),
     inquiry: emptyStats(),
+    'present-simple': emptyStats(),
+    'present-continuous': emptyStats(),
+    'past-simple': emptyStats(),
   },
   unlockedBadges: [],
   seenIds: [],
@@ -71,6 +75,7 @@ export function currentStreak(p: Progress, today = todayStr()): number {
 
 export interface RecordInput {
   kind: QuizKind
+  subject: Subject
   questions: Question[]
   answers: AnswerRecord[]
 }
@@ -94,12 +99,10 @@ export function recordQuizResult(prev: Progress, input: RecordInput, today = tod
   const percent = total === 0 ? 0 : Math.round((correct / total) * 100)
   const stars = computeStars(correct, total)
 
-  const topicStats = {
-    living: { ...prev.topicStats.living },
-    physical: { ...prev.topicStats.physical },
-    earth: { ...prev.topicStats.earth },
-    inquiry: { ...prev.topicStats.inquiry },
-  }
+  // Thống kê tách riêng theo từng chuyên đề (và do đó theo từng môn); sao và streak dùng chung.
+  const topicStats = Object.fromEntries(
+    Object.entries(prev.topicStats).map(([k, v]) => [k, { ...v }]),
+  ) as Progress['topicStats']
   const byId = new Map(input.questions.map((q) => [q.id, q]))
   for (const a of input.answers) {
     const q = byId.get(a.questionId)
@@ -124,7 +127,8 @@ export function recordQuizResult(prev: Progress, input: RecordInput, today = tod
     streak,
     lastPlayedDate: today,
     quizzesCompleted: prev.quizzesCompleted + 1,
-    mockCompleted: prev.mockCompleted + (input.kind === 'mock' ? 1 : 0),
+    mockCompleted: prev.mockCompleted + (input.kind === 'mock' && input.subject === 'science' ? 1 : 0),
+    englishMockCompleted: prev.englishMockCompleted + (input.kind === 'mock' && input.subject === 'english' ? 1 : 0),
     perfectCount: prev.perfectCount + (percent === 100 && total > 0 ? 1 : 0),
     topicStats,
     unlockedBadges: [...prev.unlockedBadges],

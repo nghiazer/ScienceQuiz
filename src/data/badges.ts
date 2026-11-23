@@ -72,4 +72,28 @@ export const BADGES: BadgeDef[] = [
     desc_vi: 'Đúng từ 80% ở mảng Thực nghiệm (ít nhất 5 câu)', desc_en: '80%+ correct in Scientific Inquiry (5+ questions)',
     check: TOPIC_MASTER('inquiry'),
   },
+  {
+    id: 'english-mock-done', emoji: '🇬🇧',
+    name_vi: 'Thí sinh Cambridge', name_en: 'Cambridge Contestant',
+    desc_vi: 'Hoàn thành bài thi thử Tiếng Anh', desc_en: 'Finish an English mock test',
+    check: (p) => p.englishMockCompleted >= 1,
+  },
+  {
+    id: 'master-present-simple', emoji: '🔁',
+    name_vi: 'Bậc thầy Hiện tại đơn', name_en: 'Present Simple Master',
+    desc_vi: 'Đúng từ 80% ở Hiện tại đơn (ít nhất 5 câu)', desc_en: '80%+ correct in Present Simple (5+ questions)',
+    check: TOPIC_MASTER('present-simple'),
+  },
+  {
+    id: 'master-present-continuous', emoji: '🏃',
+    name_vi: 'Bậc thầy Hiện tại tiếp diễn', name_en: 'Present Continuous Master',
+    desc_vi: 'Đúng từ 80% ở Hiện tại tiếp diễn (ít nhất 5 câu)', desc_en: '80%+ correct in Present Continuous (5+ questions)',
+    check: TOPIC_MASTER('present-continuous'),
+  },
+  {
+    id: 'master-past-simple', emoji: '🕰️',
+    name_vi: 'Bậc thầy Quá khứ đơn', name_en: 'Past Simple Master',
+    desc_vi: 'Đúng từ 80% ở Quá khứ đơn (ít nhất 5 câu)', desc_en: '80%+ correct in Past Simple (5+ questions)',
+    check: TOPIC_MASTER('past-simple'),
+  },
 ]

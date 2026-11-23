@@ -3,7 +3,7 @@ import confetti from 'canvas-confetti'
 import { motion } from 'framer-motion'
 import { Home, RotateCcw, Star } from 'lucide-react'
 import type { Question, QuizResult } from '../types/quiz'
-import { TOPICS, TOPIC_ORDER } from '../data/questions'
+import { SUBJECT_TOPICS, TOPICS } from '../data/questions'
 import { buildRetryQuiz, findMissed } from '../utils/quiz'
 import { playComplete } from '../utils/sound'
 import BilingualText from './BilingualText'
@@ -28,7 +28,8 @@ function fireConfetti() {
 
 export default function ResultScreen({ result, onRetryWrong, onReplay, onHome }: Props) {
   const { config, answers, percent, stars, newBadges } = result
-  const { questions } = config
+  const { questions, subject } = config
+  const isEnglish = subject === 'english'
   const correctCount = answers.filter((a) => a.correct).length
   const passed = percent >= 70
 
@@ -40,13 +41,21 @@ export default function ResultScreen({ result, onRetryWrong, onReplay, onHome }:
   const wrong = useMemo(() => findMissed(questions, answers), [questions, answers])
   const answerOf = (id: string) => answers.find((a) => a.questionId === id)
 
-  const byTopic = TOPIC_ORDER.map((t) => {
+  const byTopic = SUBJECT_TOPICS[subject].map((t) => {
     const qs = questions.filter((q) => q.topic === t)
     const ok = qs.filter((q) => answerOf(q.id)?.correct).length
     return { topic: t, total: qs.length, ok }
   }).filter((x) => x.total > 0)
 
-  const message = percent >= 90
+  const message = isEnglish
+    ? percent >= 90
+      ? { vi: 'Xuất sắc! Tiếng Anh của con thật tuyệt! 🏆', en: 'Outstanding! Your English is brilliant! 🏆' }
+      : percent >= 70
+        ? { vi: 'Giỏi lắm! Con nắm các thì rất tốt! 🎉', en: 'Great work! You know your tenses well! 🎉' }
+        : percent >= 40
+          ? { vi: 'Khá lắm! Đọc kỹ dấu hiệu thời gian là sẽ giỏi hơn! 💪', en: 'Good try! Look carefully at the time clues and you will improve! 💪' }
+          : { vi: 'Đừng buồn nhé, học ngoại ngữ cần thời gian. Cùng thử lại nào! 🌱', en: 'Don’t worry, learning English takes time. Let’s try again! 🌱' }
+    : percent >= 90
     ? { vi: 'Xuất sắc! Con là nhà khoa học tài ba! 🏆', en: 'Outstanding! You are a brilliant scientist! 🏆' }
     : percent >= 70
       ? { vi: 'Giỏi lắm! Con làm rất tốt! 🎉', en: 'Great work! You did really well! 🎉' }
@@ -131,16 +140,28 @@ export default function ResultScreen({ result, onRetryWrong, onReplay, onHome }:
               const a = answerOf(q.id)
               return (
                 <li key={q.id} className="rounded-2xl bg-slate-50 p-4">
-                  <BilingualText as="p" vi={q.question_vi} en={q.question_en} className="font-extrabold text-slate-800" subClassName="!text-[0.9em]" />
-                  {a?.selectedIndex != null && (
-                    <p className="mt-2 text-sm font-bold text-rose-600">
-                      ✗ <BilingualText vi={q.options_vi[a.selectedIndex]} en={q.options_en[a.selectedIndex]} compact />
-                    </p>
+                  {q.subject === 'english' ? (
+                    <>
+                      {q.passage_en && <p lang="en" className="mb-1 whitespace-pre-line rounded-xl bg-amber-50 px-3 py-1 text-sm font-bold text-amber-900">{q.passage_en}</p>}
+                      <p lang="en" className="whitespace-pre-line font-extrabold text-slate-800">{q.question_en}</p>
+                      {a?.selectedIndex != null && <p lang="en" className="mt-2 text-sm font-bold text-rose-600">✗ {q.options_en[a.selectedIndex]}</p>}
+                      <p lang="en" className="mt-1 flex items-start gap-2 font-extrabold text-green-700"><span>✓</span> {q.options_en[q.correctIndex]}</p>
+                      <p className="mt-2 whitespace-pre-line text-sm font-semibold text-slate-600">{q.explanation_vi}</p>
+                    </>
+                  ) : (
+                    <>
+                      <BilingualText as="p" vi={q.question_vi} en={q.question_en} className="font-extrabold text-slate-800" subClassName="!text-[0.9em]" />
+                      {a?.selectedIndex != null && (
+                        <p className="mt-2 text-sm font-bold text-rose-600">
+                          ✗ <BilingualText vi={q.options_vi[a.selectedIndex]} en={q.options_en[a.selectedIndex]} compact />
+                        </p>
+                      )}
+                      <p className="mt-1 flex items-start gap-2 font-extrabold text-green-700">
+                        <span>✓</span> <BilingualText vi={q.options_vi[q.correctIndex]} en={q.options_en[q.correctIndex]} />
+                      </p>
+                      <BilingualText as="p" vi={q.explanation_vi} en={q.explanation_en} className="mt-2 text-sm font-semibold text-slate-600" subClassName="!text-[0.95em]" />
+                    </>
                   )}
-                  <p className="mt-1 flex items-start gap-2 font-extrabold text-green-700">
-                    <span>✓</span> <BilingualText vi={q.options_vi[q.correctIndex]} en={q.options_en[q.correctIndex]} />
-                  </p>
-                  <BilingualText as="p" vi={q.explanation_vi} en={q.explanation_en} className="mt-2 text-sm font-semibold text-slate-600" subClassName="!text-[0.95em]" />
                 </li>
               )
             })}
