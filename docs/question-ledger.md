@@ -195,7 +195,7 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | liv-89 | vừa |  | Vì sao nên hạn chế ăn đồ ngọt nhiều? | Vì đường giúp vi khuẩn tạo axit làm hại răng | ☐ |
 | liv-90 | khó |  | Khi bị sốt, em nên làm gì để cơ thể hồi phục? | Nghỉ ngơi, uống đủ nước và báo người lớn | ☐ |
 
-## Vật lý & Năng lượng (60 câu)
+## Vật lý & Năng lượng (90 câu)
 
 ### Nam châm (8 câu)
 
@@ -296,6 +296,66 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | phy-55 | vừa | water-states | Khi để nước vào ngăn đá tủ lạnh, nước sẽ biến thành gì? | Đá rắn | ☐ |
 | phy-56 | vừa |  | Vì sao quần áo ướt phơi ngoài nắng khô nhanh hơn trong bóng râm? | Nắng làm nước trong quần áo bốc hơi nhanh hơn | ☐ |
 | phy-57 | khó |  | Một cốc nước để trên bàn vài ngày thì nước bớt đi. Nước đã đi đâu? | Bốc hơi thành hơi nước bay vào không khí | ☐ |
+
+### Nóng, lạnh và truyền nhiệt (5 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| phy-061 | dễ |  | Khi để muỗng kim loại trong cốc nước nóng, điều gì xảy ra với tay cầm muỗng? | Tay cầm nóng lên dần | ☐ |
+| phy-062 | dễ |  | Vật liệu nào dẫn nhiệt kém, thường được dùng làm tay cầm nồi? | Nhựa hoặc gỗ | ☐ |
+| phy-063 | vừa |  | Không khí nóng nhẹ hơn bốc lên cao, rồi không khí lạnh hơn chìm xuống. Kiểu truyền nhiệt … | Đối lưu | ☐ |
+| phy-064 | vừa |  | Vì sao áo màu sáng thường giúp người mặc đỡ nóng hơn áo màu tối khi trời nắng? | Màu sáng phản xạ nhiều ánh sáng và hấp thụ ít nhiệt hơn | ☐ |
+| phy-065 | khó |  | Một ly nước đá đặt trên bàn gỗ, bên ngoài ly xuất hiện các giọt nước. Nước này đến từ đâu? | Hơi nước trong không khí ngưng tụ trên thành ly lạnh | ☐ |
+
+### Các dạng năng lượng (5 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| phy-066 | dễ |  | Năng lượng nào đến từ Mặt Trời và giúp cây làm ra thức ăn? | Năng lượng ánh sáng | ☐ |
+| phy-067 | dễ |  | Pin của đèn pin biến năng lượng hóa học thành dạng năng lượng nào? | Điện năng, rồi thành ánh sáng và nhiệt | ☐ |
+| phy-068 | vừa |  | Khi em đạp xe, năng lượng từ thức ăn trong cơ thể chuyển thành dạng nào để bánh xe quay? | Động năng (chuyển động) | ☐ |
+| phy-069 | vừa |  | Một quả bóng được giữ trên cao rồi thả rơi. Trước khi rơi, năng lượng của bóng ở dạng nào? | Thế năng, vì nó đang ở độ cao | ☐ |
+| phy-070 | khó |  | Trong máy phát điện gió, dạng năng lượng nào được chuyển thành điện năng? | Động năng của gió làm cánh quạt quay | ☐ |
+
+### Máy đơn giản (5 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| phy-071 | dễ |  | Mặt phẳng nghiêng, chẳng hạn như con dốc, giúp chúng ta điều gì? | Đưa vật nặng lên cao với lực nhỏ hơn | ☐ |
+| phy-072 | vừa |  | Kéo là ví dụ của máy đơn giản nào? | Đòn bẩy | ☐ |
+| phy-073 | vừa |  | Bập bênh trên sân chơi là ví dụ của máy đơn giản nào? | Đòn bẩy có điểm tựa ở giữa | ☐ |
+| phy-074 | vừa |  | Vì sao đặt vật lên bánh xe rồi đẩy lại dễ hơn là kéo lê trên mặt đất? | Bánh xe lăn thay vì trượt, nên giảm ma sát | ☐ |
+| phy-075 | khó |  | Một ròng rọc cố định được dùng để kéo thùng nặng lên cao. Ròng rọc này giúp điều gì? | Đổi hướng lực kéo, nên có thể kéo từ trên xuống dễ hơn | ☐ |
+
+### Hòa tan và hỗn hợp (5 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| phy-076 | dễ |  | Khi khuấy đường vào nước, điều gì xảy ra với đường? | Tan vào nước và không còn nhìn thấy các hạt | ☐ |
+| phy-077 | vừa |  | Hòa tan muối vào nước cho đến khi muối không tan thêm được nữa. Dung dịch này gọi là gì? | Dung dịch bão hòa | ☐ |
+| phy-078 | vừa |  | Cát trộn với nước rồi để yên, cát lắng xuống đáy. Đây là loại hỗn hợp nào? | Không hòa tan, có thể lọc được | ☐ |
+| phy-079 | vừa |  | Muốn lấy lại muối từ nước muối, cách nào dễ nhất? | Đun cho nước bốc hơi hết, muối còn lại đáy nồi | ☐ |
+| phy-080 | khó |  | Trong ba chất đường, cát và dầu ăn, chất nào tan trong nước? | Chỉ đường | ☐ |
+
+### Tính chất vật liệu (5 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| phy-081 | dễ |  | Vật nào cứng nhất khi ta thử ấn bằng tay? | Viên đá | ☐ |
+| phy-082 | dễ |  | Vật nào thấm nước nhanh nhất? | Khăn bông | ☐ |
+| phy-083 | vừa |  | Đất sét có thể nặn thành hình bằng tay và giữ nguyên hình dạng đó. Tính chất này gọi là g… | Dẻo | ☐ |
+| phy-084 | vừa |  | Vật nào bị gỉ khi để ngoài trời ẩm lâu ngày? | Sắt | ☐ |
+| phy-085 | khó |  | Vì sao khi chạm tay vào, sắt thường có cảm giác lạnh hơn gỗ dù cả hai đều ở cùng nhiệt độ… | Sắt dẫn nhiệt tốt nên lấy nhiệt từ tay nhanh hơn | ☐ |
+
+### Âm cao và âm thấp (5 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| phy-086 | vừa |  | Dây đàn ngắn và căng hơn thường phát ra âm thanh thế nào? | Cao hơn | ☐ |
+| phy-087 | dễ |  | Âm cao và âm thấp khác nhau ở điều gì? | Tần số rung của vật khác nhau | ☐ |
+| phy-088 | khó |  | Trong ống sáo, khi bịt bớt lỗ để cột không khí trong ống dài hơn, âm thanh sẽ thế nào? | Thấp hơn | ☐ |
+| phy-089 | vừa |  | Vật nhỏ và nhẹ thường rung nhanh hơn vật to và nặng. Điều này có nghĩa là gì với âm thanh? | Vật nhỏ thường tạo âm cao hơn | ☐ |
+| phy-090 | khó |  | Khi gõ vào một cái cốc thủy tinh có ít nước hơn, âm thanh sẽ cao hơn hay thấp hơn? | Âm cao hơn, vì cốc rung nhanh hơn | ☐ |
 
 ## Trái đất & Vũ trụ (60 câu)
 
