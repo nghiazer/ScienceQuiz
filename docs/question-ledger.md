@@ -574,9 +574,9 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | ear-095 | vừa |  | Trên hành tinh nào, nhiệt độ bề mặt cao nhất trong Hệ Mặt Trời? | Sao Kim | ☐ |
 | ear-124 | vừa |  | Hành tinh nào có một cơn bão đỏ khổng lồ đã tồn tại hàng trăm năm? | Sao Mộc | ☐ |
 
-## Tư duy thực nghiệm (90 câu)
+## Tư duy thực nghiệm (120 câu)
 
-### Quan sát (8 câu)
+### Quan sát (12 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -588,8 +588,12 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | inq-12 | vừa |  | Vì sao các nhà khoa học ghi chép cẩn thận kết quả quan sát? | Để so sánh và kiểm tra lại sau này | ☐ |
 | inq-13 | khó |  | Bạn A nói “quả táo đỏ và nhẵn”. Bạn B nói “quả táo rất ngon”. Ai đưa ra quan sát? | Bạn A | ☐ |
 | inq-60 | dễ |  | Bạn nói “quả bưởi to hơn quả quýt”. Đây là quan sát hay ý kiến? | Quan sát, vì có so sánh kích thước | ☐ |
+| inq-094 | dễ |  | Khi nhìn kỹ một hạt đậu, hạt có hình dạng gì? | Hình bầu dục hơi dẹt | ☐ |
+| inq-095 | vừa |  | Bạn nói: “Lá cây này có gân lá nổi và mép răng cưa”. Đây là loại quan sát nào? | Quan sát bằng mắt, mô tả đặc điểm | ☐ |
+| inq-096 | vừa |  | Vì sao các nhà khoa học thường quan sát một hiện tượng nhiều lần? | Để chắc chắn điều thấy không phải chỉ là ngẫu nhiên | ☐ |
+| inq-097 | khó |  | Khi quan sát một con sâu bướm, em thấy nó ăn lá rất nhanh. Quan sát này cho biết điều gì? | Sâu bướm cần thức ăn để lớn lên | ☐ |
 
-### Dụng cụ đo (7 câu)
+### Dụng cụ đo (11 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -600,8 +604,12 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | inq-18 | vừa |  | Muốn đo chiều dài của một chiếc bàn học, nên dùng dụng cụ nào? | Thước dây hoặc thước mét | ☐ |
 | inq-19 | vừa | balance-scale | Trên chiếc cân trong hình, bên trái thấp hơn. Điều đó có nghĩa là gì? | Vật bên trái nặng hơn vật bên phải | ☐ |
 | inq-20 | vừa |  | Để đo thời gian một bạn chạy 50 mét, nên dùng dụng cụ nào? | Đồng hồ bấm giờ | ☐ |
+| inq-098 | dễ |  | Dụng cụ nào dùng để đo dung tích chất lỏng? | Ca đong hoặc ống đong | ☐ |
+| inq-099 | vừa |  | Muốn đo chính xác thời gian một con kiến đi 10 cm, dụng cụ nào tốt nhất? | Đồng hồ bấm giờ điện tử | ☐ |
+| inq-100 | khó |  | Vì sao khi dùng cân, nên đưa kim về số 0 trước khi cân? | Để kết quả không bị lệch do sai số ban đầu | ☐ |
+| inq-101 | vừa |  | Khi đo chiều dài một vật bằng thước, điều quan trọng nhất là gì? | Đặt đúng đầu vật ngang vạch 0 | ☐ |
 
-### Đọc nhiệt kế và số liệu (8 câu)
+### Đọc nhiệt kế và số liệu (11 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -613,8 +621,11 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | inq-25 | vừa |  | Nước đá đang tan ở 0 °C. Con số 0 °C có ý nghĩa gì? | Điểm nước đóng băng và đá tan | ☐ |
 | inq-26 | khó |  | Lúc 7 giờ sáng nhiệt độ là 22 °C, lúc 13 giờ là 31 °C. Nhiệt độ đã tăng bao nhiêu độ? | 9 °C | ☐ |
 | inq-27 | khó |  | Trong một ngày nắng, nhiệt độ thường cao nhất vào lúc nào? | Khoảng 2 đến 3 giờ chiều | ☐ |
+| inq-114 | dễ |  | Nhiệt kế chỉ 25 °C, điều đó có nghĩa là gì? | Nhiệt độ là 25 độ Celsius | ☐ |
+| inq-115 | vừa |  | Nhiệt kế ghi 18 °C vào buổi sáng và 27 °C vào buổi trưa. Nhiệt độ đã tăng bao nhiêu độ? | 9 °C (tăng) | ☐ |
+| inq-116 | khó |  | Một cốc nước ấm ghi 40 °C, sau 10 phút còn 34 °C. Nhiệt độ đã giảm bao nhiêu độ trong 10 … | 6 °C | ☐ |
 
-### Biểu đồ và bảng (8 câu)
+### Biểu đồ và bảng (11 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -626,6 +637,9 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | inq-32 | vừa |  | Biểu đồ cột dùng để làm gì? | So sánh số lượng giữa các nhóm | ☐ |
 | inq-33 | vừa |  | Vì sao biểu đồ cần có tiêu đề và tên các cột? | Để người xem hiểu biểu đồ nói về điều gì | ☐ |
 | inq-62 | vừa |  | Trong bảng số liệu có hàng và cột. Để biết có bao nhiêu bạn thích cam, em đọc ở đâu? | Hàng “cam” và cột “số bạn” | ☐ |
+| inq-117 | dễ |  | Trên biểu đồ cột, cột cao hơn nghĩa là gì? | Số lượng lớn hơn | ☐ |
+| inq-118 | vừa |  | Bảng ghi: Lan 4 quả, Minh 6 quả, Hoa 4 quả. Ai ăn nhiều quả nhất? | Minh | ☐ |
+| inq-119 | khó |  | Một biểu đồ cột có 5 cột với số liệu: 2, 6, 3, 8, 1. Tổng của tất cả các cột là bao nhiêu? | 20 | ☐ |
 
 ### Thí nghiệm công bằng (9 câu)
 
@@ -641,7 +655,7 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | inq-40 | vừa |  | Trong thí nghiệm, nhóm “đối chứng” là nhóm như thế nào? | Nhóm không thay đổi gì để so sánh | ☐ |
 | inq-61 | vừa |  | Vì sao không nên thay đổi nhiều yếu tố cùng lúc trong một thí nghiệm? | Vì ta không biết yếu tố nào đã gây ra kết quả | ☐ |
 
-### Dự đoán và so sánh (7 câu)
+### Dự đoán và so sánh (11 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -652,8 +666,12 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | inq-43 | vừa |  | Kết quả thí nghiệm khác với dự đoán của em. Em nên làm gì? | Ghi lại kết quả, suy nghĩ lại và thử thêm | ☐ |
 | inq-44 | vừa |  | Khi so sánh hai kết quả, điều quan trọng nhất là gì? | Dựa vào số liệu đo được, không dựa vào cảm tính | ☐ |
 | inq-45 | khó |  | Một bạn nói: “Nước đá tan nhanh vì nó vui”. Vì sao đây không phải là giải thích khoa học? | Vì nó không dựa trên bằng chứng hay quan sát | ☐ |
+| inq-102 | vừa |  | Hai kết quả thí nghiệm khác nhau, em nên làm gì trước khi kết luận? | Kiểm tra lại thí nghiệm để chắc chắn | ☐ |
+| inq-103 | vừa |  | Khi chênh lệch giữa hai nhóm rất nhỏ, nhà khoa học nên làm gì? | Lặp lại thí nghiệm để xem chênh lệch có ổn định không | ☐ |
+| inq-104 | khó |  | Dự đoán của em đã sai. Điều này có nghĩa là gì? | Em có thể học được điều mới từ kết quả thật | ☐ |
+| inq-105 | dễ |  | Nếu chỉ làm thí nghiệm một lần rồi kết luận ngay, điều gì có thể xảy ra? | Kết luận có thể do may rủi nên không đáng tin | ☐ |
 
-### Phân loại (7 câu)
+### Phân loại (11 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -664,8 +682,12 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | inq-50 | vừa |  | Vì sao các nhà khoa học phân loại sinh vật? | Để dễ tìm hiểu, so sánh và ghi nhớ | ☐ |
 | inq-51 | vừa |  | Nhóm nào gồm toàn sinh vật sống? | Cây, cá, con người | ☐ |
 | inq-52 | khó |  | Trong một hộp có táo, chuối, cam, và một chiếc thìa. Nếu muốn phân loại theo “trái cây”, … | Chiếc thìa | ☐ |
+| inq-110 | dễ |  | Bút chì, thước và bút mực thuộc nhóm nào? | Dụng cụ học tập | ☐ |
+| inq-111 | vừa |  | Nếu phân loại động vật theo nơi sống, cá, tôm và cua thuộc nhóm nào? | Sống dưới nước | ☐ |
+| inq-112 | vừa |  | Nếu dùng tiêu chí “có xương sống” để phân loại, con nào KHÔNG thuộc nhóm này? | Con giun đất | ☐ |
+| inq-113 | khó |  | Trong các vật làm từ kim loại, gỗ, nhựa và thủy tinh, nhóm nào dẫn điện tốt? | Chỉ kim loại | ☐ |
 
-### Biến số và nguyên nhân (6 câu)
+### Biến số và nguyên nhân (10 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -675,8 +697,12 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | inq-56 | khó |  | Một bạn nói: “Cây cao vì được nghe nhạc”. Để kiểm tra, cần làm gì? | So sánh hai nhóm cây: một nhóm nghe nhạc, một nhóm không, c… | ☐ |
 | inq-57 | vừa |  | Trong thí nghiệm hai cốc đá, yếu tố nào là nguyên nhân khiến đá tan nhanh hơn? | Nhiệt độ môi trường cao hơn | ☐ |
 | inq-58 | vừa |  | Vì sao nhà khoa học thường lặp lại thí nghiệm nhiều lần? | Để kết quả đáng tin hơn và không do may rủi | ☐ |
+| inq-106 | dễ |  | Trong thí nghiệm, biến giữ nguyên (không đổi) là gì? | Yếu tố được giữ giống nhau để thí nghiệm công bằng | ☐ |
+| inq-107 | vừa |  | Khi tưới nhiều nước hơn thì cây cao hơn. Nếu chỉ thấy hai điều này xảy ra cùng lúc, có ch… | Chưa chắc, cần thí nghiệm có kiểm soát để chứng minh nguyên… | ☐ |
+| inq-108 | khó |  | Một bạn thấy mỗi khi trời mưa, nhiều ốc sên xuất hiện. Bạn kết luận mưa làm ốc sên xuất h… | Liệu có yếu tố khác như độ ẩm cao cũng xuất hiện cùng lúc k… | ☐ |
+| inq-109 | vừa |  | Trong thí nghiệm, biến phụ thuộc là gì? | Kết quả thay đổi theo biến em đã thay đổi | ☐ |
 
-### Quy luật và dãy số (5 câu)
+### Quy luật và dãy số (7 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -685,6 +711,8 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | inq-066 | vừa |  | Một cây cao 10 cm và mỗi tuần cao thêm 5 cm. Sau 3 tuần cây cao bao nhiêu cm? | 25 cm | ☐ |
 | inq-067 | vừa |  | Nếu hôm nay là thứ Tư, thì ba ngày sau là thứ mấy? | Thứ Bảy | ☐ |
 | inq-068 | vừa |  | Nhiệt độ đo hằng ngày là 20 °C, 22 °C, 24 °C, 26 °C. Nếu quy luật tiếp tục, ngày thứ 5 nh… | 28 °C | ☐ |
+| inq-122 | dễ |  | Dãy số 5, 10, 15, 20… số tiếp theo là số nào? | 25 | ☐ |
+| inq-123 | dễ |  | Chữ cái nào nối tiếp sau G trong dãy A, C, E, G? | I | ☐ |
 
 ### Ước lượng và đơn vị đo (5 câu)
 
@@ -716,7 +744,7 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | inq-082 | khó |  | Một biểu đồ đường cho thấy chiều cao của cây tăng dần qua các tuần. Điều gì làm cho đường… | Cây càng ngày càng cao hơn | ☐ |
 | inq-083 | vừa |  | Vì sao nên vẽ đường nối các điểm dữ liệu theo thứ tự thời gian? | Để thấy xu hướng tăng hoặc giảm rõ ràng | ☐ |
 
-### Thiết kế thí nghiệm (5 câu)
+### Thiết kế thí nghiệm (6 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -725,8 +753,9 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | inq-086 | vừa |  | Em muốn xem loại đất nào giữ nước tốt hơn. Em nên làm gì? | Dùng cùng lượng nước và cùng loại cốc cho mỗi loại đất, rồi… | ☐ |
 | inq-087 | khó |  | Trong một thí nghiệm, em ghi “nước ấm làm đường tan nhanh hơn”. Câu này là gì? | Một giả thuyết cần được kiểm tra | ☐ |
 | inq-088 | dễ |  | Bảng ghi kết quả thí nghiệm nên có những gì? | Tên thí nghiệm, các số đo và ngày làm | ☐ |
+| inq-120 | vừa |  | Muốn so sánh hai loại kẹo tan nhanh trong nước, em nên làm gì? | Dùng cùng lượng nước, cùng nhiệt độ và cùng loại cốc | ☐ |
 
-### Bằng chứng và ý kiến (5 câu)
+### Bằng chứng và ý kiến (6 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -735,6 +764,7 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | inq-091 | vừa |  | Điều nào là bằng chứng tốt để kết luận “cây cần nước”? | Cây được tưới nước thì xanh tốt, cây không được tưới thì hé… | ☐ |
 | inq-092 | khó |  | Một quảng cáo nói “Sản phẩm này làm tóc mọc nhanh gấp 10 lần”. Điều gì nên làm trước khi … | Tìm bằng chứng từ thí nghiệm có kiểm soát và so sánh với nh… | ☐ |
 | inq-093 | vừa |  | Vì sao khoa học cần bằng chứng mà người khác có thể lặp lại được? | Để người khác kiểm tra lại và tin vào kết quả | ☐ |
+| inq-121 | vừa |  | Một cửa hàng nói “90% khách hàng hài lòng”. Điều gì cần biết để đánh giá con số này? | Số khách được hỏi và cách đặt câu hỏi | ☐ |
 
 # Tiếng Anh (Cambridge KET / PET)
 
