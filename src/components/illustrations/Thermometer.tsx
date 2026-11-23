@@ -24,3 +24,8 @@ export default function Thermometer({ value = 30 }: { value?: number }) {
     </Frame>
   )
 }
+
+/** Nhiệt kế chỉ 12 độ C, dùng cho câu hỏi đọc số liệu. */
+export function ColdThermometer() {
+  return <Thermometer value={12} />
+}

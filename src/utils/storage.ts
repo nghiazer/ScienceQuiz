@@ -19,6 +19,7 @@ export const defaultProgress = (): Progress => ({
     inquiry: emptyStats(),
   },
   unlockedBadges: [],
+  seenIds: [],
 })
 
 export function loadProgress(): Progress {
@@ -32,6 +33,7 @@ export function loadProgress(): Progress {
       ...parsed,
       topicStats: { ...base.topicStats, ...(parsed.topicStats ?? {}) },
       unlockedBadges: Array.isArray(parsed.unlockedBadges) ? parsed.unlockedBadges : [],
+      seenIds: Array.isArray(parsed.seenIds) ? parsed.seenIds : [],
     }
   } catch {
     return defaultProgress()
@@ -126,6 +128,10 @@ export function recordQuizResult(prev: Progress, input: RecordInput, today = tod
     perfectCount: prev.perfectCount + (percent === 100 && total > 0 ? 1 : 0),
     topicStats,
     unlockedBadges: [...prev.unlockedBadges],
+    seenIds: Array.from(new Set([
+      ...prev.seenIds,
+      ...input.answers.filter((a) => a.selectedIndex !== null).map((a) => a.questionId),
+    ])),
   }
 
   const newBadges: string[] = []

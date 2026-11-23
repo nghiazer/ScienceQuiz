@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ArrowRight, LogOut, Star } from 'lucide-react'
-import type { AnswerRecord, OptionIndex, QuizConfig } from '../types/quiz'
+import type { AnswerRecord, Difficulty, OptionIndex, QuizConfig } from '../types/quiz'
 import { TOPICS } from '../data/questions'
 import { useLang } from '../context/LanguageContext'
 import { MOCK_MINUTES } from '../utils/quiz'
@@ -22,6 +22,12 @@ interface Props {
 }
 
 const LETTERS = ['A', 'B', 'C', 'D']
+
+const DIFF: Record<Difficulty, { vi: string; en: string; c: string }> = {
+  easy: { vi: 'Dễ', en: 'Easy', c: 'bg-green-100 text-green-700' },
+  medium: { vi: 'Vừa', en: 'Medium', c: 'bg-orange-100 text-orange-700' },
+  hard: { vi: 'Khó', en: 'Hard', c: 'bg-rose-100 text-rose-700' },
+}
 
 export default function QuizArena({ config, onFinish, onExit }: Props) {
   const { questions, timerEnabled, kind } = config
@@ -142,8 +148,8 @@ export default function QuizArena({ config, onFinish, onExit }: Props) {
           <span className={`rounded-full px-3 py-1 ${topic.soft} ${topic.text}`}>
             {topic.emoji} <BilingualText vi={topic.name_vi} en={topic.name_en} compact />
           </span>
-          <span className={`rounded-full px-3 py-1 ${q.difficulty === 'easy' ? 'bg-green-100 text-green-700' : 'bg-orange-100 text-orange-700'}`}>
-            <BilingualText vi={q.difficulty === 'easy' ? 'Dễ' : 'Vừa'} en={q.difficulty === 'easy' ? 'Easy' : 'Medium'} compact />
+          <span className={`rounded-full px-3 py-1 ${DIFF[q.difficulty].c}`}>
+            <BilingualText vi={DIFF[q.difficulty].vi} en={DIFF[q.difficulty].en} compact />
           </span>
           {kind === 'mock' && <span className="rounded-full bg-violet-100 px-3 py-1 text-violet-700">{title.vi}</span>}
         </div>

@@ -23,9 +23,9 @@ export default function App() {
   }
 
   const startTopic = (topic: Topic) =>
-    start({ kind: 'topic', topic, questions: buildTopicQuiz(topic), timerEnabled: false })
+    start({ kind: 'topic', topic, questions: buildTopicQuiz(topic, new Set(progress.seenIds)), timerEnabled: false })
   const startMock = (timerEnabled: boolean) =>
-    start({ kind: 'mock', questions: buildMockTest(), timerEnabled })
+    start({ kind: 'mock', questions: buildMockTest(new Set(progress.seenIds)), timerEnabled })
   const startRetry = (questions: Question[]) =>
     start({ kind: 'retry', questions, timerEnabled: false })
 

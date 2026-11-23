@@ -94,7 +94,7 @@ export default function HomeScreen({ progress, onStartTopic, onStartMock }: Prop
                   <BilingualText vi={t.name_vi} en={t.name_en} className="text-xl font-black" subClassName="!text-white/85 !not-italic !text-[0.7em]" />
                   <BilingualText vi={t.desc_vi} en={t.desc_en} className="mt-1 text-sm font-semibold text-white/90" subClassName="!text-white/75 !not-italic !text-[0.9em]" />
                   <span className="mt-2 flex items-center gap-2 text-xs font-extrabold">
-                    <span className="rounded-full bg-white/25 px-2 py-0.5">{n} câu</span>
+                    <span className="rounded-full bg-white/25 px-2 py-0.5">Kho {n} câu</span>
                     {pct !== null && <span className="rounded-full bg-white/25 px-2 py-0.5">Đúng {pct}%</span>}
                   </span>
                 </span>
