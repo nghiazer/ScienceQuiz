@@ -387,7 +387,7 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | phy-102 | vừa |  | Tiếng ong bay thường cao hơn tiếng gấu gầm. Vì sao? | Cánh ong rung nhanh hơn nên tạo âm cao hơn | ☐ |
 | phy-103 | vừa |  | Hai thanh thép cùng loại, một ngắn và một dài, cùng được gõ. Thanh nào rung nhanh hơn và … | Thanh ngắn | ☐ |
 
-## Trái đất & Vũ trụ (91 câu)
+## Trái đất & Vũ trụ (120 câu)
 
 ### Mặt Trời (8 câu)
 
@@ -402,7 +402,7 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | ear-090 | vừa |  | Vì sao có thể nói Mặt Trời lớn hơn Trái Đất rất nhiều? | Mặt Trời có thể chứa rất nhiều Trái Đất bên trong | ☐ |
 | ear-091 | khó |  | Vì sao có thể nói Mặt Trời là một quả cầu khí? | Vì nó chủ yếu gồm khí nóng, không có bề mặt đá rắn | ☐ |
 
-### Mặt Trăng (9 câu)
+### Mặt Trăng (12 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -415,8 +415,11 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | ear-18 | vừa |  | Mặt Trăng có thể nhìn thấy vào ban ngày không? | Có, đôi khi có thể thấy Mặt Trăng ban ngày | ☐ |
 | ear-19 | khó |  | Vì sao ta luôn thấy cùng một mặt của Mặt Trăng từ Trái Đất? | Vì Mặt Trăng tự quay một vòng đúng bằng thời gian nó quay q… | ☐ |
 | ear-20 | khó |  | Khi Mặt Trăng đi vào giữa Mặt Trời và Trái Đất, đôi khi ta có thể gặp hiện tượng gì? | Nhật thực: Mặt Trăng che một phần hoặc toàn bộ Mặt Trời | ☐ |
+| ear-105 | vừa |  | Trên Mặt Trăng có những vùng tối nhìn rõ từ Trái Đất. Các vùng này gọi là gì? | Biển Mặt Trăng, hình thành từ dung nham cổ | ☐ |
+| ear-106 | vừa |  | Thủy triều lên xuống trên biển có liên quan đến điều gì? | Lực hút của Mặt Trăng và Mặt Trời | ☐ |
+| ear-107 | khó |  | Nếu không có Mặt Trăng, thủy triều sẽ thay đổi thế nào? | Thủy triều sẽ yếu đi nhiều | ☐ |
 
-### Ngày và đêm (7 câu)
+### Ngày và đêm (10 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -427,8 +430,11 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | ear-24 | khó |  | Nếu Trái Đất ngừng tự quay, điều gì sẽ xảy ra với ngày và đêm? | Một nửa Trái Đất luôn là ban ngày, nửa kia luôn là ban đêm | ☐ |
 | ear-25 | vừa | earth-rotation | Khi em đang ngủ ban đêm, có người ở nơi khác trên Trái Đất đang ăn sáng. Vì sao? | Vì Trái Đất tròn, mỗi nơi có thời điểm ngày đêm khác nhau | ☐ |
 | ear-60 | dễ |  | Một ngày trên Trái Đất dài khoảng bao nhiêu giờ? | 24 giờ | ☐ |
+| ear-108 | khó |  | Vì sao có nơi gần cực Bắc có vài tháng liên tục là ban ngày? | Vì trục Trái Đất nghiêng nên nơi đó nhận nắng liên tục tron… | ☐ |
+| ear-109 | vừa |  | Khi ở phía tây Trái Đất đang là buổi trưa, thì ở phía đông đang là lúc nào? | Đã là buổi chiều hoặc tối muộn hơn | ☐ |
+| ear-110 | vừa |  | Ở nơi có ngày và đêm, mặt Trời buổi sáng sớm thường mọc ở đâu trên đường chân trời? | Ở phía đông | ☐ |
 
-### Bóng thay đổi trong ngày (7 câu)
+### Bóng thay đổi trong ngày (10 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -439,8 +445,11 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | ear-28 | vừa |  | Vì sao bóng của cây thay đổi độ dài và hướng trong ngày? | Vì vị trí Mặt Trời trên bầu trời thay đổi | ☐ |
 | ear-29 | khó |  | Một bạn đo bóng cây lúc 8 giờ sáng và lúc 12 giờ trưa. Bóng nào dài hơn và vì sao? | Bóng lúc 8 giờ sáng dài hơn vì Mặt Trời còn thấp | ☐ |
 | ear-30 | vừa |  | Khi có mây che Mặt Trời, bóng của em sẽ thế nào? | Bóng mờ đi hoặc biến mất | ☐ |
+| ear-111 | dễ |  | Đồng hồ mặt trời dùng gì để báo giờ? | Bóng của một cây kim đứng trên mặt đất | ☐ |
+| ear-112 | vừa |  | Bóng của một cây cột thay đổi thế nào trong ngày? | Dài ra vào buổi sáng và buổi chiều, ngắn lại vào giữa trưa | ☐ |
+| ear-113 | khó |  | Vào buổi sáng sớm, bóng của một cái cây có thể dài hơn chiều cao của cây không? | Có, vì Mặt Trời còn thấp nên bóng dài hơn chiều cao | ☐ |
 
-### Vòng tuần hoàn nước (8 câu)
+### Vòng tuần hoàn nước (11 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -452,8 +461,11 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | ear-35 | khó |  | Vì sao nước biển không bị cạn đi mãi khi liên tục bốc hơi? | Vì hơi nước rơi xuống thành mưa và chảy trở lại biển | ☐ |
 | ear-36 | vừa |  | Vì sao buổi sáng sớm đôi khi có sương trên cỏ? | Hơi nước trong không khí lạnh đi và đọng thành giọt nhỏ | ☐ |
 | ear-37 | dễ |  | Khi phơi quần áo ướt, nước trên áo biến mất dần. Đây là bước nào của vòng tuần hoàn nước? | Bốc hơi | ☐ |
+| ear-096 | vừa |  | Hơi nước thoát ra từ lá cây đi vào không khí gọi là gì? | Thoát hơi nước | ☐ |
+| ear-097 | dễ |  | Nước ngầm là gì? | Nước thấm xuống đất và tích trữ trong các lớp đất đá | ☐ |
+| ear-098 | vừa |  | Khi hơi nước trên cao bị lạnh xuống dưới 0 độ C, nó có thể tạo thành gì? | Băng tuyết hoặc mưa đá | ☐ |
 
-### Thời tiết và mùa (11 câu)
+### Thời tiết và mùa (13 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -468,8 +480,10 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | ear-092 | vừa |  | Mùa xuân thường có đặc điểm gì? | Cây bắt đầu đâm chồi nảy lộc và thời tiết dần ấm lên | ☐ |
 | ear-093 | vừa |  | Vào mùa thu, lá cây thường đổi màu. Vì sao? | Vì cây giảm chất diệp lục khi ngày ngắn và trời lạnh hơn | ☐ |
 | ear-094 | khó |  | Vì sao Trái Đất có các mùa trong năm? | Vì trục Trái Đất nghiêng, nên mỗi nửa cầu nhận ánh sáng Mặt… | ☐ |
+| ear-122 | vừa |  | Khi không khí nóng và ẩm bốc lên cao, điều gì thường xảy ra? | Hơi nước nguội đi, tạo thành mây và có thể mưa | ☐ |
+| ear-123 | dễ |  | Người dự báo thời tiết xem những gì để đoán mưa hay nắng? | Mây, gió, nhiệt độ và độ ẩm | ☐ |
 
-### Hệ Mặt Trời và Trái Đất (8 câu)
+### Hệ Mặt Trời và Trái Đất (11 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -481,8 +495,11 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | ear-50 | khó |  | Vì sao nhiều ngôi sao trông nhỏ hơn Mặt Trời, dù nhiều ngôi sao thật ra lớn hơn? | Vì chúng ở xa hơn rất nhiều | ☐ |
 | ear-59 | dễ |  | Trái Đất có bao nhiêu vệ tinh tự nhiên? | 1 | ☐ |
 | ear-64 | dễ |  | Hành tinh nào lớn nhất trong Hệ Mặt Trời? | Sao Mộc | ☐ |
+| ear-102 | dễ |  | Trái Đất quay một vòng quanh Mặt Trời mất khoảng bao lâu? | Khoảng một năm | ☐ |
+| ear-103 | vừa |  | Lực nào giữ Trái Đất đi theo quỹ đạo quanh Mặt Trời? | Lực hút (hấp dẫn) của Mặt Trời | ☐ |
+| ear-104 | khó |  | Vì sao Trái Đất không rơi vào Mặt Trời? | Vì Trái Đất chuyển động ngang đủ nhanh để cân bằng với lực … | ☐ |
 
-### Đất và đá (8 câu)
+### Đất và đá (11 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -494,8 +511,11 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | ear-56 | khó |  | Khi nắm đất sét và đất cát đều ẩm trong tay, hai loại đất khác nhau thế nào? | Đất sét dính và dẻo; đất cát rời rạc, không dính | ☐ |
 | ear-57 | dễ |  | Vì sao đất lại quan trọng với cây? | Đất cung cấp nước và chất dinh dưỡng cho rễ cây | ☐ |
 | ear-58 | vừa |  | Phát biểu nào đúng về nguồn gốc của đất? | Đất có nguồn gốc từ đá vỡ nhỏ dần kết hợp với chất hữu cơ | ☐ |
+| ear-099 | vừa |  | Vì sao sỏi, cát và bụi có kích thước khác nhau? | Vì đá vỡ ra với mức độ mài mòn khác nhau | ☐ |
+| ear-100 | vừa |  | Đất bị xói mòn khi nào? | Khi mưa lớn cuốn trôi lớp đất mặt, nhất là khi không có cây… | ☐ |
+| ear-101 | khó |  | Vì sao đá phiến có thể tách thành từng lớp mỏng? | Vì nó được hình thành từ nhiều lớp trầm tích xếp chồng lên … | ☐ |
 
-### Sao và bầu trời đêm (5 câu)
+### Sao và bầu trời đêm (7 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -504,8 +524,10 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | ear-067 | vừa |  | Vì sao các ngôi sao ban đêm dường như di chuyển trên bầu trời? | Vì Trái Đất tự quay | ☐ |
 | ear-068 | khó |  | Vì sao sao Bắc Cực dường như đứng yên ở gần một hướng trên bầu trời? | Vì nó nằm gần trục quay kéo dài của Trái Đất | ☐ |
 | ear-069 | dễ |  | Vì sao ban ngày ta không nhìn thấy các ngôi sao? | Vì ánh sáng Mặt Trời làm chúng bị lấn át | ☐ |
+| ear-114 | vừa |  | Sao băng là gì? | Một mảnh đá nhỏ từ vũ trụ cháy sáng khi lao vào khí quyển | ☐ |
+| ear-115 | khó |  | Vì sao các ngôi sao có màu xanh, vàng hoặc đỏ khác nhau? | Vì nhiệt độ bề mặt khác nhau; sao xanh nóng hơn sao đỏ | ☐ |
 
-### Không khí và gió (5 câu)
+### Không khí và gió (7 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -514,8 +536,10 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | ear-072 | vừa |  | Không khí có khối lượng không? Quả bóng bơm đầy không khí so với quả bóng xẹp thì thế nào? | Bóng đầy không khí nặng hơn một chút | ☐ |
 | ear-073 | khó |  | Vì sao khi bơm xe đạp, không khí bị nén lại nóng lên? | Khi bị nén, các phân tử không khí va chạm nhiều hơn và sinh… | ☐ |
 | ear-074 | vừa |  | Khí nào chiếm phần lớn nhất trong không khí chúng ta đang thở? | Nitơ | ☐ |
+| ear-116 | vừa |  | Vì sao khi có gió thổi, ta cảm thấy mát hơn lúc đổ mồ hôi? | Gió giúp mồ hôi bay hơi nhanh hơn và lấy bớt nhiệt từ da | ☐ |
+| ear-117 | dễ |  | Dụng cụ dùng để đo tốc độ gió gọi là gì? | Máy đo gió | ☐ |
 
-### Tài nguyên và ô nhiễm (5 câu)
+### Tài nguyên và ô nhiễm (7 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -524,8 +548,10 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | ear-077 | vừa |  | Vì sao nên tiết kiệm nước sạch? | Vì nước sạch là tài nguyên có hạn | ☐ |
 | ear-078 | khó |  | Khí nào sinh ra khi đốt than đá và dầu, góp phần làm Trái Đất nóng lên? | Cacbonic (CO2) | ☐ |
 | ear-079 | dễ |  | Vì sao nên tắt đèn khi ra khỏi phòng? | Để tiết kiệm điện và giảm việc khai thác nhiên liệu | ☐ |
+| ear-118 | dễ |  | Vì sao nên phân loại rác trước khi bỏ đi? | Để tái chế được nhiều hơn và giảm rác phải chôn lấp | ☐ |
+| ear-119 | vừa |  | Năng lượng mặt trời, gió và nước là loại nguồn gì? | Năng lượng tái tạo | ☐ |
 
-### Địa hình (5 câu)
+### Địa hình (7 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -534,8 +560,10 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | ear-082 | vừa |  | Núi lửa là gì? | Lỗ hở trên vỏ Trái Đất, qua đó dung nham và khí có thể phun… | ☐ |
 | ear-083 | khó |  | Động đất thường xảy ra khi nào? | Khi các mảng đá dưới lòng đất dịch chuyển đột ngột | ☐ |
 | ear-084 | dễ |  | Vùng đất bằng phẳng, rộng lớn và ít đồi núi được gọi là gì? | Đồng bằng | ☐ |
+| ear-120 | dễ |  | Thung lũng là gì? | Vùng trũng thấp nằm giữa hai sườn núi hoặc đồi | ☐ |
+| ear-121 | khó |  | Hang động trong núi đá vôi thường hình thành như thế nào? | Nước mưa có chút axit hòa tan đá vôi dần dần qua hàng nghìn… | ☐ |
 
-### Các hành tinh (5 câu)
+### Các hành tinh (6 câu)
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
@@ -543,7 +571,8 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | ear-086 | vừa |  | Trái Đất là hành tinh thứ mấy tính từ Mặt Trời? | Thứ ba | ☐ |
 | ear-087 | vừa |  | Hành tinh nào nổi tiếng với những vành đai sáng đẹp quanh mình? | Sao Thổ | ☐ |
 | ear-088 | khó |  | Sao Kim thường được gọi là gì vì nó là vật sáng nhất trên bầu trời lúc gần bình minh hoặc… | Sao Mai hoặc sao Hôm | ☐ |
-| ear-095 | vừa |  | Hành tinh nào nóng nhất trong Hệ Mặt Trời? | Sao Kim | ☐ |
+| ear-095 | vừa |  | Trên hành tinh nào, nhiệt độ bề mặt cao nhất trong Hệ Mặt Trời? | Sao Kim | ☐ |
+| ear-124 | vừa |  | Hành tinh nào có một cơn bão đỏ khổng lồ đã tồn tại hàng trăm năm? | Sao Mộc | ☐ |
 
 ## Tư duy thực nghiệm (60 câu)
 
