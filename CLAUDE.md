@@ -9,6 +9,7 @@ Two subjects: **Science** (ASMO-style, 4 topics × 120 questions, Vietnamese + E
 - `npm run check:dupes` — duplicate detection only (allowlist: `scripts/dupes-allowlist.json`, every entry needs a `reason`)
 - `npm run ledger` — regenerates `docs/question-ledger.md` (generated; never hand-edit)
 - `npm run verify` — lint + check:data + tsc in one go
+- `npm run q -- --sub=pa-negative --diff=hard --full` — look up questions (filters: `--id --topic --sub --diff --trap --text --limit --full`); prints the source file
 
 ## Layout
 - `src/types/quiz.ts` — all types (`EnglishTopic`, `EnglishSubtopicId`, `IllustrationId`, `Progress`, …)
@@ -34,8 +35,18 @@ Two subjects: **Science** (ASMO-style, 4 topics × 120 questions, Vietnamese + E
 - Don't commit `dist/`, `node_modules/` or `.claude/settings.local.json`.
 
 ## Skills (`.claude/skills`) and agents (`.claude/agents`)
-- `/add-english-questions`, `/add-science-questions` — write question batches the right way
-- `/add-english-tense` — checklist for registering a new tense end to end
-- `/add-illustration` — new SVG figure + registration
-- `/verify` — run all gates and fix failures
-- Agent `question-writer` writes one subtopic batch (parallelizable); agent `question-reviewer` audits questions read-only and returns a fix list. Prefer running the reviewer after any large batch.
+CRUD map — pick the skill by what you are doing:
+
+| Area | Create | Read | Update / Delete |
+| --- | --- | --- | --- |
+| Questions | `/add-english-questions`, `/add-science-questions` | `/find-questions` | `/edit-question` |
+| Topics, subtopics, tenses | `/add-english-tense`, `/manage-topics` | `src/data/topics.ts` | `/manage-topics` |
+| Illustrations | `/add-illustration` | `registry.tsx`, `check:data` summary | `/add-illustration` (update/rename/delete section) |
+| Dresses & wardrobe | `/manage-dresses` | `src/data/dresses.ts` | `/manage-dresses` |
+| Screens, gameplay, UI | `/ui-feature` | — | `/ui-feature` |
+| Saved data (localStorage) | `/progress-storage` | — | `/progress-storage` |
+| Quality gates | `/verify` (run after every change) | | |
+
+Agents: `question-writer` (new batch, one subtopic), `question-editor` (apply fixes to existing items, one file each), `question-reviewer` (read-only audit → fix list; run after any large batch, then hand the list to the editor), `illustrator` (SVG figures), `feature-developer` (multi-file UI/gameplay/wardrobe/storage work).
+
+Gotchas worth remembering: English question ids are positional (inserting/deleting mid-file renumbers the rest — edit in place or append); removing a topic lowers derived dress unlocks; the mock-test builders and `HomeScreen` copy assume 3 tenses / 4 science topics; never change `asmo-quiz-progress-v1` without a migration.

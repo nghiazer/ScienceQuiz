@@ -19,6 +19,7 @@ Stack: Vite, React 19, TypeScript, Tailwind CSS 4, framer-motion, oxlint.
 | `npm run check:dupes` | Duplicate detection only |
 | `npm run ledger` | Regenerate `docs/question-ledger.md` |
 | `npm run verify` | lint + check:data + tsc |
+| `npm run q -- --sub=pa-negative` | Look up questions (see `scripts/query.ts` for filters) |
 
 ## Data layout
 

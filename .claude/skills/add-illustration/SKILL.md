@@ -1,9 +1,11 @@
 ---
 name: add-illustration
-description: Create a new SVG illustration component for ScienceQuiz questions and register it (Frame wrapper, IllustrationId, registry, validator sets). Use when a question needs a picture, or when asked to add or redraw a figure.
+description: Create, redraw, rename or delete SVG illustration components for ScienceQuiz questions and keep them registered (Frame wrapper, IllustrationId, registry, validator sets). Use when a question needs a picture, or when asked to add, change, rename or remove a figure.
 ---
 
-# Add an illustration
+# Add / update / delete an illustration
+
+Update, rename and delete notes are at the end; the numbered steps are for creating.
 
 Reference implementations: `src/components/illustrations/Compass.tsx` (simple), `FoodChain.tsx`, `TenseTimeline.tsx` (English).
 
@@ -17,3 +19,9 @@ Reference implementations: `src/components/illustrations/Compass.tsx` (simple), 
 4. **English-only figure?** also add the id to the `ENGLISH_ILLUS` set in `scripts/check-data.ts`, otherwise it is reported as an unused Science figure.
 5. **Attach** to a question: `illustrationId: '<id>'` (Science object) or `{ ill: '<id>' }` as last argument of a `section()` item (English).
 6. **Check visually**: `npm run dev`, open a quiz containing the question at desktop width and at ~375px wide. Then run `/verify`.
+
+## Update, rename, delete
+- **Redraw**: edit the component only; keep the same visual facts the questions rely on (numbers, letters A–D, arrow directions, labels). Find the questions that use it with grep: `illustrationId: '<id>'` (Science) and `ill: '<id>'` (English), then re-read each against the new picture.
+- **Rename the id**: change the `IllustrationId` literal, the `registry.tsx` key, `ENGLISH_ILLUS` in `scripts/check-data.ts` (if listed) and every `illustrationId`/`ill` reference (grep for the old id). `tsc` and `check:data` flag leftovers.
+- **Delete**: first detach it from all questions (`/edit-question`), then remove the file, the import + registry entry, the union member and any `ENGLISH_ILLUS` entry. Never leave a registered-but-unused figure: `check:data` lists unused Science figures under "chưa dùng".
+- Parallel or heavy drawing work → the `illustrator` agent.

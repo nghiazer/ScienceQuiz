@@ -7,6 +7,7 @@
       "Bash(npm run check:data:*)",
       "Bash(npm run check:dupes:*)",
       "Bash(npm run ledger:*)",
+      "Bash(npm run q:*)",
       "Bash(npm run verify:*)",
       "Bash(npx tsc:*)",
       "Bash(npx tsx scripts/:*)",
