@@ -12,7 +12,8 @@
     "check:dupes": "tsx scripts/check-dupes.ts",
     "ledger": "tsx scripts/ledger.ts",
     "verify": "oxlint && tsx scripts/check-data.ts && tsc -b",
-    "q": "tsx scripts/query.ts"
+    "q": "tsx scripts/query.ts",
+    "gallery": "tsx --tsconfig tsconfig.app.json scripts/dress-gallery.ts"
   },
   "dependencies": {
     "canvas-confetti": "^1.9.4",

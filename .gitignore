@@ -25,3 +25,6 @@ dist-ssr
 
 # Claude Code (personal overrides)
 .claude/settings.local.json
+
+# Dress gallery output
+gallery/

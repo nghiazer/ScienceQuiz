@@ -13,7 +13,7 @@ interface Props {
   onSelect?: () => void
 }
 
-const TIER_RING = ['ring-pink-200', 'ring-violet-300', 'ring-amber-300'] as const
+const TIER_RING = ['ring-pink-200', 'ring-violet-300', 'ring-amber-300', 'ring-sky-300', 'ring-fuchsia-400'] as const
 
 /** Một chiếc váy trên móc: đã mở thì đủ màu, chưa mở thì xám và có khóa. */
 export default function DressCard({ dress, unlocked, remaining, selected = false, highlight = false, onSelect }: Props) {
@@ -24,7 +24,7 @@ export default function DressCard({ dress, unlocked, remaining, selected = false
       </span>
       {!unlocked && <Lock className="absolute right-2 top-2 size-5 text-slate-500" aria-label="Chưa mở khóa" />}
       <div className={`mx-auto w-3/4 ${unlocked ? '' : 'grayscale opacity-45 brightness-95'}`}>
-        <PrincessSvg look={dress.look} className="h-auto w-full" />
+        <PrincessSvg look={dress.look} className="h-auto w-full" still />
       </div>
       <BilingualText
         vi={unlocked ? dress.name_vi : '???'}
