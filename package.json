@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "check:data": "tsx scripts/check-data.ts",
     "check:dupes": "tsx scripts/check-dupes.ts",
-    "ledger": "tsx scripts/ledger.ts"
+    "ledger": "tsx scripts/ledger.ts",
+    "verify": "oxlint && tsx scripts/check-data.ts && tsc -b"
   },
   "dependencies": {
     "canvas-confetti": "^1.9.4",

@@ -1,32 +1,31 @@
-# React + TypeScript + Vite
+# ScienceQuiz
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A bilingual (Vietnamese / English) quiz app for children in grades 2–3.
 
-Currently, two official plugins are available:
+- **Science** — 4 topics (living things, physical science, earth & space, scientific inquiry), 120 questions each, with SVG illustrations.
+- **English (Cambridge KET/PET style)** — Present Simple, Present Continuous and Past Simple, 10 subtopics per tense, 100 questions per subtopic, plus mock tests with tense-contrast "trap" questions.
+- Stars, daily streaks, a countdown timer, text-to-speech, and a wardrobe of princess ball gowns unlocked by progress.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Stack: Vite, React 19, TypeScript, Tailwind CSS 4, framer-motion, oxlint.
 
-## React Compiler
+## Commands
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Command | What it does |
+| --- | --- |
+| `npm run dev` | Start the dev server |
+| `npm run build` | Typecheck and build to `dist/` |
+| `npm run lint` | Run oxlint |
+| `npm run check:data` | Validate the question banks (structure, counts, balance, duplicates) |
+| `npm run check:dupes` | Duplicate detection only |
+| `npm run ledger` | Regenerate `docs/question-ledger.md` |
+| `npm run verify` | lint + check:data + tsc |
 
-## Expanding the Oxlint configuration
+## Data layout
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+- Science questions: `src/data/questions/*.ts`
+- English questions: `src/data/english/<tense>/<subtopic>.ts`, written with the `section()` helper
+- Topics and subtopics: `src/data/topics.ts`; types: `src/types/quiz.ts`
+- Illustrations: `src/components/illustrations/`
+- Question ledger (generated): `docs/question-ledger.md`
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+See `CLAUDE.md` for the content rules and contributor workflow (also used by Claude Code skills and agents in `.claude/`).
