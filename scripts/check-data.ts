@@ -92,8 +92,18 @@ const dupes = findDupes(ALL_QUESTIONS, allow)
 errors.push(...dupes.errors)
 for (const w of dupes.warnings) console.warn('  cảnh báo: ' + w)
 
-// Váy dạ hội: mỗi môn đúng 30 váy, thứ tự 1–30, tên đủ, độ đẹp (tier) không giảm
+// Váy dạ hội: mỗi môn đúng DRESSES_PER_SUBJECT váy, thứ tự liên tục, tên đủ và không trùng,
+// độ đẹp (tier) không giảm, màu hợp lệ, không có hai váy giống hệt nhau, váy cấp 4–5 phải có điểm "hoàng gia"
 const dressIds = new Set<string>()
+const dressNames = new Set<string>()
+const dressLooks = new Map<string, string>()
+const HEX = /^#[0-9a-fA-F]{6}$/
+const ROYAL_KEYS = ['tiara', 'cape', 'wings', 'train', 'aura'] as const
+const colorsOf = (look: Record<string, unknown>): string[] =>
+  Object.entries(look).flatMap(([k, v]) =>
+    k === 'silhouette' || k === 'pattern' || k === 'sleeves' || k === 'trim' || k === 'tiara' || k === 'neckline' || k === 'hair'
+      ? []
+      : typeof v === 'string' ? [v] : Array.isArray(v) ? (v as string[]) : [])
 for (const [subj, list] of Object.entries(DRESSES)) {
   if (list.length !== DRESSES_PER_SUBJECT) fail(`váy ${subj}: ${list.length} váy, cần ${DRESSES_PER_SUBJECT}`)
   list.forEach((d, i) => {
@@ -103,6 +113,18 @@ for (const [subj, list] of Object.entries(DRESSES)) {
     if (!d.name_vi.trim() || !d.name_en.trim()) fail(`váy ${d.id}: thiếu tên`)
     if (i > 0 && d.tier < list[i - 1].tier) fail(`váy ${d.id}: tier giảm so với váy trước`)
     if (d.subject !== subj) fail(`váy ${d.id}: sai môn`)
+    for (const n of [d.name_vi, d.name_en]) {
+      if (dressNames.has(n.toLowerCase())) fail(`váy ${d.id}: tên trùng "${n}"`)
+      dressNames.add(n.toLowerCase())
+    }
+    for (const c of colorsOf(d.look as unknown as Record<string, unknown>)) {
+      if (!HEX.test(c)) fail(`váy ${d.id}: màu không hợp lệ "${c}"`)
+    }
+    const key = JSON.stringify(d.look)
+    const same = dressLooks.get(key)
+    if (same) fail(`váy ${d.id}: giống hệt ${same}`)
+    dressLooks.set(key, d.id)
+    if (d.tier >= 4 && !ROYAL_KEYS.some((k) => d.look[k])) fail(`váy ${d.id}: cấp ${d.tier} cần ít nhất một trong ${ROYAL_KEYS.join('/')}`)
   })
 }
 console.log(`Váy dạ hội: ${Object.entries(DRESSES).map(([k, v]) => `${k} ${v.length}`).join(', ')}`)

@@ -2,7 +2,7 @@ import type { Subject } from '../../types/quiz'
 
 /** Số câu ĐÚNG cần có để mở thêm một váy (đếm riêng từng môn). */
 export const CORRECT_PER_DRESS = 10
-export const DRESSES_PER_SUBJECT = 30
+export const DRESSES_PER_SUBJECT = 100
 
 export type Silhouette =
   | 'aline' | 'empire' | 'tiered' | 'ballgown' | 'mermaid' | 'grand'

@@ -9,7 +9,7 @@ const arg = (k: string) => process.argv.find((a) => a.startsWith(`--${k}=`))?.sl
 const only = arg('sub')
 const from = Number(arg('from') ?? 1)
 const to = Number(arg('to') ?? 9999)
-const big = Boolean(arg('from'))
+const big = Boolean(arg('big'))
 const TIER_NAMES = ['1 · dễ thương', '2 · lộng lẫy', '3 · dạ hội hoàng gia', '4 · dạ hội ánh sao', '5 · nữ hoàng']
 
 let body = ''
@@ -23,7 +23,8 @@ for (const [subject, list] of Object.entries(DRESSES)) {
       tier = d.tier
       body += `<h3 style="grid-column:1/-1">Cấp ${TIER_NAMES[tier - 1]}</h3>`
     }
-    const svg = renderToStaticMarkup(createElement(PrincessSvg, { look: d.look, className: 'p', still: true }))
+    // mỗi lần render là một root riêng → phải đặt tiền tố để id gradient/pattern không trùng giữa các SVG trong cùng trang
+    const svg = renderToStaticMarkup(createElement(PrincessSvg, { look: d.look, className: 'p', still: true }), { identifierPrefix: d.id })
     body += `<figure>${svg}<figcaption><b>${d.index}</b> ${d.name_vi}<br><small>${d.name_en}</small></figcaption></figure>`
   }
   body += '<hr>'

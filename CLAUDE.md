@@ -1,12 +1,13 @@
 # ScienceQuiz
 
 Bilingual (vi / en / bilingual) quiz app for grade 2–3 children, built with Vite + React 19 + TypeScript + Tailwind 4 + framer-motion.
-Two subjects: **Science** (ASMO-style, 4 topics × 120 questions, Vietnamese + English) and **English** (Cambridge KET/PET style, 3 tenses × 10 subtopics × 100 questions). Kids earn stars, streaks and princess ball gowns (`src/data/dresses.ts`).
+Two subjects: **Science** (ASMO-style, 4 topics × 120 questions, Vietnamese + English) and **English** (Cambridge KET/PET style, 3 tenses × 10 subtopics × 100 questions). Kids earn stars, streaks and princess ball gowns (`src/data/dresses/`, 100 per subject in 5 tiers, one unlocked per 10 correct answers).
 
 ## Commands
 - `npm run dev` / `npm run build` (`tsc -b && vite build`) / `npm run lint` (oxlint)
 - `npm run check:data` — structure, counts, answer-position balance, trap share, dupes, dresses. **Must pass before every commit.**
 - `npm run check:dupes` — duplicate detection only (allowlist: `scripts/dupes-allowlist.json`, every entry needs a `reason`)
+- `npm run gallery` — renders every dress to `gallery/dresses.html` (git-ignored) for visual review
 - `npm run ledger` — regenerates `docs/question-ledger.md` (generated; never hand-edit)
 - `npm run verify` — lint + check:data + tsc in one go
 - `npm run q -- --sub=pa-negative --diff=hard --full` — look up questions (filters: `--id --topic --sub --diff --trap --text --limit --full`); prints the source file
@@ -42,7 +43,7 @@ CRUD map — pick the skill by what you are doing:
 | Questions | `/add-english-questions`, `/add-science-questions` | `/find-questions` | `/edit-question` |
 | Topics, subtopics, tenses | `/add-english-tense`, `/manage-topics` | `src/data/topics.ts` | `/manage-topics` |
 | Illustrations | `/add-illustration` | `registry.tsx`, `check:data` summary | `/add-illustration` (update/rename/delete section) |
-| Dresses & wardrobe | `/manage-dresses` | `src/data/dresses.ts` | `/manage-dresses` |
+| Dresses & wardrobe | `/manage-dresses` | `src/data/dresses/`, `npm run gallery` | `/manage-dresses` |
 | Screens, gameplay, UI | `/ui-feature` | — | `/ui-feature` |
 | Saved data (localStorage) | `/progress-storage` | — | `/progress-storage` |
 | Quality gates | `/verify` (run after every change) | | |
