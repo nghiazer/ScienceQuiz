@@ -42,6 +42,8 @@ export function shuffleOptions(q: Question): Question {
 
 export const MOCK_SIZE = 15
 export const MOCK_MINUTES = 20
+/** Sau khi trả lời (đúng hay sai) phải chờ chừng này mili giây mới được sang câu tiếp theo, để bé đọc giải thích. */
+export const NEXT_DELAY_MS = 3500
 export const ENGLISH_MOCK_SIZE = 15
 /** Số câu mỗi lượt luyện theo chủ đề (kho có 60 câu mỗi chủ đề). */
 export const TOPIC_SESSION_SIZE = 10

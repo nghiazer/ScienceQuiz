@@ -4,7 +4,7 @@ import { ArrowRight, LogOut, Star } from 'lucide-react'
 import type { AnswerRecord, Difficulty, OptionIndex, QuizConfig } from '../types/quiz'
 import { SUBJECTS, TOPICS } from '../data/questions'
 import { useLang } from '../context/LanguageContext'
-import { MOCK_MINUTES } from '../utils/quiz'
+import { MOCK_MINUTES, NEXT_DELAY_MS } from '../utils/quiz'
 import { playClick, playCorrect, playWrong, unlockAudio } from '../utils/sound'
 import { speakQuestion, stopSpeaking } from '../utils/speech'
 import { useStudyTimer } from '../utils/useStudyTimer'
@@ -42,6 +42,7 @@ export default function QuizArena({ config, onFinish, onExit }: Props) {
   const [paused, setPaused] = useState(false)
   const [confirmExit, setConfirmExit] = useState(false)
   const [rewardToast, setRewardToast] = useState(false)
+  const [nextReady, setNextReady] = useState(false)
   const topRef = useRef<HTMLDivElement>(null)
 
   const q = questions[index]
@@ -64,6 +65,13 @@ export default function QuizArena({ config, onFinish, onExit }: Props) {
     const id = window.setInterval(() => setRemaining((r) => Math.max(0, r - 1)), 1000)
     return () => window.clearInterval(id)
   }, [timerEnabled, paused, timeUp, confirmExit])
+
+  // Sau mỗi câu trả lời, khóa nút "Câu tiếp theo" trong NEXT_DELAY_MS (cleanup khi đổi câu/thoát)
+  useEffect(() => {
+    if (!answered) return
+    const id = window.setTimeout(() => setNextReady(true), NEXT_DELAY_MS)
+    return () => window.clearTimeout(id)
+  }, [answered, index])
 
   // Dừng đọc khi đổi câu hoặc rời màn hình
   useEffect(() => () => stopSpeaking(), [index])
@@ -89,6 +97,7 @@ export default function QuizArena({ config, onFinish, onExit }: Props) {
   }
 
   const next = () => {
+    if (!nextReady) return
     playClick()
     if (index + 1 >= questions.length) {
       onFinish(answers)
@@ -96,6 +105,7 @@ export default function QuizArena({ config, onFinish, onExit }: Props) {
     }
     setIndex(index + 1)
     setSelected(null)
+    setNextReady(false)
     topRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
 
@@ -219,7 +229,11 @@ export default function QuizArena({ config, onFinish, onExit }: Props) {
           <button
             type="button"
             onClick={next}
-            className="flex min-h-14 items-center gap-2 rounded-2xl bg-green-500 px-6 text-lg font-black text-white shadow-pop hover:bg-green-600 active:translate-y-0.5"
+            disabled={!nextReady}
+            aria-disabled={!nextReady}
+            className={`relative flex min-h-14 items-center gap-2 overflow-hidden rounded-2xl px-6 text-lg font-black text-white shadow-pop transition-colors ${
+              nextReady ? 'bg-green-500 hover:bg-green-600 active:translate-y-0.5' : 'cursor-not-allowed bg-green-300'
+            }`}
           >
             <BilingualText
               vi={isLast ? 'Xem kết quả' : 'Câu tiếp theo'}
@@ -227,6 +241,16 @@ export default function QuizArena({ config, onFinish, onExit }: Props) {
               subClassName="!text-white/80 !not-italic text-xs"
             />
             <ArrowRight className="size-6" />
+            {!nextReady && (
+              <motion.span
+                key={q.id}
+                aria-hidden
+                initial={{ width: '0%' }}
+                animate={{ width: '100%' }}
+                transition={{ duration: NEXT_DELAY_MS / 1000, ease: 'linear' }}
+                className="absolute bottom-0 left-0 h-1.5 bg-white/80"
+              />
+            )}
           </button>
         </motion.div>
       )}
