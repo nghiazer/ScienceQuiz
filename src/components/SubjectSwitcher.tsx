@@ -1,10 +1,8 @@
 import { motion } from 'framer-motion'
 import { useSubject } from '../context/SubjectContext'
-import { SUBJECTS } from '../data/topics'
+import { SUBJECTS, VISIBLE_SUBJECTS } from '../data/topics'
 import { playClick, unlockAudio } from '../utils/sound'
 import type { Subject } from '../types/quiz'
-
-const ORDER: Subject[] = ['science', 'english', 'math']
 
 const ACTIVE: Record<Subject, string> = {
   science: 'bg-gradient-to-br from-sky-400 to-indigo-500 text-white shadow-pop',
@@ -16,8 +14,8 @@ const ACTIVE: Record<Subject, string> = {
 export default function SubjectSwitcher() {
   const { subject, setSubject } = useSubject()
   return (
-    <div role="radiogroup" aria-label="Môn học / Subject" className="grid grid-cols-3 gap-2 rounded-3xl bg-white p-2 shadow-soft">
-      {ORDER.map((id) => {
+    <div role="radiogroup" aria-label="Môn học / Subject" className={`grid gap-2 rounded-3xl bg-white p-2 shadow-soft ${VISIBLE_SUBJECTS.length === 3 ? 'grid-cols-3' : 'grid-cols-2'}`}>
+      {VISIBLE_SUBJECTS.map((id) => {
         const s = SUBJECTS[id]
         const active = id === subject
         return (

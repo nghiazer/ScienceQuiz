@@ -1,5 +1,6 @@
 import { createContext, useCallback, useContext, useMemo, useState, type ReactNode } from 'react'
 import type { Subject } from '../types/quiz'
+import { VISIBLE_SUBJECTS } from '../data/topics'
 
 const KEY = 'asmo-quiz-subject'
 /** Môn mở sẵn khi chưa có lựa chọn đã lưu. */
@@ -15,7 +16,7 @@ const SubjectContext = createContext<Ctx | null>(null)
 function readInitial(): Subject {
   try {
     const v = localStorage.getItem(KEY)
-    if (v === 'science' || v === 'english' || v === 'math') return v
+    if (v && (VISIBLE_SUBJECTS as string[]).includes(v)) return v as Subject
   } catch {
     /* ignore */
   }

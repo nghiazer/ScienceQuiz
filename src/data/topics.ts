@@ -286,6 +286,12 @@ export const SUBTOPICS: Record<SubtopicId, { topic: Topic; vi: string; en: strin
   'com-systematic-list': { topic: 'combinatorics', vi: 'Liệt kê có hệ thống', en: 'Listing systematically' },
 }
 
+/**
+ * Các môn hiển thị trên giao diện (thanh chọn môn, môn mở sẵn). Môn Toán TIMO đang ẩn theo yêu cầu;
+ * dữ liệu và tiến độ Toán vẫn được giữ. Muốn hiện lại: thêm 'math' vào danh sách này.
+ */
+export const VISIBLE_SUBJECTS: Subject[] = ['science', 'english']
+
 export const SUBJECT_TOPICS: Record<Subject, Topic[]> = {
   science: ['living', 'physical', 'earth', 'inquiry'],
   english: ['present-simple', 'present-continuous', 'past-simple'],
