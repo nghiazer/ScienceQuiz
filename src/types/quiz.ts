@@ -117,6 +117,8 @@ export interface QuizConfig {
   topic?: Topic
   questions: Question[]
   timerEnabled: boolean
+  /** chuỗi đúng liên tiếp của môn lúc bắt đầu bài (để hiện tiến độ mở váy trong lúc làm) */
+  dressRunStart?: number
 }
 
 export interface QuizResult {
@@ -149,6 +151,10 @@ export interface Progress {
   seenIds: string[]
   /** váy đã mở theo luật cũ (tủ riêng từng môn), giữ lại khi gộp thành tủ chung */
   keptDresses: string[]
+  /** id các váy đã mở trong tủ chung; lần đầu nạp tiến độ cũ được điền sẵn để bé không mất váy nào */
+  unlockedDresses: string[]
+  /** số câu đúng liên tiếp hiện tại của từng môn; đủ CORRECT_PER_DRESS thì mở 1 váy rồi đếm lại từ 0 */
+  correctRun: Record<Subject, number>
 }
 
 export interface TopicMeta {

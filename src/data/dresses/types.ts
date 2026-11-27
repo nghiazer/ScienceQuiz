@@ -1,6 +1,6 @@
 import type { Subject } from '../../types/quiz'
 
-/** Số câu ĐÚNG (cộng cả ba môn) cần có để mở thêm một váy trong tủ chung. */
+/** Số câu ĐÚNG LIÊN TIẾP trong cùng một môn cần có để mở thêm một váy trong tủ chung. */
 export const CORRECT_PER_DRESS = 10
 export const DRESSES_PER_SUBJECT = 100
 

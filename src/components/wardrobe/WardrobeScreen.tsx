@@ -2,6 +2,7 @@ import { useEffect, useMemo } from 'react'
 import { motion } from 'framer-motion'
 import { Clock, Home, Lock } from 'lucide-react'
 import type { Progress } from '../../types/quiz'
+import { useSubject } from '../../context/SubjectContext'
 import { CORRECT_PER_DRESS, WARDROBE, WARDROBE_SIZE, dressById, nextDress, nextDressIn, unlockedIds, type DressDef, type DressTier } from '../../data/dresses'
 import { formatClock, spendBankSeconds, useWardrobe, wearDress } from '../../utils/wardrobe'
 import { playClick } from '../../utils/sound'
@@ -53,7 +54,8 @@ export default function WardrobeScreen({ progress, onHome }: { progress: Progres
   const open = useMemo(() => unlockedIds(progress), [progress])
   const unlocked = open.size
   const upcoming = nextDress(progress)
-  const remaining = nextDressIn(progress)
+  const { subject } = useSubject()
+  const remaining = nextDressIn(progress, subject)
   const wornDress = dressById(wornId)
   const lastOpen = [...WARDROBE].reverse().find((d) => open.has(d.id))
   const shown = wornDress && open.has(wornDress.id) ? wornDress : lastOpen
@@ -128,7 +130,7 @@ export default function WardrobeScreen({ progress, onHome }: { progress: Progres
                 {remaining > 0 ? (
                   <>
                     <Lock className="size-4" />
-                    <BilingualText vi={`Còn ${remaining} câu đúng nữa`} en={`${remaining} more correct`} compact />
+                    <BilingualText vi={`Đúng liên tiếp ${remaining} câu nữa`} en={`${remaining} more in a row`} compact />
                   </>
                 ) : (
                   <BilingualText vi="Đã mở hết váy! 🎉" en="All dresses unlocked! 🎉" compact />

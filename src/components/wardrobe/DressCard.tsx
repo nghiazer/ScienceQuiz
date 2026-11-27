@@ -38,7 +38,7 @@ export default function DressCard({ dress, unlocked, remaining, selected = false
       />
       {!unlocked && remaining !== undefined && remaining > 0 && (
         <span className="mt-1 block rounded-full bg-amber-100 px-2 py-0.5 text-xs font-extrabold text-amber-700">
-          Còn {remaining} câu đúng
+          Đúng liên tiếp {remaining} câu nữa
         </span>
       )}
     </>

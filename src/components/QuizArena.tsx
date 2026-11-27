@@ -1,10 +1,11 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { ArrowRight, LogOut, Star } from 'lucide-react'
+import { ArrowRight, LogOut, Shirt, Star } from 'lucide-react'
 import type { AnswerRecord, Difficulty, OptionIndex, QuizConfig } from '../types/quiz'
 import { SUBJECTS, TOPICS } from '../data/questions'
 import { useLang } from '../context/LanguageContext'
 import { MOCK_MINUTES_BY_SUBJECT, NEXT_DELAY_MS } from '../utils/quiz'
+import { CORRECT_PER_DRESS } from '../data/dresses'
 import { playClick, playCorrect, playWrong, unlockAudio } from '../utils/sound'
 import { speakQuestion, stopSpeaking } from '../utils/speech'
 import { useStudyTimer } from '../utils/useStudyTimer'
@@ -48,6 +49,11 @@ export default function QuizArena({ config, onFinish, onExit }: Props) {
   const q = questions[index]
   const answered = selected !== null
   const stars = answers.filter((a) => a.correct).length
+  // Chuỗi đúng liên tiếp của môn (tính tiếp từ đầu bài): đủ CORRECT_PER_DRESS thì mở 1 váy và đếm lại.
+  const dressRun = answers.reduce(
+    (run, a) => (a.correct ? (run + 1 >= CORRECT_PER_DRESS ? 0 : run + 1) : 0),
+    config.dressRunStart ?? 0,
+  )
   const timeUp = timerEnabled && remaining === 0
   const modalOpen = timeUp || confirmExit
 
@@ -146,6 +152,14 @@ export default function QuizArena({ config, onFinish, onExit }: Props) {
               onTogglePause={() => setPaused((p) => !p)}
             />
           )}
+          <div
+            className="flex min-h-12 items-center gap-1.5 rounded-2xl bg-pink-100 px-4 font-black text-pink-700 shadow-soft"
+            aria-label={`Chuỗi đúng liên tiếp ${dressRun}/${CORRECT_PER_DRESS} để mở váy`}
+            title="Đúng liên tiếp 10 câu để mở 1 váy / 10 correct in a row unlock a dress"
+          >
+            <Shirt className="size-6 text-pink-500" />
+            <span className="text-xl tabular-nums">{dressRun}/{CORRECT_PER_DRESS}</span>
+          </div>
           <div className="flex min-h-12 items-center gap-1.5 rounded-2xl bg-amber-100 px-4 font-black text-amber-700 shadow-soft" aria-label={`${stars} sao`}>
             <Star className="size-6 fill-amber-400 text-amber-500" />
             <span className="text-xl tabular-nums">{stars}</span>

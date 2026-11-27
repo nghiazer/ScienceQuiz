@@ -12,6 +12,7 @@ Keys: `asmo-quiz-progress-v1` (`Progress`, `src/utils/storage.ts`), `princess-wa
 ## Existing migration fields
 - `Progress.keptDresses`: dresses unlocked under the old per-subject wardrobe; `loadProgress` fills it from `legacyUnlockedIds` when an old save lacks it. Keep it forever.
 - `WardrobeState.wornId`: replaced the per-subject `worn` record; `load()` falls back to the first id in an old `worn`.
+- `Progress.unlockedDresses` (stored list of unlocked dress ids) and `Progress.correctRun` (per-subject run of consecutive correct answers): `loadProgress` fills `unlockedDresses` from `pooledUnlockedIds` when an old save lacks it, and validates each run as a non-negative integer. Keep both forever.
 
 ## Add a field
 1. Add it to the type (`src/types/quiz.ts` for `Progress`, `WardrobeState` in `wardrobe.ts`).

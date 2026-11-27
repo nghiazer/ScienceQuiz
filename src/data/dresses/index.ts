@@ -39,21 +39,19 @@ const ORDER = new Map(WARDROBE.map((d, i) => [d.id, i + 1]))
 /** Số thứ tự của váy trong tủ chung (1…WARDROBE_SIZE). */
 export const orderOf = (d: DressDef): number => ORDER.get(d.id) ?? 0
 
-type DressProgress = Pick<Progress, 'topicStats'> & Partial<Pick<Progress, 'keptDresses'>>
-
-/** Tổng số câu đúng của một môn (tính từ thống kê đã lưu, nên tiến độ cũ được tính luôn). */
+/** Tổng số câu đúng của một môn (tính từ thống kê đã lưu). */
 export function correctFor(p: Pick<Progress, 'topicStats'>, subject: Subject): number {
   return SUBJECT_TOPICS[subject].reduce((sum, t) => sum + (p.topicStats[t]?.correct ?? 0), 0)
 }
 
-/** Tổng số câu đúng của cả ba môn — câu đúng ở môn nào cũng góp vào tủ chung. */
+/** Tổng số câu đúng của cả ba môn. */
 export function totalCorrect(p: Pick<Progress, 'topicStats'>): number {
   return SUBJECT_ORDER.reduce((sum, s) => sum + correctFor(p, s), 0)
 }
 
 /**
- * Luật cũ (mỗi môn có tủ riêng, 10 câu đúng của môn đó mở 1 váy của môn đó).
- * Chỉ dùng một lần khi nạp tiến độ cũ, để bé giữ đúng những chiếc váy đã mở trước khi gộp tủ.
+ * Luật cũ nhất (mỗi môn có tủ riêng, 10 câu đúng của môn đó mở 1 váy của môn đó).
+ * Chỉ dùng khi nạp tiến độ cũ, để bé giữ đúng những chiếc váy đã mở.
  */
 export function legacyUnlockedIds(p: Pick<Progress, 'topicStats'>): string[] {
   return SUBJECT_ORDER.flatMap((s) =>
@@ -62,10 +60,10 @@ export function legacyUnlockedIds(p: Pick<Progress, 'topicStats'>): string[] {
 }
 
 /**
- * Các váy đã mở: những váy giữ lại từ trước khi gộp tủ, cộng thêm váy theo thứ tự tủ chung
- * cho tới khi đủ ⌊tổng câu đúng / 10⌋ chiếc.
+ * Luật tủ chung trước đây (cứ 10 câu đúng cộng dồn ở bất kỳ môn nào thì mở 1 váy), cộng các váy giữ lại từ luật cũ nhất.
+ * Chỉ dùng một lần khi nạp tiến độ chưa có `unlockedDresses`, để chuyển sang luật chuỗi đúng mà không mất váy.
  */
-export function unlockedIds(p: DressProgress): Set<string> {
+export function pooledUnlockedIds(p: Pick<Progress, 'topicStats'> & Partial<Pick<Progress, 'keptDresses'>>): Set<string> {
   const earned = Math.min(WARDROBE_SIZE, Math.floor(totalCorrect(p) / CORRECT_PER_DRESS))
   const ids = new Set((p.keptDresses ?? []).filter((id) => ORDER.has(id)))
   for (const d of WARDROBE) {
@@ -75,22 +73,28 @@ export function unlockedIds(p: DressProgress): Set<string> {
   return ids
 }
 
+type DressProgress = Pick<Progress, 'unlockedDresses'>
+
+/** Các váy đã mở trong tủ chung (lưu trực tiếp trong tiến độ). */
+export function unlockedIds(p: DressProgress): Set<string> {
+  return new Set(p.unlockedDresses.filter((id) => ORDER.has(id)))
+}
+
 /** Số váy đã mở trong tủ chung. */
 export function unlockedCount(p: DressProgress): number {
   return unlockedIds(p).size
 }
 
-/** Chiếc váy sẽ mở tiếp theo (undefined nếu đã mở hết). */
+/** Chiếc váy sẽ mở tiếp theo theo thứ tự tủ chung (undefined nếu đã mở hết). */
 export function nextDress(p: DressProgress): DressDef | undefined {
   const ids = unlockedIds(p)
   return WARDROBE.find((d) => !ids.has(d.id))
 }
 
-/** Số câu đúng còn thiếu để mở váy kế tiếp (0 nếu đã mở hết). */
-export function nextDressIn(p: DressProgress): number {
-  const n = unlockedCount(p)
-  if (n >= WARDROBE_SIZE) return 0
-  return Math.max(1, (n + 1) * CORRECT_PER_DRESS - totalCorrect(p))
+/** Số câu đúng LIÊN TIẾP của môn `subject` còn thiếu để mở váy kế tiếp (0 nếu đã mở hết). */
+export function nextDressIn(p: DressProgress & Pick<Progress, 'correctRun'>, subject: Subject): number {
+  if (!nextDress(p)) return 0
+  return Math.max(1, CORRECT_PER_DRESS - (p.correctRun[subject] ?? 0))
 }
 
 export const isUnlocked = (p: DressProgress, d: DressDef): boolean => unlockedIds(p).has(d.id)

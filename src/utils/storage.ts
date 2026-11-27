@@ -1,4 +1,4 @@
-import { WARDROBE, legacyUnlockedIds, unlockedIds } from '../data/dresses'
+import { CORRECT_PER_DRESS, legacyUnlockedIds, nextDress, pooledUnlockedIds } from '../data/dresses'
 import type { AnswerRecord, Progress, Question, QuizKind, Subject, Topic } from '../types/quiz'
 
 const KEY = 'asmo-quiz-progress-v1'
@@ -30,7 +30,12 @@ export const defaultProgress = (): Progress => ({
   },
   seenIds: [],
   keptDresses: [],
+  unlockedDresses: [],
+  correctRun: { science: 0, english: 0, math: 0 },
 })
+
+/** Chỉ nhận số nguyên không âm cho chuỗi đúng; dữ liệu hỏng thì về 0. */
+const runOf = (v: unknown): number => (Number.isInteger(v) && (v as number) >= 0 ? (v as number) : 0)
 
 export function loadProgress(): Progress {
   try {
@@ -39,13 +44,20 @@ export function loadProgress(): Progress {
     const parsed = JSON.parse(raw) as Partial<Progress>
     const base = defaultProgress()
     const topicStats = { ...base.topicStats, ...(parsed.topicStats ?? {}) }
+    // Tiến độ từ trước khi gộp tủ váy: ghi lại những váy bé đã mở theo luật cũ để không mất váy nào.
+    const keptDresses = Array.isArray(parsed.keptDresses) ? parsed.keptDresses : legacyUnlockedIds({ topicStats })
+    const savedRun = (parsed.correctRun ?? {}) as Partial<Record<Subject, unknown>>
     return {
       ...base,
       ...parsed,
       topicStats,
       seenIds: Array.isArray(parsed.seenIds) ? parsed.seenIds : [],
-      // Tiến độ từ trước khi gộp tủ váy: ghi lại những váy bé đã mở theo luật cũ để không mất váy nào.
-      keptDresses: Array.isArray(parsed.keptDresses) ? parsed.keptDresses : legacyUnlockedIds({ topicStats }),
+      keptDresses,
+      // Tiến độ từ trước luật chuỗi đúng: chốt lại đúng những váy bé đang có (luật cộng dồn cũ), từ nay lưu trực tiếp.
+      unlockedDresses: Array.isArray(parsed.unlockedDresses)
+        ? parsed.unlockedDresses
+        : [...pooledUnlockedIds({ topicStats, keptDresses })],
+      correctRun: { science: runOf(savedRun.science), english: runOf(savedRun.english), math: runOf(savedRun.math) },
     }
   } catch {
     return defaultProgress()
@@ -148,10 +160,29 @@ export function recordQuizResult(prev: Progress, input: RecordInput, today = tod
     ])),
   }
 
-  // Tủ váy chung: cứ 10 câu đúng (ở bất kỳ môn nào) thì mở thêm một váy.
-  const before = unlockedIds(prev)
-  const after = unlockedIds(next)
-  const newDresses = WARDROBE.filter((d) => after.has(d.id) && !before.has(d.id)).map((d) => d.id)
+  // Tủ váy chung: cứ 10 câu đúng LIÊN TIẾP trong cùng một môn thì mở thêm một váy (theo thứ tự tủ).
+  // Mỗi môn có chuỗi riêng, giữ qua các lượt làm bài; trả lời sai hoặc bỏ trống thì chuỗi của môn đó về 0.
+  const correctRun = { ...prev.correctRun }
+  const unlocked = [...prev.unlockedDresses]
+  const newDresses: string[] = []
+  for (const a of input.answers) {
+    const s = byId.get(a.questionId)?.subject ?? input.subject
+    if (!a.correct) {
+      correctRun[s] = 0
+      continue
+    }
+    correctRun[s] = (correctRun[s] ?? 0) + 1
+    if (correctRun[s] >= CORRECT_PER_DRESS) {
+      correctRun[s] = 0
+      const d = nextDress({ unlockedDresses: unlocked })
+      if (d) {
+        unlocked.push(d.id)
+        newDresses.push(d.id)
+      }
+    }
+  }
+  next.correctRun = correctRun
+  next.unlockedDresses = unlocked
   saveProgress(next)
   return { progress: next, stars, percent, newDresses }
 }

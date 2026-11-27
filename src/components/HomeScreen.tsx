@@ -41,7 +41,7 @@ export default function HomeScreen({ progress, onStartTopic, onStartMock }: Prop
   const topicIds = SUBJECT_TOPICS[subject]
   // Tủ váy chung của cả ba môn: câu đúng ở môn nào cũng được tính.
   const dressCount = unlockedCount(progress)
-  const dressesLeft = nextDressIn(progress)
+  const dressesLeft = nextDressIn(progress, subject)
   const nextDress = findNextDress(progress)
   const { studySeconds, bankSeconds } = useWardrobe()
   const mockSize = MOCK_SIZE_BY_SUBJECT[subject]
@@ -85,8 +85,8 @@ export default function HomeScreen({ progress, onStartTopic, onStartMock }: Prop
           <div className="min-w-0 flex-1 font-extrabold">
             {nextDress ? (
               <BilingualText
-                vi={`Còn ${dressesLeft} câu đúng nữa để mở váy mới!`}
-                en={`${dressesLeft} more correct answers to unlock a new dress!`}
+                vi={`Đúng liên tiếp ${dressesLeft} câu nữa để mở váy mới!`}
+                en={`${dressesLeft} more correct answers in a row to unlock a new dress!`}
                 subClassName="!text-white/80 !not-italic !text-xs"
               />
             ) : (

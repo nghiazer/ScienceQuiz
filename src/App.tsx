@@ -21,7 +21,8 @@ export default function App() {
 
   const start = (config: QuizConfig) => {
     setRunId((n) => n + 1)
-    setScreen({ name: 'quiz', config, runId: runId + 1 })
+    // Chuỗi đúng liên tiếp hiện có của môn, để màn làm bài hiện tiếp tiến độ mở váy.
+    setScreen({ name: 'quiz', config: { ...config, dressRunStart: progress.correctRun[config.subject] ?? 0 }, runId: runId + 1 })
     window.scrollTo({ top: 0 })
   }
 
