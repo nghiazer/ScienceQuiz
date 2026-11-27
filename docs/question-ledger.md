@@ -151,7 +151,7 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | --- | --- | --- | --- | --- | --- |
 | liv-66 | dễ | animal-teeth | Răng ở hình A to và bằng phẳng, dùng để nghiền cỏ. Con vật nào dưới đây có răng như vậy? | Con bò | ☐ |
 | liv-67 | dễ |  | Con vật nào dưới đây là loài săn mồi? | Con hổ | ☐ |
-| liv-68 | vừa | animal-teeth | Răng nanh nhọn và sắc của sư tử dùng để làm gì? | Xé thịt con mồi | ☐ |
+| liv-68 | vừa | animal-teeth | Hình B có hai răng nanh dài và nhọn, giống răng nanh của sư tử. Răng nanh như vậy dùng để… | Xé thịt con mồi | ☐ |
 | liv-69 | vừa |  | Vì sao em nên đánh răng sau khi ăn? | Để răng sạch và không bị sâu | ☐ |
 | liv-70 | khó |  | Gà không có răng nhưng vẫn nghiền được thức ăn cứng. Gà làm điều đó bằng cách nào? | Nuốt sỏi nhỏ để nghiền thức ăn | ☐ |
 
@@ -568,7 +568,7 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | --- | --- | --- | --- | --- | --- |
 | ear-64 | dễ |  | Hành tinh nào lớn nhất trong Hệ Mặt Trời? | Sao Mộc | ☐ |
 | ear-085 | dễ | planets-order | Hành tinh nào gần Mặt Trời nhất? | Sao Thủy | ☐ |
-| ear-086 | vừa | planets-order | Tính từ Mặt Trời, Trái Đất là hành tinh thứ mấy? | Thứ ba | ☐ |
+| ear-086 | vừa | planets-order | Đếm từ Mặt Trời ra xa dần, Trái Đất là hành tinh thứ mấy? | Thứ ba | ☐ |
 | ear-087 | vừa |  | Hành tinh nào nổi tiếng với những vành đai sáng đẹp quanh mình? | Sao Thổ | ☐ |
 | ear-088 | khó |  | Sao Kim thường được gọi là gì vì ta hay thấy nó sáng rực trước khi Mặt Trời mọc hoặc sau … | Sao Mai hoặc sao Hôm | ☐ |
 | ear-095 | vừa |  | Trên hành tinh nào, nhiệt độ bề mặt cao nhất trong Hệ Mặt Trời? | Sao Kim | ☐ |

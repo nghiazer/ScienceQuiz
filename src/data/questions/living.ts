@@ -673,13 +673,13 @@ export const LIVING_QUESTIONS: ScienceQuestionInput[] = [
   },
   {
     id: 'liv-68', topic: 'living', subtopic: 'feeding-teeth', difficulty: 'medium', illustrationId: 'animal-teeth',
-    question_vi: 'Răng nanh nhọn và sắc của sư tử dùng để làm gì?',
-    question_en: 'What are a lion’s sharp canine teeth used for?',
+    question_vi: 'Hình B có hai răng nanh dài và nhọn, giống răng nanh của sư tử. Răng nanh như vậy dùng để làm gì?',
+    question_en: 'Picture B shows two long, sharp canine teeth, like a lion’s. What are canines like these used for?',
     options_vi: ['Nhai cỏ thật mịn', 'Ngửi mùi thức ăn', 'Đào hang trong đất', 'Xé thịt con mồi'],
     options_en: ['Chewing grass finely', 'Smelling food', 'Digging holes in the ground', 'Tearing up prey’s meat'],
     correctIndex: 3,
-    explanation_vi: '💡 Vì sao: Răng nanh nhọn giúp sư tử giữ chặt và xé thịt. Răng hàm mới dùng để nghiền thức ăn.\n📘 Ghi nhớ: Răng nanh xé thịt, răng hàm nghiền thức ăn.',
-    explanation_en: '💡 Why: Sharp canine teeth help a lion grip and tear meat. It is the back teeth that crush food.\n📘 Remember: Canines tear meat, back teeth crush food.',
+    explanation_vi: '💡 Vì sao: Răng nanh dài và nhọn như ở hình B giúp sư tử giữ chặt và xé thịt. Răng hàm mới dùng để nghiền thức ăn.\n📘 Ghi nhớ: Răng nanh xé thịt, răng hàm nghiền thức ăn.',
+    explanation_en: '💡 Why: Long, sharp canines like those in picture B help a lion grip and tear meat. It is the back teeth that crush food.\n📘 Remember: Canines tear meat, back teeth crush food.',
   },
   {
     id: 'liv-69', topic: 'living', subtopic: 'feeding-teeth', difficulty: 'medium',

@@ -1085,15 +1085,15 @@ export const EARTH_QUESTIONS: ScienceQuestionInput[] = [
   },
   {
     id: 'ear-086', topic: 'earth', subtopic: 'planets-order', difficulty: 'medium', illustrationId: 'planets-order',
-    question_vi: 'Tính từ Mặt Trời, Trái Đất là hành tinh thứ mấy?',
-    question_en: 'Counting from the Sun, which number is Earth?',
-    options_vi: ['Thứ hai', 'Thứ ba', 'Thứ tư', 'Thứ năm'],
-    options_en: ['Second', 'Third', 'Fourth', 'Fifth'],
-    correctIndex: 1,
+    question_vi: 'Đếm từ Mặt Trời ra xa dần, Trái Đất là hành tinh thứ mấy?',
+    question_en: 'Counting outwards from the Sun, which planet in the row is Earth?',
+    options_vi: ['Thứ nhất', 'Thứ hai', 'Thứ ba', 'Thứ tư'],
+    options_en: ['First', 'Second', 'Third', 'Fourth'],
+    correctIndex: 2,
     explanation_vi:
-      '💡 Vì sao: Đếm từ Mặt Trời: Sao Thủy là thứ nhất, Sao Kim là thứ hai, rồi đến Trái Đất là thứ ba.\n📘 Ghi nhớ: Trái Đất là hành tinh thứ ba tính từ Mặt Trời.',
+      '💡 Vì sao: Đếm từ Mặt Trời ra xa: Sao Thủy là thứ nhất, Sao Kim là thứ hai, rồi đến Trái Đất là thứ ba, sau đó là Sao Hỏa.\n📘 Ghi nhớ: Trái Đất là hành tinh thứ ba tính từ Mặt Trời.',
     explanation_en:
-      '💡 Why: Counting from the Sun, Mercury is first, Venus is second and then comes Earth as third.\n📘 Remember: Earth is the third planet from the Sun.',
+      '💡 Why: Counting outwards from the Sun, Mercury is first, Venus is second, then Earth is third, and Mars comes after.\n📘 Remember: Earth is the third planet from the Sun.',
   },
   {
     id: 'ear-087', topic: 'earth', subtopic: 'planets-order', difficulty: 'medium',
