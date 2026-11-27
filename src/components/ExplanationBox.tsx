@@ -6,13 +6,13 @@ import SpeakButton from './SpeakButton'
 import { speak } from '../utils/speech'
 import type { Question } from '../types/quiz'
 
-/** Tô đậm nhãn "Dấu hiệu" / "Quy tắc" (hoặc Clue / Rule) ở đầu mỗi ý. */
+/** Tô đậm nhãn đầu mỗi ý: "Dấu hiệu" / "Quy tắc" (Tiếng Anh) hoặc "Ý tưởng" / "Lời giải" (Toán). */
 function GrammarText({ text, className }: { text: string; className: string }) {
-  const parts = text.split(/(🔎 [^:]+:|📘 [^:]+:)/g).filter(Boolean)
+  const parts = text.split(/((?:🔎|📘|🧠|✏️) [^:]+:)/g).filter(Boolean)
   return (
     <p className={className}>
       {parts.map((p, i) =>
-        /^(🔎|📘) [^:]+:$/.test(p) ? (
+        /^(?:🔎|📘|🧠|✏️) [^:]+:$/.test(p) ? (
           <strong key={i} className="mt-1 block font-black text-amber-800">{p}</strong>
         ) : (
           <span key={i} className="block">{p.trim()}</span>
@@ -25,9 +25,10 @@ function GrammarText({ text, className }: { text: string; className: string }) {
 export default function ExplanationBox({ question, correct }: { question: Question; correct: boolean }) {
   const { mode } = useLang()
   const english = question.subject === 'english'
+  const math = question.subject === 'math'
   const readExplanation = () => {
     if (mode === 'en') speak(question.explanation_en, 'en')
-    else speak(question.explanation_vi.replace(/[🔎📘]/gu, ''), 'vi')
+    else speak(question.explanation_vi.replace(/🔎|📘|🧠|✏️/gu, ''), 'vi')
   }
   return (
     <motion.section
@@ -42,6 +43,8 @@ export default function ExplanationBox({ question, correct }: { question: Questi
         <h3 className="flex-1 text-lg sm:text-xl font-black text-amber-800">
           {english ? (
             <BilingualText vi="Góc giải thích ngữ pháp" en="Grammar Corner" subClassName="text-amber-700/80" />
+          ) : math ? (
+            <BilingualText vi="Góc lời giải" en="Solution Corner" subClassName="text-amber-700/80" />
           ) : (
             <BilingualText vi="Góc giải thích khoa học" en="Science Explanation Corner" subClassName="text-amber-700/80" />
           )}
@@ -60,6 +63,18 @@ export default function ExplanationBox({ question, correct }: { question: Questi
           <GrammarText text={question.explanation_vi} className="text-base sm:text-lg font-semibold text-slate-700 leading-relaxed" />
           {mode === 'bi' && (
             <GrammarText text={question.explanation_en} className="mt-2 text-[0.95rem] font-semibold italic text-slate-500 leading-relaxed" />
+          )}
+        </>
+      ) : math ? (
+        <>
+          {mode !== 'en' && (
+            <GrammarText text={question.explanation_vi} className="text-base sm:text-lg font-semibold text-slate-700 leading-relaxed" />
+          )}
+          {mode !== 'vi' && (
+            <GrammarText
+              text={question.explanation_en}
+              className={mode === 'bi' ? 'mt-2 text-[0.95rem] font-semibold italic text-slate-500 leading-relaxed' : 'text-base sm:text-lg font-semibold text-slate-700 leading-relaxed'}
+            />
           )}
         </>
       ) : (

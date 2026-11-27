@@ -7,7 +7,7 @@ description: Change what ScienceQuiz saves in localStorage (Progress fields, top
 
 Saved data lives on kids' devices; losing it loses stars, streaks and unlocked dresses.
 
-Keys: `asmo-quiz-progress-v1` (`Progress`, `src/utils/storage.ts`), `princess-wardrobe-v1` (`WardrobeState`, `src/utils/wardrobe.ts`), `asmo-quiz-subject`, `asmo-quiz-lang`, `asmo-quiz-lang-english`.
+Keys: `asmo-quiz-progress-v1` (`Progress`, `src/utils/storage.ts`), `princess-wardrobe-v1` (`WardrobeState`, `src/utils/wardrobe.ts`), `asmo-quiz-subject` (`science|english|math`), `asmo-quiz-lang`, `asmo-quiz-lang-english`, `asmo-quiz-lang-math`.
 
 ## Add a field
 1. Add it to the type (`src/types/quiz.ts` for `Progress`, `WardrobeState` in `wardrobe.ts`).

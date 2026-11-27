@@ -50,7 +50,7 @@ export default function Header({ inQuiz, inWardrobe, onOpenWardrobe }: Props) {
           </div>
           <span
             className={`ml-1 hidden shrink-0 rounded-full px-3 py-1 text-xs font-extrabold sm:inline-block ${
-              subject === 'english' ? 'bg-teal-100 text-teal-800' : 'bg-sky-100 text-sky-800'
+              subject === 'english' ? 'bg-teal-100 text-teal-800' : subject === 'math' ? 'bg-violet-100 text-violet-800' : 'bg-sky-100 text-sky-800'
             }`}
           >
             {meta.emoji} {meta.short_vi}

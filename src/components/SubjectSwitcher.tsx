@@ -4,18 +4,19 @@ import { SUBJECTS } from '../data/topics'
 import { playClick, unlockAudio } from '../utils/sound'
 import type { Subject } from '../types/quiz'
 
-const ORDER: Subject[] = ['science', 'english']
+const ORDER: Subject[] = ['science', 'english', 'math']
 
 const ACTIVE: Record<Subject, string> = {
   science: 'bg-gradient-to-br from-sky-400 to-indigo-500 text-white shadow-pop',
   english: 'bg-gradient-to-br from-teal-400 to-blue-500 text-white shadow-pop',
+  math: 'bg-gradient-to-br from-indigo-400 to-fuchsia-500 text-white shadow-pop',
 }
 
 /** Thanh chuyển môn học lớn, nằm đầu trang chủ. */
 export default function SubjectSwitcher() {
   const { subject, setSubject } = useSubject()
   return (
-    <div role="radiogroup" aria-label="Môn học / Subject" className="grid grid-cols-2 gap-2 rounded-3xl bg-white p-2 shadow-soft">
+    <div role="radiogroup" aria-label="Môn học / Subject" className="grid grid-cols-3 gap-2 rounded-3xl bg-white p-2 shadow-soft">
       {ORDER.map((id) => {
         const s = SUBJECTS[id]
         const active = id === subject
@@ -31,7 +32,7 @@ export default function SubjectSwitcher() {
               playClick()
               setSubject(id)
             }}
-            className={`flex min-h-16 items-center justify-center gap-2 rounded-2xl px-2 py-2 text-base font-black transition sm:text-xl ${
+            className={`flex min-h-16 flex-col items-center justify-center gap-1 rounded-2xl px-1 py-2 text-sm font-black transition sm:flex-row sm:gap-2 sm:px-2 sm:text-xl ${
               active ? ACTIVE[id] : 'bg-slate-50 text-slate-600 hover:bg-sky-50'
             }`}
           >

@@ -4,7 +4,7 @@ import { ArrowRight, LogOut, Star } from 'lucide-react'
 import type { AnswerRecord, Difficulty, OptionIndex, QuizConfig } from '../types/quiz'
 import { SUBJECTS, TOPICS } from '../data/questions'
 import { useLang } from '../context/LanguageContext'
-import { MOCK_MINUTES, NEXT_DELAY_MS } from '../utils/quiz'
+import { MOCK_MINUTES_BY_SUBJECT, NEXT_DELAY_MS } from '../utils/quiz'
 import { playClick, playCorrect, playWrong, unlockAudio } from '../utils/sound'
 import { speakQuestion, stopSpeaking } from '../utils/speech'
 import { useStudyTimer } from '../utils/useStudyTimer'
@@ -37,7 +37,7 @@ export default function QuizArena({ config, onFinish, onExit }: Props) {
   const [index, setIndex] = useState(0)
   const [selected, setSelected] = useState<OptionIndex | null>(null)
   const [answers, setAnswers] = useState<AnswerRecord[]>([])
-  const [remaining, setRemaining] = useState(MOCK_MINUTES * 60)
+  const [remaining, setRemaining] = useState(MOCK_MINUTES_BY_SUBJECT[config.subject] * 60)
   const [timerVisible, setTimerVisible] = useState(true)
   const [paused, setPaused] = useState(false)
   const [confirmExit, setConfirmExit] = useState(false)
@@ -181,7 +181,7 @@ export default function QuizArena({ config, onFinish, onExit }: Props) {
             {q.subject === 'english' ? (
               <EnglishPrompt question={q} />
             ) : (
-              <BilingualText as="h2" vi={q.question_vi} en={q.question_en} className="text-xl sm:text-2xl font-black leading-snug text-slate-800" subClassName="font-bold" />
+              <BilingualText as="h2" vi={q.question_vi} en={q.question_en} className="whitespace-pre-line text-xl sm:text-2xl font-black leading-snug text-slate-800" subClassName="font-bold" />
             )}
           </div>
           {q.illustrationId && (
@@ -197,7 +197,7 @@ export default function QuizArena({ config, onFinish, onExit }: Props) {
           <OptionCard
             key={`${q.id}-${i}`}
             letter={LETTERS[i]}
-            vi={q.subject === 'science' ? q.options_vi[i] : en}
+            vi={q.subject === 'english' ? en : q.options_vi[i]}
             en={en}
             englishOnly={q.subject === 'english'}
             state={stateOf(i)}
@@ -285,7 +285,7 @@ export default function QuizArena({ config, onFinish, onExit }: Props) {
       )}
       {confirmExit && (
         <Modal>
-          <p className="text-5xl">{subject === 'english' ? '👋' : '🚀'}</p>
+          <p className="text-5xl">{subject === 'english' ? '👋' : subject === 'math' ? '🧮' : '🚀'}</p>
           <h3 className="mt-2 text-2xl font-black text-slate-800">
             <BilingualText vi="Thoát bài làm?" en="Leave this quiz?" />
           </h3>

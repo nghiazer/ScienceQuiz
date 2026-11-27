@@ -20,7 +20,7 @@ Run `npm run q -- <filters>` (script: `scripts/query.ts`). Filters can be combin
 Output shows id, difficulty, trap/illustration flags, **source file**, question, options with `✓` on the correct one.
 
 Tips
-- For English, the number in the id (`pa-negative-07`) is the 7th `negative(...)` call in the file named in the output. Science ids are literal `id: 'liv-01'` fields — grep them directly.
+- For English, the number in the id (`pa-negative-07`) is the 7th `negative(...)` call in the file named in the output. Maths ids work the same way (`geo-perimeter-07` = 7th `q(...)` call in `src/data/math/geometry/perimeter.ts`). Science ids are literal `id: 'liv-01'` fields — grep them directly.
 - Counts and balance: `npm run check:data`. Browsing a whole subtopic: `docs/question-ledger.md` (truncated text, generated).
 - To find unused illustrations or tenses with missing questions read the `check:data` summary lines, not the ledger.
 - Reading is free; to change what you found use `/edit-question`.

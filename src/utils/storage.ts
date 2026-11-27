@@ -12,6 +12,7 @@ export const defaultProgress = (): Progress => ({
   quizzesCompleted: 0,
   mockCompleted: 0,
   englishMockCompleted: 0,
+  mathMockCompleted: 0,
   perfectCount: 0,
   topicStats: {
     living: emptyStats(),
@@ -21,6 +22,11 @@ export const defaultProgress = (): Progress => ({
     'present-simple': emptyStats(),
     'present-continuous': emptyStats(),
     'past-simple': emptyStats(),
+    logic: emptyStats(),
+    arithmetic: emptyStats(),
+    'number-theory': emptyStats(),
+    geometry: emptyStats(),
+    combinatorics: emptyStats(),
   },
   seenIds: [],
 })
@@ -107,6 +113,7 @@ export function recordQuizResult(prev: Progress, input: RecordInput, today = tod
     const q = byId.get(a.questionId)
     if (!q) continue
     const t: Topic = q.topic
+    topicStats[t] ??= emptyStats()
     topicStats[t].total += 1
     if (a.correct) topicStats[t].correct += 1
   }
@@ -128,6 +135,7 @@ export function recordQuizResult(prev: Progress, input: RecordInput, today = tod
     quizzesCompleted: prev.quizzesCompleted + 1,
     mockCompleted: prev.mockCompleted + (input.kind === 'mock' && input.subject === 'science' ? 1 : 0),
     englishMockCompleted: prev.englishMockCompleted + (input.kind === 'mock' && input.subject === 'english' ? 1 : 0),
+    mathMockCompleted: prev.mathMockCompleted + (input.kind === 'mock' && input.subject === 'math' ? 1 : 0),
     perfectCount: prev.perfectCount + (percent === 100 && total > 0 ? 1 : 0),
     topicStats,
     seenIds: Array.from(new Set([

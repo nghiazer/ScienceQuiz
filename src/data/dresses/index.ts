@@ -3,6 +3,7 @@ import { SUBJECT_TOPICS } from '../topics'
 import { CORRECT_PER_DRESS, DRESSES_PER_SUBJECT, type DressDef, type DressLook } from './types'
 import { SCIENCE_DRESSES } from './science'
 import { ENGLISH_DRESSES } from './english'
+import { MATH_DRESSES } from './math'
 
 export * from './types'
 
@@ -14,9 +15,10 @@ export const PLAIN_LOOK: DressLook = {
 export const DRESSES: Record<Subject, DressDef[]> = {
   science: SCIENCE_DRESSES,
   english: ENGLISH_DRESSES,
+  math: MATH_DRESSES,
 }
 
-export const ALL_DRESSES: DressDef[] = [...SCIENCE_DRESSES, ...ENGLISH_DRESSES]
+export const ALL_DRESSES: DressDef[] = [...SCIENCE_DRESSES, ...ENGLISH_DRESSES, ...MATH_DRESSES]
 
 export const dressById = (id: string | null | undefined): DressDef | undefined =>
   id ? ALL_DRESSES.find((d) => d.id === id) : undefined

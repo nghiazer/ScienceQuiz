@@ -14,6 +14,18 @@ export function tokens(s: string): Set<string> {
   return new Set(normalize(s).split(' ').filter((w) => w.length > 1 && !STOP.has(w)))
 }
 
+/**
+ * Toán: số một chữ số, emoji và dấu phép tính mang nghĩa ("🐱 + 🐱 = 12" khác "🐶 × 🐶 = 12"),
+ * nên giữ lại chúng khi so sánh thay vì bỏ như với câu chữ.
+ */
+const MATH_SYMBOLS = /\d+|\p{Extended_Pictographic}|[+\-−×÷=<>□?★]/gu
+export function mathTokens(s: string): Set<string> {
+  const t = tokens(s)
+  for (const m of s.normalize('NFC').match(MATH_SYMBOLS) ?? []) t.add(`#${m}`)
+  return t
+}
+const mathNormalize = (s: string) => s.toLowerCase().normalize('NFC').replace(/\s+/g, ' ').trim()
+
 export function jaccard(a: Set<string>, b: Set<string>): number {
   let inter = 0
   for (const x of a) if (b.has(x)) inter++
@@ -23,7 +35,7 @@ export function jaccard(a: Set<string>, b: Set<string>): number {
 
 const SIM_ERROR = 0.65
 const SIM_WARN = 0.8
-// Câu ngữ pháp Tiếng Anh ngắn và theo mẫu nên giống nhau nhiều hơn: nới ngưỡng, và đáp án đúng được phép lặp (vd. "doesn’t").
+// Câu ngữ pháp Tiếng Anh và câu Toán ngắn, theo dạng bài nên giống nhau nhiều hơn: nới ngưỡng, và đáp án đúng được phép lặp (vd. "doesn’t", "12").
 const SIM_ERROR_EN = 0.8
 
 const viText = (q: Question) => (q.subject === 'english' ? `${q.passage_en ?? ''} ${q.question_en}` : q.question_vi)
@@ -45,13 +57,12 @@ export function findDupes(qs: Question[], allow: AllowEntry[]): DupeReport {
     allow.some((e) => (e.a === a && e.b === b) || (e.a === b && e.b === a))
 
   // Chuẩn hoá và tách từ một lần cho mỗi câu (kho Tiếng Anh lên tới hàng nghìn câu).
-  const prep: Prepared[] = qs.map((q) => ({
-    q,
-    nvi: normalize(viText(q)),
-    nen: normalize(enText(q)),
-    viTok: tokens(viText(q)),
-    enTok: tokens(enText(q)),
-  }))
+  const prep: Prepared[] = qs.map((q) => {
+    const math = q.subject === 'math'
+    const norm = math ? mathNormalize : normalize
+    const tok = math ? mathTokens : tokens
+    return { q, nvi: norm(viText(q)), nen: norm(enText(q)), viTok: tok(viText(q)), enTok: tok(enText(q)) }
+  })
 
   for (let i = 0; i < prep.length; i++) {
     for (let j = i + 1; j < prep.length; j++) {
@@ -61,6 +72,7 @@ export function findDupes(qs: Question[], allow: AllowEntry[]): DupeReport {
       const q = b.q
       if (p.subject !== q.subject) continue
       const english = p.subject === 'english'
+      const loose = english || p.subject === 'math'
       // Tiếng Anh: so sánh gần-trùng trong cùng một thì; trùng nguyên văn được kiểm tra riêng toàn kho bên dưới.
       if (english && p.topic !== q.topic) continue
       const pair = `${p.id} / ${q.id}`
@@ -73,9 +85,9 @@ export function findDupes(qs: Question[], allow: AllowEntry[]): DupeReport {
       }
 
       const sim = Math.max(jaccard(a.viTok, b.viTok), jaccard(a.enTok, b.enTok))
-      const sameAnswer = !english && sameSub && normalize(answerText(p)) === normalize(answerText(q))
+      const sameAnswer = !loose && sameSub && normalize(answerText(p)) === normalize(answerText(q))
 
-      if (sameSub && sim >= (english ? SIM_ERROR_EN : SIM_ERROR) && !allowed(p.id, q.id)) {
+      if (sameSub && sim >= (loose ? SIM_ERROR_EN : SIM_ERROR) && !allowed(p.id, q.id)) {
         errors.push(`${pair}: câu hỏi gần giống nhau (độ giống ${sim.toFixed(2)}) cùng chủ điểm ${p.subtopic}`)
       } else if (sameAnswer && !allowed(p.id, q.id)) {
         errors.push(`${pair}: cùng chủ điểm ${p.subtopic} và cùng đáp án đúng "${answerText(p)}"`)

@@ -1,7 +1,9 @@
-export type Subject = 'science' | 'english'
+export type Subject = 'science' | 'english' | 'math'
 export type ScienceTopic = 'living' | 'physical' | 'earth' | 'inquiry'
 export type EnglishTopic = 'present-simple' | 'present-continuous' | 'past-simple'
-export type Topic = ScienceTopic | EnglishTopic
+/** Toán chuẩn TIMO: 5 mảng thi */
+export type MathTopic = 'logic' | 'arithmetic' | 'number-theory' | 'geometry' | 'combinatorics'
+export type Topic = ScienceTopic | EnglishTopic | MathTopic
 export type Difficulty = 'easy' | 'medium' | 'hard'
 export type LangMode = 'vi' | 'en' | 'bi'
 export type OptionIndex = 0 | 1 | 2 | 3
@@ -25,7 +27,14 @@ export type EnglishSubtopicId =
   | 'pa-time-words' | 'pa-regular-ed' | 'pa-irregular-1' | 'pa-irregular-2' | 'pa-was-were'
   | 'pa-negative' | 'pa-questions' | 'pa-vs-present' | 'pa-dialogues' | 'pa-notices'
 
-export type SubtopicId = ScienceSubtopicId | EnglishSubtopicId
+export type MathSubtopicId =
+  | 'log-number-patterns' | 'log-shape-patterns' | 'log-ordering-truth' | 'log-calendar-age' | 'log-work-backwards'
+  | 'ari-quick-calc' | 'ari-missing-number' | 'ari-word-problems' | 'ari-money-time-units' | 'ari-balance-unknown'
+  | 'num-odd-even' | 'num-place-value' | 'num-multiples' | 'num-digit-count' | 'num-remainder-cycles'
+  | 'geo-count-shapes' | 'geo-perimeter' | 'geo-area-grid' | 'geo-cubes-nets' | 'geo-symmetry-clock'
+  | 'com-choices' | 'com-grid-paths' | 'com-handshakes' | 'com-pigeonhole' | 'com-systematic-list'
+
+export type SubtopicId = ScienceSubtopicId | EnglishSubtopicId | MathSubtopicId
 
 export type IllustrationId =
   | 'magnets' | 'butterfly-life-cycle' | 'sun-shadow' | 'circuit-open' | 'circuit-closed' | 'melting-ice'
@@ -35,6 +44,8 @@ export type IllustrationId =
   | 'ruler-pencil' | 'balance-scale' | 'magnifier-ant'
   | 'seed-sprout' | 'animal-teeth' | 'compost-cycle' | 'heat-spoon' | 'dissolve-cup' | 'simple-machines' | 'planets-order' | 'constellation' | 'sea-breeze' | 'landforms' | 'volcano' | 'rainbow' | 'line-graph' | 'pictograph' | 'measuring-cup' | 'pattern-sequence' | 'lab-goggles' | 'energy-ball' | 'series-circuit' | 'compass'
   | 'en-timeline-past' | 'en-timeline-now' | 'en-timeline-habit' | 'en-dialogue' | 'en-daily-routine' | 'en-look-listen'
+  | 'ma-count-triangles' | 'ma-count-squares' | 'ma-grid-area' | 'ma-perimeter-shape' | 'ma-cube-stack' | 'ma-cube-net' | 'ma-clock'
+  | 'ma-symmetry-fold' | 'ma-grid-paths' | 'ma-matchsticks' | 'ma-number-pyramid' | 'ma-magic-square' | 'ma-balance-math' | 'ma-shape-pattern'
 
 interface BaseQuestion {
   id: string
@@ -71,11 +82,25 @@ export interface EnglishQuestion extends BaseQuestion {
   trap?: true
 }
 
-export type Question = ScienceQuestion | EnglishQuestion
+/** Câu Toán TIMO: song ngữ như Khoa học; mọi con số viết bằng chữ số để vi/en khớp nhau. */
+export interface MathQuestion extends BaseQuestion {
+  subject: 'math'
+  topic: MathTopic
+  subtopic: MathSubtopicId
+  question_vi: string
+  question_en: string
+  options_vi: Options
+  options_en: Options
+}
+
+export type Question = ScienceQuestion | EnglishQuestion | MathQuestion
+/** Câu song ngữ (có question_vi / options_vi): Khoa học và Toán. */
+export type BilingualQuestion = ScienceQuestion | MathQuestion
 
 /** Dạng khai báo trong file dữ liệu Khoa học (subject được thêm tự động). */
 export type ScienceQuestionInput = Omit<ScienceQuestion, 'subject'>
 export type EnglishQuestionInput = Omit<EnglishQuestion, 'subject'>
+export type MathQuestionInput = Omit<MathQuestion, 'subject'>
 
 export type QuizKind = 'topic' | 'mock' | 'retry'
 
@@ -116,6 +141,8 @@ export interface Progress {
   mockCompleted: number
   /** số bài thi thử Tiếng Anh đã hoàn thành (mockCompleted chỉ tính Khoa học) */
   englishMockCompleted: number
+  /** số bài thi thử Toán TIMO đã hoàn thành */
+  mathMockCompleted: number
   perfectCount: number
   topicStats: Record<Topic, TopicStat>
   /** id các câu đã trả lời, dùng để ưu tiên câu mới ở các lượt sau */

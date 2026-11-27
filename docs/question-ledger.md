@@ -3924,3 +3924,1140 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | pa-notices-99 | khó |  |  | Dear Tim, / We ___ lost, so we asked a policeman for help. → Complete the message. | were | ☐ |
 | pa-notices-100 | khó |  |  | Hi Mary, / They ___ me their house for the weekend. → Complete the message. | lent | ☐ |
 
+# Toán TIMO
+
+## Tư duy logic – Logical Thinking (200 câu)
+
+### Quy luật dãy số (40 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| log-number-patterns-01 | dễ |  | Số nào tiếp theo trong dãy số: 3, 7, 11, 15, ? | 19 | ☐ |
+| log-number-patterns-02 | dễ |  | Dãy số giảm dần đều: 50, 45, 40, 35, ? Số tiếp theo là số nào? | 30 | ☐ |
+| log-number-patterns-03 | dễ |  | Tìm số tiếp theo: 2, 4, 8, 16, ? | 32 | ☐ |
+| log-number-patterns-04 | dễ |  | Tìm số còn thiếu trong ô trống: 12, 18, □, 30, 36 | 24 | ☐ |
+| log-number-patterns-05 | dễ |  | Trên cầu thang, bậc 1 ghi số 5, bậc 2 ghi số 10, bậc 3 ghi số 15, cứ thế tiếp tục. Bậc 6 … | 30 | ☐ |
+| log-number-patterns-06 | dễ |  | Số nào đứng tiếp sau trong dãy 1, 3, 5, 7, 9, ? | 11 | ☐ |
+| log-number-patterns-07 | dễ |  | Quan sát dãy số: 64, 32, 16, 8, ? Số nào điền vào dấu ? | 4 | ☐ |
+| log-number-patterns-08 | dễ |  | Số nào thay cho ô trống: 9, □, 27, 36, 45? | 18 | ☐ |
+| log-number-patterns-09 | dễ |  | Bạn An đếm lùi: 40, 37, 34, 31, … An sẽ đọc số nào tiếp theo? | 28 | ☐ |
+| log-number-patterns-10 | dễ |  | Tìm số tiếp theo của dãy: 125, 150, 175, ? | 200 | ☐ |
+| log-number-patterns-11 | dễ |  | Trong dãy 4, 8, 12, 15, 20, 24 có một số viết sai. Đó là số nào? | 15 | ☐ |
+| log-number-patterns-12 | dễ |  | Dãy số: 1, 10, 2, 20, 3, 30, ? Số tiếp theo là số nào? | 4 | ☐ |
+| log-number-patterns-13 | dễ |  | Hàng thứ nhất có 2 bông hoa, hàng thứ hai có 5 bông, hàng thứ ba có 8 bông, hàng thứ tư c… | 14 | ☐ |
+| log-number-patterns-14 | dễ |  | Số nào tiếp theo: 3, 6, 12, 24, ? | 48 | ☐ |
+| log-number-patterns-15 | dễ |  | Điền số thích hợp vào ô trống: 81, 72, □, 54, 45 | 63 | ☐ |
+| log-number-patterns-16 | dễ |  | Tuấn nhảy trên tia số: 0, 7, 14, 21, … Số tiếp theo Tuấn nhảy tới là số mấy? | 28 | ☐ |
+| log-number-patterns-17 | vừa |  | Quy luật nào đây? 1, 2, 4, 7, 11, ? Hãy tìm số thay cho dấu ? | 16 | ☐ |
+| log-number-patterns-18 | vừa |  | Số nào điền tiếp vào dãy: 5, 8, 7, 10, 9, 12, ? | 11 | ☐ |
+| log-number-patterns-19 | vừa |  | Mỗi số (từ số thứ ba) bằng tổng hai số đứng ngay trước nó: 2, 4, 6, 10, 16, ? Số tiếp the… | 26 | ☐ |
+| log-number-patterns-20 | vừa |  | Số nào tiếp theo trong dãy: 2, 50, 4, 45, 6, 40, ? | 8 | ☐ |
+| log-number-patterns-21 | vừa |  | Số nào bị che trong ô vuông: 5, 10, □, 40, 80? | 20 | ☐ |
+| log-number-patterns-22 | vừa |  | Dãy số 4, 7, 10, 13, … tiếp tục theo quy luật. Số thứ 10 của dãy là số nào? | 31 | ☐ |
+| log-number-patterns-23 | vừa |  | Ngày đầu Mai bỏ 2 viên bi vào hộp, ngày sau bỏ 4 viên, ngày tiếp theo 6 viên, cứ mỗi ngày… | 30 | ☐ |
+| log-number-patterns-24 | vừa |  | Dãy 3, 4, 6, 9, 13, 17, 24 có đúng một số viết sai. Số nào viết sai? | 17 | ☐ |
+| log-number-patterns-25 | vừa |  | Một quả bóng thả từ độ cao 96 cm. Mỗi lần nảy, bóng lên cao bằng một nửa lần trước: lần 1… | 6 cm | ☐ |
+| log-number-patterns-26 | vừa |  | Dãy số giảm: 50, 49, 47, 44, 40, ? Số tiếp theo là số nào? | 35 | ☐ |
+| log-number-patterns-27 | vừa |  | Lớp Lan ghép các bàn vuông thành một hàng dài: 1 bàn ngồi được 4 bạn, 2 bàn ghép lại ngồi… | 32 | ☐ |
+| log-number-patterns-28 | vừa |  | Điền số tiếp theo: 2, 4, 3, 6, 5, 10, ? | 9 | ☐ |
+| log-number-patterns-29 | vừa |  | Số nào còn thiếu: 3, 5, 9, □, 23? | 15 | ☐ |
+| log-number-patterns-30 | vừa |  | Ngày số 1 Khoa đọc 3 trang truyện, ngày số 2 đọc 7 trang, ngày số 3 đọc 11 trang; mỗi ngà… | 23 | ☐ |
+| log-number-patterns-31 | vừa |  | Ngày đầu tiên, trong ao có 6 cây bèo. Cứ mỗi ngày, số cây bèo lại gấp đôi hôm trước. Hỏi … | 96 | ☐ |
+| log-number-patterns-32 | vừa |  | Bạn Hà viết dãy số 4, 8, 16, 32, 62, 128 nhưng viết nhầm một số. Số nào bị viết nhầm? | 62 | ☐ |
+| log-number-patterns-33 | khó |  | Các số 1, 4, 9, 16, 25 được xếp theo một quy luật. Số tiếp theo là số nào? | 36 | ☐ |
+| log-number-patterns-34 | khó |  | Dãy 1, 4, 9, 16, … tiếp tục theo quy luật. Số thứ 10 của dãy là số nào? | 100 | ☐ |
+| log-number-patterns-35 | khó |  | Tìm quy luật rồi điền số: 2, 3, 5, 8, 13, ? | 21 | ☐ |
+| log-number-patterns-36 | khó |  | Minh xếp ghế trong hội trường: hàng đầu có 8 ghế, mỗi hàng sau nhiều hơn hàng trước 2 ghế… | 36 | ☐ |
+| log-number-patterns-37 | khó |  | Dãy số sau gồm hai dãy xen kẽ nhau, nhưng có một số viết sai: 1, 20, 3, 18, 5, 16, 6, 14.… | 6 | ☐ |
+| log-number-patterns-38 | khó |  | Hình 1 có 1 chấm, hình 2 có 3 chấm, hình 3 có 6 chấm, hình 4 có 10 chấm. Cứ thế tiếp tục,… | 45 | ☐ |
+| log-number-patterns-39 | khó |  | Dãy số theo quy luật cộng 5, trừ 2 xen kẽ: 1, 6, 4, 9, 7, 12, … Số thứ 15 của dãy là số n… | 22 | ☐ |
+| log-number-patterns-40 | khó |  | Trong dãy, mỗi số (từ số thứ ba) bằng tổng hai số đứng ngay trước: 3, □, 7, 11, 18, 29. S… | 4 | ☐ |
+
+### Quy luật hình và bảng số (40 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| log-shape-patterns-01 | dễ | ma-shape-pattern | Bé An xếp các hình theo quy luật như trong hình. Hình ở ô số 12 (ô có dấu ?) là hình gì? | Hình vuông | ☐ |
+| log-shape-patterns-02 | dễ |  | Trên tấm thiệp, Mai dán: ⭐⭐🌙⭐⭐🌙⭐⭐ … Mai dán hình gì tiếp theo? | Mặt trăng 🌙 | ☐ |
+| log-shape-patterns-03 | dễ |  | Bình viết dãy chữ: A B C A B C A B … Chữ tiếp theo là chữ gì? | C | ☐ |
+| log-shape-patterns-04 | dễ |  | Lan bày trái cây trên bàn: 🍎🍌🍌🍎🍌🍌🍎 … Quả tiếp theo là quả gì? | Quả chuối 🍌 | ☐ |
+| log-shape-patterns-05 | dễ |  | Minh chồng cốc: hình 1 có 2 cốc, hình 2 có 5 cốc, hình 3 có 8 cốc. Theo quy luật đó, hình… | 11 | ☐ |
+| log-shape-patterns-06 | dễ |  | Tìm quy luật rồi điền số: 2 → 4, 3 → 6, 5 → 10, 7 → ? | 14 | ☐ |
+| log-shape-patterns-07 | dễ |  | Mai xếp ô vuông thành bậc thang: thang 1 bậc có 1 ô, thang 2 bậc có 3 ô, thang 3 bậc có 6… | 6 | ☐ |
+| log-shape-patterns-08 | dễ |  | Tháp số: mỗi viên gạch bằng tổng hai viên ngay bên dưới. Hàng dưới cùng là 1, 2, 3. Số ở … | 8 | ☐ |
+| log-shape-patterns-09 | dễ |  | Hà tô các ô vuông theo thứ tự: 🟥🟨🟩🟥🟨🟩🟥 … Ô tiếp theo màu gì? | Màu vàng 🟨 | ☐ |
+| log-shape-patterns-10 | dễ |  | Khoa vẽ lần lượt: 🔺🟥🔺🟥🔺🟥 (tam giác có 3 cạnh, hình vuông có 4 cạnh). Khoa đã vẽ tất… | 21 | ☐ |
+| log-shape-patterns-11 | dễ |  | Mỗi hàng của bảng theo cùng một quy luật: / 4 \| 5 \| 9 / 2 \| 6 \| 8 / 7 \| 3 \| ? / Số cần đi… | 10 | ☐ |
+| log-shape-patterns-12 | dễ |  | Tuấn vẽ một bảng 3 × 3 hình. Mỗi hàng có đủ một ▲, một ● và một ■: / ▲ ● ■ / ● ■ ▲ / ■ ? … | Tam giác ▲ | ☐ |
+| log-shape-patterns-13 | dễ |  | Mũi tên quay theo thứ tự: ⬆️➡️⬇️⬅️⬆️➡️⬇️ … Mũi tên tiếp theo chỉ hướng nào? | Sang trái ⬅️ | ☐ |
+| log-shape-patterns-14 | dễ |  | Linh vẽ lặp lại nhóm 🔵🔺🔺 cho đến khi được 12 hình. Linh vẽ bao nhiêu hình tam giác 🔺? | 8 | ☐ |
+| log-shape-patterns-15 | dễ |  | Các con vật xếp hàng theo quy luật, một chỗ bị che: 🐱🐶🐶🐱🐶 ? 🐱🐶🐶. Con vật bị che l… | Con chó 🐶 | ☐ |
+| log-shape-patterns-16 | dễ |  | Nam viết lặp lại chữ MATH: M A T H M A T H … Chữ thứ 9 là chữ gì? | M | ☐ |
+| log-shape-patterns-17 | vừa |  | Một chuỗi hạt được xâu theo quy luật 🔺🔵🔵⭐🔺🔵🔵⭐ … Hạt thứ 20 là hình gì? | Ngôi sao ⭐ | ☐ |
+| log-shape-patterns-18 | vừa |  | Tuấn viết lặp lại chữ SUNNY: S U N N Y S U N N Y … Chữ thứ 35 là chữ gì? | Y | ☐ |
+| log-shape-patterns-19 | vừa |  | Bình đính 25 chiếc cúc theo quy luật 🔺🔵🔵🔺🔵🔵 … Có bao nhiêu cúc 🔵? | 16 | ☐ |
+| log-shape-patterns-20 | vừa |  | Hình 1 có 1 chấm, hình 2 có 3 chấm, hình 3 có 5 chấm, cứ thế tiếp tục. Hình 20 có bao nhi… | 39 | ☐ |
+| log-shape-patterns-21 | vừa |  | Bảng Vào → Ra: 2 → 7, 3 → 9, 5 → 13, 8 → ?. Số ra là bao nhiêu? | 19 | ☐ |
+| log-shape-patterns-22 | vừa |  | Mũi tên trên vòng quay đang chỉ ⬆️. Cứ mỗi phút, nó quay một phần tư vòng theo chiều kim … | Xuống dưới ⬇️ | ☐ |
+| log-shape-patterns-23 | vừa |  | Hàng dưới cùng của một tháp số là 1, 2, 3, 4. Mỗi tầng trên ít hơn 1 viên, mỗi viên bằng … | 20 | ☐ |
+| log-shape-patterns-24 | vừa |  | Mỗi hàng theo cùng một quy luật: / 2 \| 3 \| 6 / 4 \| 5 \| 20 / 3 \| 6 \| ? / Điền số vào dấu ? | 18 | ☐ |
+| log-shape-patterns-25 | vừa |  | Hùng xếp hình: 🔺🔵🔺🔵🔵🔺🔵🔵🔵🔺 … (sau mỗi 🔺, số 🔵 tăng thêm 1). Trước 🔺 thứ 5 có … | 10 | ☐ |
+| log-shape-patterns-26 | vừa |  | Các hàng theo cùng một quy luật: / 9 \| 4 \| 5 / 12 \| 7 \| 5 / 15 \| ? \| 8 / Số bị che là bao… | 7 | ☐ |
+| log-shape-patterns-27 | vừa |  | Quân mặc áo theo thứ tự đỏ, xanh, vàng, đỏ, xanh, vàng, … Ngày 1 Quân mặc áo đỏ. Ngày 22 … | Áo đỏ | ☐ |
+| log-shape-patterns-28 | vừa |  | Xếp que diêm thành hàng ô vuông: 1 ô cần 4 que, 2 ô liền nhau cần 7 que, 3 ô cần 10 que. … | 19 | ☐ |
+| log-shape-patterns-29 | vừa |  | Bảo dán ô màu theo từng nhóm, mỗi nhóm dài hơn nhóm trước 1 ô, màu đỏ và vàng xen kẽ: / �… | 9 | ☐ |
+| log-shape-patterns-30 | vừa |  | Vy xâu vòng gồm 30 hạt theo quy luật 🔴🔴⚪⚪⚪🔴🔴⚪⚪⚪ … Vòng có bao nhiêu hạt trắng ⚪? | 18 | ☐ |
+| log-shape-patterns-31 | vừa |  | Mỗi số được đổi thành một số mới: 23 → 5, 41 → 5, 36 → 9, 60 → 6. Vậy 52 → ? | 7 | ☐ |
+| log-shape-patterns-32 | vừa |  | Phúc tô ô vuông thành hình chữ L: một cột và một hàng chung nhau ô ở góc. Hình 1 có 3 ô, … | 21 | ☐ |
+| log-shape-patterns-33 | khó |  | Tháp số 3 tầng: mỗi viên bằng tổng hai viên ngay dưới. Hàng dưới là 3, □, 4 và đỉnh tháp … | 4 | ☐ |
+| log-shape-patterns-34 | khó |  | Ba hàng số cùng một quy luật: / 2 \| 3 \| 10 / 1 \| 6 \| 14 / 3 \| 5 \| ? / Số thích hợp điền v… | 16 | ☐ |
+| log-shape-patterns-35 | khó |  | Cô bán hàng xếp 35 quả theo quy luật 🍎🍐🍐🍊🍎🍐🍐🍊 … Có bao nhiêu quả lê 🍐? | 18 | ☐ |
+| log-shape-patterns-36 | khó |  | Xếp que tính thành hàng tam giác chung cạnh: 1 tam giác cần 3 que, 2 tam giác cần 5 que, … | 10 | ☐ |
+| log-shape-patterns-37 | khó |  | Hàng trên viết lặp lại A B C D E, hàng dưới vẽ lặp lại 🔺🔵: / A B C D E A B C … / 🔺🔵🔺… | 11 | ☐ |
+| log-shape-patterns-38 | khó |  | Hoa viết dãy lặp lại 1, 2, 3, 2, 1, 2, 3, 2, 1, … Tổng của 22 số đầu tiên là bao nhiêu? | 43 | ☐ |
+| log-shape-patterns-39 | khó |  | Bình vẽ bảng 3 × 3. Mỗi hàng và mỗi cột đều có đủ một ▲, một ● và một ■: / ▲ ● ? / ? ? ★ … | Hình tròn ● | ☐ |
+| log-shape-patterns-40 | khó |  | Hình 1 là viền hình vuông 3 × 3 chấm, có 8 chấm. Hình 2 là viền 4 × 4 chấm, có 12 chấm. H… | 32 | ☐ |
+
+### Sắp xếp và nói thật – nói dối (40 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| log-ordering-truth-01 | dễ |  | Lan xếp hàng mua kem. Lan đứng thứ 4 tính từ đầu hàng và thứ 6 tính từ cuối hàng. Hàng có… | 9 | ☐ |
+| log-ordering-truth-02 | dễ |  | 12 bạn đứng thành một hàng ngang. Minh đứng thứ 5 tính từ bên trái. Minh đứng thứ mấy tín… | 8 | ☐ |
+| log-ordering-truth-03 | dễ |  | Trong một hàng, Hà đứng thứ 3 và Tuấn đứng thứ 9 tính từ đầu hàng. Giữa Hà và Tuấn có bao… | 5 | ☐ |
+| log-ordering-truth-04 | dễ |  | Mai cao hơn Hà. Linh thấp hơn Hà. Thảo cao hơn Mai. Ai cao nhất? | Thảo | ☐ |
+| log-ordering-truth-05 | dễ |  | Bình lớn tuổi hơn Khoa. Khoa lớn tuổi hơn Nam. Nam lớn tuổi hơn Phúc. Ai lớn tuổi thứ 2? | Khoa | ☐ |
+| log-ordering-truth-06 | dễ |  | Con mèo nặng hơn con thỏ. Con chó nặng hơn con mèo. Con thỏ nặng hơn con gà. Con nào nhẹ … | Con gà | ☐ |
+| log-ordering-truth-07 | dễ |  | 4 bạn chạy thi: Nam, Tuấn, Khoa, Long. Long về cuối. Nam về trước Tuấn. Khoa về ngay sau … | Tuấn | ☐ |
+| log-ordering-truth-08 | dễ |  | An, Bình, Chi mỗi bạn nuôi một con vật khác nhau: mèo, chó, cá. An không nuôi mèo, cũng k… | Mèo | ☐ |
+| log-ordering-truth-09 | dễ |  | Mai, Lan, Hoa mỗi bạn mặc một áo khác màu: đỏ, xanh, vàng. Mai mặc áo đỏ. Lan không mặc á… | Vàng | ☐ |
+| log-ordering-truth-10 | dễ |  | 4 bạn Khoa, Linh, Nam, Mai ngồi trên 4 ghế xếp thành hàng ngang. Khoa ngồi ghế đầu bên tr… | Mai | ☐ |
+| log-ordering-truth-11 | dễ |  | Một quả bóng nằm trong 1 trong 3 hộp: đỏ, xanh, vàng. Nam nói: "Bóng không ở hộp đỏ." Mai… | Hộp vàng | ☐ |
+| log-ordering-truth-12 | dễ |  | Trong một hàng, đứng trước Hùng có 7 bạn, đứng sau Hùng có 5 bạn. Hàng có tất cả bao nhiê… | 13 | ☐ |
+| log-ordering-truth-13 | dễ |  | Hà có nhiều kẹo hơn Linh. Linh có nhiều kẹo hơn Thu. Hà có ít kẹo hơn Ngọc. Ai có ít kẹo … | Thu | ☐ |
+| log-ordering-truth-14 | dễ |  | Trong một cuộc đua, Phong về đích thứ 3. Có 2 bạn về đích sau Phong. Có bao nhiêu bạn tha… | 5 | ☐ |
+| log-ordering-truth-15 | dễ |  | Một trong 4 bạn Tâm, Hương, Vinh, Yến đã ăn chiếc bánh. Tâm nói: "Không phải tớ." Hương n… | Yến | ☐ |
+| log-ordering-truth-16 | dễ |  | 9 bạn đứng thành một hàng. Bảo đứng chính giữa hàng. Bảo đứng thứ mấy tính từ đầu hàng? | 5 | ☐ |
+| log-ordering-truth-17 | vừa |  | Một hàng có 15 bạn. Tuấn đứng thứ 6 tính từ cuối hàng. Phía trước Tuấn có bao nhiêu bạn? | 9 | ☐ |
+| log-ordering-truth-18 | vừa |  | Một hàng có 15 người. Lan đứng thứ 8 tính từ đầu hàng, Mai đứng thứ 3 tính từ cuối hàng. … | 4 | ☐ |
+| log-ordering-truth-19 | vừa |  | Hà lớn tuổi hơn Minh. Quân nhỏ tuổi hơn Minh. Hà nhỏ tuổi hơn Phương. Ai nhỏ tuổi thứ 2? | Minh | ☐ |
+| log-ordering-truth-20 | vừa |  | 5 bạn An, Bình, Cường, Dung, Em chạy thi. Bình về cuối. Em về thứ 3. An về ngay trước Bìn… | Cường | ☐ |
+| log-ordering-truth-21 | vừa |  | Hoa, Lan, Mai, Nga mỗi bạn đội một chiếc mũ khác màu: đỏ, xanh, vàng, trắng. Lan đội mũ v… | Nga | ☐ |
+| log-ordering-truth-22 | vừa |  | Một trong 4 bạn Nam, Hải, Long, Quân làm đổ lọ mực. / Nam nói: "Hải làm đổ." / Hải nói: "… | Hải | ☐ |
+| log-ordering-truth-23 | vừa |  | 5 bạn Mai, Lan, Hoa, Nga, Thu ngồi trên 5 ghế xếp thành hàng ngang. Mai ngồi ghế chính gi… | Thu | ☐ |
+| log-ordering-truth-24 | vừa |  | Trong một cuộc chạy thi, Phúc vượt qua bạn đang chạy thứ 2. Bây giờ Phúc đang chạy thứ mấ… | 2 | ☐ |
+| log-ordering-truth-25 | vừa |  | Tùng đang chạy ở vị trí thứ 5. Tùng vượt qua 2 bạn, sau đó bị 1 bạn vượt lại. Bây giờ Tùn… | 4 | ☐ |
+| log-ordering-truth-26 | vừa |  | An hơn Bình 2 tuổi. Chi kém Bình 1 tuổi. Dũng hơn An 1 tuổi. Dũng hơn Chi mấy tuổi? | 4 | ☐ |
+| log-ordering-truth-27 | vừa |  | Ngân, Quỳnh, Vân mỗi bạn học một môn khác nhau: vẽ, múa, đàn. Ngân và bạn học múa là hàng… | Đàn | ☐ |
+| log-ordering-truth-28 | vừa |  | 4 bạn Lâm, Khánh, Minh, Nhi ngồi trên 4 ghế xếp thành hàng ngang. Lâm ngồi ở một đầu hàng… | Minh | ☐ |
+| log-ordering-truth-29 | vừa |  | Trong một cuộc thi, Hưng xếp trên 3 bạn và xếp dưới 5 bạn. Cuộc thi có bao nhiêu bạn tham… | 9 | ☐ |
+| log-ordering-truth-30 | vừa |  | Một hàng có 10 bạn. Nam đứng thứ 3 tính từ đầu hàng. Nam đổi chỗ cho bạn đứng thứ 3 tính … | 8 | ☐ |
+| log-ordering-truth-31 | vừa |  | Sơn có nhiều bi hơn Tài nhưng ít bi hơn Uyên. Vy có ít bi hơn Tài. Xếp 4 bạn từ nhiều bi … | 3 | ☐ |
+| log-ordering-truth-32 | vừa |  | Các bạn xếp một hàng dọc. Hằng đứng thứ 7 tính từ đầu hàng. Ngay sau Hằng có 2 bạn, rồi đ… | 14 | ☐ |
+| log-ordering-truth-33 | khó |  | Một trong 4 bạn Toàn, Diệp, Kiều, Sang làm vỡ bình hoa. / Toàn nói: "Diệp làm vỡ." / Diệp… | Kiều | ☐ |
+| log-ordering-truth-34 | khó |  | Lan đứng thứ 10 tính từ đầu hàng. Mai đứng thứ 8 tính từ cuối hàng. Mai đứng trước Lan và… | 14 | ☐ |
+| log-ordering-truth-35 | khó |  | 5 bạn Phát, Quang, Oanh, Hiền, Kiên chạy thi, không ai về cùng lúc. Hiền về cuối. Oanh về… | Phát | ☐ |
+| log-ordering-truth-36 | khó |  | Mỗi bạn An, Bình, Chi hoặc luôn nói thật, hoặc luôn nói dối. / An nói: "Bình nói dối." / … | Bình | ☐ |
+| log-ordering-truth-37 | khó |  | Đức, Giang, Hải, Khang mỗi bạn nuôi một con vật khác nhau: chó, mèo, thỏ, cá. / Con vật c… | Mèo | ☐ |
+| log-ordering-truth-38 | khó |  | Trong túi có 1 quả bóng màu đỏ, xanh hoặc vàng. 3 bạn đoán màu. / Lan: "Bóng màu đỏ." / H… | Xanh | ☐ |
+| log-ordering-truth-39 | khó |  | 5 bạn Ánh, Bảo, Cúc, Đào, Em ngồi trên 5 ghế xếp hàng ngang, đánh số 1 đến 5 từ trái sang… | Ghế 3 | ☐ |
+| log-ordering-truth-40 | khó |  | Hưng cao hơn Ích. Kha thấp hơn Ích. Lộc cao hơn Hưng. Mạnh thấp hơn Lộc nhưng cao hơn Hưn… | Mạnh | ☐ |
+
+### Lịch, ngày tháng và tuổi (40 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| log-calendar-age-01 | dễ |  | Hôm nay là thứ Hai. Đúng 7 ngày nữa là thứ mấy? | Thứ Hai | ☐ |
+| log-calendar-age-02 | dễ |  | Hôm nay là thứ Tư. 2 ngày nữa bà đến chơi. Bà đến vào thứ mấy? | Thứ Sáu | ☐ |
+| log-calendar-age-03 | dễ |  | Hôm qua là thứ Bảy. Hôm nay là thứ mấy? | Chủ nhật | ☐ |
+| log-calendar-age-04 | dễ |  | Kỳ nghỉ của Linh kéo dài 3 tuần. Kỳ nghỉ đó có bao nhiêu ngày? | 21 | ☐ |
+| log-calendar-age-05 | dễ |  | Nam đi cắm trại 2 ngày tròn. Đó là bao nhiêu giờ? | 48 | ☐ |
+| log-calendar-age-06 | dễ |  | An 8 tuổi, Bình 5 tuổi. 4 năm nữa, An hơn Bình bao nhiêu tuổi? | 3 | ☐ |
+| log-calendar-age-07 | dễ |  | Mai năm nay 9 tuổi. 6 năm nữa Mai bao nhiêu tuổi? | 15 | ☐ |
+| log-calendar-age-08 | dễ |  | Hôm nay là ngày 5. Sinh nhật Lan là ngày 12 cùng tháng. Còn bao nhiêu ngày nữa là đến sin… | 7 | ☐ |
+| log-calendar-age-09 | dễ |  | Ngày mai là thứ Năm. Hôm qua là thứ mấy? | Thứ Ba | ☐ |
+| log-calendar-age-10 | dễ |  | Trại hè của Minh kéo dài 14 ngày. Đó là mấy tuần? | 2 | ☐ |
+| log-calendar-age-11 | dễ |  | Tháng nào đến sau tháng Ba đúng 3 tháng? | Tháng Sáu | ☐ |
+| log-calendar-age-12 | dễ |  | Khoa năm nay 6 tuổi. 4 năm trước Khoa mấy tuổi? | 2 | ☐ |
+| log-calendar-age-13 | dễ |  | Hà ở nhà bà 1 tuần và 3 ngày. Hà ở nhà bà tất cả bao nhiêu ngày? | 10 | ☐ |
+| log-calendar-age-14 | dễ |  | Hôm nay là ngày 18. 6 ngày trước là ngày bao nhiêu? | Ngày 12 | ☐ |
+| log-calendar-age-15 | dễ |  | Bố 35 tuổi, con trai 8 tuổi. Bố hơn con bao nhiêu tuổi? | 27 | ☐ |
+| log-calendar-age-16 | dễ |  | Hôm nay là Chủ nhật. Bình được tặng chú cún cách đây 3 ngày. Bình nhận cún vào thứ mấy? | Thứ Năm | ☐ |
+| log-calendar-age-17 | vừa |  | Hôm nay là thứ Ba. Bài kiểm tra bơi của Minh diễn ra sau 10 ngày nữa. Hôm đó là thứ mấy? | Thứ Sáu | ☐ |
+| log-calendar-age-18 | vừa |  | Hôm nay là thứ Sáu. Lan gieo hạt đậu cách đây 9 ngày. Lan gieo hạt vào thứ mấy? | Thứ Tư | ☐ |
+| log-calendar-age-19 | vừa |  | Trong một tháng, ngày 3 là thứ Ba. Ngày 24 của tháng đó là thứ mấy? | Thứ Ba | ☐ |
+| log-calendar-age-20 | vừa |  | Ngày 5 của một tháng là thứ Bảy. Ngày 20 của tháng đó là thứ mấy? | Chủ nhật | ☐ |
+| log-calendar-age-21 | vừa |  | Ngày 1 của một tháng là thứ Hai. Ngày thứ Hai lần thứ 3 trong tháng đó là ngày bao nhiêu? | Ngày 15 | ☐ |
+| log-calendar-age-22 | vừa |  | Hội chợ của trường diễn ra từ ngày 8 đến ngày 14 cùng tháng (tính cả hai ngày). Hội chợ k… | 7 | ☐ |
+| log-calendar-age-23 | vừa |  | Mai 7 tuổi, mẹ Mai 32 tuổi. Khi Mai 15 tuổi thì mẹ bao nhiêu tuổi? | 40 | ☐ |
+| log-calendar-age-24 | vừa |  | Nam 6 tuổi, anh của Nam 9 tuổi. 4 năm nữa, tổng số tuổi của hai anh em là bao nhiêu? | 23 | ☐ |
+| log-calendar-age-25 | vừa |  | Linh 9 tuổi. Tuổi mẹ gấp 3 lần tuổi Linh. Mẹ hơn Linh bao nhiêu tuổi? | 18 | ☐ |
+| log-calendar-age-26 | vừa |  | Tuấn 8 tuổi, em gái Tuấn 5 tuổi. Sau bao nhiêu năm nữa thì tổng số tuổi hai anh em là 21? | 4 | ☐ |
+| log-calendar-age-27 | vừa |  | Chú cún ngủ 12 giờ mỗi ngày. Trong 1 tuần, chú cún ngủ bao nhiêu giờ? | 84 | ☐ |
+| log-calendar-age-28 | vừa |  | Một tháng có 30 ngày, ngày 1 là Chủ nhật. Tháng đó có bao nhiêu ngày Chủ nhật? | 5 | ☐ |
+| log-calendar-age-29 | vừa |  | Hôm nay là ngày 9. Tiệc của Hà vào ngày 23 cùng tháng. Giữa hôm nay và ngày tiệc có bao n… | 13 | ☐ |
+| log-calendar-age-30 | vừa |  | Trong một tháng, ngày 10 là thứ Tư. Ngày 1 của tháng đó là thứ mấy? | Thứ Hai | ☐ |
+| log-calendar-age-31 | vừa |  | 4 năm trước An 5 tuổi. 3 năm nữa An bao nhiêu tuổi? | 12 | ☐ |
+| log-calendar-age-32 | vừa |  | Cây đậu của Khoa mọc được 25 ngày. Đó là bao nhiêu tuần trọn và mấy ngày lẻ? | 3 tuần 4 ngày | ☐ |
+| log-calendar-age-33 | khó |  | Tháng Chín có 30 ngày. Có một năm, ngày 1 tháng Chín là thứ Bảy. Tháng Chín năm đó có mấy… | 4 | ☐ |
+| log-calendar-age-34 | khó |  | Tháng Mười có 31 ngày. Ngày 1 tháng Mười là thứ Tư. Ngày 1 tháng Mười Một là thứ mấy? | Thứ Bảy | ☐ |
+| log-calendar-age-35 | khó |  | Hà 8 tuổi, tuổi mẹ gấp 3 lần tuổi Hà. Sau bao nhiêu năm nữa thì tuổi mẹ gấp 2 lần tuổi Hà? | 8 | ☐ |
+| log-calendar-age-36 | khó |  | Tổng số tuổi của Lan và mẹ là 42. Mẹ hơn Lan 30 tuổi. Lan bao nhiêu tuổi? | 6 | ☐ |
+| log-calendar-age-37 | khó |  | Quân đọc mỗi ngày 1 chương truyện, bắt đầu vào thứ Hai ngày 6. Cuốn truyện có 15 chương. … | Thứ Hai, ngày 20 | ☐ |
+| log-calendar-age-38 | khó |  | Hôm nay là thứ Tư. Còn đúng 50 ngày nữa là đến Tết. Tết rơi vào thứ mấy? | Thứ Năm | ☐ |
+| log-calendar-age-39 | khó |  | Một đoàn tàu khởi hành lúc 8:00 sáng thứ Hai và chạy liên tục 64 giờ. Tàu đến nơi vào thứ… | Thứ Năm | ☐ |
+| log-calendar-age-40 | khó |  | Trong một tháng có 3 ngày Chủ nhật rơi vào ngày chẵn. Ngày 20 của tháng đó là thứ mấy? | Thứ Năm | ☐ |
+
+### Tính ngược từ cuối (40 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| log-work-backwards-01 | dễ |  | An nghĩ ra một số. An cộng số đó với 7 thì được 20. An đã nghĩ số nào? | 13 | ☐ |
+| log-work-backwards-02 | dễ |  | Một chiếc máy số nhân số đưa vào với 3. Mai đưa vào một số và máy cho ra 24. Mai đã đưa v… | 8 | ☐ |
+| log-work-backwards-03 | dễ |  | Bình có một số nhãn dán. Bình cho Nam 9 nhãn dán thì còn lại 15 nhãn dán. Lúc đầu Bình có… | 24 | ☐ |
+| log-work-backwards-04 | dễ |  | Trong giỏ có một số quả táo. Mẹ mua thêm 8 quả bỏ vào giỏ, bây giờ giỏ có 30 quả. Lúc đầu… | 22 | ☐ |
+| log-work-backwards-05 | dễ |  | Mai vào thang máy và đi lên 4 tầng để về nhà ở tầng 9. Mai đã vào thang máy ở tầng nào? | 5 | ☐ |
+| log-work-backwards-06 | dễ |  | Đến một ga, đoàn tàu được tháo bớt 3 toa. Bây giờ đoàn tàu còn 6 toa. Trước khi đến ga, đ… | 9 | ☐ |
+| log-work-backwards-07 | dễ |  | Minh mua một quyển truyện hết 15 nghìn đồng và còn lại 20 nghìn đồng. Lúc đầu Minh có bao… | 35 nghìn đồng | ☐ |
+| log-work-backwards-08 | dễ |  | Hà cho Tuấn một nửa số viên bi của mình thì Hà còn lại 12 viên bi. Lúc đầu Hà có bao nhiê… | 24 | ☐ |
+| log-work-backwards-09 | dễ |  | Trên cây có một đàn chim. 8 con chim bay đi, trên cây còn lại 15 con. Lúc đầu trên cây có… | 23 | ☐ |
+| log-work-backwards-10 | dễ |  | Một chiếc máy số chia số đưa vào cho 5. Lan đưa vào một số và máy cho ra 6. Lan đã đưa và… | 30 | ☐ |
+| log-work-backwards-11 | dễ |  | Một chú ếch nhảy xuống 4 bậc cầu thang và đáp xuống bậc thứ 7. Lúc đầu chú ếch đứng ở bậc… | 11 | ☐ |
+| log-work-backwards-12 | dễ |  | Linh rót 3 lít nước từ một cái can sang chai. Trong can còn lại 5 lít. Lúc đầu can có bao… | 8 lít | ☐ |
+| log-work-backwards-13 | dễ |  | Thứ Ba, Khoa đọc được 26 trang sách, gấp đôi số trang Khoa đọc hôm thứ Hai. Thứ Hai Khoa … | 13 | ☐ |
+| log-work-backwards-14 | dễ |  | Đến một bến, có 6 người xuống xe buýt và không ai lên. Bây giờ trên xe có 18 người. Trước… | 24 | ☐ |
+| log-work-backwards-15 | dễ |  | Một con ốc sên bò lên thêm 6 cm thì cách mặt đất 20 cm. Trước đó ốc sên cách mặt đất bao … | 14 cm | ☐ |
+| log-work-backwards-16 | dễ |  | Nam cắt một sợi ruy băng thành 3 đoạn dài bằng nhau, mỗi đoạn dài 8 cm. Lúc đầu sợi ruy b… | 24 cm | ☐ |
+| log-work-backwards-17 | vừa |  | Tuấn nghĩ ra một số. Tuấn cộng thêm 7, rồi gấp đôi kết quả thì được 30. Tuấn đã nghĩ số n… | 8 | ☐ |
+| log-work-backwards-18 | vừa |  | Một chiếc máy số làm 2 việc: trừ số đưa vào đi 4, rồi nhân kết quả với 3. Máy cho ra 27. … | 13 | ☐ |
+| log-work-backwards-19 | vừa |  | Mai có một túi kẹo. Mai ăn 3 cái, rồi cho em trai 5 cái thì còn lại 10 cái. Lúc đầu túi c… | 18 | ☐ |
+| log-work-backwards-20 | vừa |  | Hà cho bạn một nửa số viên bi của mình và thêm 2 viên nữa. Hà còn lại 10 viên bi. Lúc đầu… | 24 | ☐ |
+| log-work-backwards-21 | vừa |  | Bình mua sách hết 12 nghìn đồng, mua bánh hết 8 nghìn đồng, còn lại 15 nghìn đồng. Lúc đầ… | 35 nghìn đồng | ☐ |
+| log-work-backwards-22 | vừa |  | Ở khách sạn, Bình đi thang máy lên 5 tầng để lấy đồ, sau đó xuống 3 tầng tới hồ bơi ở tần… | 6 | ☐ |
+| log-work-backwards-23 | vừa |  | Một chú ếch nhảy lên 4 bậc thang, rồi nhảy xuống 6 bậc thì đứng ở bậc thứ 5. Lúc đầu ếch … | 7 | ☐ |
+| log-work-backwards-24 | vừa |  | Có 2 bình A và B. Linh rót 4 lít từ bình A sang bình B, rồi rót 2 lít từ bình B về bình A… | 9 lít | ☐ |
+| log-work-backwards-25 | vừa |  | Nam cho Lan một nửa số nhãn dán, rồi cho Khoa 6 nhãn dán. Nam còn lại 9 nhãn dán. Lúc đầu… | 30 | ☐ |
+| log-work-backwards-26 | vừa |  | Buổi sáng bồn có một ít nước. Buổi trưa bố đổ thêm nước cho bồn có gấp đôi lúc sáng. Buổi… | 11 lít | ☐ |
+| log-work-backwards-27 | vừa |  | Xe buýt đến bến thứ nhất có 5 người xuống. Đến bến thứ hai có 8 người lên. Bây giờ trên x… | 17 | ☐ |
+| log-work-backwards-28 | vừa |  | Linh có một ít tiền. Bà cho Linh thêm 20 nghìn đồng. Sau đó Linh tiêu một nửa số tiền đan… | 30 nghìn đồng | ☐ |
+| log-work-backwards-29 | vừa |  | Tuấn cắt bớt 8 cm từ một sợi dây, rồi cắt phần còn lại thành 2 đoạn bằng nhau, mỗi đoạn d… | 28 cm | ☐ |
+| log-work-backwards-30 | vừa |  | Một chiếc máy số chia số đưa vào cho 3, rồi cộng thêm 4. Máy cho ra 10. Số đưa vào là số … | 18 | ☐ |
+| log-work-backwards-31 | vừa |  | Mẹ nướng một mẻ bánh quy. Cả nhà ăn 9 cái, rồi mẹ nướng thêm 10 cái. Bây giờ có 25 cái bá… | 24 | ☐ |
+| log-work-backwards-32 | vừa |  | Một con ốc sên bò lên một bức tường, mỗi ngày bò lên 3 cm. Sau 4 ngày, ốc sên ở độ cao 20… | 8 cm | ☐ |
+| log-work-backwards-33 | khó |  | Lan nghĩ ra một số. Lan cộng thêm 5, nhân kết quả với 3, rồi trừ đi 6 thì được 30. Lan đã… | 7 | ☐ |
+| log-work-backwards-34 | khó |  | Minh cho An một nửa số viên bi và thêm 1 viên. Sau đó Minh cho Bình một nửa số bi còn lại… | 26 | ☐ |
+| log-work-backwards-35 | khó |  | Khoa tiêu một nửa số tiền ở hiệu sách, rồi tiêu 10 nghìn đồng ở tiệm bánh, rồi tiêu một n… | 80 nghìn đồng | ☐ |
+| log-work-backwards-36 | khó |  | Sáng nay thang máy của tòa nhà chạy 4 chuyến liên tiếp: lên 6 tầng, xuống 9 tầng, lên 4 t… | 6 | ☐ |
+| log-work-backwards-37 | khó |  | Có 3 bình A, B, C. Rót 5 lít từ A sang B, rồi rót 3 lít từ B sang C, rồi rót 2 lít từ C s… | 8 lít | ☐ |
+| log-work-backwards-38 | khó |  | Một con ốc sên ban ngày bò lên 5 cm, ban đêm tụt xuống 2 cm. Sau 3 ngày và 3 đêm, ốc sên … | 11 cm | ☐ |
+| log-work-backwards-39 | khó |  | Nam nghĩ ra một số. Nam gấp đôi số đó, cộng thêm 6, chia đôi kết quả, rồi trừ đi 4 thì đư… | 10 | ☐ |
+| log-work-backwards-40 | khó |  | Bác bán trứng có một rổ trứng. Người thứ nhất mua một nửa số trứng. Người thứ hai mua một… | 40 | ☐ |
+
+## Số học – Arithmetic (200 câu)
+
+### Tính nhanh, tính khéo (40 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| ari-quick-calc-01 | dễ |  | Tính nhanh: 25 + 48 + 75 = ? | 148 | ☐ |
+| ari-quick-calc-02 | dễ |  | Mai có 36 hạt cườm đỏ, 19 hạt cườm xanh và 64 hạt cườm vàng. Mai có tất cả bao nhiêu hạt … | 119 | ☐ |
+| ari-quick-calc-03 | dễ |  | Tính nhanh: 99 + 46 = ? | 145 | ☐ |
+| ari-quick-calc-04 | dễ |  | Bình xếp 6 hàng ghế, mỗi hàng 8 ghế. Tính 8 + 8 + 8 + 8 + 8 + 8 = ? | 48 | ☐ |
+| ari-quick-calc-05 | dễ |  | Tính tổng các số từ 1 đến 9: 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 = ? | 45 | ☐ |
+| ari-quick-calc-06 | dễ |  | Tính nhanh: 58 − 9 = ? | 49 | ☐ |
+| ari-quick-calc-07 | dễ |  | Lan có 6 hộp bút, mỗi hộp 9 cây. Tính nhanh 9 + 9 + 9 + 9 + 9 + 9 = ? | 54 | ☐ |
+| ari-quick-calc-08 | dễ |  | Tính nhanh: 17 + 28 + 3 = ? | 48 | ☐ |
+| ari-quick-calc-09 | dễ |  | Tính nhanh tích: 2 × 7 × 5 = ? | 70 | ☐ |
+| ari-quick-calc-10 | dễ |  | Không cần tính, so sánh hai tổng: 38 + 47 và 37 + 48. | Hai tổng bằng nhau | ☐ |
+| ari-quick-calc-11 | dễ |  | Tính nhanh: 10 + 20 + 30 + 40 + 50 = ? | 150 | ☐ |
+| ari-quick-calc-12 | dễ |  | Tính nhanh: 63 + 98 = ? | 161 | ☐ |
+| ari-quick-calc-13 | dễ |  | Minh bỏ ống 25 đồng xu mỗi tuần, trong 4 tuần. Tính 25 + 25 + 25 + 25 = ? | 100 | ☐ |
+| ari-quick-calc-14 | dễ |  | Ghép các số thành số tròn chục để tính nhanh: 8 + 13 + 2 + 7 = ? | 30 | ☐ |
+| ari-quick-calc-15 | dễ |  | Cộng trừ xen kẽ, tính nhanh: 10 − 9 + 8 − 7 + 6 − 5 = ? | 3 | ☐ |
+| ari-quick-calc-16 | dễ |  | Tính nhanh: 4 × 9 × 25 = ? | 900 | ☐ |
+| ari-quick-calc-17 | vừa |  | Tính nhanh: 198 + 57 = ? | 255 | ☐ |
+| ari-quick-calc-18 | vừa |  | Tính nhanh: 301 − 99 = ? | 202 | ☐ |
+| ari-quick-calc-19 | vừa |  | Tính tổng các số chẵn: 2 + 4 + 6 + 8 + 10 + 12 + 14 + 16 + 18 + 20 = ? | 110 | ☐ |
+| ari-quick-calc-20 | vừa |  | Tính nhanh: 36 + 36 + 36 − 6 − 6 − 6 = ? | 90 | ☐ |
+| ari-quick-calc-21 | vừa |  | Mẹo nhân: 5 × 18 = ? | 90 | ☐ |
+| ari-quick-calc-22 | vừa |  | Tính nhanh: 6 × 7 + 4 × 7 = ? | 70 | ☐ |
+| ari-quick-calc-23 | vừa |  | Dùng bảng nhân 8 để tính nhanh: 9 × 8 − 4 × 8 = ? | 40 | ☐ |
+| ari-quick-calc-24 | vừa |  | Tính nhanh: 20 − 19 + 18 − 17 + 16 − 15 + … + 4 − 3 + 2 − 1 = ? | 10 | ☐ |
+| ari-quick-calc-25 | vừa |  | Khoa cộng 7 số 8 lại với nhau, rồi trừ bớt một số 8: 8 + 8 + 8 + 8 + 8 + 8 + 8 − 8 = ? | 48 | ☐ |
+| ari-quick-calc-26 | vừa |  | Không cần tính, so sánh: 99 + 99 + 99 và 300 − 3. | Hai bên bằng nhau | ☐ |
+| ari-quick-calc-27 | vừa |  | Tính nhanh: 125 + 268 + 75 = ? | 468 | ☐ |
+| ari-quick-calc-28 | vừa |  | Tính nhanh: 47 + 47 + 47 + 53 + 53 + 53 = ? | 300 | ☐ |
+| ari-quick-calc-29 | vừa |  | Tìm thừa số chung rồi tính: 3 × 9 + 9 × 7 = ? | 90 | ☐ |
+| ari-quick-calc-30 | vừa |  | Hà có 457 con tem, Hà tặng bạn 199 con tem. Hà còn lại bao nhiêu con tem? | 258 | ☐ |
+| ari-quick-calc-31 | vừa |  | Nhóm các thừa số hợp lý rồi tính: 5 × 7 × 2 × 9 = ? | 630 | ☐ |
+| ari-quick-calc-32 | vừa |  | Không cần tính, tổng thứ nhất 46 + 27 lớn hơn tổng thứ hai 47 + 25 bao nhiêu? | 1 | ☐ |
+| ari-quick-calc-33 | khó |  | Tính nhanh: (2 + 4 + 6 + … + 20) − (1 + 3 + 5 + … + 19) = ? | 10 | ☐ |
+| ari-quick-calc-34 | khó |  | Tính nhanh: 1 + 2 − 3 + 4 + 5 − 6 + 7 + 8 − 9 + 10 + 11 − 12 = ? | 18 | ☐ |
+| ari-quick-calc-35 | khó |  | Tính tổng các số lẻ: 1 + 3 + 5 + 7 + 9 + 11 + 13 + 15 + 17 + 19 = ? | 100 | ☐ |
+| ari-quick-calc-36 | khó |  | Tính nhanh: 99 + 199 + 299 + 3 = ? | 600 | ☐ |
+| ari-quick-calc-37 | khó |  | Tính nhanh: 6 × 8 + 6 × 2 + 2 × 10 = ? | 80 | ☐ |
+| ari-quick-calc-38 | khó |  | Tổng thứ nhất: 2 + 4 + 6 + 8 + 10 + 12. / Tổng thứ hai: 1 + 3 + 5 + 7 + 9 + 11 + 13. / Tổ… | Tổng thứ hai lớn hơn 7 | ☐ |
+| ari-quick-calc-39 | khó |  | Dãy số đi lên rồi đi xuống. Tính tổng: 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 + 9 + 8 + 7… | 100 | ☐ |
+| ari-quick-calc-40 | khó |  | Tính nhanh: 403 − 98 − 102 = ? | 203 | ☐ |
+
+### Tìm số và dấu còn thiếu (40 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| ari-missing-number-01 | dễ |  | Điền số thích hợp vào □: 35 + □ = 82 | 47 | ☐ |
+| ari-missing-number-02 | dễ |  | Điền số thích hợp vào □: □ − 17 = 46 | 63 | ☐ |
+| ari-missing-number-03 | dễ |  | Điền số thích hợp vào □: 4 × □ = 28 | 7 | ☐ |
+| ari-missing-number-04 | dễ |  | Điền số thích hợp vào □: 90 − □ = 54 | 36 | ☐ |
+| ari-missing-number-05 | dễ |  | Số nào điền vào □? □ + 28 = 100 | 72 | ☐ |
+| ari-missing-number-06 | dễ |  | Số nào điền vào □? □ × 6 = 42 | 7 | ☐ |
+| ari-missing-number-07 | dễ |  | Điền số thích hợp vào □: 45 : □ = 5 | 9 | ☐ |
+| ari-missing-number-08 | dễ |  | Tìm số bị chia còn thiếu: □ : 4 = 8 | 32 | ☐ |
+| ari-missing-number-09 | dễ |  | Số nào ở ngôi sao? ★ + ★ + 6 = 20 | 7 | ☐ |
+| ari-missing-number-10 | dễ |  | Tìm số bị trừ: □ − 37 = 63 | 100 | ☐ |
+| ari-missing-number-11 | dễ |  | Số nào điền vào □? 7 + □ + 8 = 30 | 15 | ☐ |
+| ari-missing-number-12 | dễ |  | Điền dấu nào vào □ để có: 9 □ 3 = 27? | × | ☐ |
+| ari-missing-number-13 | dễ |  | Điền dấu nào vào □ để có: 15 □ 6 = 9? | − | ☐ |
+| ari-missing-number-14 | dễ |  | Ô trống nằm bên phải dấu bằng: 56 = □ + 19. Ô trống là số nào? | 37 | ☐ |
+| ari-missing-number-15 | dễ |  | Số nào ở ngôi sao? ★ + ★ + ★ = 24 | 8 | ☐ |
+| ari-missing-number-16 | dễ |  | Viết tổng thành phép nhân: 6 + 6 + 6 + 6 = 6 × □. Số trong ô là mấy? | 4 | ☐ |
+| ari-missing-number-17 | vừa |  | Điền số thích hợp vào □: 56 − □ = 19 + 8 | 29 | ☐ |
+| ari-missing-number-18 | vừa |  | Điền số thích hợp vào □: □ + 15 = 40 − 12 | 13 | ☐ |
+| ari-missing-number-19 | vừa |  | Số nào điền vào □? 3 × □ = 50 − 26 | 8 | ☐ |
+| ari-missing-number-20 | vừa |  | Mọi ô □ là cùng một số. Số đó là bao nhiêu? / □ + □ + 12 = □ + 30 | 18 | ☐ |
+| ari-missing-number-21 | vừa |  | Điền dấu +, − hoặc × vào hai ô (theo thứ tự) để có: / 8 □ 2 □ 5 = 21 | × và + | ☐ |
+| ari-missing-number-22 | vừa |  | Chọn hai dấu phép tính (+, −, ×) cho hai ô, từ trái sang phải: / 6 □ 3 □ 4 = 14 | × và − | ☐ |
+| ari-missing-number-23 | vừa |  | Trong phép cộng 4□ + ○7 = 92, mỗi hình là một chữ số. Tính □ + ○. | 9 | ☐ |
+| ari-missing-number-24 | vừa |  | Trong phép cộng □3 + 2○ = 71, mỗi hình là một chữ số. □ là chữ số nào? | 4 | ☐ |
+| ari-missing-number-25 | vừa |  | Trong phép trừ □5 − 3○ = 18, mỗi hình là một chữ số. Tính □ + ○. | 12 | ☐ |
+| ari-missing-number-26 | vừa |  | Mọi ngôi sao là cùng một số. Số đó là bao nhiêu? / ★ + ★ + ★ + 5 = ★ + ★ + 13 | 8 | ☐ |
+| ari-missing-number-27 | vừa |  | Số nào điền vào □? □ × 4 + 7 = 35 | 7 | ☐ |
+| ari-missing-number-28 | vừa |  | Hai ô □ là cùng một số. Số đó là bao nhiêu? / 45 − □ = □ + 9 | 18 | ☐ |
+| ari-missing-number-29 | vừa |  | Điền số thích hợp vào □: □ : 3 = 18 − 11 | 21 | ☐ |
+| ari-missing-number-30 | vừa |  | Điền dấu +, − hoặc × vào hai ô (theo thứ tự) để có: / 20 □ 4 □ 3 = 19 | − và + | ☐ |
+| ari-missing-number-31 | vừa |  | Biết: □ + □ + △ = 20 và □ + △ = 13. / Số △ là bao nhiêu? | 6 | ☐ |
+| ari-missing-number-32 | vừa | ma-matchsticks | Phép tính que diêm trong hình đang sai: 6 + 4 = 4. Nhấc que dọc của dấu + (để dấu + thành… | 8 | ☐ |
+| ari-missing-number-33 | khó |  | Hai ô □ là cùng một chữ số. Chữ số đó là gì? / 3□5 + 1□7 = 572 | 8 | ☐ |
+| ari-missing-number-34 | khó |  | Mỗi ô là một dấu +, −, × hoặc :. Cặp dấu nào (theo thứ tự) làm phép tính đúng? / 12 □ 3 □… | : và + | ☐ |
+| ari-missing-number-35 | khó |  | Hai ô □ là cùng một chữ số. Chữ số đó là gì? / □7 + 7□ = 121 | 4 | ☐ |
+| ari-missing-number-36 | khó |  | Mọi ô □ là cùng một chữ số. Chữ số đó là gì? / □□ + □ + □ = 52 | 4 | ☐ |
+| ari-missing-number-37 | khó |  | Biết: ★ + ★ = ● và ● + ● + ★ = 30. / Số ● là bao nhiêu? | 12 | ☐ |
+| ari-missing-number-38 | khó |  | Hai ô □ là cùng một chữ số. Chữ số đó là gì? / 7□ − □8 = 26 | 4 | ☐ |
+| ari-missing-number-39 | khó |  | Mọi ô □ là cùng một số. Số đó là bao nhiêu? / 100 − □ − □ − □ = □ + 4 | 24 | ☐ |
+| ari-missing-number-40 | khó |  | Điền + hoặc − vào mỗi ô (theo thứ tự) để có: / 1 □ 2 □ 3 □ 4 □ 5 = 7 | + + − + | ☐ |
+
+### Toán có lời văn (40 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| ari-word-problems-01 | dễ |  | Mai có 25 nhãn dán. Lan có nhiều hơn Mai 8 nhãn dán. Hỏi Lan có bao nhiêu nhãn dán? | 33 | ☐ |
+| ari-word-problems-02 | dễ |  | Sợi ruy băng đỏ dài 45 cm. Sợi ruy băng xanh ngắn hơn sợi đỏ 12 cm. Sợi xanh dài bao nhiê… | 33 cm | ☐ |
+| ari-word-problems-03 | dễ |  | An có 6 viên bi. Bình có số bi gấp 3 lần số bi của An. Hỏi Bình có bao nhiêu viên bi? | 18 | ☐ |
+| ari-word-problems-04 | dễ |  | Cô giáo chia đều 24 cái kẹo cho 4 bạn. Mỗi bạn được mấy cái kẹo? | 6 | ☐ |
+| ari-word-problems-05 | dễ |  | Có 5 hộp bút, mỗi hộp có 7 cây bút chì. Hỏi có tất cả bao nhiêu cây bút chì? | 35 | ☐ |
+| ari-word-problems-06 | dễ |  | Khoa có 40 tấm thẻ. Minh có ít hơn Khoa 15 tấm thẻ. Hỏi Minh có bao nhiêu tấm thẻ? | 25 | ☐ |
+| ari-word-problems-07 | dễ |  | Hà nhặt được 52 vỏ sò, Tuấn nhặt được 37 vỏ sò. Hỏi Hà nhặt được nhiều hơn Tuấn bao nhiêu… | 15 | ☐ |
+| ari-word-problems-08 | dễ |  | Thứ Hai Linh đọc 9 trang sách. Thứ Ba Linh đọc gấp đôi số trang của thứ Hai. Hỏi thứ Ba L… | 18 | ☐ |
+| ari-word-problems-09 | dễ |  | Lớp có 30 học sinh, chia thành các nhóm, mỗi nhóm 5 bạn. Hỏi có bao nhiêu nhóm? | 6 | ☐ |
+| ari-word-problems-10 | dễ |  | Nam cho Bình 5 viên bi thì Nam còn lại 13 viên bi. Hỏi lúc đầu Nam có bao nhiêu viên bi? | 18 | ☐ |
+| ari-word-problems-11 | dễ |  | Mỗi con nhện có 8 chân. Hỏi 3 con nhện có tất cả bao nhiêu chân? | 24 | ☐ |
+| ari-word-problems-12 | dễ |  | Lan và Mai hái được tất cả 30 bông hoa. Lan hái được 12 bông. Hỏi Mai hái được bao nhiêu … | 18 | ☐ |
+| ari-word-problems-13 | dễ |  | Trong sân có 6 con gà. Hỏi 6 con gà có tất cả bao nhiêu cái chân? | 12 | ☐ |
+| ari-word-problems-14 | dễ |  | Mỗi chiếc ô tô có 4 bánh xe. Bãi xe có tất cả 20 bánh xe. Hỏi có mấy chiếc ô tô? | 5 | ☐ |
+| ari-word-problems-15 | dễ |  | Buổi sáng Hà hái 23 quả táo, buổi chiều hái thêm 19 quả. Hỏi cả ngày Hà hái được bao nhiê… | 42 | ☐ |
+| ari-word-problems-16 | dễ |  | Một sợi dây dài 40 cm được cắt thành 5 đoạn dài bằng nhau. Mỗi đoạn dài bao nhiêu? | 8 cm | ☐ |
+| ari-word-problems-17 | vừa |  | Tổng của hai số là 30, hiệu của chúng là 6. Số lớn là bao nhiêu? | 18 | ☐ |
+| ari-word-problems-18 | vừa |  | Năm nay Nam 6 tuổi, bố 30 tuổi. Hỏi sau mấy năm nữa tuổi bố gấp 4 lần tuổi Nam? | 2 | ☐ |
+| ari-word-problems-19 | vừa |  | Nếu An cho Bình 3 viên bi thì số bi của hai bạn bằng nhau. Hỏi An có nhiều hơn Bình bao n… | 6 | ☐ |
+| ari-word-problems-20 | vừa |  | Ở hội chợ, mỗi lượt đi đu quay cần 4 vé. Lan có 30 vé và đi đu quay 6 lượt. Hỏi Lan còn l… | 6 | ☐ |
+| ari-word-problems-21 | vừa |  | Trên xe buýt có 26 người. Đến bến, 9 người xuống và 7 người lên. Hỏi lúc này trên xe có b… | 24 | ☐ |
+| ari-word-problems-22 | vừa |  | Khoa có 14 nhãn dán, như vậy Khoa có ít hơn Hà 6 nhãn dán. Hỏi Hà có bao nhiêu nhãn dán? | 20 | ☐ |
+| ari-word-problems-23 | vừa |  | Có 5 cây trồng thành một hàng thẳng, hai cây liền nhau cách nhau 3 m. Hỏi từ cây đầu tiên… | 12 m | ☐ |
+| ari-word-problems-24 | vừa |  | Bác thợ cưa một khúc gỗ thành 4 đoạn. Mỗi lần cưa mất 3 phút. Hỏi bác cưa xong hết bao nh… | 9 phút | ☐ |
+| ari-word-problems-25 | vừa |  | Minh có 8 cây bút màu. Khoa có số bút màu gấp 3 lần của Minh. Hỏi cả hai bạn có tất cả ba… | 32 | ☐ |
+| ari-word-problems-26 | vừa |  | Có 26 bạn đi chèo thuyền. Mỗi thuyền chở được nhiều nhất 4 bạn. Cần ít nhất bao nhiêu chi… | 7 | ☐ |
+| ari-word-problems-27 | vừa |  | Lan có nhiều hơn Mai 15 nhãn dán. Lan cho Mai 5 nhãn dán. Điều nào sau đây đúng? | Lan nhiều hơn Mai 5 nhãn dán | ☐ |
+| ari-word-problems-28 | vừa |  | Có 3 rổ, mỗi rổ 8 quả cam. Số cam được chia đều cho 4 bạn. Hỏi mỗi bạn được mấy quả cam? | 6 | ☐ |
+| ari-word-problems-29 | vừa |  | Hà đã có 12 vỏ ốc. Mỗi ngày Hà nhặt thêm 6 vỏ ốc. Hỏi sau mấy ngày Hà có 42 vỏ ốc? | 5 | ☐ |
+| ari-word-problems-30 | vừa |  | Linh có 20 cái kẹo. Linh ăn 4 cái, rồi cho em trai Nam một nửa số kẹo còn lại. Hỏi Nam đư… | 8 | ☐ |
+| ari-word-problems-31 | vừa |  | Giỏ của Nam có số táo gấp 3 lần giỏ của Mai. Cả hai giỏ có 24 quả táo. Hỏi giỏ của Mai có… | 6 | ☐ |
+| ari-word-problems-32 | vừa |  | Lớp 3A có 32 học sinh. Số bạn gái nhiều hơn số bạn trai 4 bạn. Hỏi lớp có bao nhiêu bạn t… | 14 | ☐ |
+| ari-word-problems-33 | khó |  | Trong chuồng có gà và thỏ, tất cả 7 con. Đếm được 20 cái chân. Hỏi có mấy con thỏ? | 3 | ☐ |
+| ari-word-problems-34 | khó |  | Linh đếm gà và thỏ trong sân: có 10 cái đầu và 26 cái chân. Hỏi trong sân có mấy con gà? | 7 | ☐ |
+| ari-word-problems-35 | khó |  | Người ta trồng cây ở cả hai bên một con đường dài 20 m. Mỗi bên, cứ cách 5 m trồng một câ… | 10 | ☐ |
+| ari-word-problems-36 | khó |  | Một khúc gỗ dài 12 m được cưa thành các đoạn dài 2 m. Mỗi lần cưa mất 4 phút. Hỏi cưa xon… | 20 phút | ☐ |
+| ari-word-problems-37 | khó |  | Nam và Khoa có tất cả 40 tấm thẻ. Nếu Nam cho Khoa 4 tấm thẻ thì số thẻ của hai bạn bằng … | 24 | ☐ |
+| ari-word-problems-38 | khó |  | Mai có số nhãn dán gấp 3 lần Lan. Mai cho Lan 10 nhãn dán thì hai bạn có số nhãn dán bằng… | 10 | ☐ |
+| ari-word-problems-39 | khó |  | Đi bộ từ tầng 1 lên tầng 3 của một tòa nhà phải bước 24 bậc thang. Hỏi đi từ tầng 1 lên t… | 60 | ☐ |
+| ari-word-problems-40 | khó |  | Hộp A và hộp B có tất cả 50 cây bút. Chuyển 5 cây bút từ hộp A sang hộp B thì hộp B nhiều… | 27 | ☐ |
+
+### Tiền, thời gian, đơn vị đo (40 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| ari-money-time-units-01 | dễ |  | Lan mua một bút chì giá 5 nghìn đồng, một quyển vở giá 8 nghìn đồng và một cục tẩy giá 2 … | 15 nghìn đồng | ☐ |
+| ari-money-time-units-02 | dễ |  | Minh mua một ô tô đồ chơi giá 12 nghìn đồng và đưa tờ 20 nghìn đồng. Minh được trả lại ba… | 8 nghìn đồng | ☐ |
+| ari-money-time-units-03 | dễ |  | Đổi: 2 giờ 15 phút = ? phút | 135 phút | ☐ |
+| ari-money-time-units-04 | dễ |  | Sợi dây dài 3 m 5 cm. Sợi dây dài bao nhiêu xăng-ti-mét? | 305 cm | ☐ |
+| ari-money-time-units-05 | dễ |  | Bộ phim bắt đầu lúc 7:45 và dài 50 phút. Bộ phim kết thúc lúc mấy giờ? | 8:35 | ☐ |
+| ari-money-time-units-06 | dễ |  | Tiết học bắt đầu lúc 8:30 và kết thúc lúc 9:05. Tiết học dài bao nhiêu phút? | 35 phút | ☐ |
+| ari-money-time-units-07 | dễ |  | Cần bao nhiêu tờ 5 nghìn đồng để được 50 nghìn đồng? | 10 tờ | ☐ |
+| ari-money-time-units-08 | dễ |  | Một dải ruy băng dài 80 cm được cắt thành 4 đoạn dài bằng nhau. Mỗi đoạn dài bao nhiêu? | 20 cm | ☐ |
+| ari-money-time-units-09 | dễ |  | Độ dài nào dài nhất? | 120 cm | ☐ |
+| ari-money-time-units-10 | dễ |  | Chai nước có 500 ml. Nam rót thêm 700 ml vào chai. Lúc này chai có bao nhiêu nước? | 1 lít 200 ml | ☐ |
+| ari-money-time-units-11 | dễ |  | Đổi: 130 phút = ? | 2 giờ 10 phút | ☐ |
+| ari-money-time-units-12 | dễ |  | Hà có 2 tờ 10 nghìn đồng và 3 tờ 5 nghìn đồng. Hà có tất cả bao nhiêu tiền? | 35 nghìn đồng | ☐ |
+| ari-money-time-units-13 | dễ |  | Túi bột mì cân nặng 2 kg 50 g. Túi bột mì nặng bao nhiêu gam? | 2050 g | ☐ |
+| ari-money-time-units-14 | dễ |  | Khoa phải đến trường lúc 9:10. Khoa đi bộ hết 30 phút. Khoa phải xuất phát muộn nhất lúc … | 8:40 | ☐ |
+| ari-money-time-units-15 | dễ |  | Khối lượng nào nhẹ nhất? | 800 g | ☐ |
+| ari-money-time-units-16 | dễ |  | Một con gấu bông giá 35 nghìn đồng. Linh có 20 nghìn đồng. Linh cần thêm bao nhiêu tiền n… | 15 nghìn đồng | ☐ |
+| ari-money-time-units-17 | vừa |  | Một cái ca đựng 1 lít nước. Mai rót ra 2 cốc, mỗi cốc 300 ml. Trong ca còn lại bao nhiêu … | 400 ml | ☐ |
+| ari-money-time-units-18 | vừa |  | Cửa hàng mở cửa lúc 8:00 sáng và đóng cửa lúc 5:00 chiều. Cửa hàng mở cửa bao nhiêu giờ? | 9 giờ | ☐ |
+| ari-money-time-units-19 | vừa |  | Nam đi ngủ lúc 8:30 tối và thức dậy lúc 6:30 sáng hôm sau. Nam ngủ bao lâu? | 10 giờ | ☐ |
+| ari-money-time-units-20 | vừa |  | Mai cắt một dải ruy băng dài 1 m thành các đoạn, mỗi đoạn dài 20 cm. Mai phải cắt bao nhi… | 4 nhát | ☐ |
+| ari-money-time-units-21 | vừa |  | Tuấn muốn trả đúng 5 nghìn đồng bằng các tờ 1 nghìn, 2 nghìn hoặc 5 nghìn đồng (không cần… | 4 cách | ☐ |
+| ari-money-time-units-22 | vừa |  | An mua 3 quyển vở, mỗi quyển giá 7 nghìn đồng. An đưa tờ 50 nghìn đồng. An được trả lại b… | 29 nghìn đồng | ☐ |
+| ari-money-time-units-23 | vừa |  | Mẹ cho bánh vào lò lúc 10:50. Bánh nướng hết 1 giờ 15 phút. Bánh chín lúc mấy giờ? | 12:05 | ☐ |
+| ari-money-time-units-24 | vừa |  | Túi cam nặng 1 kg 200 g. Túi táo nặng 900 g. Túi cam nặng hơn túi táo bao nhiêu? | 300 g | ☐ |
+| ari-money-time-units-25 | vừa |  | Lan có 3 tờ 20 nghìn đồng. Minh có 1 tờ 50 nghìn đồng và 2 tờ 5 nghìn đồng. Bạn nào có nh… | Hai bạn có số tiền bằng nhau | ☐ |
+| ari-money-time-units-26 | vừa |  | Tuấn có 2 lít nước cam. Tuấn rót vào các cốc, mỗi cốc 250 ml. Tuấn rót được bao nhiêu cốc? | 8 cốc | ☐ |
+| ari-money-time-units-27 | vừa |  | Sợi dây dài 2 m. Bố cắt ra 3 đoạn, mỗi đoạn dài 45 cm. Sợi dây còn lại dài bao nhiêu? | 65 cm | ☐ |
+| ari-money-time-units-28 | vừa |  | Lan cao 1 m 28 cm. Bình thấp hơn Lan 9 cm. Minh cao hơn Bình 15 cm. Minh cao bao nhiêu? | 1 m 34 cm | ☐ |
+| ari-money-time-units-29 | vừa |  | 1 kg gạo giá 20 nghìn đồng. Hỏi 500 g gạo giá bao nhiêu tiền? | 10 nghìn đồng | ☐ |
+| ari-money-time-units-30 | vừa |  | Đồng hồ của Hà chạy nhanh 10 phút. Đồng hồ đang chỉ 8:05. Giờ đúng lúc đó là mấy giờ? | 7:55 | ☐ |
+| ari-money-time-units-31 | vừa |  | 3 quả táo như nhau nặng 600 g. Hỏi 5 quả táo như thế nặng bao nhiêu? | 1 kg | ☐ |
+| ari-money-time-units-32 | vừa |  | Trận bóng đá kéo dài 1 giờ 40 phút và kết thúc lúc 9:10. Trận đấu bắt đầu lúc mấy giờ? | 7:30 | ☐ |
+| ari-money-time-units-33 | khó |  | Lớp 3A đi dã ngoại từ 9:30 sáng đến 2:15 chiều. Chuyến đi kéo dài bao lâu? | 4 giờ 45 phút | ☐ |
+| ari-money-time-units-34 | khó |  | Bến xe có chuyến buýt đầu tiên lúc 7:00, sau đó cứ 25 phút lại có một chuyến. Nam ra đến … | 20 phút | ☐ |
+| ari-money-time-units-35 | khó |  | Có rất nhiều tờ 2 nghìn, 5 nghìn và 10 nghìn đồng. Có bao nhiêu cách trả đúng 20 nghìn đồ… | 6 cách | ☐ |
+| ari-money-time-units-36 | khó |  | Đồng hồ của Khoa cứ mỗi giờ chạy chậm 5 phút. Khoa chỉnh đúng giờ lúc 8:00 sáng. Lúc 2:00… | 1:30 | ☐ |
+| ari-money-time-units-37 | khó |  | Một cây bút đắt hơn một cái thước 6 nghìn đồng. Mua cả bút và thước hết 20 nghìn đồng. Cá… | 7 nghìn đồng | ☐ |
+| ari-money-time-units-38 | khó |  | Một thùng đựng 4 quyển sách giống nhau cân nặng 3 kg. Thùng rỗng nặng 600 g. Mỗi quyển sá… | 600 g | ☐ |
+| ari-money-time-units-39 | khó |  | Từ thứ Hai đến thứ Sáu, tối nào Linh cũng đọc sách từ 7:50 đến 8:35. Cả 5 tối Linh đọc sá… | 3 giờ 45 phút | ☐ |
+| ari-money-time-units-40 | khó |  | Nam có 9 tờ tiền, chỉ gồm tờ 2 nghìn và tờ 5 nghìn đồng, tổng cộng 30 nghìn đồng. Nam có … | 4 tờ | ☐ |
+
+### Cân thăng bằng và ẩn số (40 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| ari-balance-unknown-01 | dễ | ma-balance-math | Nhìn hai cái cân thăng bằng trong hình. Hỏi 1 quả táo nặng bằng mấy khối? | 3 | ☐ |
+| ari-balance-unknown-02 | dễ |  | Cân thăng bằng: đĩa trái có 15 khối gỗ, đĩa phải có 3 con vịt đồ chơi 🦆 giống nhau. / Ma… | 5 | ☐ |
+| ari-balance-unknown-03 | dễ |  | Linh đặt 1 quả dưa 🍈 lên đĩa trái và 7 khối gỗ lên đĩa phải. Đĩa trái vẫn nặng hơn. Linh… | 15 | ☐ |
+| ari-balance-unknown-04 | dễ |  | Khoa cân một hộp quà. Đĩa trái có 1 🎁 và quả cân 5 kg, đĩa phải có quả cân 12 kg. Cân th… | 7 kg | ☐ |
+| ari-balance-unknown-05 | dễ |  | Ở cửa hàng đồ chơi, 1 gấu bông 🐻 nặng bằng 2 thỏ bông 🐰. / Cần mấy thỏ bông để cân bằng… | 6 | ☐ |
+| ari-balance-unknown-06 | dễ |  | 4 viên gạch giống hệt nhau nặng tổng cộng 20 kg. / Hỏi 1 viên gạch nặng bao nhiêu? | 5 kg | ☐ |
+| ari-balance-unknown-07 | dễ |  | Minh đổ bớt 6 kg cát ra khỏi một túi cát. Đặt túi cát lên cân đĩa thì nó thăng bằng với q… | 15 kg | ☐ |
+| ari-balance-unknown-08 | dễ |  | Trong trò chơi đoán số của Khoa: / 🍓 + 🍓 = 🍋 / 🍓 = 7 / Quả chanh 🍋 có giá trị bao nh… | 14 | ☐ |
+| ari-balance-unknown-09 | dễ |  | 1 🐘 đồ chơi nặng bằng 5 🐭 đồ chơi. / 1 🐭 nặng 3 g. / Hỏi 1 🐘 nặng bao nhiêu? | 15 g | ☐ |
+| ari-balance-unknown-10 | dễ |  | Linh đặt 2 quả bí ngô 🎃 giống nhau lên đĩa trái. Đĩa phải có 1 quả bí ngô và quả cân 6 k… | 6 kg | ☐ |
+| ari-balance-unknown-11 | dễ |  | Hà đổi đồ trên cân đĩa: / 1 bí ngô 🎃 nặng bằng 2 quả dừa 🥥. / 1 quả dừa nặng bằng 3 quả… | 6 | ☐ |
+| ari-balance-unknown-12 | dễ |  | ■ = 4 / ■ + ■ + ■ + ▲ = 20 / Hỏi ▲ = ? | 8 | ☐ |
+| ari-balance-unknown-13 | dễ |  | Bao gạo và bao đường nặng tổng cộng 9 kg. Bao gạo nặng 5 kg. / Hỏi bao gạo nặng hơn bao đ… | 1 kg | ☐ |
+| ari-balance-unknown-14 | dễ |  | Trong giỏ của Lan, 1 quả cam 🍊 nặng bằng 2 quả chanh 🍋. / Hỏi 4 quả chanh nặng bằng mấy… | 2 | ☐ |
+| ari-balance-unknown-15 | dễ |  | Tuấn viết phép tính có ngôi sao bí ẩn: / ⭐ − 5 = 5 + 5 / Ngôi sao bí ẩn là số mấy? | 15 | ☐ |
+| ari-balance-unknown-16 | dễ |  | Cân thăng bằng: đĩa trái có 1 🍍, đĩa phải có 1 🍋 và 5 khối gỗ. / 1 🍋 nặng bằng 3 khối … | 8 | ☐ |
+| ari-balance-unknown-17 | vừa |  | 🐱 + 🐱 = 12 / 🐱 + 🐶 = 10 / Hỏi 🐶 = ? | 4 | ☐ |
+| ari-balance-unknown-18 | vừa |  | Một hộp có 5 quả bóng nặng hơn 30 g so với chính hộp đó khi chỉ có 2 quả bóng. Các quả bó… | 10 g | ☐ |
+| ari-balance-unknown-19 | vừa |  | Cân thăng bằng: đĩa trái có 2 quả bóng ⚽ giống nhau và 4 khối gỗ, đĩa phải có 18 khối gỗ.… | 7 | ☐ |
+| ari-balance-unknown-20 | vừa |  | 🐟 + 🐟 + 🐟 + 🐟 = 🐟 + 12 / Hỏi 🐟 = ? | 4 | ☐ |
+| ari-balance-unknown-21 | vừa |  | Nam đặt hoa quả lên cân ở lớp học: / 3 quả táo 🍎 nặng bằng 1 quả dứa 🍍. / 1 quả dứa và … | 3 | ☐ |
+| ari-balance-unknown-22 | vừa |  | Hai gói hàng nặng tổng cộng 20 kg. Gói này nặng hơn gói kia 4 kg. / Hỏi gói nặng hơn nặng… | 12 kg | ☐ |
+| ari-balance-unknown-23 | vừa |  | Cân thăng bằng: đĩa trái có 3 quả lê 🍐 và 2 khối gỗ, đĩa phải có 1 quả lê và 10 khối gỗ.… | 4 | ☐ |
+| ari-balance-unknown-24 | vừa |  | ■ + ■ = 18 / ■ + ▲ + ▲ = 15 / Hỏi ▲ = ? | 3 | ☐ |
+| ari-balance-unknown-25 | vừa |  | Cân thăng bằng: đĩa trái có 2 🎁 và quả cân 3 kg, đĩa phải có 1 🎁 và quả cân 10 kg. Các … | 7 kg | ☐ |
+| ari-balance-unknown-26 | vừa |  | Hộp to nặng bằng 2 hộp nhỏ. Hộp to và 1 hộp nhỏ nặng tổng cộng 18 kg. / Hỏi 1 hộp nhỏ nặn… | 6 kg | ☐ |
+| ari-balance-unknown-27 | vừa |  | 🌙 + ⭐ = 13 / 🌙 − ⭐ = 3 / Hỏi ⭐ = ? | 5 | ☐ |
+| ari-balance-unknown-28 | vừa |  | Trên kệ đồ chơi của Tuấn: / 1 thỏ 🐰 và 1 rùa 🐢 nặng bằng 9 khối gỗ. / 1 thỏ và 2 rùa nặ… | 5 | ☐ |
+| ari-balance-unknown-29 | vừa |  | Ở chợ, 2 quả chuối 🍌 nặng bằng 3 quả lê 🍐. / Hỏi 6 quả chuối nặng bằng mấy quả lê? | 9 | ☐ |
+| ari-balance-unknown-30 | vừa |  | Một hộp đựng 4 đồ chơi giống nhau nặng 70 g. Cũng hộp đó đựng 2 đồ chơi thì nặng 40 g. / … | 10 g | ☐ |
+| ari-balance-unknown-31 | vừa |  | Hình thoi ◆ và hình tròn ● thay cho các số: / ◆ + ◆ + ◆ = ● + ● / ● = 9 / Hình thoi là số… | 6 | ☐ |
+| ari-balance-unknown-32 | vừa |  | 🍎 + 🍎 + 🍌 = 14 / 🍎 + 🍌 = 10 / Hỏi 🍌 = ? | 6 | ☐ |
+| ari-balance-unknown-33 | khó |  | 🍎 + 🍌 = 11 / 🍌 + 🍒 = 13 / 🍎 + 🍒 = 10 / Hỏi 🍒 = ? | 6 | ☐ |
+| ari-balance-unknown-34 | khó |  | Một bình đầy nước nặng 9 kg. Khi chỉ còn một nửa nước, bình nặng 5 kg. / Hỏi bình rỗng nặ… | 1 kg | ☐ |
+| ari-balance-unknown-35 | khó |  | Trong bếp, Mai thấy 2 quả bơ 🥑 nặng bằng 3 quả kiwi 🥝. / 1 quả bơ và 1 quả kiwi nặng bằ… | 6 | ☐ |
+| ari-balance-unknown-36 | khó |  | ◆ + ◆ + ● = 20 / ◆ + ● + ● = 16 / Hỏi ◆ = ? | 8 | ☐ |
+| ari-balance-unknown-37 | khó |  | Tuấn có 3 cái cân đĩa, cả 3 cái đều thăng bằng: / Cân 1: 1 🐻 nặng bằng 1 🐰 và 1 🐢. / C… | Gấu 🐻 | ☐ |
+| ari-balance-unknown-38 | khó |  | Một hộp đựng 6 quả bóng giống nhau nặng 80 g. Cũng hộp đó đựng 3 quả bóng nặng 50 g. / Hỏ… | 120 g | ☐ |
+| ari-balance-unknown-39 | khó |  | Ba chiếc cặp của Mai, Lan và Hà nặng tổng cộng 21 kg. Cặp của Mai nặng hơn cặp của Lan 2 … | 9 kg | ☐ |
+| ari-balance-unknown-40 | khó |  | Một viên gạch nặng bằng 2 kg cộng với nửa viên gạch đó. / Hỏi viên gạch nặng bao nhiêu? | 4 kg | ☐ |
+
+## Lý thuyết số – Number Theory (200 câu)
+
+### Số chẵn và số lẻ (40 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| num-odd-even-01 | dễ |  | Số nào dưới đây là số chẵn? | 58 | ☐ |
+| num-odd-even-02 | dễ |  | Số nào dưới đây là số lẻ? | 73 | ☐ |
+| num-odd-even-03 | dễ |  | Mai cộng hai số lẻ bất kỳ với nhau. Kết quả: | Luôn là số chẵn | ☐ |
+| num-odd-even-04 | dễ |  | Trong các số 12, 17, 20, 33, 46, 59 có bao nhiêu số chẵn? | 3 | ☐ |
+| num-odd-even-05 | dễ |  | Số lẻ nhỏ nhất có 2 chữ số là số nào? | 11 | ☐ |
+| num-odd-even-06 | dễ |  | Số chẵn lớn nhất có 2 chữ số là số nào? | 98 | ☐ |
+| num-odd-even-07 | dễ |  | Số chẵn liền sau số 48 là số nào? | 50 | ☐ |
+| num-odd-even-08 | dễ |  | Nam viết tất cả các số lẻ lớn hơn 20 và nhỏ hơn 30. Nam viết được bao nhiêu số? | 5 | ☐ |
+| num-odd-even-09 | dễ |  | Các nhà bên trái một con phố được đánh số lẻ: 1, 3, 5, 7, … Nhà thứ 6 mang số mấy? | 11 | ☐ |
+| num-odd-even-10 | dễ |  | Phép cộng nào dưới đây có kết quả là số lẻ? | 26 + 37 | ☐ |
+| num-odd-even-11 | dễ |  | Lan có 15 cái kẹo. Lan muốn chia đều cho 2 bạn mà không còn thừa cái nào. Lan cần thêm ít… | 1 | ☐ |
+| num-odd-even-12 | dễ |  | Minh mở một quyển sách. Trang bên trái là trang 24. Trang bên phải là trang mấy? | 25 | ☐ |
+| num-odd-even-13 | dễ |  | Số 7□ là số chẵn. Chữ số □ có thể là số nào? | 4 | ☐ |
+| num-odd-even-14 | dễ |  | Số nào vừa là số lẻ, vừa lớn hơn 50? | 53 | ☐ |
+| num-odd-even-15 | dễ |  | Số lẻ liền trước số 70 là số nào? | 69 | ☐ |
+| num-odd-even-16 | dễ |  | Bình đếm các số chẵn: 2, 4, 6, …, 20. Bình đếm được bao nhiêu số? | 10 | ☐ |
+| num-odd-even-17 | vừa |  | Có bao nhiêu số lẻ nằm giữa 10 và 30? | 10 | ☐ |
+| num-odd-even-18 | vừa |  | Trên tia số, Linh tô màu các số chẵn từ 10 đến 30 (tính cả 10 và 30). Linh tô màu bao nhi… | 11 | ☐ |
+| num-odd-even-19 | vừa |  | Tính nhanh: 1 + 3 + 5 + 7 + 9 = ? | 25 | ☐ |
+| num-odd-even-20 | vừa |  | Tổng của 3 số tự nhiên liên tiếp là 27. Số lớn nhất trong 3 số đó là số nào? | 10 | ☐ |
+| num-odd-even-21 | vừa |  | Hai số lẻ liên tiếp có tổng là 36. Số lớn hơn là số nào? | 19 | ☐ |
+| num-odd-even-22 | vừa |  | Dùng các chữ số 3, 5, 8 (mỗi chữ số dùng một lần), viết số chẵn lớn nhất có 3 chữ số. | 538 | ☐ |
+| num-odd-even-23 | vừa |  | Dùng các chữ số 1, 4, 6 (mỗi chữ số dùng một lần), viết số lẻ nhỏ nhất có 3 chữ số. | 461 | ☐ |
+| num-odd-even-24 | vừa |  | Hà chọn 2 chữ số khác nhau trong các chữ số 3, 6, 9 để viết số lẻ có 2 chữ số. Số lẻ lớn … | 93 | ☐ |
+| num-odd-even-25 | vừa |  | Hà đọc sách từ trang 15 đến trang 32 (tính cả hai trang đó). Có bao nhiêu trang mang số c… | 9 | ☐ |
+| num-odd-even-26 | vừa |  | Không cần tính, cho biết tổng 1 + 2 + 3 + … + 10 là số gì? | Số lẻ | ☐ |
+| num-odd-even-27 | vừa |  | Phép nhân nào dưới đây có kết quả là số chẵn? | 3 × 8 | ☐ |
+| num-odd-even-28 | vừa |  | Tổng của hai số là một số lẻ. Một số là 14. Số còn lại có thể là số nào? | 21 | ☐ |
+| num-odd-even-29 | vừa |  | Tuấn có 3 hộp bút, mỗi hộp có một số lẻ cái bút. Tổng số bút của Tuấn có thể là bao nhiêu? | 25 | ☐ |
+| num-odd-even-30 | vừa |  | Tổng của 3 số chẵn liên tiếp là 30. Số nhỏ nhất trong các số đó là số nào? | 8 | ☐ |
+| num-odd-even-31 | vừa |  | Khoa mở một quyển sách. Tổng hai số trang của hai trang đang mở là 45. Trang có số nhỏ hơ… | 22 | ☐ |
+| num-odd-even-32 | vừa |  | Các phòng của một khách sạn được đánh số lẻ từ 15 đến 75: 15, 17, 19, …, 75. Khách sạn có… | 31 | ☐ |
+| num-odd-even-33 | khó |  | Có thể chọn 5 số lẻ (được chọn lặp lại) có tổng bằng 20 không? | Không, vì tổng của 5 số lẻ luôn là số lẻ | ☐ |
+| num-odd-even-34 | khó |  | An chọn 3 số khác nhau trong các số 1, 2, 3, 4, 5, 6 sao cho tổng của chúng là số chẵn. A… | 10 | ☐ |
+| num-odd-even-35 | khó |  | Điền dấu + hoặc dấu − vào mỗi ô trống: 6 □ 5 □ 4 □ 3 □ 2 □ 1. Kết quả có thể bằng 0 không? | Không, vì kết quả luôn là số lẻ | ☐ |
+| num-odd-even-36 | khó |  | Khoa xé 4 tờ giấy khỏi một quyển sách. Mỗi tờ có 2 trang: một trang số lẻ và trang số chẵ… | 100 | ☐ |
+| num-odd-even-37 | khó |  | Tìm số chẵn lớn nhất có 3 chữ số khác nhau mà tổng các chữ số bằng 10. | 910 | ☐ |
+| num-odd-even-38 | khó |  | 3 chiếc cốc đều đang úp ngược. Mỗi lượt Minh phải lật đúng 2 chiếc cốc. Cần ít nhất bao n… | Không thể làm được | ☐ |
+| num-odd-even-39 | khó |  | Linh viết các số từ 1 đến 15 lên bảng. Mỗi lần, Linh xóa 2 số bất kỳ và viết tổng của chú… | 120 | ☐ |
+| num-odd-even-40 | khó |  | Tổng của 4 số tự nhiên liên tiếp là 50. Số lớn nhất trong 4 số đó là số nào? | 14 | ☐ |
+
+### Chữ số và giá trị theo hàng (40 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| num-place-value-01 | dễ |  | Trong số 347, chữ số 4 có giá trị bằng bao nhiêu? | 40 | ☐ |
+| num-place-value-02 | dễ |  | Chữ số 5 trong số 582 có giá trị là bao nhiêu? | 500 | ☐ |
+| num-place-value-03 | dễ |  | Chữ số hàng chục của số 693 là chữ số nào? | 9 | ☐ |
+| num-place-value-04 | dễ |  | Trên bàn tính, cột trăm có 7 hạt, cột chục không có hạt nào, cột đơn vị có 4 hạt. Bàn tín… | 704 | ☐ |
+| num-place-value-05 | dễ |  | Bình có 3 tấm thẻ số: 3, 8, 5. Mỗi thẻ dùng đúng 1 lần, Bình ghép được số có 3 chữ số lớn… | 853 | ☐ |
+| num-place-value-06 | dễ |  | Số 7□4 lớn hơn 750 và bé hơn 760. Chữ số □ là chữ số nào? | 5 | ☐ |
+| num-place-value-07 | dễ |  | Số bé nhất có 3 chữ số là số nào? | 100 | ☐ |
+| num-place-value-08 | dễ |  | Tổng các chữ số của số 465 bằng bao nhiêu? | 15 | ☐ |
+| num-place-value-09 | dễ |  | □ = 3 trăm + 4 chục + 9 đơn vị. Số □ là số nào? | 349 | ☐ |
+| num-place-value-10 | dễ |  | An viết một số gồm 6 trăm và 5 đơn vị. An đã viết số nào? | 605 | ☐ |
+| num-place-value-11 | dễ |  | Tăng chữ số hàng trăm của số 315 thêm 2, ta được số mới là bao nhiêu? | 515 | ☐ |
+| num-place-value-12 | dễ |  | Số nào dưới đây có chữ số 8 ở hàng chục? | 286 | ☐ |
+| num-place-value-13 | dễ |  | Điền số thích hợp vào ô trống: 438 = 400 + □ + 8 | 30 | ☐ |
+| num-place-value-14 | dễ |  | Số nào lớn hơn 395 đúng 10 đơn vị? | 405 | ☐ |
+| num-place-value-15 | dễ |  | Số bé nhất có 3 chữ số khác nhau mà chữ số hàng trăm là 5 là số nào? | 501 | ☐ |
+| num-place-value-16 | dễ |  | Hà có 9 bó, mỗi bó 10 que tính, và 3 que tính lẻ. Hà có tất cả bao nhiêu que tính? | 93 | ☐ |
+| num-place-value-17 | vừa |  | Dùng các thẻ 0, 4, 7 (mỗi thẻ 1 lần), số bé nhất có 3 chữ số là số nào? | 407 | ☐ |
+| num-place-value-18 | vừa |  | Từ 3 thẻ 2, 5, 8 (mỗi thẻ dùng 1 lần), Nam lập số lớn nhất và số bé nhất có 3 chữ số. Hiệ… | 594 | ☐ |
+| num-place-value-19 | vừa |  | Lan viết ra tất cả các số có 2 chữ số mà hai chữ số cộng lại được 9. Lan viết được mấy số? | 9 | ☐ |
+| num-place-value-20 | vừa |  | Minh viết số 73 rồi đổi chỗ hai chữ số của nó. Số mới bé hơn số cũ bao nhiêu? | 36 | ☐ |
+| num-place-value-21 | vừa |  | Số nào bằng 3 trăm, 15 chục và 2 đơn vị? | 452 | ☐ |
+| num-place-value-22 | vừa |  | Có bao nhiêu số có 2 chữ số mà chữ số hàng chục lớn hơn chữ số hàng đơn vị 3 đơn vị? | 7 | ☐ |
+| num-place-value-23 | vừa |  | Tôi là số có 3 chữ số. Chữ số hàng trăm của tôi là 4. Chữ số hàng chục gấp 2 lần chữ số h… | 487 | ☐ |
+| num-place-value-24 | vừa |  | Số 250 có tất cả bao nhiêu chục? | 25 | ☐ |
+| num-place-value-25 | vừa |  | Số chẵn lớn nhất có 3 chữ số khác nhau là số nào? | 986 | ☐ |
+| num-place-value-26 | vừa |  | Minh muốn viết số bé nhất có 3 chữ số, trong đó 3 chữ số đều khác nhau. Minh viết số nào? | 102 | ☐ |
+| num-place-value-27 | vừa |  | Số gồm 4 trăm và 13 chục là số nào? | 530 | ☐ |
+| num-place-value-28 | vừa |  | Trong số 555, chữ số 5 ở hàng trăm có giá trị lớn hơn chữ số 5 ở hàng đơn vị bao nhiêu? | 495 | ☐ |
+| num-place-value-29 | vừa |  | Tuấn tìm số lớn nhất có 3 chữ số mà các chữ số cộng lại bằng 5. Đó là số nào? | 500 | ☐ |
+| num-place-value-30 | vừa |  | Số bé nhất có 3 chữ số có tổng các chữ số là 10 là số nào? | 109 | ☐ |
+| num-place-value-31 | vừa |  | Khoa viết số 418, rồi đổi chỗ chữ số hàng trăm và chữ số hàng đơn vị. Số mới lớn hơn số c… | 396 | ☐ |
+| num-place-value-32 | vừa |  | Linh viết số 45, rồi viết thêm chữ số 0 vào giữa hai chữ số. Số mới lớn hơn số cũ bao nhi… | 360 | ☐ |
+| num-place-value-33 | khó |  | Có 4 thẻ số 0, 3, 5, 8. Mỗi thẻ dùng không quá 1 lần. Lấy số lớn nhất có 3 chữ số trừ đi … | 548 | ☐ |
+| num-place-value-34 | khó |  | Nam liệt kê mọi số có 3 chữ số có các chữ số cộng lại bằng 3 (ví dụ 111). Nam viết được b… | 6 | ☐ |
+| num-place-value-35 | khó |  | Mai nghĩ ra một số có 3 chữ số: chữ số ở giữa là 0, chữ số đầu gấp 2 lần chữ số cuối, và … | 603 | ☐ |
+| num-place-value-36 | khó |  | Một số có 2 chữ số có tổng các chữ số bằng 9. Nếu đổi chỗ hai chữ số, số đó tăng thêm 27.… | 36 | ☐ |
+| num-place-value-37 | khó |  | Hùng viết các số có 3 chữ số sao cho, đọc từ trái sang phải, mỗi chữ số bé hơn chữ số đứn… | 6 | ☐ |
+| num-place-value-38 | khó |  | Phong có 2 tờ 100 đồng, 23 tờ 10 đồng và 17 đồng xu 1 đồng. Phong mua một quyển sách giá … | 262 | ☐ |
+| num-place-value-39 | khó |  | Tôi là số có 3 chữ số, bé hơn 400. Các chữ số của tôi đều lẻ, khác nhau và cộng lại bằng … | 357 | ☐ |
+| num-place-value-40 | khó |  | Có bao nhiêu số có 3 chữ số mà chữ số hàng trăm gấp 2 lần chữ số hàng đơn vị, còn chữ số … | 3 | ☐ |
+
+### Bội số và chia hết (40 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| num-multiples-01 | dễ |  | Đếm thêm 5: 5, 10, 15, 20, □. Số trong ô trống là bao nhiêu? | 25 | ☐ |
+| num-multiples-02 | dễ |  | Đếm lùi 3: 30, 27, 24, □, 18. Số trong ô trống là bao nhiêu? | 21 | ☐ |
+| num-multiples-03 | dễ |  | Số nào nằm trong bảng nhân 6? | 42 | ☐ |
+| num-multiples-04 | dễ |  | Minh chia kẹo thành các nhóm, mỗi nhóm 3 viên, vừa hết không thừa. Minh có thể có bao nhi… | 27 | ☐ |
+| num-multiples-05 | dễ |  | Số nào vừa chia hết cho 2, vừa chia hết cho 5? | 40 | ☐ |
+| num-multiples-06 | dễ |  | Mai đếm thêm 10: 10, 20, 30, …, 100. Mai đã đọc tất cả bao nhiêu số? | 10 | ☐ |
+| num-multiples-07 | dễ |  | Lan đếm giày của 8 bạn theo cách đếm thêm 2, mỗi bạn đi 2 chiếc giày. Có tất cả bao nhiêu… | 16 | ☐ |
+| num-multiples-08 | dễ |  | Minh có 37 viên bi, muốn cho vào các túi, mỗi túi 5 viên, vừa hết không thừa. Minh cần th… | 3 | ☐ |
+| num-multiples-09 | dễ |  | Có 30 cây bút chì, xếp vào các hộp, mỗi hộp 4 cây. Sau khi xếp đầy được nhiều hộp nhất, c… | 2 | ☐ |
+| num-multiples-10 | dễ |  | Khoa đếm thêm 5 từ 5 đến 60. Số nào dưới đây Khoa KHÔNG đọc? | 52 | ☐ |
+| num-multiples-11 | dễ |  | Số lớn nhất chia hết cho 10 và bé hơn 75 là số nào? | 70 | ☐ |
+| num-multiples-12 | dễ |  | Số bé nhất có 2 chữ số chia hết cho 4 là số nào? | 12 | ☐ |
+| num-multiples-13 | dễ |  | Một chú ếch bắt đầu ở số 0 trên tia số, mỗi lần nhảy 4 đơn vị. Chú ếch sẽ đáp xuống số nà… | 32 | ☐ |
+| num-multiples-14 | dễ |  | Có 12 bông hoa cắm đều vào các lọ, không thừa bông nào. Mỗi lọ có thể có bao nhiêu bông? | 6 | ☐ |
+| num-multiples-15 | dễ |  | Từ 1 đến 30 có bao nhiêu số chia hết cho 5? | 6 | ☐ |
+| num-multiples-16 | dễ |  | Lan đếm chân thỏ theo cách đếm thêm 4: 4, 8, 12, … và dừng ở 28. Có bao nhiêu con thỏ? | 7 | ☐ |
+| num-multiples-17 | vừa |  | Bình viết ra tất cả các số chia hết cho 3 nằm giữa 1 và 50. Bình viết được bao nhiêu số? | 16 | ☐ |
+| num-multiples-18 | vừa |  | Cô giáo có một số kẹo. Chia đều cho 3 bạn hay chia đều cho 4 bạn đều vừa hết. Cô có ít nh… | 12 | ☐ |
+| num-multiples-19 | vừa |  | Vòi phun nước A cứ 6 giây phun một lần, vòi B cứ 9 giây phun một lần. Hai vòi vừa cùng ph… | 18 | ☐ |
+| num-multiples-20 | vừa |  | Xếp 12 cái ghế thành các hàng, hàng nào cũng có số ghế bằng nhau và dùng hết ghế. Có thể … | 6 | ☐ |
+| num-multiples-21 | vừa |  | Trong các số từ 1 đến 50, Tuấn tô màu những số chia hết cho cả 2 và 5. Tuấn tô bao nhiêu … | 5 | ☐ |
+| num-multiples-22 | vừa |  | Số 18 chia hết cho bao nhiêu số khác nhau (kể cả 1 và 18)? | 6 | ☐ |
+| num-multiples-23 | vừa |  | Có bao nhiêu số chia hết cho 4 lớn hơn 20 và bé hơn 40? | 4 | ☐ |
+| num-multiples-24 | vừa |  | Mai có 38 hình dán, mỗi trang sổ dán được 6 hình. Mai cần ít nhất bao nhiêu trang để dán … | 7 | ☐ |
+| num-multiples-25 | vừa |  | Số nào lớn hơn 30, bé hơn 40 và chia hết cho cả 3 và 4? | 36 | ☐ |
+| num-multiples-26 | vừa |  | Xe buýt số 1 cứ 10 phút có một chuyến, xe buýt số 2 cứ 15 phút có một chuyến. Lúc 7:00 cả… | 7:30 | ☐ |
+| num-multiples-27 | vừa |  | Nam đếm thêm 4: 4, 8, 12, … Số thứ 9 Nam đọc là số nào? | 36 | ☐ |
+| num-multiples-28 | vừa |  | Số lớn nhất bé hơn 100 chia hết cho cả 2 và 5 là số nào? | 90 | ☐ |
+| num-multiples-29 | vừa |  | Linh đọc sách từ trang 21 đến trang 59. Trang nào có số chia hết cho 5 thì có một bức tra… | 7 | ☐ |
+| num-multiples-30 | vừa |  | Hà có 24 chiếc bánh, muốn xếp vào các hộp, hộp nào cũng có số bánh bằng nhau và không thừ… | 5 | ☐ |
+| num-multiples-31 | vừa |  | Lan đếm thêm 3 từ 3 đến 50, An đếm thêm 5 từ 5 đến 50. Có bao nhiêu số cả hai bạn đều đọc? | 3 | ☐ |
+| num-multiples-32 | vừa |  | Số nào dưới đây chỉ chia hết cho đúng 3 số khác nhau? | 9 | ☐ |
+| num-multiples-33 | khó |  | Minh có nhiều hơn 10 và ít hơn 30 viên bi. Chia thành nhóm 5 viên thì vừa hết; chia thành… | 25 | ☐ |
+| num-multiples-34 | khó |  | An đi bơi cứ 2 ngày một lần, Bình cứ 3 ngày một lần, Mai cứ 5 ngày một lần. Hôm nay cả ba… | 30 | ☐ |
+| num-multiples-35 | khó |  | Từ 1 đến 60, Lan tô đỏ các số chia hết cho 3 và tô xanh các số chia hết cho 4 (có số được… | 30 | ☐ |
+| num-multiples-36 | khó |  | Rổ trứng có hơn 10 quả và ít hơn 50 quả. Đếm theo nhóm 2, nhóm 3 hay nhóm 5 đều thừa 1 qu… | 31 | ☐ |
+| num-multiples-37 | khó |  | Lớp có 36 bạn xếp hàng tập thể dục, hàng nào cũng có số bạn bằng nhau. Phải có ít nhất 2 … | 7 | ☐ |
+| num-multiples-38 | khó |  | Hai ngọn hải đăng cùng chiếu sáng lúc giây thứ 0. Ngọn thứ nhất cứ 6 giây chiếu một lần, … | 3 | ☐ |
+| num-multiples-39 | khó |  | Tính nhanh tổng các số khi đếm thêm 5 từ 5 đến 50: 5 + 10 + 15 + … + 50 = ? | 275 | ☐ |
+| num-multiples-40 | khó |  | Có bao nhiêu số có 2 chữ số chia hết cho cả 4 và 6? | 8 | ☐ |
+
+### Đếm chữ số, đánh số trang (40 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| num-digit-count-01 | dễ |  | Có bao nhiêu số từ 15 đến 42 (tính cả 15 và 42)? | 28 | ☐ |
+| num-digit-count-02 | dễ |  | Có tất cả bao nhiêu số có 2 chữ số? | 90 | ☐ |
+| num-digit-count-03 | dễ |  | Trong các số từ 1 đến 20, có bao nhiêu số chỉ có 1 chữ số? | 9 | ☐ |
+| num-digit-count-04 | dễ |  | Hàng rào có các cọc được đánh số từ 23 đến 30. Hàng rào có bao nhiêu cọc? | 8 | ☐ |
+| num-digit-count-05 | dễ |  | Viết các số từ 10 đến 19, ta cần bao nhiêu chữ số? | 20 | ☐ |
+| num-digit-count-06 | dễ |  | Có bao nhiêu số có 2 chữ số mà chữ số hàng chục là 7? | 10 | ☐ |
+| num-digit-count-07 | dễ |  | Từ 1 đến 30, có bao nhiêu số có chữ số tận cùng là 5? | 3 | ☐ |
+| num-digit-count-08 | dễ |  | An đếm lùi từ 52 xuống 37: 52, 51, 50, …, 37. An đã đọc bao nhiêu số? | 16 | ☐ |
+| num-digit-count-09 | dễ |  | Lan viết các số từ 1 đến 20 lên bảng. Chữ số 3 được viết bao nhiêu lần? | 2 | ☐ |
+| num-digit-count-10 | dễ |  | Một tờ lịch tháng có các ngày từ 1 đến 31. Có bao nhiêu ngày được viết bằng 2 chữ số? | 22 | ☐ |
+| num-digit-count-11 | dễ |  | Một dãy ghế trong rạp được đánh số từ 31 đến 50. Dãy đó có bao nhiêu ghế? | 20 | ☐ |
+| num-digit-count-12 | dễ |  | Có bao nhiêu số có 2 chữ số nhỏ hơn 20? | 10 | ☐ |
+| num-digit-count-13 | vừa |  | Mặt đồng hồ có các số từ 1 đến 12. Trên mặt đồng hồ có tất cả bao nhiêu chữ số? | 15 | ☐ |
+| num-digit-count-14 | dễ |  | Các vé được đánh số từ 100 đến 109. Các số trên tất cả các vé có bao nhiêu chữ số? | 30 | ☐ |
+| num-digit-count-15 | dễ |  | Có bao nhiêu số có 2 chữ số mà hai chữ số giống nhau (như 33)? | 9 | ☐ |
+| num-digit-count-16 | dễ |  | Từ 1 đến 50, có bao nhiêu số có chữ số tận cùng là 1 hoặc 2? | 10 | ☐ |
+| num-digit-count-17 | vừa |  | Viết liền các số từ 1 đến 30, ta cần dùng bao nhiêu chữ số? | 51 | ☐ |
+| num-digit-count-18 | vừa |  | Một cuốn sách có 60 trang, đánh số từ 1 đến 60. Cần bao nhiêu chữ số để đánh số trang? | 111 | ☐ |
+| num-digit-count-19 | vừa |  | Các nhà ở một bên phố mang số lẻ 1, 3, 5, …, 39. Bên phố đó có bao nhiêu nhà? | 20 | ☐ |
+| num-digit-count-20 | vừa |  | Minh dán số cho 50 chiếc tủ, đánh số từ 1 đến 50. Minh cần bao nhiêu miếng dán chữ số 5? | 6 | ☐ |
+| num-digit-count-21 | vừa |  | Viết các số từ 1 đến 50. Chữ số 1 được viết bao nhiêu lần? | 15 | ☐ |
+| num-digit-count-22 | vừa |  | Một con đường có 30 cột đèn đánh số từ 1 đến 30. Chữ số 2 xuất hiện bao nhiêu lần trên cá… | 13 | ☐ |
+| num-digit-count-23 | vừa |  | Từ 1 đến 30, có bao nhiêu số có chứa chữ số 2? | 12 | ☐ |
+| num-digit-count-24 | vừa |  | Bác bảo vệ sơn số cho các chỗ để xe mang số chẵn 2, 4, 6, …, 30. Bác phải sơn tất cả bao … | 26 | ☐ |
+| num-digit-count-25 | vừa |  | Khoa viết các số từ 1 đến 20, mỗi số trên một tấm thẻ. Khoa đã viết tất cả bao nhiêu chữ … | 31 | ☐ |
+| num-digit-count-26 | vừa |  | Hà viết các số từ 10 đến 25. Hà dùng bao nhiêu chữ số? | 32 | ☐ |
+| num-digit-count-27 | vừa |  | Nam viết các số từ 40 đến 60. Nam viết chữ số 5 bao nhiêu lần? | 12 | ☐ |
+| num-digit-count-28 | vừa |  | Tuấn viết các số từ 1 đến 100. Chữ số 0 được viết bao nhiêu lần? | 11 | ☐ |
+| num-digit-count-29 | vừa |  | Bình đọc từ trang 8 đến trang 15. Các số trang Bình đã đọc có tất cả bao nhiêu chữ số? | 14 | ☐ |
+| num-digit-count-30 | vừa |  | Có bao nhiêu số có 2 chữ số tận cùng là 0 hoặc 5? | 18 | ☐ |
+| num-digit-count-31 | vừa |  | Linh viết tất cả các số từ 1 đến 99. Linh viết bao nhiêu chữ số? | 189 | ☐ |
+| num-digit-count-32 | dễ |  | Từ 1 đến 50, có bao nhiêu số có đúng 2 chữ số? | 41 | ☐ |
+| num-digit-count-33 | khó |  | Để đánh số trang một cuốn sách (bắt đầu từ trang 1), người ta dùng hết 75 chữ số. Cuốn sá… | 42 | ☐ |
+| num-digit-count-34 | khó |  | Mai đánh số trang cho cuốn sổ tay từ trang 1 và dùng hết 39 chữ số. Cuốn sổ có bao nhiêu … | 24 | ☐ |
+| num-digit-count-35 | khó |  | Một cuốn sách có 100 trang, đánh số từ 1 đến 100. Chữ số 1 được in bao nhiêu lần? | 21 | ☐ |
+| num-digit-count-36 | khó |  | Có bao nhiêu số có 2 chữ số chứa ít nhất một chữ số 7? | 18 | ☐ |
+| num-digit-count-37 | khó |  | Viết các số từ 95 đến 105 cần bao nhiêu chữ số? | 28 | ☐ |
+| num-digit-count-38 | khó |  | Một cuốn truyện có 120 trang, đánh số từ trang 1. Cần bao nhiêu chữ số để đánh số tất cả … | 252 | ☐ |
+| num-digit-count-39 | khó |  | Các nhà ở một bên phố mang số lẻ từ 1 đến 39. Mỗi chữ số trên biển số nhà là một miếng sắ… | 35 | ☐ |
+| num-digit-count-40 | khó |  | Có bao nhiêu số có 2 chữ số không chứa chữ số 5? | 72 | ☐ |
+
+### Số dư và chu kỳ lặp (40 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| num-remainder-cycles-01 | dễ |  | Có 29 nhãn dán chia đều cho 4 bạn, mỗi bạn được nhiều nhất có thể. Còn thừa mấy nhãn dán? | 1 | ☐ |
+| num-remainder-cycles-02 | dễ |  | Khi chia một số cho 6, số dư lớn nhất có thể là bao nhiêu? | 5 | ☐ |
+| num-remainder-cycles-03 | dễ |  | Mai có 23 cái bánh, xếp vào các hộp, mỗi hộp 5 cái. Còn thừa mấy cái bánh không đủ một hộ… | 3 | ☐ |
+| num-remainder-cycles-04 | dễ |  | Hạt cườm được xâu theo thứ tự: đỏ, vàng, xanh, tím, đỏ, vàng, xanh, tím, … Hạt thứ 10 màu… | vàng | ☐ |
+| num-remainder-cycles-05 | dễ |  | Đèn giao thông sáng lần lượt: xanh, vàng, đỏ, xanh, vàng, đỏ, … Lần sáng nào dưới đây có … | Lần thứ 11 | ☐ |
+| num-remainder-cycles-06 | dễ |  | Chia 17 cho 3 thì số dư là bao nhiêu? | 2 | ☐ |
+| num-remainder-cycles-07 | dễ |  | Khoa viết lặp lại chữ ROBOT: R, O, B, O, T, R, O, B, … Chữ cái thứ 8 là chữ gì? | B | ☐ |
+| num-remainder-cycles-08 | dễ |  | Lan có 20 viên kẹo, chia đều cho 3 em, mỗi em được nhiều nhất có thể. Lan còn lại mấy viê… | 2 | ☐ |
+| num-remainder-cycles-09 | dễ |  | Khi chia một số cho 4, số nào dưới đây KHÔNG thể là số dư? | 4 | ☐ |
+| num-remainder-cycles-10 | dễ |  | Kim giờ của đồng hồ đang chỉ số 9. Sau 5 giờ nữa, kim giờ chỉ số mấy? | 2 | ☐ |
+| num-remainder-cycles-11 | dễ |  | Trận bóng của Minh diễn ra sau thứ Tư 3 ngày. Trận bóng vào thứ mấy? | thứ Bảy | ☐ |
+| num-remainder-cycles-12 | dễ |  | Tìm □ biết: □ : 5 = 6 dư 4. | 34 | ☐ |
+| num-remainder-cycles-13 | dễ |  | Dãy số lặp lại: 5, 7, 9, 5, 7, 9, 5, … Số thứ 8 trong dãy là số mấy? | 7 | ☐ |
+| num-remainder-cycles-14 | dễ |  | Có 40 bạn xếp thành các hàng, mỗi hàng 6 bạn. Hàng cuối cùng chưa đủ người có mấy bạn? | 4 | ☐ |
+| num-remainder-cycles-15 | dễ |  | Số nào dưới đây chia cho 5 dư 2? | 12 | ☐ |
+| num-remainder-cycles-16 | dễ |  | Vòng quay ngựa gỗ có 8 con ngựa đánh số 1 đến 8. Các con ngựa lần lượt đi qua cổng: 1, 2,… | 6 | ☐ |
+| num-remainder-cycles-17 | vừa |  | Một chuỗi hạt xâu theo thứ tự: đỏ, xanh dương, xanh lá, đỏ, xanh dương, xanh lá, … Hạt th… | đỏ và xanh dương | ☐ |
+| num-remainder-cycles-18 | vừa |  | Viết lặp lại chữ MATH thành dãy MATHMATHMATH… Chữ cái thứ 30 là chữ gì? | A | ☐ |
+| num-remainder-cycles-19 | vừa |  | Dãy chữ số lặp lại: 1, 2, 3, 1, 2, 3, … Tổng của 20 chữ số đầu tiên là bao nhiêu? | 39 | ☐ |
+| num-remainder-cycles-20 | vừa |  | Lan bắt đầu đọc một cuốn sách vào thứ Hai. Lan đọc xong đúng 30 ngày sau đó. Hôm đó là th… | thứ Tư | ☐ |
+| num-remainder-cycles-21 | vừa |  | Kim giờ đang chỉ số 10. Sau 27 giờ nữa, kim giờ chỉ số mấy? | 1 | ☐ |
+| num-remainder-cycles-22 | vừa |  | 6 bạn đứng thành vòng tròn, đánh số 1 đến 6. Bạn số 1 cầm bóng. Mỗi lần bóng được chuyền … | 3 | ☐ |
+| num-remainder-cycles-23 | vừa |  | Số nhỏ nhất có 2 chữ số mà chia cho 4 dư 3 là số nào? | 11 | ☐ |
+| num-remainder-cycles-24 | vừa |  | Có 44 bạn đi tham quan, mỗi xe buýt chở được 9 bạn. Cần ít nhất bao nhiêu xe buýt? | 5 | ☐ |
+| num-remainder-cycles-25 | vừa |  | Cờ được treo theo thứ tự: đỏ, đỏ, xanh, đỏ, đỏ, xanh, … Trong 20 lá cờ đầu tiên có bao nh… | 6 | ☐ |
+| num-remainder-cycles-26 | vừa |  | Bây giờ là mùa xuân. Các mùa lần lượt: xuân, hè, thu, đông, rồi lại xuân. Sau 10 mùa nữa … | mùa thu | ☐ |
+| num-remainder-cycles-27 | vừa |  | Nam viết lặp lại các chữ số 2, 0, 2, 6, 2, 0, 2, 6, … Tổng của 10 chữ số đầu tiên là bao … | 22 | ☐ |
+| num-remainder-cycles-28 | vừa |  | Một số chia cho 9 được thương là 3 và số dư lớn nhất có thể. Số đó là bao nhiêu? | 35 | ☐ |
+| num-remainder-cycles-29 | vừa |  | 7 bạn An, Bình, Mai, Lan, Minh, Khoa, Hà ngồi thành vòng tròn theo thứ tự đó và đếm lần l… | Lan | ☐ |
+| num-remainder-cycles-30 | vừa |  | Bây giờ là tháng Ba. 15 tháng nữa là tháng mấy? | tháng Sáu | ☐ |
+| num-remainder-cycles-31 | vừa |  | Có 47 cây bút chì chia đều cho 6 bạn. Cần thêm ít nhất mấy cây bút để chia đều mà không t… | 1 | ☐ |
+| num-remainder-cycles-32 | vừa |  | Rô-bốt đi lần lượt theo hướng: Bắc, Đông, Nam, Tây, Bắc, Đông, … Bước thứ 50 rô-bốt đi hư… | Đông | ☐ |
+| num-remainder-cycles-33 | khó |  | Tìm số nhỏ nhất lớn hơn 1 mà chia cho 2, chia cho 3 hay chia cho 4 đều dư 1. | 13 | ☐ |
+| num-remainder-cycles-34 | khó |  | Dãy chữ số: 1, 2, 3, 4, 3, 2, 1, 2, 3, 4, 3, 2, 1, … Chữ số thứ 40 là mấy? | 4 | ☐ |
+| num-remainder-cycles-35 | khó |  | Ngày 1 tháng Năm là thứ Tư. Ngày 31 tháng Năm là thứ mấy? | thứ Sáu | ☐ |
+| num-remainder-cycles-36 | khó |  | Lan dán một hàng hình dán. Màu lặp lại: đỏ, xanh, vàng, đỏ, xanh, vàng, … Hình lặp lại: s… | 5 | ☐ |
+| num-remainder-cycles-37 | khó |  | Mai viết lần lượt 1, 2, 3, 1, 2, 3, … và cộng dồn các số đã viết. Khi tổng vừa bằng 99 th… | 50 | ☐ |
+| num-remainder-cycles-38 | khó |  | Một số lớn hơn 20 và nhỏ hơn 40. Số đó chia cho 3 dư 2, chia cho 5 cũng dư 2. Số đó là số… | 32 | ☐ |
+| num-remainder-cycles-39 | khó |  | Hạt cườm xâu theo nhóm lặp lại: đỏ, xanh, xanh, vàng, vàng, vàng, đỏ, xanh, xanh, … Trong… | 12 | ☐ |
+| num-remainder-cycles-40 | khó |  | Mai tưới cây cứ 3 ngày một lần, Lan cho cá ăn cứ 4 ngày một lần. Hôm nay là thứ Hai, Mai … | thứ Bảy | ☐ |
+
+## Hình học – Geometry (200 câu)
+
+### Đếm hình (40 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| geo-count-shapes-01 | dễ | ma-count-triangles | Nhìn hình vẽ. Các đường kẻ chia tam giác lớn thành bao nhiêu mảnh nhỏ không chồng lên nha… | 4 | ☐ |
+| geo-count-shapes-02 | dễ | ma-count-triangles | Nhìn hình vẽ. Có bao nhiêu hình tam giác nằm hoàn toàn ở phía trên đường kẻ ngang? | 3 | ☐ |
+| geo-count-shapes-03 | dễ | ma-count-squares | Nhìn lưới ô vuông trong hình. Có bao nhiêu hình vuông được ghép từ đúng 4 ô nhỏ (2 hàng, … | 4 | ☐ |
+| geo-count-shapes-04 | dễ |  | An chấm 3 điểm A, B, C theo thứ tự trên một đường thẳng. Có bao nhiêu đoạn thẳng có hai đ… | 3 | ☐ |
+| geo-count-shapes-05 | dễ |  | Một hình vuông được chia thành 4 ô vuông nhỏ bằng nhau (2 hàng, 2 cột). Có tất cả bao nhi… | 5 | ☐ |
+| geo-count-shapes-06 | dễ |  | Bình vẽ một tam giác, rồi kẻ 1 đoạn thẳng từ đỉnh trên cùng xuống cạnh đáy. Hình vẽ có ba… | 3 | ☐ |
+| geo-count-shapes-07 | dễ |  | Mai có một tấm bìa hình chữ nhật. Mai kẻ 1 đường thẳng dọc chia tấm bìa thành 2 hình chữ … | 3 | ☐ |
+| geo-count-shapes-08 | dễ |  | Lan vẽ một tam giác rồi kẻ 1 đường thẳng nằm ngang cắt ngang qua tam giác (song song với … | 2 | ☐ |
+| geo-count-shapes-09 | dễ |  | Một tam giác lớn được chia thành 4 tam giác nhỏ bằng nhau: 3 tam giác đứng thẳng và 1 tam… | 5 | ☐ |
+| geo-count-shapes-10 | dễ |  | Thanh sô-cô-la của Minh gồm 3 ô vuông bằng nhau xếp thành 1 hàng. Trên thanh sô-cô-la có … | 3 | ☐ |
+| geo-count-shapes-11 | dễ |  | Một ô cửa sổ hình chữ nhật có 1 thanh dọc và 1 thanh ngang chia thành 4 ô kính hình chữ n… | 4 | ☐ |
+| geo-count-shapes-12 | dễ |  | Khoa vẽ ngôi nhà: tường là 1 hình vuông, mái là 1 tam giác. Trong tường có 1 cửa ra vào h… | 4 | ☐ |
+| geo-count-shapes-13 | dễ |  | Hà xếp 5 ô vuông bằng nhau thành hình dấu cộng: 1 ô ở giữa, mỗi phía trên, dưới, trái, ph… | 5 | ☐ |
+| geo-count-shapes-14 | dễ |  | Tuấn xếp 3 ô vuông bằng nhau thành chữ L: 2 ô nằm ngang ở dưới, 1 ô đặt trên ô bên trái. … | 5 | ☐ |
+| geo-count-shapes-15 | dễ |  | Linh vẽ 1 hình tròn lớn. Bên trong có 2 hình tròn vừa không chạm nhau, trong mỗi hình trò… | 5 | ☐ |
+| geo-count-shapes-16 | dễ |  | Từ điểm O, Nam kẻ 3 tia OA, OB, OC xòe ra như cái quạt, tia OB nằm giữa. Hình có bao nhiê… | 3 | ☐ |
+| geo-count-shapes-17 | vừa | ma-count-triangles | Đếm thật kỹ: trong hình vẽ có tất cả bao nhiêu hình tam giác? | 6 | ☐ |
+| geo-count-shapes-18 | vừa | ma-count-triangles | Trong hình vẽ tam giác lớn bị chia bởi các đường kẻ, có bao nhiêu hình có đúng 4 cạnh? | 3 | ☐ |
+| geo-count-shapes-19 | vừa | ma-count-squares | Trong lưới ô vuông 3 hàng, 3 cột ở hình vẽ có tất cả bao nhiêu hình vuông? | 14 | ☐ |
+| geo-count-shapes-20 | vừa | ma-count-squares | Nhìn lưới ô vuông trong hình. Có bao nhiêu hình vuông chứa ô nhỏ ở góc trên bên trái? | 3 | ☐ |
+| geo-count-shapes-21 | vừa |  | Trên một đường thẳng có 4 điểm A, B, C, D theo thứ tự. Có bao nhiêu đoạn thẳng có hai đầu… | 6 | ☐ |
+| geo-count-shapes-22 | vừa |  | Khoa ghép 4 ô vuông bằng nhau thành chữ T: 3 ô nằm thành hàng ở trên, 1 ô ở ngay dưới ô g… | 8 | ☐ |
+| geo-count-shapes-23 | vừa |  | Một băng giấy được chia thành 3 ô vuông bằng nhau nằm thành 1 hàng. Trên băng giấy có bao… | 6 | ☐ |
+| geo-count-shapes-24 | vừa |  | Đoàn tàu đồ chơi của Bình có 4 toa hình chữ nhật nối liền thành 1 hàng, nhìn như một hình… | 10 | ☐ |
+| geo-count-shapes-25 | vừa |  | Một hình chữ nhật được kẻ thành lưới 2 × 3 ô vuông bằng nhau (2 hàng, 3 cột). Có tất cả b… | 8 | ☐ |
+| geo-count-shapes-26 | vừa |  | Bàn cờ nhỏ của An là lưới 2 × 4 ô vuông (2 hàng, 4 cột). Trên bàn cờ có bao nhiêu hình vu… | 11 | ☐ |
+| geo-count-shapes-27 | vừa |  | Mai vẽ một tam giác rồi kẻ 2 đoạn thẳng từ đỉnh trên cùng xuống cạnh đáy. Hình có tất cả … | 6 | ☐ |
+| geo-count-shapes-28 | vừa |  | Lan kẻ cả 2 đường chéo của một hình vuông. Hình vẽ có tất cả bao nhiêu tam giác? | 8 | ☐ |
+| geo-count-shapes-29 | vừa |  | Một hình chữ nhật được 1 đường dọc và 1 đường ngang chia thành 4 ô (2 hàng, 2 cột). Có tấ… | 9 | ☐ |
+| geo-count-shapes-30 | vừa |  | Khoa vẽ tam giác ABC, rồi kẻ 1 đoạn thẳng từ đỉnh A xuống điểm D nằm trên cạnh BC. Hình v… | 6 | ☐ |
+| geo-count-shapes-31 | vừa |  | Hà xếp 5 ô vuông bằng nhau thành hình dấu cộng (1 ô giữa và 4 ô xung quanh). Hình có bao … | 11 | ☐ |
+| geo-count-shapes-32 | vừa |  | Nam kẻ 1 đường chéo của hình vuông (từ góc dưới trái lên góc trên phải) và 1 đường dọc ở … | 4 | ☐ |
+| geo-count-shapes-33 | khó | ma-count-triangles | Trong hình vẽ, đếm tất cả các hình tam giác và tất cả các hình 4 cạnh. Có tổng cộng bao n… | 9 | ☐ |
+| geo-count-shapes-34 | khó | ma-count-squares | Nhìn lưới ô vuông trong hình. Có bao nhiêu hình vuông chứa ô nhỏ nằm chính giữa lưới? | 6 | ☐ |
+| geo-count-shapes-35 | khó |  | Tờ lịch của Minh là lưới 4 × 4 ô vuông bằng nhau (4 hàng, 4 cột). Có tất cả bao nhiêu hìn… | 30 | ☐ |
+| geo-count-shapes-36 | khó |  | Thanh sô-cô-la của Linh là lưới 2 × 3 ô (2 hàng, 3 cột). Trên thanh có bao nhiêu hình chữ… | 18 | ☐ |
+| geo-count-shapes-37 | khó |  | Tuấn vẽ một tam giác, kẻ 3 đoạn thẳng từ đỉnh trên cùng chia đáy thành 4 phần. Sau đó Tuấ… | 20 | ☐ |
+| geo-count-shapes-38 | khó |  | Một tam giác có 2 đoạn thẳng từ đỉnh trên cùng xuống cạnh đáy và 1 đường ngang cắt qua cả… | 12 | ☐ |
+| geo-count-shapes-39 | khó |  | Trên một đường thẳng có 5 điểm A, B, C, D, E theo thứ tự. Có bao nhiêu đoạn thẳng (nối ha… | 8 | ☐ |
+| geo-count-shapes-40 | khó |  | Bình cắt bỏ 1 ô ở góc của lưới 3 × 3 ô vuông, còn lại 8 ô. Hình còn lại có bao nhiêu hình… | 11 | ☐ |
+
+### Chu vi (40 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| geo-perimeter-01 | dễ |  | Một hình vuông có cạnh 6 cm. Chu vi hình vuông đó là bao nhiêu? | 24 cm | ☐ |
+| geo-perimeter-02 | dễ |  | Hình chữ nhật có chiều dài 7 cm, chiều rộng 3 cm. Tính chu vi hình chữ nhật. | 20 cm | ☐ |
+| geo-perimeter-03 | dễ |  | Một hình tam giác có ba cạnh dài 4 cm, 5 cm và 6 cm. Chu vi của nó là bao nhiêu? | 15 cm | ☐ |
+| geo-perimeter-04 | vừa |  | Một hình chữ nhật có chu vi 30 cm, chiều dài 9 cm. Chiều rộng là bao nhiêu? | 6 cm | ☐ |
+| geo-perimeter-05 | dễ | ma-perimeter-shape | Nhìn hình chữ L. Mỗi cạnh đều ghi độ dài. Chu vi của hình là bao nhiêu? | 26 cm | ☐ |
+| geo-perimeter-06 | dễ |  | Bình xếp que diêm thành một hình vuông. Mỗi cạnh có 4 que diêm. Bình đã dùng tất cả bao n… | 16 que | ☐ |
+| geo-perimeter-07 | vừa |  | Khoa đặt 2 tấm thẻ hình vuông cạnh 4 cm sát nhau, tạo thành một hình chữ nhật. Chu vi hìn… | 24 cm | ☐ |
+| geo-perimeter-08 | dễ |  | Vườn rau hình vuông có cạnh 5 m. Bố rào xung quanh vườn. Hàng rào dài bao nhiêu mét? | 20 m | ☐ |
+| geo-perimeter-09 | vừa |  | Vườn hình chữ nhật dài 8 m, rộng 5 m. Một cạnh dài sát tường nhà nên không cần rào. Cần r… | 18 m | ☐ |
+| geo-perimeter-10 | khó |  | Một tấm bìa hình chữ nhật dài 8 cm, rộng 4 cm. Tuấn cắt nó thành 2 hình vuông bằng nhau. … | 8 cm | ☐ |
+| geo-perimeter-11 | dễ |  | Ghép 3 hình vuông cạnh 1 cm thành một hàng ngang, cạnh kề cạnh. Chu vi hình mới là bao nh… | 8 cm | ☐ |
+| geo-perimeter-12 | dễ | ma-grid-area | Trong lưới ô vuông, hình C (màu xanh lá) có chu vi bằng bao nhiêu cạnh ô? | 10 cạnh ô | ☐ |
+| geo-perimeter-13 | vừa | ma-grid-area | Hình A màu đỏ có dạng chữ L. Đi một vòng quanh mép hình A thì đi qua bao nhiêu cạnh ô vuô… | 12 cạnh ô | ☐ |
+| geo-perimeter-14 | dễ |  | Một hình tam giác có 3 cạnh bằng nhau, mỗi cạnh 7 cm. Chu vi bằng bao nhiêu? | 21 cm | ☐ |
+| geo-perimeter-15 | vừa |  | Một hình vuông cạnh 6 cm và một hình tam giác có 3 cạnh bằng nhau có chu vi bằng nhau. Mỗ… | 8 cm | ☐ |
+| geo-perimeter-16 | dễ |  | Một hình vuông có chu vi 20 cm. Mỗi cạnh dài bao nhiêu? | 5 cm | ☐ |
+| geo-perimeter-17 | khó |  | Một vườn hình vuông có cạnh 6 m. Người ta cắm cọc rào quanh vườn, cứ 2 m một cọc, có cọc … | 12 cọc | ☐ |
+| geo-perimeter-18 | vừa |  | Cắt một hình chữ nhật dài 10 cm, rộng 5 cm thành 2 hình vuông bằng nhau. Chu vi của mỗi h… | 20 cm | ☐ |
+| geo-perimeter-19 | dễ |  | Một mảnh vườn hình chữ nhật dài 9 m, rộng 4 m. Cô Hà trồng hoa dọc theo toàn bộ mép vườn.… | 26 m | ☐ |
+| geo-perimeter-20 | vừa |  | Một hình bậc thang: cạnh đáy dài 9 cm, cạnh bên trái cao 6 cm. Phía bên phải đi xuống 3 b… | 30 cm | ☐ |
+| geo-perimeter-21 | dễ | ma-perimeter-shape | Nhìn hình chữ L. Cạnh đáy dài hơn cạnh trên cùng bao nhiêu xăng-ti-mét? | 3 cm | ☐ |
+| geo-perimeter-22 | vừa | ma-perimeter-shape | Nhìn hình chữ L. Tổng độ dài các cạnh thẳng đứng của hình là bao nhiêu? | 10 cm | ☐ |
+| geo-perimeter-23 | khó |  | Từ một hình chữ nhật dài 10 cm, rộng 6 cm, An cắt bỏ một hình vuông nhỏ cạnh 2 cm ở một g… | 32 cm | ☐ |
+| geo-perimeter-24 | dễ |  | Bà quây một chuồng gà hình chữ nhật dài 6 m, rộng 4 m. Một cạnh ngắn dựa sát tường nên kh… | 16 m | ☐ |
+| geo-perimeter-25 | vừa |  | Nam xếp 5 viên gạch hình vuông cạnh 1 cm thành hình dấu cộng: 1 viên ở giữa, 4 viên ở trê… | 12 cm | ☐ |
+| geo-perimeter-26 | dễ |  | Một hình ngũ giác có 5 cạnh, mỗi cạnh đều dài 4 cm. Chu vi là bao nhiêu? | 20 cm | ☐ |
+| geo-perimeter-27 | khó |  | Một hình chữ nhật có chu vi 24 cm. Chiều dài gấp đôi chiều rộng. Chiều dài là bao nhiêu? | 8 cm | ☐ |
+| geo-perimeter-28 | vừa |  | Mai uốn một sợi dây thép dài 36 cm thành một hình chữ nhật dài 11 cm, dùng hết dây. Chiều… | 7 cm | ☐ |
+| geo-perimeter-29 | dễ |  | Minh chạy 1 vòng quanh sân hình chữ nhật dài 6 m, rộng 2 m. Minh chạy được bao nhiêu mét? | 16 m | ☐ |
+| geo-perimeter-30 | vừa |  | Hai hình vuông giống nhau, mỗi hình có chu vi 12 cm, được ghép sát cạnh nhau thành hình c… | 18 cm | ☐ |
+| geo-perimeter-31 | khó |  | Có 6 hình vuông cạnh 1 cm. Hà xếp thành 1 hàng dài; Linh xếp thành 2 hàng, mỗi hàng 3 hìn… | 4 cm | ☐ |
+| geo-perimeter-32 | dễ |  | Lan xếp các ô vuông cạnh 1 cm thành bậc thang, sát bên trái: hàng dưới 3 ô, hàng giữa 2 ô… | 12 cm | ☐ |
+| geo-perimeter-33 | vừa |  | Một hình chữ nhật dài 9 cm, chiều rộng ngắn hơn chiều dài 3 cm. Chu vi hình chữ nhật là b… | 30 cm | ☐ |
+| geo-perimeter-34 | vừa | ma-grid-area | Trong ba hình A, B, C trên lưới, hình nào có chu vi lớn nhất? | Hình A | ☐ |
+| geo-perimeter-35 | khó |  | Minh có 4 miếng bánh quy hình vuông giống nhau, mỗi miếng có chu vi 16 cm. Minh xếp chúng… | 32 cm | ☐ |
+| geo-perimeter-36 | vừa |  | Một hình vuông có chu vi bằng chu vi hình chữ nhật dài 10 cm, rộng 6 cm. Cạnh hình vuông … | 8 cm | ☐ |
+| geo-perimeter-37 | khó |  | Một tờ giấy hình vuông được gấp đôi rồi cắt thành 2 hình chữ nhật bằng nhau. Mỗi hình chữ… | 24 cm | ☐ |
+| geo-perimeter-38 | vừa |  | Bà và Linh đi bộ 2 vòng quanh công viên hình chữ nhật dài 50 m, rộng 30 m. Hai bà cháu đi… | 320 m | ☐ |
+| geo-perimeter-39 | vừa |  | Một hình tam giác có 2 cạnh bằng nhau, mỗi cạnh 7 cm. Chu vi tam giác là 20 cm. Cạnh còn … | 6 cm | ☐ |
+| geo-perimeter-40 | khó | ma-perimeter-shape | Nhìn hình chữ L. Hình chữ nhật nào dưới đây có chu vi bằng chu vi hình chữ L? | 8 cm × 5 cm | ☐ |
+
+### Diện tích trên lưới ô vuông (40 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| geo-area-grid-01 | dễ | ma-grid-area | Nhìn hình. Diện tích hình B (màu xanh dương) là bao nhiêu ô vuông? | 6 ô vuông | ☐ |
+| geo-area-grid-02 | dễ |  | Trên giấy kẻ ô, Nam tô chữ T: hàng trên cùng 5 ô liền nhau, bên dưới ô chính giữa có thêm… | 8 ô vuông | ☐ |
+| geo-area-grid-03 | vừa | ma-grid-area | Nhìn hình. Cả ba hình A, B, C có tổng cộng bao nhiêu ô được tô màu? | 15 ô vuông | ☐ |
+| geo-area-grid-04 | dễ |  | Hình chữ nhật dài 5 cm, rộng 3 cm. Diện tích của nó là bao nhiêu? | 15 cm² | ☐ |
+| geo-area-grid-05 | vừa |  | Nền nhà hình chữ nhật dài 6 ô, rộng 4 ô (mỗi ô 1 × 1). Lát bằng viên gạch to cỡ 2 × 2 ô t… | 6 viên | ☐ |
+| geo-area-grid-06 | khó |  | Thanh sô-cô-la có 3 hàng, mỗi hàng 8 miếng. Mỗi lần bẻ, An bẻ 1 mẩu thành 2 mẩu theo đườn… | 23 lần | ☐ |
+| geo-area-grid-07 | dễ |  | Hình vuông có cạnh 3 cm. Diện tích hình vuông là bao nhiêu? | 9 cm² | ☐ |
+| geo-area-grid-08 | vừa |  | Hình chữ L gồm 2 hình chữ nhật ghép lại: một hình 6 cm × 2 cm và một hình 3 cm × 2 cm. Di… | 18 cm² | ☐ |
+| geo-area-grid-09 | dễ |  | Trên giấy kẻ ô, Hà tô chữ U rộng 4 ô, cao 4 ô. 3 hàng trên, mỗi hàng chỉ tô 2 ô (ô ngoài … | 10 ô vuông | ☐ |
+| geo-area-grid-10 | vừa | ma-grid-area | Nhìn hình. Lưới có 8 cột và 5 hàng. Có bao nhiêu ô vuông KHÔNG được tô màu? | 25 ô vuông | ☐ |
+| geo-area-grid-11 | dễ |  | Sân nhà Khoa hình vuông, lát 5 hàng gạch, mỗi hàng 5 viên. Ở giữa sân có một bồn cây chiế… | 21 viên | ☐ |
+| geo-area-grid-12 | vừa |  | Hình vuông có diện tích 36 cm². Cạnh của hình vuông dài bao nhiêu? | 6 cm | ☐ |
+| geo-area-grid-13 | dễ |  | Hình P là hình chữ nhật 4 ô × 2 ô. Hình Q là hình vuông 3 ô × 3 ô. Hình nào có diện tích … | Hình Q | ☐ |
+| geo-area-grid-14 | vừa |  | Hình chữ nhật 6 cm × 2 cm và hình vuông cạnh 4 cm có chu vi bằng nhau. Diện tích hình vuô… | 4 cm² | ☐ |
+| geo-area-grid-15 | khó | ma-grid-area | Nhìn hình. Mai muốn tô thêm ô vào cạnh hình A và hình C để cả ba hình A, B, C có diện tíc… | 3 ô vuông | ☐ |
+| geo-area-grid-16 | dễ |  | Mỗi ô vuông nhỏ có diện tích 1 cm². Một hình gồm 2 hàng ô: hàng trên 5 ô, hàng dưới 3 ô. … | 8 cm² | ☐ |
+| geo-area-grid-17 | vừa |  | Trên giấy kẻ ô, Bình vẽ hình chữ nhật 6 ô × 4 ô rồi cắt theo đường chéo thành 2 hình tam … | 12 ô vuông | ☐ |
+| geo-area-grid-18 | khó |  | Từ một tấm bìa hình vuông cạnh 6 cm, Khoa cắt bỏ 2 hình vuông nhỏ cạnh 2 cm ở 2 góc. Phần… | 28 cm² | ☐ |
+| geo-area-grid-19 | dễ |  | Thẻ đánh dấu sách hình chữ nhật dài 8 cm, rộng 2 cm. Diện tích thẻ là bao nhiêu? | 16 cm² | ☐ |
+| geo-area-grid-20 | vừa |  | Trên giấy kẻ ô, một hình phủ 6 ô nguyên và 4 nửa ô (mỗi nửa ô là một nửa ô vuông cắt chéo… | 8 ô vuông | ☐ |
+| geo-area-grid-21 | dễ |  | Hình nào sau đây (đo bằng ô vuông) có diện tích đúng bằng 12 ô vuông? | 3 × 4 | ☐ |
+| geo-area-grid-22 | khó |  | Có bao nhiêu hình chữ nhật khác nhau có diện tích 24 ô vuông, với cạnh là số ô nguyên? (X… | 4 hình | ☐ |
+| geo-area-grid-23 | dễ |  | Bức tường bếp được ốp gạch: 9 viên theo chiều ngang và 6 viên theo chiều cao. Bức tường c… | 54 viên | ☐ |
+| geo-area-grid-24 | vừa |  | Thanh sô-cô-la có 4 hàng, mỗi hàng 7 miếng. Lan bẻ ra 2 cột (mỗi cột 4 miếng) để chia cho… | 20 miếng | ☐ |
+| geo-area-grid-25 | dễ |  | Một hình chữ nhật trên giấy kẻ ô có diện tích 20 ô vuông và có 4 hàng. Mỗi hàng có bao nh… | 5 ô vuông | ☐ |
+| geo-area-grid-26 | vừa | ma-grid-area | Nhìn hình. Diện tích hình B hơn diện tích hình C bao nhiêu ô vuông? | 2 ô vuông | ☐ |
+| geo-area-grid-27 | dễ |  | Bàn cờ vua có 8 hàng, mỗi hàng 8 ô. Bàn cờ có tất cả bao nhiêu ô? | 64 ô vuông | ☐ |
+| geo-area-grid-28 | vừa |  | Hình chữ nhật có diện tích 24 cm² và chiều dài 8 cm. Chiều rộng của nó là bao nhiêu? | 3 cm | ☐ |
+| geo-area-grid-29 | khó |  | Các hình chữ nhật có chu vi 16 cm và cạnh là số cm nguyên. Hình có diện tích lớn nhất là … | 16 cm² | ☐ |
+| geo-area-grid-30 | dễ |  | Tấm thiệp hình chữ nhật dài 10 cm, rộng 4 cm. Diện tích tấm thiệp là bao nhiêu? | 40 cm² | ☐ |
+| geo-area-grid-31 | vừa |  | Nền phòng lát 7 hàng gạch, mỗi hàng 5 viên. Một tấm thảm che kín 3 hàng, mỗi hàng 4 viên.… | 23 viên | ☐ |
+| geo-area-grid-32 | dễ |  | Hình 1 là hình vuông 2 ô × 2 ô. Hình 2 là dải 1 hàng gồm 4 ô. Hình nào có diện tích lớn h… | Bằng nhau | ☐ |
+| geo-area-grid-33 | khó |  | Một hình vuông lớn có diện tích 36 cm² được ghép từ 4 hình vuông nhỏ bằng nhau (2 hàng, 2… | 3 cm | ☐ |
+| geo-area-grid-34 | vừa |  | Hình vuông có chu vi 20 cm. Diện tích hình vuông là bao nhiêu? | 25 cm² | ☐ |
+| geo-area-grid-35 | dễ | ma-grid-area | Nhìn hình. Hình nào có diện tích lớn nhất? | Hình B | ☐ |
+| geo-area-grid-36 | vừa |  | Có bao nhiêu thẻ domino cỡ 1 × 2 ô để phủ kín bảng 4 × 5 ô, không chồng lên nhau? | 10 thẻ | ☐ |
+| geo-area-grid-37 | khó |  | Trên giấy kẻ ô, Minh vẽ hình vuông 4 × 4 ô, rồi nối 4 trung điểm của 4 cạnh thành một hìn… | 8 ô vuông | ☐ |
+| geo-area-grid-38 | vừa |  | Luống rau hình chữ nhật dài 5 ô, rộng 3 ô. Bố nới dài thêm 2 ô (rộng vẫn 3 ô). Diện tích … | 6 ô vuông | ☐ |
+| geo-area-grid-39 | khó |  | Hà xếp các ô vuông thành hình bậc thang 6 bậc: cột 1 có 1 ô, cột 2 có 2 ô, …, cột 6 có 6 … | 21 ô vuông | ☐ |
+| geo-area-grid-40 | vừa |  | Hình P là hình chữ nhật 9 ô × 2 ô. Hình Q là hình chữ nhật 5 ô × 4 ô. Hình nào có diện tí… | Hình Q, hơn 2 ô | ☐ |
+
+### Khối lập phương và hình trải (40 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| geo-cubes-nets-01 | dễ |  | Hình lập phương có bao nhiêu mặt? | 6 | ☐ |
+| geo-cubes-nets-02 | dễ |  | Hình lập phương có bao nhiêu cạnh? | 12 | ☐ |
+| geo-cubes-nets-03 | dễ |  | Hình lập phương có bao nhiêu đỉnh (góc)? | 8 | ☐ |
+| geo-cubes-nets-04 | dễ |  | Trên một con xúc xắc, hai mặt đối diện luôn có tổng là 7. / Khoa tung xúc xắc, mặt trên l… | 5 | ☐ |
+| geo-cubes-nets-05 | dễ |  | Đồ vật nào dưới đây lăn được về mọi phía trên sàn? | Quả bóng (hình cầu) | ☐ |
+| geo-cubes-nets-06 | dễ |  | Lon nước ngọt có dạng hình trụ. Hình trụ có bao nhiêu mặt phẳng? | 2 | ☐ |
+| geo-cubes-nets-07 | dễ |  | Chiếc mũ sinh nhật của Mai có dạng hình nón. Hình nón có mấy đáy phẳng hình tròn? | 1 | ☐ |
+| geo-cubes-nets-08 | dễ | ma-cube-stack | Các khối lập phương xếp thành bậc thang, chỉ một lớp (không có khối nào bị che). / Cột ca… | 3 | ☐ |
+| geo-cubes-nets-09 | dễ | ma-cube-stack | Các khối lập phương xếp thành bậc thang, chỉ một lớp (không có khối nào bị che). / Có tất… | 6 | ☐ |
+| geo-cubes-nets-10 | dễ | ma-cube-stack | Nhìn bậc thang một lớp làm bằng khối lập phương trong hình. Có bao nhiêu khối được đặt tr… | 3 | ☐ |
+| geo-cubes-nets-11 | dễ | ma-cube-net | Gấp hình khai triển này thành một hình lập phương. / Mặt nào đối diện với mặt số 1? | 5 | ☐ |
+| geo-cubes-nets-12 | dễ |  | Hộp giày của Bình có dạng hình hộp chữ nhật (có nắp). Hộp có bao nhiêu mặt? | 6 | ☐ |
+| geo-cubes-nets-13 | dễ |  | Hình ghép từ các ô vuông nào dưới đây gấp được thành một hình lập phương? | 1 hàng 4 ô, thêm 1 ô phía trên và 1 ô p… | ☐ |
+| geo-cubes-nets-14 | dễ |  | Linh dùng các khối lập phương nhỏ ghép thành một khối lập phương lớn 2 × 2 × 2. Linh dùng… | 8 | ☐ |
+| geo-cubes-nets-15 | dễ |  | Minh xếp 4 khối lập phương thành hình vuông 2 × 2 trên bàn, rồi đặt thêm 1 khối lên trên … | 4 | ☐ |
+| geo-cubes-nets-16 | dễ |  | Quả bóng hình cầu có bao nhiêu đỉnh (góc nhọn)? | 0 | ☐ |
+| geo-cubes-nets-17 | vừa | ma-cube-net | Gấp hình khai triển này thành hình lập phương. / Có bao nhiêu mặt có chung cạnh với mặt s… | 4 | ☐ |
+| geo-cubes-nets-18 | vừa | ma-cube-net | Gấp hình khai triển này thành hình lập phương. / Lấy số ở mặt đối diện mặt 2 cộng với số … | 7 | ☐ |
+| geo-cubes-nets-19 | vừa | ma-cube-net | Gấp hình khai triển thành hình lập phương rồi đặt sao cho mặt 4 ở bên phải. / Số nào nằm … | 2 | ☐ |
+| geo-cubes-nets-20 | vừa | ma-cube-stack | Các khối lập phương xếp thành bậc thang, chỉ một lớp (không có khối nào bị che). / Cần th… | 3 | ☐ |
+| geo-cubes-nets-21 | vừa |  | Con xúc xắc có các mặt từ 1 đến 6 chấm. Tổng số chấm trên cả con xúc xắc là bao nhiêu? | 21 | ☐ |
+| geo-cubes-nets-22 | vừa |  | Bố uốn dây thép thành khung hình lập phương, mỗi cạnh dài 2 cm. Bố cần bao nhiêu xăng-ti-… | 24 | ☐ |
+| geo-cubes-nets-23 | vừa |  | Tuấn ghép các khối lập phương nhỏ thành một khối lập phương lớn 3 × 3 × 3. Tuấn cần bao n… | 27 | ☐ |
+| geo-cubes-nets-24 | vừa |  | Hà xếp các khối lập phương thành bậc thang một lớp: hàng dưới cùng có 4 khối, mỗi hàng ph… | 10 | ☐ |
+| geo-cubes-nets-25 | vừa |  | Mai làm khung hình lập phương: mỗi cạnh là một ống hút, mỗi đỉnh là một viên đất nặn. Mai… | 20 | ☐ |
+| geo-cubes-nets-26 | vừa |  | Một chiếc hộp hình hộp chữ nhật không có nắp. Nam sơn cả mặt trong và mặt ngoài của mọi m… | 10 | ☐ |
+| geo-cubes-nets-27 | vừa |  | Minh dán hai khối lập phương bằng nhau, áp sát mặt vào mặt. Phía ngoài khối mới có bao nh… | 10 | ☐ |
+| geo-cubes-nets-28 | vừa |  | Một con xúc xắc (mặt đối diện cộng lại bằng 7) có mặt trên 4 chấm và mặt trước 2 chấm. Tổ… | 8 | ☐ |
+| geo-cubes-nets-29 | vừa |  | Một kim tự tháp có đáy là hình vuông và 4 mặt bên hình tam giác chụm lại ở đỉnh nhọn. Kim… | 8 | ☐ |
+| geo-cubes-nets-30 | vừa |  | Lan có 3 tháp khối lập phương cao 2 khối, 4 khối và 5 khối. Lan muốn cả 3 tháp đều cao 5 … | 4 | ☐ |
+| geo-cubes-nets-31 | vừa |  | Khoa ghép 8 khối lập phương nhỏ thành khối lớn 2 × 2 × 2, rồi sơn đỏ toàn bộ mặt ngoài. C… | 8 | ☐ |
+| geo-cubes-nets-32 | vừa |  | Bình xếp một "kim tự tháp" bằng khối lập phương: tầng dưới là hình vuông 3 × 3, tầng giữa… | 14 | ☐ |
+| geo-cubes-nets-33 | khó |  | Một khối lập phương lớn 3 × 3 × 3 ghép từ 27 khối nhỏ được sơn xanh toàn bộ mặt ngoài. Có… | 6 | ☐ |
+| geo-cubes-nets-34 | khó |  | Tuấn sơn vàng mặt ngoài của khối lập phương lớn ghép từ 27 khối nhỏ (3 × 3 × 3), rồi tách… | 12 | ☐ |
+| geo-cubes-nets-35 | khó |  | Lan nhúng một khối lập phương 3 × 3 × 3 (ghép từ 27 khối nhỏ) vào sơn tím rồi tách rời cá… | 1 | ☐ |
+| geo-cubes-nets-36 | khó |  | Ba con xúc xắc (mặt đối diện cộng lại bằng 7) chồng thành tháp trên bàn. Mặt trên cùng có… | 16 | ☐ |
+| geo-cubes-nets-37 | khó |  | Nam xếp 4 khối lập phương chồng thành một tháp đứng giữa sàn. Đi vòng quanh và nhìn từ tr… | 17 | ☐ |
+| geo-cubes-nets-38 | khó |  | Khoa đã ghép xong khối lập phương 3 × 3 × 3 từ các khối nhỏ. Khoa muốn ghép thêm để được … | 37 | ☐ |
+| geo-cubes-nets-39 | khó | ma-cube-net | Gấp hình khai triển thành hình lập phương rồi đặt lên bàn với mặt 3 chạm bàn. Tổng các số… | 12 | ☐ |
+| geo-cubes-nets-40 | khó |  | Một khối lập phương 2 × 2 × 2 ghép từ 8 khối nhỏ có 24 mặt ô vuông nhỏ ở mặt ngoài. Hà rú… | 24 | ☐ |
+
+### Đối xứng, gấp giấy và đồng hồ (40 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| geo-symmetry-clock-01 | dễ | ma-clock | Đồng hồ trong hình chỉ mấy giờ? | 3:00 | ☐ |
+| geo-symmetry-clock-02 | dễ | ma-clock | Đồng hồ trong hình chỉ giờ hiện tại. 2 giờ sau đồng hồ sẽ chỉ mấy giờ? | 5:00 | ☐ |
+| geo-symmetry-clock-03 | dễ | ma-clock | Hai kim của đồng hồ trong hình tạo thành hình gì? | Góc vuông | ☐ |
+| geo-symmetry-clock-04 | dễ | ma-symmetry-fold | Mở tờ giấy trong hình ra, em sẽ thấy gì? | 1 lỗ hình trái tim nguyên vẹn | ☐ |
+| geo-symmetry-clock-05 | dễ |  | Mai có một chiếc khăn tay hình vuông. Có bao nhiêu cách gấp đôi chiếc khăn để hai nửa trù… | 4 | ☐ |
+| geo-symmetry-clock-06 | dễ |  | Một hình chữ nhật (không phải hình vuông) có bao nhiêu trục đối xứng? | 2 | ☐ |
+| geo-symmetry-clock-07 | dễ |  | Bình viết một chữ cái in hoa lên tấm thẻ rồi gấp đôi theo đường thẳng đứng ở giữa chữ. Vớ… | A | ☐ |
+| geo-symmetry-clock-08 | dễ |  | Chữ cái in hoa nào dưới đây KHÔNG có trục đối xứng nào? | L | ☐ |
+| geo-symmetry-clock-09 | dễ |  | Lan gấp đôi một tờ giấy rồi đục 1 lỗ xuyên qua cả hai lớp (không trúng mép gấp). Mở tờ gi… | 2 | ☐ |
+| geo-symmetry-clock-10 | dễ |  | Lúc 6:00, kim giờ và kim phút tạo thành hình gì? | Một đường thẳng | ☐ |
+| geo-symmetry-clock-11 | dễ |  | Hình nào dưới đây có đúng 1 trục đối xứng? | Hình trái tim | ☐ |
+| geo-symmetry-clock-12 | dễ |  | Kim phút đi từ số 12, quay hết một vòng rồi trở lại số 12. Đã trôi qua bao nhiêu phút? | 60 | ☐ |
+| geo-symmetry-clock-13 | dễ |  | Minh gấp một tờ giấy hình vuông theo đường chéo sao cho hai góc đối diện chồng lên nhau. … | Hình tam giác | ☐ |
+| geo-symmetry-clock-14 | dễ |  | Trên lưới ô vuông có một trục đối xứng thẳng đứng. Ô màu đỏ nằm cách trục 2 ô, ở bên trái… | Cách trục 2 ô, bên phải | ☐ |
+| geo-symmetry-clock-15 | dễ |  | Hà gấp đôi một tờ giấy. Hà cắt 1 nửa hình tròn sát nếp gấp, rồi cắt 1 hình tam giác nhỏ ở… | 3 | ☐ |
+| geo-symmetry-clock-16 | dễ |  | Lúc nào dưới đây hai kim đồng hồ tạo thành góc vuông? | 9:00 | ☐ |
+| geo-symmetry-clock-17 | vừa | ma-clock | Bắt đầu từ lúc đồng hồ chỉ như trong hình, sau 30 phút kim phút sẽ chỉ vào số nào? | Số 6 | ☐ |
+| geo-symmetry-clock-18 | vừa | ma-symmetry-fold | Mở tờ giấy trong hình ra, lỗ hình trái tim nằm ở đâu trên tờ giấy? | Ở giữa tờ giấy, nếp gấp chia đôi trái t… | ☐ |
+| geo-symmetry-clock-19 | vừa |  | Một hình tam giác có 3 cạnh bằng nhau. Hình đó có bao nhiêu trục đối xứng? | 3 | ☐ |
+| geo-symmetry-clock-20 | vừa |  | Hình nào dưới đây có nhiều trục đối xứng nhất? | Hình tròn | ☐ |
+| geo-symmetry-clock-21 | vừa |  | Hà cắt một hình tam giác giống mái nhà: 2 cạnh bên bằng nhau, cạnh đáy ngắn hơn. Hình đó … | 1 | ☐ |
+| geo-symmetry-clock-22 | vừa |  | Chữ cái in hoa nào có thể gấp theo đường nằm ngang (nửa trên úp xuống nửa dưới) mà hai nử… | E | ☐ |
+| geo-symmetry-clock-23 | vừa |  | Chữ cái in hoa nào có đúng 2 trục đối xứng? | H | ☐ |
+| geo-symmetry-clock-24 | vừa |  | Trong chữ HELLO (viết in hoa), có bao nhiêu chữ cái có ít nhất một trục đối xứng? | 3 | ☐ |
+| geo-symmetry-clock-25 | vừa |  | Nam nhìn chiếc đồng hồ treo tường qua gương. Trong gương, kim giờ chỉ số 3, kim phút chỉ … | 9:00 | ☐ |
+| geo-symmetry-clock-26 | vừa |  | Lúc Lan bắt đầu làm bài, kim giờ chỉ số 2 và kim phút chỉ số 12. Lan làm xong đúng lúc ki… | Số 5 | ☐ |
+| geo-symmetry-clock-27 | vừa |  | Khoa gấp đôi một tờ giấy, rồi gấp đôi thêm một lần nữa. Bạn đục 1 lỗ xuyên qua tất cả các… | 4 | ☐ |
+| geo-symmetry-clock-28 | vừa |  | Linh gấp đôi một băng giấy rồi đục 3 lỗ, lỗ nào cũng xuyên qua cả hai lớp và không trúng … | 6 | ☐ |
+| geo-symmetry-clock-29 | vừa |  | Xét các giờ đúng từ 1:00 đến 12:00. Có bao nhiêu giờ mà hai kim đồng hồ tạo thành góc vuô… | 2 | ☐ |
+| geo-symmetry-clock-30 | vừa |  | Chỉ xét giờ đúng. Khoảng hở giữa kim giờ và kim phút hẹp hơn một góc vuông vào lúc nào? | 1:00 | ☐ |
+| geo-symmetry-clock-31 | vừa |  | Mỗi ô tổ ong là một hình 6 cạnh có các cạnh bằng nhau và các góc bằng nhau. Có bao nhiêu … | 6 | ☐ |
+| geo-symmetry-clock-32 | vừa |  | Có 7 bông hoa xếp thành một hàng, đối xứng qua bông ở chính giữa. Bông thứ 2 tính từ trái… | Bông thứ 6 | ☐ |
+| geo-symmetry-clock-33 | khó |  | Tính từ sau 12:00 đến trước 6:00, kim giờ và kim phút chồng lên nhau bao nhiêu lần? | 5 | ☐ |
+| geo-symmetry-clock-34 | khó |  | Tuấn nhìn đồng hồ treo tường qua gương và thấy đồng hồ chỉ 2:30. Giờ thật là mấy giờ? | 9:30 | ☐ |
+| geo-symmetry-clock-35 | khó |  | An gấp đôi một tờ giấy liền 3 lần (mỗi lần gấp đôi phần đã gấp). Rồi An đục 1 lỗ xuyên qu… | 8 | ☐ |
+| geo-symmetry-clock-36 | khó |  | Minh gấp đôi một tờ giấy vuông, rồi gấp đôi thêm lần nữa thành hình vuông nhỏ. Bạn cắt bỏ… | 1 | ☐ |
+| geo-symmetry-clock-37 | khó |  | Mai vẽ một con bướm đối xứng qua thân. Cánh trái có 4 chấm tròn, trên thân (nằm đúng trên… | 9 | ☐ |
+| geo-symmetry-clock-38 | khó |  | Đặt một chiếc gương đứng ngay bên cạnh từ được viết in hoa. Từ nào nhìn trong gương vẫn y… | WOW | ☐ |
+| geo-symmetry-clock-39 | khó |  | Từ 8:00 sáng thứ Hai đến 8:00 sáng thứ Tư, kim giờ của đồng hồ quay được bao nhiêu vòng t… | 4 | ☐ |
+| geo-symmetry-clock-40 | khó |  | Hà nhìn đồng hồ qua gương thấy kim giờ chỉ số 10, kim phút chỉ số 12. Thêm 3 giờ nữa thì … | 5:00 | ☐ |
+
+## Tổ hợp – Combinatorics (200 câu)
+
+### Đếm cách chọn và phối đồ (40 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| com-choices-01 | dễ |  | Mai có 3 chiếc áo và 2 chiếc váy. Mỗi bộ đồ gồm 1 áo và 1 váy. Mai mặc được bao nhiêu bộ … | 6 | ☐ |
+| com-choices-02 | dễ |  | Quán nước có 5 loại đồ uống và 3 loại bánh. Nam gọi 1 đồ uống và 1 cái bánh. Nam có bao n… | 15 | ☐ |
+| com-choices-03 | dễ |  | Từ làng A đến làng B có 4 con đường. Từ làng B đến làng C cũng có 4 con đường. Có bao nhi… | 16 | ☐ |
+| com-choices-04 | dễ |  | An, Bình và Chi đứng thành một hàng ngang để chụp ảnh. Có bao nhiêu cách xếp 3 bạn (đổi c… | 6 | ☐ |
+| com-choices-05 | dễ |  | Tiệm bánh có 4 loại bánh mì và 3 loại bánh quy. Lan chỉ mua đúng 1 món: hoặc 1 bánh mì, h… | 7 | ☐ |
+| com-choices-06 | dễ |  | Có 5 tấm thẻ ghi số 1, 2, 3, 4, 5. Lấy 2 thẻ xếp thành số có 2 chữ số (mỗi thẻ dùng 1 lần… | 20 | ☐ |
+| com-choices-07 | dễ |  | Hộp bút của Khoa có 4 cây bút chì và 2 cục tẩy. Khoa lấy 1 bút chì và 1 cục tẩy. Có bao n… | 8 | ☐ |
+| com-choices-08 | dễ |  | Cô giáo chọn 2 bạn trong 3 bạn Hà, Linh, Tuấn đi tưới cây. Hai bạn làm cùng một việc, nên… | 3 | ☐ |
+| com-choices-09 | dễ |  | Quầy kem có 4 vị kem. Mỗi phần kem gồm 1 vị và đựng trong ốc quế hoặc trong cốc. Có bao n… | 8 | ☐ |
+| com-choices-10 | dễ |  | Chỉ dùng hai chữ số 1 và 2, viết số có 2 chữ số. Một chữ số được phép dùng 2 lần (như 11)… | 4 | ☐ |
+| com-choices-11 | dễ |  | Lớp chọn 1 lớp trưởng và 1 lớp phó trong 3 bạn Minh, Hà, Nam. Một bạn không giữ cả hai ch… | 6 | ☐ |
+| com-choices-12 | dễ |  | Linh đi sở thú bằng 1 trong 3 tuyến xe buýt hoặc 1 trong 2 tuyến tàu điện. Linh chỉ đi mộ… | 5 | ☐ |
+| com-choices-13 | dễ |  | Mỗi tấm hình dán có 1 màu nền (chọn 1 trong 2 màu) và 1 con vật (chọn 1 trong 5 con). Có … | 10 | ☐ |
+| com-choices-14 | dễ |  | Từ nhà Tuấn ra bờ sông có 3 con đường. Tuấn đi ra sông rồi về nhà; lúc về có thể đi lại đ… | 9 | ☐ |
+| com-choices-15 | dễ |  | Suất cơm trưa ở trường gồm 1 món mặn (chọn trong 4 món) và 1 món canh (chọn trong 3 món).… | 12 | ☐ |
+| com-choices-16 | dễ |  | Có 3 tấm thẻ ghi số 4, 6, 8. Xếp cả 3 thẻ thành số có 3 chữ số (mỗi thẻ dùng 1 lần). Có b… | 4 | ☐ |
+| com-choices-17 | vừa |  | Đội bóng có 4 bạn: An, Bình, Chi, Dũng. Cần chọn 1 đội trưởng và 1 đội phó (2 bạn khác nh… | 12 | ☐ |
+| com-choices-18 | vừa |  | Quầy kem có 4 vị: dâu, sô-cô-la, vani, xoài. Hà chọn 2 viên kem khác vị nhau cho vào một … | 6 | ☐ |
+| com-choices-19 | vừa |  | Một lá cờ có 3 sọc ngang. Tô mỗi sọc một màu đỏ, vàng hoặc xanh, và mỗi màu dùng đúng 1 l… | 6 | ☐ |
+| com-choices-20 | vừa |  | Bình tô một dải băng gồm 3 ô liền nhau. Mỗi ô tô 1 trong 3 màu đỏ, vàng, xanh; các ô được… | 27 | ☐ |
+| com-choices-21 | vừa |  | Mai, Lan, Hoa và Khoa ngồi vào 4 chiếc ghế xếp thành một hàng, mỗi bạn một ghế. Mai và La… | 4 | ☐ |
+| com-choices-22 | vừa |  | Thực đơn có 3 món: món khai vị (súp cá hoặc súp gà), món chính (cá, gà hoặc bò) và tráng … | 10 | ☐ |
+| com-choices-23 | vừa |  | Bình có 3 miếng ghép số 0, 3, 5 và dùng cả 3 miếng để ghép thành số có 3 chữ số. Nhớ: số … | 4 | ☐ |
+| com-choices-24 | vừa |  | Lan có 3 chiếc áo, 3 chiếc váy và 2 đôi giày. Mỗi bộ gồm 1 áo, 1 váy và 1 đôi giày. Lan c… | 18 | ☐ |
+| com-choices-25 | vừa |  | Từ A đến B có 3 đường, từ B đến C có 2 đường. Ngoài ra còn 1 đường đi thẳng từ A đến C (k… | 7 | ☐ |
+| com-choices-26 | vừa |  | Lan, Mai, Nam, Khoa xếp thành một hàng dọc. Lan luôn đứng đầu hàng và Khoa luôn đứng cuối… | 2 | ☐ |
+| com-choices-27 | vừa |  | 4 bạn An, Bình, Khoa, Tuấn chạy thi. Huy chương vàng, bạc, đồng được trao cho 3 bạn khác … | 24 | ☐ |
+| com-choices-28 | vừa |  | Thư viện lớp có 5 quyển truyện khác nhau. Minh mượn 2 quyển khác nhau cùng lúc (mượn quyể… | 10 | ☐ |
+| com-choices-29 | vừa |  | Nhà thi đấu có 5 cửa. Khoa vào bằng một cửa và ra bằng một cửa khác (không ra bằng cửa vừ… | 20 | ☐ |
+| com-choices-30 | vừa |  | Hộp ăn nhẹ gồm 1 đồ uống (3 loại), 1 trái cây (4 loại) và 1 cái bánh (2 loại). Có bao nhi… | 24 | ☐ |
+| com-choices-31 | vừa |  | Số áo đấu của Tuấn là một số chẵn có 2 chữ số khác nhau, mỗi chữ số lấy từ 1, 2, 3. Có ba… | 2 | ☐ |
+| com-choices-32 | vừa |  | Hà có một số áo và 3 chiếc váy. Ghép 1 áo với 1 váy, Hà được đúng 15 bộ khác nhau. Hà có … | 5 | ☐ |
+| com-choices-33 | khó |  | Một lá cờ có 3 sọc ngang, mỗi sọc tô 1 trong 3 màu đỏ, vàng, xanh. Một màu được dùng lại,… | 12 | ☐ |
+| com-choices-34 | khó |  | 2 bạn gái Mai, Linh và 2 bạn trai Tuấn, Nam xếp thành một hàng ngang. Bạn trai và bạn gái… | 8 | ☐ |
+| com-choices-35 | khó |  | Nhóm có 3 bạn trai An, Bình, Khoa và 2 bạn gái Mai, Lan. Cô chọn 2 bạn cùng cầm cờ (thứ t… | 7 | ☐ |
+| com-choices-36 | khó |  | Bữa trưa, Nam chọn HOẶC 1 suất cơm, HOẶC 1 tô phở. Suất cơm gồm 1 loại cơm (2 loại) và 1 … | 9 | ☐ |
+| com-choices-37 | khó |  | Trong hộp có 4 quả bóng ghi số 1, 2, 3, 4. Minh lấy 3 quả xếp thành hàng để được một số l… | 12 | ☐ |
+| com-choices-38 | khó |  | Nhóm có 4 bạn: An, Bình, Chi, Dũng. Chọn 1 đội trưởng và 1 đội phó (2 bạn khác nhau), như… | 9 | ☐ |
+| com-choices-39 | khó |  | Tiệm kem có 4 vị. Mai mua một cốc 2 viên kem; 2 viên có thể cùng vị (như 2 viên dâu). Thứ… | 10 | ☐ |
+| com-choices-40 | khó |  | Từ A đến B có 3 đường, từ B đến C có 2 đường. Tuấn đi từ A qua B đến C, rồi quay về A qua… | 12 | ☐ |
+
+### Đường đi trên lưới (40 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| com-grid-paths-01 | dễ | ma-grid-paths | Nhìn bản đồ phố. An đi từ A đến B, mỗi lần chỉ được đi sang phải hoặc đi lên. An có bao n… | 10 | ☐ |
+| com-grid-paths-02 | dễ | ma-grid-paths | Trên bản đồ phố, Mai đi từ A đến B theo một đường ngắn nhất (chỉ sang phải hoặc lên trên)… | 5 | ☐ |
+| com-grid-paths-03 | dễ |  | Một khu nhà hình vuông có đường bao quanh 4 phía (lưới rộng 1 ô và cao 1 ô). Đi từ góc dư… | 2 | ☐ |
+| com-grid-paths-04 | dễ |  | Một rô-bốt chạy trên lưới phố rộng 2 ô và cao 1 ô, từ góc dưới bên trái đến góc trên bên … | 3 | ☐ |
+| com-grid-paths-05 | dễ |  | Một lưới ô vuông rộng 1 ô và cao 4 ô. Con kiến bò dọc theo các đường kẻ từ góc dưới bên t… | 5 | ☐ |
+| com-grid-paths-06 | dễ |  | Vườn rau của bà chia thành lưới rộng 2 ô và cao 2 ô, có lối đi dọc theo các cạnh. Lan đi … | 6 | ☐ |
+| com-grid-paths-07 | dễ |  | Thị trấn có lưới phố rộng 4 ô và cao 3 ô. Khoa đi từ góc dưới bên trái đến góc trên bên p… | 7 | ☐ |
+| com-grid-paths-08 | dễ |  | Cầu thang nhà Hà có 3 bậc. Mỗi lần Hà bước lên 1 bậc hoặc 2 bậc. Hà có bao nhiêu cách để … | 3 | ☐ |
+| com-grid-paths-09 | dễ |  | Dòng sông có 2 hòn đảo. Từ bờ trái sang đảo thứ nhất có 3 cây cầu, từ đảo thứ nhất sang đ… | 12 | ☐ |
+| com-grid-paths-10 | dễ |  | Trên lưới phố, Minh chỉ đi sang phải hoặc lên trên. Từ nhà Minh đến cửa hàng là 1 đoạn sa… | 4 | ☐ |
+| com-grid-paths-11 | dễ |  | Minh lập bảng đếm đường cho lưới phố rộng 3 ô và cao 2 ô: Minh ghi một số ở mỗi ngã tư, k… | 12 | ☐ |
+| com-grid-paths-12 | dễ |  | Trên một lưới phố, chỉ được đi sang phải hoặc lên trên. Có 5 cách đến ngã tư ngay bên trá… | 15 | ☐ |
+| com-grid-paths-13 | dễ |  | Minh ghi số cách đi đến mỗi góc của một lưới (chỉ sang phải hoặc lên trên). Góc ★ ghi 10,… | 4 | ☐ |
+| com-grid-paths-14 | dễ |  | Linh đi trên lưới phố rộng 4 ô và cao 2 ô, từ góc dưới bên trái đến góc trên bên phải the… | 4 | ☐ |
+| com-grid-paths-15 | dễ |  | Lưới phố rộng 2 ô và cao 1 ô. Tuấn đi từ góc dưới bên trái đến góc trên bên phải, chỉ san… | 2 | ☐ |
+| com-grid-paths-16 | dễ |  | Trên một lưới phố, chỉ được đi sang phải hoặc lên trên. Có bao nhiêu cách đi từ điểm xuất… | 1 | ☐ |
+| com-grid-paths-17 | vừa | ma-grid-paths | Trên bản đồ phố, đi từ A đến B (chỉ sang phải hoặc lên trên). Có bao nhiêu đường ngắn nhấ… | 6 | ☐ |
+| com-grid-paths-18 | vừa | ma-grid-paths | Nhìn bản đồ phố. Chỉ đi sang phải hoặc lên trên. Có bao nhiêu đường ngắn nhất từ A đến B … | 2 | ☐ |
+| com-grid-paths-19 | vừa | ma-grid-paths | Trên bản đồ phố, chỉ đi sang phải hoặc lên trên. Có bao nhiêu đường ngắn nhất từ A đến B … | 4 | ☐ |
+| com-grid-paths-20 | vừa |  | Một chú ốc sên bò dọc các đường kẻ của lưới rộng 2 ô và cao 3 ô, từ góc dưới bên trái đến… | 10 | ☐ |
+| com-grid-paths-21 | vừa |  | Các lối đi trong công viên tạo thành lưới rộng 3 ô và cao 3 ô. Bình đi từ cổng ở góc dưới… | 20 | ☐ |
+| com-grid-paths-22 | vừa |  | Cầu thang lên gác xép có 4 bậc. Mỗi lần Mai bước 1 bậc hoặc 2 bậc. Mai có bao nhiêu cách … | 5 | ☐ |
+| com-grid-paths-23 | vừa |  | Bản đồ khu phố là lưới rộng 2 ô và cao 4 ô. Xe giao hàng chạy từ góc dưới bên trái đến gó… | 15 | ☐ |
+| com-grid-paths-24 | vừa |  | Từ nhà An (A) đến nhà Phúc (P) có 3 đường ngắn nhất. Từ nhà Phúc đến trường (B) có 4 đườn… | 12 | ☐ |
+| com-grid-paths-25 | vừa |  | Lưới phố rộng 4 ô và cao 2 ô. Hà đi từ góc dưới bên trái đến góc trên bên phải, chỉ sang … | 11 | ☐ |
+| com-grid-paths-26 | vừa |  | Có 4 cây cầu nối hai bờ sông. Nam đi sang bờ bên kia rồi quay về, lúc về có thể đi cầu nà… | 16 | ☐ |
+| com-grid-paths-27 | vừa |  | Một con kiến đứng ở một đỉnh của hình lập phương. Kiến bò dọc theo đúng 2 cạnh khác nhau.… | 3 | ☐ |
+| com-grid-paths-28 | vừa |  | Lưới phố rộng 2 ô và cao 2 ô. Ngã tư ở chính giữa lưới đang bị chặn. Chi đi từ góc dưới b… | 2 | ☐ |
+| com-grid-paths-29 | vừa |  | Một bảng ghi số cách đi đến mỗi góc của lưới (chỉ sang phải hoặc lên trên). Hàng dưới cùn… | 10 | ☐ |
+| com-grid-paths-30 | vừa |  | Các lối đi trong công viên tạo thành lưới rộng 2 ô và cao 2 ô. Ngoài ra có một lối đi ché… | 8 | ☐ |
+| com-grid-paths-31 | vừa |  | Lưới phố rộng 3 ô và cao 3 ô. Linh đi từ góc dưới bên trái đến góc trên bên phải, chỉ san… | 8 | ☐ |
+| com-grid-paths-32 | vừa |  | Lưới phố rộng 2 ô và cao 2 ô. Chỉ đi sang phải hoặc lên trên. Có bao nhiêu đường ngắn nhấ… | 3 | ☐ |
+| com-grid-paths-33 | khó | ma-grid-paths | Nhìn bản đồ phố. Gọi M là ngã tư cách A 1 đoạn sang phải và 1 đoạn lên trên. Chỉ đi sang … | 6 | ☐ |
+| com-grid-paths-34 | khó |  | Một con kiến ở một đỉnh của hình lập phương muốn bò đến đỉnh xa nhất, dọc theo các cạnh, … | 6 | ☐ |
+| com-grid-paths-35 | khó |  | Ếch con ngồi trên bờ ao. Trước mặt có các hòn đá xếp thành hàng, đánh số từ 1 đến 5. Mỗi … | 8 | ☐ |
+| com-grid-paths-36 | khó |  | Lưới phố rộng 4 ô và cao 2 ô. P là ngã tư cách góc dưới bên trái 2 đoạn sang phải và 1 đo… | 9 | ☐ |
+| com-grid-paths-37 | khó |  | Lưới phố rộng 3 ô và cao 3 ô. Ngã tư cách góc dưới bên trái 1 đoạn sang phải và 1 đoạn lê… | 8 | ☐ |
+| com-grid-paths-38 | khó |  | Rô-bốt hút bụi chạy theo các đường kẻ của tấm thảm lưới rộng 3 ô và cao 3 ô, từ góc dưới … | 6 | ☐ |
+| com-grid-paths-39 | khó |  | Nam đạp xe từ nhà (góc dưới bên trái) đến thư viện (góc trên bên phải) trên một khu phố h… | 7 | ☐ |
+| com-grid-paths-40 | khó | ma-grid-paths | Nhìn bản đồ phố. Lan đi từ A đến B theo một đường ngắn nhất (chỉ sang phải hoặc lên trên)… | 90 | ☐ |
+
+### Bắt tay và thi đấu vòng tròn (40 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| com-handshakes-01 | dễ |  | An, Bình và Mai gặp nhau. Mỗi cặp bạn bắt tay nhau đúng một lần. Có tất cả bao nhiêu cái … | 3 | ☐ |
+| com-handshakes-02 | dễ |  | 4 bạn Lan, Minh, Khoa và Hà gặp nhau. Mỗi cặp bạn bắt tay nhau đúng một lần. Có tất cả ba… | 6 | ☐ |
+| com-handshakes-03 | dễ |  | Một nhóm có 6 bạn. Mỗi cặp bạn bắt tay nhau đúng một lần. Mỗi bạn bắt tay bao nhiêu lần? | 5 | ☐ |
+| com-handshakes-04 | dễ |  | 5 bạn Tuấn, Linh, Nam, Hà và Bình chơi cầu lông. Mỗi cặp bạn đấu với nhau đúng một trận. … | 10 | ☐ |
+| com-handshakes-05 | dễ |  | 3 bạn An, Chi và Dũng, mỗi bạn tặng mỗi bạn còn lại một tấm thiệp. Có tất cả bao nhiêu tấ… | 6 | ☐ |
+| com-handshakes-06 | dễ |  | Linh, Khoa và Minh đổi nhãn dán: mỗi bạn tặng mỗi bạn còn lại 2 nhãn dán. Có tất cả bao n… | 12 | ☐ |
+| com-handshakes-07 | dễ |  | Mai chấm 5 điểm trên một đường tròn. Mai nối mỗi điểm với 2 điểm không nằm cạnh nó và đượ… | 5 | ☐ |
+| com-handshakes-08 | dễ |  | Có 3 bạn nam và 2 bạn nữ. Mỗi bạn nam bắt tay mỗi bạn nữ đúng một lần. Các bạn cùng là na… | 6 | ☐ |
+| com-handshakes-09 | dễ |  | Sau trận đấu, mỗi cầu thủ trong 5 cầu thủ đội Đỏ bắt tay mỗi cầu thủ trong 5 cầu thủ đội … | 25 | ☐ |
+| com-handshakes-10 | dễ |  | Có 4 đội thi đấu loại trực tiếp: mỗi trận đội thua bị loại, đội thắng đi tiếp, cho đến kh… | 3 | ☐ |
+| com-handshakes-11 | dễ |  | Có 8 đội thi đấu loại trực tiếp. Ở vòng đầu tiên, các đội đấu theo từng cặp và mỗi đội đấ… | 4 | ☐ |
+| com-handshakes-12 | dễ |  | Bảng đấu có 4 đội, mỗi cặp đội đấu với nhau đúng một trận. Thắng được 3 điểm. Đội Sao Mai… | 9 | ☐ |
+| com-handshakes-13 | dễ |  | Giải có 5 đội, mỗi cặp đội đấu với nhau đúng một trận. Hòa được 1 điểm. Đội Cá Heo hòa tấ… | 4 | ☐ |
+| com-handshakes-14 | dễ |  | Mai, Lan và Hà chơi quần vợt. Mỗi cặp bạn đấu với nhau 2 trận. Có tất cả bao nhiêu trận? | 6 | ☐ |
+| com-handshakes-15 | dễ |  | Nhóm có 5 bạn. Mỗi bạn gửi một tấm thiệp cho mỗi bạn khác trong nhóm. Mỗi bạn gửi đi bao … | 4 | ☐ |
+| com-handshakes-16 | dễ |  | Có 3 điểm A, B, C không nằm trên cùng một đường thẳng. Nối mỗi cặp điểm bằng một đoạn thẳ… | 3 | ☐ |
+| com-handshakes-17 | vừa |  | 6 thành viên câu lạc bộ cờ vua gặp nhau đầu năm học. Mỗi cặp bạn bắt tay nhau đúng một lầ… | 15 | ☐ |
+| com-handshakes-18 | vừa |  | Ở tiệc sinh nhật của Linh có 7 bạn (tính cả Linh). Mỗi cặp bạn bắt tay nhau đúng một lần.… | 21 | ☐ |
+| com-handshakes-19 | vừa |  | Giải bóng đá của trường có 5 đội. Mỗi cặp đội đấu với nhau đúng một trận. Cả giải có bao … | 10 | ☐ |
+| com-handshakes-20 | vừa |  | Có 4 đội bóng. Mỗi cặp đội đấu với nhau 2 trận: một trận trên sân nhà của mỗi đội. Cả giả… | 12 | ☐ |
+| com-handshakes-21 | vừa |  | Dịp Tết, 5 bạn trong tổ, mỗi bạn tặng mỗi bạn còn lại một tấm thiệp chúc mừng. Cả tổ tặng… | 20 | ☐ |
+| com-handshakes-22 | vừa |  | 8 bạn trong lớp, mỗi cặp bạn gọi điện cho nhau đúng một lần (một cuộc gọi cho mỗi cặp). C… | 28 | ☐ |
+| com-handshakes-23 | vừa |  | Một hình có 7 cạnh và 7 đỉnh. Hình đó có bao nhiêu đường chéo? (Đường chéo là đoạn thẳng … | 14 | ☐ |
+| com-handshakes-24 | vừa |  | Mảnh vườn hình lục giác có 6 góc. Bác Tuấn căng một sợi dây giữa mỗi cặp góc không nằm cạ… | 9 | ☐ |
+| com-handshakes-25 | vừa |  | 4 bạn An, Bình, Chi, Dũng cần bắt tay sao cho mỗi cặp bắt tay đúng một lần. An đã bắt tay… | 3 | ☐ |
+| com-handshakes-26 | vừa |  | Có 4 thầy cô và 6 học sinh. Mỗi thầy cô bắt tay mỗi học sinh đúng một lần. Thầy cô không … | 24 | ☐ |
+| com-handshakes-27 | vừa |  | Giải có 6 đội, mỗi cặp đội đấu với nhau đúng một trận. Thắng được 3 điểm, hòa được 1 điểm… | 11 | ☐ |
+| com-handshakes-28 | vừa |  | Giải bóng đá mini khối 3 có 8 đội, đá theo thể thức loại trực tiếp (thua là bị loại). Cần… | 7 | ☐ |
+| com-handshakes-29 | khó |  | Một nhóm bạn gặp nhau. Mỗi cặp bạn bắt tay nhau đúng một lần, và mỗi bạn tặng mỗi bạn còn… | 5 | ☐ |
+| com-handshakes-30 | vừa |  | Ở buổi liên hoan lớp, mỗi cặp bạn bắt tay nhau đúng một lần. Lan đã bắt tay 7 lần. Buổi l… | 8 | ☐ |
+| com-handshakes-31 | vừa |  | 4 bạn Nam, Khoa, Linh và Hà gặp nhau, mỗi cặp bạn bắt tay đúng một lần. Sau đó cô giáo đế… | 10 | ☐ |
+| com-handshakes-32 | khó |  | Trong một giải bóng có 5 đội, mỗi đội gặp mỗi đội khác đúng một lần. Thắng được 3 điểm, h… | 2 | ☐ |
+| com-handshakes-33 | khó |  | Ở một buổi gặp mặt, mỗi cặp người bắt tay nhau đúng một lần. Có tất cả 10 cái bắt tay. Bu… | 5 | ☐ |
+| com-handshakes-34 | khó |  | Một giải cờ vua, mỗi cặp kỳ thủ đấu với nhau đúng một ván. Cả giải có 15 ván. Giải có bao… | 6 | ☐ |
+| com-handshakes-35 | vừa |  | Lớp có 10 bạn chơi trò chào nhau: mỗi cặp bạn bắt tay nhau đúng một lần. Có tất cả bao nh… | 45 | ☐ |
+| com-handshakes-36 | vừa |  | Có 16 bạn thi đấu bóng bàn loại trực tiếp: mỗi trận người thua bị loại, người thắng đi ti… | 15 | ☐ |
+| com-handshakes-37 | khó |  | Thắng được 3 điểm, hòa được 1 điểm, thua được 0 điểm. Đội Sư Tử đá 4 trận, không thua trậ… | 2 | ☐ |
+| com-handshakes-38 | khó |  | Trong một nhóm bạn, mỗi bạn gửi một tấm thiệp cho mỗi bạn khác. Có tất cả 12 tấm thiệp đư… | 4 | ☐ |
+| com-handshakes-39 | khó |  | Bảng đấu có 4 đội, mỗi cặp đội đấu với nhau đúng một trận. Thắng được 3 điểm, thua được 0… | 18 | ☐ |
+| com-handshakes-40 | khó |  | Có 3 bạn nam và 4 bạn nữ. Mỗi bạn nam bắt tay mỗi bạn nữ đúng một lần. Các bạn nữ cũng bắ… | 18 | ☐ |
+
+### Nguyên lý ngăn kéo (40 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| com-pigeonhole-01 | dễ |  | Trong ngăn kéo có 6 chiếc tất đỏ và 6 chiếc tất xanh. Không nhìn, Lan lấy ra từng chiếc. … | 3 | ☐ |
+| com-pigeonhole-02 | dễ |  | Một túi có 5 bi đỏ, 5 bi vàng và 5 bi xanh. Không nhìn vào túi, Minh phải lấy ít nhất bao… | 4 | ☐ |
+| com-pigeonhole-03 | dễ |  | Hộp bút có 4 màu: đỏ, xanh, vàng, tím, mỗi màu 10 chiếc. Không nhìn, Khoa phải lấy ít nhấ… | 5 | ☐ |
+| com-pigeonhole-04 | dễ |  | Hà viết ra các số khác nhau. Hà phải viết ít nhất bao nhiêu số để chắc chắn có 2 số có cù… | 11 | ☐ |
+| com-pigeonhole-05 | dễ |  | Trong hộp có 3 bút đỏ và 5 bút xanh. Không nhìn, Khoa phải lấy ít nhất bao nhiêu chiếc bú… | 6 | ☐ |
+| com-pigeonhole-06 | dễ |  | Tủ có 5 đôi giày, mỗi đôi một kiểu khác nhau, các chiếc bị trộn lẫn. Không nhìn, Nam phải… | 6 | ☐ |
+| com-pigeonhole-07 | dễ |  | Một nhóm phải có ít nhất bao nhiêu bạn thì chắc chắn có 2 bạn sinh cùng một tháng? | 13 | ☐ |
+| com-pigeonhole-08 | dễ |  | Cần ít nhất bao nhiêu bạn để chắc chắn có 2 bạn sinh vào cùng một thứ trong tuần (ví dụ c… | 8 | ☐ |
+| com-pigeonhole-09 | vừa |  | Cô giáo bỏ 10 cái kẹo vào 3 hộp. Điền số lớn nhất vào chỗ trống: "Chắc chắn có một hộp có… | 4 | ☐ |
+| com-pigeonhole-10 | dễ |  | Có 5 chú chim bồ câu bay vào 4 cái chuồng. Điền số lớn nhất vào chỗ trống: "Chắc chắn có … | 2 | ☐ |
+| com-pigeonhole-11 | vừa |  | Mẹ bày 9 quả cam vào 4 cái đĩa. Điền số lớn nhất vào chỗ trống: "Chắc chắn có một đĩa có … | 3 | ☐ |
+| com-pigeonhole-12 | dễ |  | Trong hộp có 4 chiếc găng tay trái và 4 chiếc găng tay phải, cùng màu, cùng cỡ. Không nhì… | 5 | ☐ |
+| com-pigeonhole-13 | dễ |  | Khoa tung một con xúc xắc 6 mặt (có các số từ 1 đến 6) nhiều lần. Khoa phải tung ít nhất … | 7 | ☐ |
+| com-pigeonhole-14 | dễ |  | Bình có 4 chiếc chìa khóa và 1 ổ khóa, chỉ 1 chìa mở được ổ. Bình thử từng chìa một. Tron… | 3 | ☐ |
+| com-pigeonhole-15 | dễ |  | Trong túi có 1 viên bi đỏ, 1 viên bi vàng, 1 viên bi xanh và 1 viên bi trắng. Không nhìn,… | 4 | ☐ |
+| com-pigeonhole-16 | vừa |  | Từ các số 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, Mai chọn ra vài số khác nhau. Mai phải chọn ít n… | 6 | ☐ |
+| com-pigeonhole-17 | dễ |  | Một túi có 1 quả bóng đỏ, 2 quả bóng vàng và 3 quả bóng xanh. Không nhìn, Bình phải lấy í… | 6 | ☐ |
+| com-pigeonhole-18 | dễ |  | Hộp có 5 viên bi đỏ, 3 viên bi xanh dương và 2 viên bi xanh lá. Không nhìn, Lan phải lấy … | 9 | ☐ |
+| com-pigeonhole-19 | vừa |  | Ngăn kéo có 4 chiếc tất đen và 6 chiếc tất trắng. Không nhìn, An phải lấy ít nhất bao nhi… | 8 | ☐ |
+| com-pigeonhole-20 | vừa |  | Hộp có 3 bút đỏ, 4 bút xanh và 5 bút đen. Không nhìn, Nam phải lấy ít nhất bao nhiêu chiế… | 11 | ☐ |
+| com-pigeonhole-21 | khó |  | Ngăn kéo có 5 chiếc tất đỏ, 4 chiếc tất xanh và 3 chiếc tất trắng. Không nhìn, Linh phải … | 11 | ☐ |
+| com-pigeonhole-22 | vừa |  | Hộp đồ chơi có 4 khối đỏ, 5 khối xanh và 6 khối vàng. Không nhìn, Hà phải lấy ít nhất bao… | 12 | ☐ |
+| com-pigeonhole-23 | vừa |  | Ngăn kéo có rất nhiều tất đen và tất trắng. Không nhìn, Tuấn phải lấy ít nhất bao nhiêu c… | 5 | ☐ |
+| com-pigeonhole-24 | vừa |  | Một túi có 6 viên bi đỏ, 6 viên bi vàng và 6 viên bi xanh. Không nhìn, Linh phải lấy ít n… | 7 | ☐ |
+| com-pigeonhole-25 | vừa |  | Ngăn kéo có 5 chiếc găng tay trái và 3 chiếc găng tay phải (cùng loại). Không nhìn, Khoa … | 7 | ☐ |
+| com-pigeonhole-26 | vừa |  | Cần ít nhất bao nhiêu bạn để chắc chắn có 3 bạn sinh cùng một tháng? | 25 | ☐ |
+| com-pigeonhole-27 | dễ |  | Chỉ xét ngày sinh (ví dụ ngày 5, ngày 20), không xét tháng. Cần ít nhất bao nhiêu bạn để … | 32 | ☐ |
+| com-pigeonhole-28 | vừa |  | Khối 3 có 3 lớp: 3A, 3B, 3C. Phải chọn ít nhất bao nhiêu bạn trong khối để chắc chắn có 2… | 37 | ☐ |
+| com-pigeonhole-29 | vừa |  | Cần bỏ ít nhất bao nhiêu cái kẹo vào 3 hộp để chắc chắn có một hộp có ít nhất 5 cái kẹo, … | 13 | ☐ |
+| com-pigeonhole-30 | vừa |  | Cần ít nhất bao nhiêu bạn để chắc chắn có 3 bạn sinh vào cùng một thứ trong tuần? | 15 | ☐ |
+| com-pigeonhole-31 | vừa |  | Túi có 4 viên bi đỏ, 4 viên bi xanh và chỉ 1 viên bi vàng. Không nhìn, Mai phải lấy ít nh… | 4 | ☐ |
+| com-pigeonhole-32 | vừa |  | An cất ruy băng trong một túi kín: 2 dải đỏ, 3 dải xanh, 4 dải vàng, 5 dải tím. An cần 1 … | 12 | ☐ |
+| com-pigeonhole-33 | khó |  | Hộp có 3 đôi găng tay đỏ và 3 đôi găng tay xanh, các chiếc bị trộn lẫn. Không nhìn, phải … | 7 | ☐ |
+| com-pigeonhole-34 | khó |  | Lọ của Nam chỉ còn 1 kẹo dâu, 1 kẹo cam và 6 kẹo chanh. Không nhìn, Nam bốc từng viên. Na… | 5 | ☐ |
+| com-pigeonhole-35 | khó |  | Hộp có 2 viên kẹo đỏ, 3 viên kẹo xanh, 4 viên kẹo vàng và 6 viên kẹo hồng. Không nhìn, La… | 14 | ☐ |
+| com-pigeonhole-36 | khó |  | Ngăn kéo có 5 chiếc tất đỏ và 3 chiếc tất xanh. Không nhìn, Hà phải lấy ít nhất bao nhiêu… | 7 | ☐ |
+| com-pigeonhole-37 | vừa |  | Trường chia học sinh vào 5 phòng thi, chia tùy ý. Trường cần ít nhất bao nhiêu học sinh t… | 16 | ☐ |
+| com-pigeonhole-38 | khó |  | Lớp 3A có 30 bạn. Điền số lớn nhất vào chỗ trống: "Chắc chắn có ít nhất ___ bạn sinh cùng… | 3 | ☐ |
+| com-pigeonhole-39 | khó |  | Ngăn kéo có rất nhiều tất đỏ, xanh và trắng. Không nhìn, Minh phải lấy ít nhất bao nhiêu … | 6 | ☐ |
+| com-pigeonhole-40 | khó |  | Hộp có 3 quả bóng đỏ, 6 quả bóng xanh và 8 quả bóng vàng. Không nhìn, Khoa phải lấy ít nh… | 12 | ☐ |
+
+### Liệt kê có hệ thống (40 câu)
+
+| id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
+| --- | --- | --- | --- | --- | --- |
+| com-systematic-list-01 | dễ |  | Viết 10 thành tổng của hai số lớn hơn 0. Đổi chỗ hai số thì vẫn tính là một cách (3 + 7 v… | 5 | ☐ |
+| com-systematic-list-02 | dễ |  | Có bao nhiêu số chẵn có 2 chữ số mà tổng hai chữ số bằng 5? | 3 | ☐ |
+| com-systematic-list-03 | dễ |  | Chỉ dùng chữ số 4 và 7 (được dùng lại), có thể viết bao nhiêu số có 2 chữ số lớn hơn 50? | 2 | ☐ |
+| com-systematic-list-04 | dễ |  | Lan có 4 bút chì: đỏ, xanh, vàng, tím. Lan lấy 3 bút để mang đến lớp (thứ tự không quan t… | 4 | ☐ |
+| com-systematic-list-05 | dễ |  | Cốc kem của Hà có thể rắc thêm hạt, sô-cô-la, cốm. Hà chọn 1 loại, 2 loại hoặc cả 3 loại … | 7 | ☐ |
+| com-systematic-list-06 | dễ |  | Từ 10 đến 30, có bao nhiêu số có ít nhất một chữ số 2? | 11 | ☐ |
+| com-systematic-list-07 | dễ |  | Chia 9 viên kẹo vào một hộp đỏ và một hộp xanh, mỗi hộp có ít nhất 1 viên. Có bao nhiêu c… | 8 | ☐ |
+| com-systematic-list-08 | dễ |  | Có bao nhiêu cách trả đúng 8 nghìn đồng chỉ bằng tờ 1 nghìn và tờ 2 nghìn? (Chỉ tính số t… | 5 | ☐ |
+| com-systematic-list-09 | dễ |  | Dùng hai chữ số khác nhau trong 1, 2, 3, 4 để viết số có 2 chữ số. Có bao nhiêu số mà chữ… | 6 | ☐ |
+| com-systematic-list-10 | dễ |  | Có bao nhiêu số có 2 chữ số mà tích hai chữ số bằng 8? | 4 | ☐ |
+| com-systematic-list-11 | dễ |  | Viết 12 thành tổng của hai số lẻ. Đổi chỗ hai số vẫn là một cách (1 + 11 và 11 + 1 là một… | 3 | ☐ |
+| com-systematic-list-12 | dễ |  | Minh gieo một xúc xắc đỏ và một xúc xắc xanh (mỗi con có mặt 1 đến 6). Có bao nhiêu cách … | 6 | ☐ |
+| com-systematic-list-13 | dễ |  | Dùng hai chữ số khác nhau trong 2, 3, 4, 5, 7 để viết số có 2 chữ số. Có bao nhiêu số lẻ? | 12 | ☐ |
+| com-systematic-list-14 | dễ |  | Có bao nhiêu số có 2 chữ số giống nhau mà chữ số đó là số lẻ? | 5 | ☐ |
+| com-systematic-list-15 | dễ |  | Bảng phi tiêu có ba vòng: 1 điểm, 2 điểm và 3 điểm. Bình ném 2 phi tiêu, cả hai đều trúng… | 5 | ☐ |
+| com-systematic-list-16 | dễ |  | Có bao nhiêu hình vuông có cạnh là số cm tròn và chu vi nhỏ hơn 30 cm? | 7 | ☐ |
+| com-systematic-list-17 | vừa |  | Dùng cả ba chữ số 1, 2, 3 (mỗi chữ số một lần) viết số có 3 chữ số. Có bao nhiêu số lẻ? | 4 | ☐ |
+| com-systematic-list-18 | vừa |  | Có bao nhiêu hình chữ nhật có các cạnh là số cm tròn và chu vi 20 cm? (Hình 2 cm × 8 cm v… | 5 | ☐ |
+| com-systematic-list-19 | vừa |  | Số 121 đọc xuôi hay đọc ngược đều giống nhau. Chỉ dùng các chữ số 1, 2, 3 (được dùng lại)… | 9 | ☐ |
+| com-systematic-list-20 | vừa |  | Ví của Minh có 2 tờ 1 nghìn và 2 tờ 5 nghìn đồng. Lấy ra 1 tờ hoặc nhiều tờ, Minh có thể … | 8 | ☐ |
+| com-systematic-list-21 | vừa | ma-magic-square | Điền đúng số vào ô dấu hỏi trong hình. Có bao nhiêu hàng 3 ô thẳng (hàng ngang, cột dọc v… | 8 | ☐ |
+| com-systematic-list-22 | vừa |  | Mẹ có 5 loại quả: táo, lê, cam, chuối, xoài. Hà chọn 2 loại khác nhau (thứ tự không quan … | 9 | ☐ |
+| com-systematic-list-23 | vừa |  | Viết 9 thành tổng của 3 số lớn hơn 0. Đổi thứ tự các số vẫn tính là một cách (1 + 2 + 6 v… | 7 | ☐ |
+| com-systematic-list-24 | vừa |  | Mai có đúng 3 tờ tiền: 1 nghìn, 2 nghìn và 5 nghìn đồng. Dùng 1 tờ hoặc nhiều tờ, Mai trả… | 7 | ☐ |
+| com-systematic-list-25 | vừa |  | An, Bình và Mai ngồi trên một băng ghế dài có 3 chỗ. Mai không muốn ngồi ở hai đầu ghế. L… | 2 | ☐ |
+| com-systematic-list-26 | vừa |  | Lan nghĩ một số có 2 chữ số. Cộng hai chữ số của số đó được 13. Số Lan nghĩ có thể là bao… | 6 | ☐ |
+| com-systematic-list-27 | vừa |  | Trong trò ném bóng rổ, mỗi quả vào rổ được 2 điểm hoặc 3 điểm. Nam được đúng 12 điểm. Có … | 3 | ☐ |
+| com-systematic-list-28 | vừa |  | Dùng đủ 3 chữ cái A, B, B, có thể xếp được bao nhiêu "từ" 3 chữ cái khác nhau? | 3 | ☐ |
+| com-systematic-list-29 | vừa |  | Dùng cả ba chữ số 0, 5, 7 (mỗi chữ số một lần) viết số có 3 chữ số. Có bao nhiêu số lớn h… | 2 | ☐ |
+| com-systematic-list-30 | vừa |  | Đồng hồ số hiện giờ và phút, từ 1:00 đến 1:59. Có bao nhiêu thời điểm mà tổng các chữ số … | 6 | ☐ |
+| com-systematic-list-31 | vừa |  | Hà viết các số có 3 chữ số chỉ dùng chữ số 1, 2, 3 (được dùng lại), sao cho mỗi chữ số kh… | 10 | ☐ |
+| com-systematic-list-32 | vừa |  | Lối đi có 4 viên gạch xếp thành hàng. Mỗi viên sơn đỏ hoặc xanh, nhưng 2 viên xanh không … | 8 | ☐ |
+| com-systematic-list-33 | khó |  | Chia 6 viên kẹo vào 3 hộp đỏ, xanh, vàng, mỗi hộp có ít nhất 1 viên. Hộp khác màu nên đỏ … | 10 | ☐ |
+| com-systematic-list-34 | khó |  | Bảng phi tiêu có các vòng 1 điểm, 3 điểm và 5 điểm. Khoa ném 3 phi tiêu, cả 3 đều trúng b… | 7 | ☐ |
+| com-systematic-list-35 | khó |  | Một hình tam giác có 3 cạnh là số cm tròn và chu vi 12 cm. Cạnh dài nhất phải ngắn hơn tổ… | 3 | ☐ |
+| com-systematic-list-36 | khó | ma-number-pyramid | Trong tháp số ở hình, mỗi viên bằng tổng hai viên ngay bên dưới. Được đổi chỗ 4 số 2, 5, … | 32 | ☐ |
+| com-systematic-list-37 | khó |  | Dùng 3 chữ số khác nhau lấy trong 1, 2, 3, 4 để viết số có 3 chữ số. Có bao nhiêu số chẵn… | 6 | ☐ |
+| com-systematic-list-38 | khó |  | Linh viết tất cả các số có 3 chữ số mà cộng ba chữ số lại được 4 và ba chữ số đều khác nh… | 4 | ☐ |
+| com-systematic-list-39 | khó |  | Cầu thang có 6 bậc. Mỗi lần Nam bước lên 1 bậc hoặc 2 bậc, nhưng bậc thứ 3 bị gãy nên Nam… | 4 | ☐ |
+| com-systematic-list-40 | khó |  | Mỗi quân cờ có 2 nửa, mỗi nửa có 0, 1, 2, 3 hoặc 4 chấm. Quân 1\|2 và quân 2\|1 là một. Bộ … | 15 | ☐ |
+

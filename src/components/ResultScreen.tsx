@@ -34,6 +34,7 @@ export default function ResultScreen({ result, onRetryWrong, onReplay, onHome, o
   const { config, answers, percent, stars, newDresses } = result
   const { questions, subject } = config
   const isEnglish = subject === 'english'
+  const isMath = subject === 'math'
   const correctCount = answers.filter((a) => a.correct).length
   const passed = percent >= 70
 
@@ -67,6 +68,14 @@ export default function ResultScreen({ result, onRetryWrong, onReplay, onHome, o
         : percent >= 40
           ? { vi: 'Khá lắm! Đọc kỹ dấu hiệu thời gian là sẽ giỏi hơn! 💪', en: 'Good try! Look carefully at the time clues and you will improve! 💪' }
           : { vi: 'Đừng buồn nhé, học ngoại ngữ cần thời gian. Cùng thử lại nào! 🌱', en: 'Don’t worry, learning English takes time. Let’s try again! 🌱' }
+    : isMath
+    ? percent >= 90
+      ? { vi: 'Xuất sắc! Con là thần đồng toán học! 🏆', en: 'Outstanding! You are a maths whiz! 🏆' }
+      : percent >= 70
+        ? { vi: 'Giỏi lắm! Con suy luận rất tốt! 🎉', en: 'Great work! Your reasoning is strong! 🎉' }
+        : percent >= 40
+          ? { vi: 'Khá lắm! Đọc kỹ đề và thử vẽ hình ra nhé! 💪', en: 'Good try! Read carefully and try drawing a picture! 💪' }
+          : { vi: 'Đừng buồn nhé, toán tư duy cần luyện dần. Cùng thử lại nào! 🌱', en: 'Don’t worry, thinking maths takes practice. Let’s try again! 🌱' }
     : percent >= 90
     ? { vi: 'Xuất sắc! Con là nhà khoa học tài ba! 🏆', en: 'Outstanding! You are a brilliant scientist! 🏆' }
     : percent >= 70
@@ -183,7 +192,7 @@ export default function ResultScreen({ result, onRetryWrong, onReplay, onHome, o
                     </>
                   ) : (
                     <>
-                      <BilingualText as="p" vi={q.question_vi} en={q.question_en} className="font-extrabold text-slate-800" subClassName="!text-[0.9em]" />
+                      <BilingualText as="p" vi={q.question_vi} en={q.question_en} className="whitespace-pre-line font-extrabold text-slate-800" subClassName="!text-[0.9em]" />
                       {a?.selectedIndex != null && (
                         <p className="mt-2 text-sm font-bold text-rose-600">
                           ✗ <BilingualText vi={q.options_vi[a.selectedIndex]} en={q.options_en[a.selectedIndex]} compact />
@@ -192,7 +201,7 @@ export default function ResultScreen({ result, onRetryWrong, onReplay, onHome, o
                       <p className="mt-1 flex items-start gap-2 font-extrabold text-green-700">
                         <span>✓</span> <BilingualText vi={q.options_vi[q.correctIndex]} en={q.options_en[q.correctIndex]} />
                       </p>
-                      <BilingualText as="p" vi={q.explanation_vi} en={q.explanation_en} className="mt-2 text-sm font-semibold text-slate-600" subClassName="!text-[0.95em]" />
+                      <BilingualText as="p" vi={q.explanation_vi} en={q.explanation_en} className="mt-2 whitespace-pre-line text-sm font-semibold text-slate-600" subClassName="!text-[0.95em]" />
                     </>
                   )}
                 </li>

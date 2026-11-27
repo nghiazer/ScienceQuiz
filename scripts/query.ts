@@ -31,7 +31,7 @@ const hits = ALL_QUESTIONS.filter(
     (!args.text || text(q).toLowerCase().includes(String(args.text).toLowerCase())),
 )
 
-// Tìm file nguồn: tiếng Anh theo `section('<thì>', '<chủ điểm>')`, Khoa học theo `id: '<id>'`.
+// Tìm file nguồn: Tiếng Anh/Toán theo `'<chủ điểm>')` (section / mathSection), Khoa học theo `id: '<id>'`.
 function walk(dir: string): string[] {
   return readdirSync(dir).flatMap((f) => {
     const p = join(dir, f)
@@ -40,7 +40,7 @@ function walk(dir: string): string[] {
 }
 const files = walk('src/data').map((p) => ({ p, src: readFileSync(p, 'utf8') }))
 const sourceOf = (q: Question) => {
-  const needle = q.subject === 'english' ? `'${q.subtopic}')` : `id: '${q.id}'`
+  const needle = q.subject === 'science' ? `id: '${q.id}'` : `'${q.subtopic}')`
   return files.find((f) => f.src.includes(needle))?.p ?? '?'
 }
 

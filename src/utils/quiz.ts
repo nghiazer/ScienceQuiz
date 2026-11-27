@@ -1,4 +1,4 @@
-import { ALL_QUESTIONS, ENGLISH_QUESTIONS, SCIENCE_QUESTIONS, SUBJECT_TOPICS, TOPIC_ORDER } from '../data/questions'
+import { ALL_QUESTIONS, ENGLISH_QUESTIONS, MATH_QUESTIONS, SCIENCE_QUESTIONS, SUBJECT_TOPICS, TOPIC_ORDER } from '../data/questions'
 import type { AnswerRecord, Difficulty, OptionIndex, Options, Question, Subject, Topic } from '../types/quiz'
 
 export function shuffle<T>(arr: readonly T[]): T[] {
@@ -21,10 +21,28 @@ export function isOrderSensitive(q: Question): boolean {
   return all.some((o) => LETTER_REF.test(o) || GROUPED.test(o)) || q.options_vi.every((o) => NUMERIC.test(o.trim()))
 }
 
+// Đáp án Toán dạng số (có thể kèm đơn vị: "12 cm", "3 giờ") hoặc giờ "8:30": khi chơi được xếp tăng dần như đề TIMO.
+const NUMBER_OPTION = /^-?\d+(?:[.,:]\d+)?(?:\s.*)?$/
+const numericValue = (o: string) => {
+  const t = o.trim().match(/^(\d+):(\d+)/)
+  return t ? Number(t[1]) * 60 + Number(t[2]) : parseFloat(o.replace(',', '.'))
+}
+
+export function isNumericOptions(q: Question): boolean {
+  return q.subject === 'math' && q.options_en.every((o) => NUMBER_OPTION.test(o.trim()))
+}
+
 /** Trả về bản sao có thứ tự đáp án xáo trộn (vi và en cùng một phép hoán vị), để đáp án đúng không luôn ở cùng vị trí. */
 export function shuffleOptions(q: Question): Question {
+  if (isNumericOptions(q)) {
+    const order = [0, 1, 2, 3].sort((a, b) => numericValue(q.options_en[a]) - numericValue(q.options_en[b]))
+    return permute(q, order)
+  }
   if (isOrderSensitive(q)) return q
-  const order = shuffle([0, 1, 2, 3])
+  return permute(q, shuffle([0, 1, 2, 3]))
+}
+
+function permute(q: Question, order: number[]): Question {
   if (q.subject === 'english') {
     return {
       ...q,
@@ -45,6 +63,10 @@ export const MOCK_MINUTES = 20
 /** Sau khi trả lời (đúng hay sai) phải chờ chừng này mili giây mới được sang câu tiếp theo, để bé đọc giải thích. */
 export const NEXT_DELAY_MS = 3500
 export const ENGLISH_MOCK_SIZE = 15
+/** Đề thi thử Toán theo vòng loại TIMO: 25 câu (5 câu mỗi mảng), 90 phút. */
+export const MATH_MOCK_SIZE = 25
+export const MOCK_SIZE_BY_SUBJECT: Record<Subject, number> = { science: MOCK_SIZE, english: ENGLISH_MOCK_SIZE, math: MATH_MOCK_SIZE }
+export const MOCK_MINUTES_BY_SUBJECT: Record<Subject, number> = { science: MOCK_MINUTES, english: MOCK_MINUTES, math: 90 }
 /** Số câu mỗi lượt luyện theo chủ đề (kho có 60 câu mỗi chủ đề). */
 export const TOPIC_SESSION_SIZE = 10
 
@@ -133,8 +155,36 @@ export function buildEnglishMockTest(seen: ReadonlySet<string>): Question[] {
   return shuffle(picked).map(shuffleOptions)
 }
 
+/**
+ * Đề thi thử Toán TIMO: 25 câu, mỗi mảng 5 câu, độ khó cả đề 10 dễ / 10 vừa / 5 khó.
+ * Mỗi mảng lấy 2 dễ + 2 vừa + 1 khó; thiếu ô nào thì lấy câu bất kỳ của mảng đó. Ưu tiên câu chưa gặp.
+ */
+export function buildMathMockTest(seen: ReadonlySet<string>): Question[] {
+  const PLAN: Difficulty[] = ['easy', 'easy', 'medium', 'medium', 'hard']
+  const used = new Set<string>()
+  const picked: Question[] = []
+  const pick = (candidates: Question[]): boolean => {
+    const q = unseenFirst(candidates.filter((x) => !used.has(x.id)), seen)[0]
+    if (!q) return false
+    used.add(q.id)
+    picked.push(q)
+    return true
+  }
+  for (const t of SUBJECT_TOPICS.math) {
+    const pool = MATH_QUESTIONS.filter((q) => q.topic === t)
+    for (const d of PLAN) {
+      if (!pick(pool.filter((q) => q.difficulty === d))) pick(pool)
+    }
+  }
+  // Đề sắp từ dễ đến khó như đề thi thật.
+  const rank: Record<Difficulty, number> = { easy: 0, medium: 1, hard: 2 }
+  return shuffle(picked).sort((a, b) => rank[a.difficulty] - rank[b.difficulty]).map(shuffleOptions)
+}
+
 export function buildMockFor(subject: Subject, seen: ReadonlySet<string>): Question[] {
-  return subject === 'english' ? buildEnglishMockTest(seen) : buildMockTest(seen)
+  if (subject === 'english') return buildEnglishMockTest(seen)
+  if (subject === 'math') return buildMathMockTest(seen)
+  return buildMockTest(seen)
 }
 
 /** Các câu sai hoặc chưa làm, giữ nguyên thứ tự và đáp án như bé đã thấy (dùng để hiển thị ôn tập). */

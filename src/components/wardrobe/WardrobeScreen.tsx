@@ -11,7 +11,7 @@ import BilingualText from '../BilingualText'
 import DressCard from './DressCard'
 import Princess from './Princess'
 
-const TABS: Subject[] = ['science', 'english']
+const TABS: Subject[] = ['science', 'english', 'math']
 /** Sau khi hết giờ chơi, tự về trang chủ sau chừng này mili giây. */
 const AUTO_HOME_MS = 6000
 

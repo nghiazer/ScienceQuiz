@@ -1,6 +1,7 @@
 /* Kiểm tra cấu trúc ngân hàng câu hỏi. Chạy: npm run check:data */
 import { ALL_QUESTIONS, QUESTIONS, SUBJECT_TOPICS, TOPIC_ORDER } from '../src/data/questions'
 import { checkEnglish, ENGLISH_PER_TOPIC } from './lib/english-checks'
+import { checkMath, MATH_PER_TOPIC } from './lib/math-checks'
 import { SUBTOPICS } from '../src/data/topics'
 import { ILLUSTRATIONS } from '../src/components/illustrations/registry'
 import type { Difficulty, Topic } from '../src/types/quiz'
@@ -67,7 +68,8 @@ for (const [s, n] of Object.entries(SUBTOPICS).filter(([, v]) => SUBJECT_TOPICS.
 const usedIllus = new Set(QUESTIONS.map((q) => q.illustrationId).filter(Boolean))
 const illusCoverage = QUESTIONS.filter((q) => q.illustrationId).length
 const ENGLISH_ILLUS = new Set(['en-timeline-past', 'en-timeline-now', 'en-timeline-habit', 'en-dialogue', 'en-daily-routine', 'en-look-listen'])
-const scienceIllus = Object.keys(ILLUSTRATIONS).filter((k) => !ENGLISH_ILLUS.has(k))
+// Hình Toán có tiền tố ma-
+const scienceIllus = Object.keys(ILLUSTRATIONS).filter((k) => !ENGLISH_ILLUS.has(k) && !k.startsWith('ma-'))
 const unusedIllus = scienceIllus.filter((k) => !usedIllus.has(k as never))
 
 console.log(`Tổng số câu: ${QUESTIONS.length}`)
@@ -125,6 +127,19 @@ for (const [subj, list] of Object.entries(DRESSES)) {
     if (same) fail(`váy ${d.id}: giống hệt ${same}`)
     dressLooks.set(key, d.id)
     if (d.tier >= 4 && !ROYAL_KEYS.some((k) => d.look[k])) fail(`váy ${d.id}: cấp ${d.tier} cần ít nhất một trong ${ROYAL_KEYS.join('/')}`)
+    // Dòng váy Toán là dòng cao cấp: mỗi váy có ít nhất một chi tiết mới và nhiều điểm hoàng gia hơn.
+    if (subj === 'math') {
+      const l = d.look
+      const premium =
+        ['petal', 'bustle', 'crystal'].includes(l.silhouette) ||
+        ['diamonds', 'hexagons', 'numbers', 'filigree', 'crystals'].includes(l.pattern ?? '') ||
+        l.tiara === 'crown' || Boolean(l.veil || l.scepter || l.corset || l.hemJewels || l.petticoat)
+      if (!premium) fail(`váy ${d.id}: váy Toán cần ít nhất một chi tiết cao cấp mới (dáng petal/bustle/crystal, hoa văn hình học, crown, veil, scepter, corset, hemJewels, petticoat)`)
+      if (!(l.trim || l.necklace || l.gems)) fail(`váy ${d.id}: váy Toán cần trim, necklace hoặc gems`)
+      const royal = ROYAL_KEYS.filter((k) => l[k]).length
+      if (d.tier >= 3 && royal < 1) fail(`váy ${d.id}: váy Toán cấp ${d.tier} cần ít nhất một điểm hoàng gia`)
+      if (d.tier === 5 && royal < 3) fail(`váy ${d.id}: váy Toán cấp 5 cần ít nhất 3 điểm hoàng gia (có ${royal})`)
+    }
   })
 }
 console.log(`Váy dạ hội: ${Object.entries(DRESSES).map(([k, v]) => `${k} ${v.length}`).join(', ')}`)
@@ -134,6 +149,12 @@ const en = checkEnglish()
 errors.push(...en.errors)
 console.log(`\nTiếng Anh (Cambridge KET/PET): mục tiêu ${ENGLISH_PER_TOPIC} câu mỗi thì`)
 for (const l of en.lines) console.log(l)
+
+// Toán TIMO
+const ma = checkMath()
+errors.push(...ma.errors)
+console.log(`\nToán TIMO: mục tiêu ${MATH_PER_TOPIC} câu mỗi mảng`)
+for (const l of ma.lines) console.log(l)
 
 if (errors.length) {
   console.error(`\n✗ ${errors.length} lỗi:`)

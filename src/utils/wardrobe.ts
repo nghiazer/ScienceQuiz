@@ -16,7 +16,7 @@ export interface WardrobeState {
   worn: Record<Subject, string | null>
 }
 
-const initial = (): WardrobeState => ({ studySeconds: 0, bankSeconds: 0, worn: { science: null, english: null } })
+const initial = (): WardrobeState => ({ studySeconds: 0, bankSeconds: 0, worn: { science: null, english: null, math: null } })
 
 function load(): WardrobeState {
   try {

@@ -51,6 +51,20 @@ import LabGoggles from './LabGoggles'
 import EnergyBall from './EnergyBall'
 import SeriesCircuit from './SeriesCircuit'
 import Compass from './Compass'
+import MaCountTriangles from './MaCountTriangles'
+import MaCountSquares from './MaCountSquares'
+import MaGridArea from './MaGridArea'
+import MaPerimeterShape from './MaPerimeterShape'
+import MaCubeStack from './MaCubeStack'
+import MaCubeNet from './MaCubeNet'
+import MaClock from './MaClock'
+import MaSymmetryFold from './MaSymmetryFold'
+import MaGridPaths from './MaGridPaths'
+import MaMatchsticks from './MaMatchsticks'
+import MaNumberPyramid from './MaNumberPyramid'
+import MaMagicSquare from './MaMagicSquare'
+import MaBalanceMath from './MaBalanceMath'
+import MaShapePattern from './MaShapePattern'
 
 /** Bảng tra illustrationId -> component. Record buộc phải có đủ mọi id. */
 export const ILLUSTRATIONS: Record<IllustrationId, ComponentType> = {
@@ -108,4 +122,18 @@ export const ILLUSTRATIONS: Record<IllustrationId, ComponentType> = {
   'energy-ball': EnergyBall,
   'series-circuit': SeriesCircuit,
   'compass': Compass,
+  'ma-count-triangles': MaCountTriangles,
+  'ma-count-squares': MaCountSquares,
+  'ma-grid-area': MaGridArea,
+  'ma-perimeter-shape': MaPerimeterShape,
+  'ma-cube-stack': MaCubeStack,
+  'ma-cube-net': MaCubeNet,
+  'ma-clock': MaClock,
+  'ma-symmetry-fold': MaSymmetryFold,
+  'ma-grid-paths': MaGridPaths,
+  'ma-matchsticks': MaMatchsticks,
+  'ma-number-pyramid': MaNumberPyramid,
+  'ma-magic-square': MaMagicSquare,
+  'ma-balance-math': MaBalanceMath,
+  'ma-shape-pattern': MaShapePattern,
 }

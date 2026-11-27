@@ -7,13 +7,17 @@ export const DRESSES_PER_SUBJECT = 100
 export type Silhouette =
   | 'aline' | 'empire' | 'tiered' | 'ballgown' | 'mermaid' | 'grand'
   | 'princess' | 'cascade' | 'hilo'
+  /** dáng cao cấp (dòng váy Toán): váy cánh hoa, phồng sau kiểu hoàng gia, gấu cắt kim cương */
+  | 'petal' | 'bustle' | 'crystal'
 export type DressPattern =
   | 'dots' | 'hearts' | 'flowers' | 'leaves' | 'stars' | 'waves' | 'snowflakes'
   | 'notes' | 'stripes' | 'drops' | 'butterflies' | 'letters' | 'feathers'
   | 'damask' | 'roses' | 'lace' | 'sequins' | 'swirls'
+  | 'diamonds' | 'hexagons' | 'numbers' | 'filigree' | 'crystals'
 export type Sleeves = 'none' | 'cap' | 'puff' | 'off-shoulder' | 'sheer' | 'long' | 'flutter' | 'bishop'
 export type Trim = 'ruffle' | 'lace' | 'pearls' | 'ribbon' | 'scallop' | 'embroidery' | 'sequins'
-export type Tiara = 'simple' | 'jeweled' | 'grand'
+/** 'crown' = vương miện hoàng đế khép kín có vòm và quả cầu */
+export type Tiara = 'simple' | 'jeweled' | 'grand' | 'crown'
 export type Neckline = 'scoop' | 'sweetheart' | 'square' | 'v' | 'halter'
 export type Hair = 'bun' | 'long' | 'braid' | 'curls'
 
@@ -54,6 +58,16 @@ export interface DressLook {
   /** vầng sáng phía sau */
   aura?: string
   tiara?: Tiara
+  /** khăn voan dài sau đầu (màu) */
+  veil?: string
+  /** quyền trượng cầm tay phải */
+  scepter?: boolean
+  /** dây đan chéo kiểu corset trên thân áo */
+  corset?: boolean
+  /** hàng đá quý lớn dọc gấu váy */
+  hemJewels?: boolean
+  /** lớp váy lót ren lộ dưới gấu (màu) */
+  petticoat?: string
   /** kiểu tóc (mặc định 'bun') và màu tóc */
   hair?: Hair
   hairColor?: string
@@ -89,3 +103,4 @@ const make = (subject: Subject, prefix: string) => (index: number, name_vi: stri
 
 export const sci = make('science', 'sci-dress')
 export const eng = make('english', 'eng-dress')
+export const mth = make('math', 'math-dress')

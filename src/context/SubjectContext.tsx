@@ -15,7 +15,7 @@ const SubjectContext = createContext<Ctx | null>(null)
 function readInitial(): Subject {
   try {
     const v = localStorage.getItem(KEY)
-    if (v === 'science' || v === 'english') return v
+    if (v === 'science' || v === 'english' || v === 'math') return v
   } catch {
     /* ignore */
   }

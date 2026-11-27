@@ -15,7 +15,8 @@ interface Props {
 /** Hiển thị theo chế độ ngôn ngữ: vi / en / song ngữ (Việt đậm, Anh nhỏ và nhạt hơn bên dưới). */
 export default function BilingualText({ vi, en, as: Tag = 'span', className = '', subClassName = '', compact = false }: Props) {
   const { mode } = useLang()
-  if (mode === 'vi' || (compact && mode === 'bi')) return <Tag className={className}>{vi}</Tag>
+  // vi và en giống hệt (vd. đáp án số "12 cm") → chỉ hiện một lần
+  if (mode === 'vi' || (compact && mode === 'bi') || vi === en) return <Tag className={className}>{vi}</Tag>
   if (mode === 'en') return <Tag className={className}>{en}</Tag>
   return (
     <Tag className={className}>

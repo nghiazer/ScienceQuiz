@@ -6,7 +6,7 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   build: {
-    // Kho câu hỏi (3000 câu Tiếng Anh + 480 câu Khoa học) tách khỏi mã ứng dụng để trình duyệt cache riêng.
+    // Kho câu hỏi (3000 câu Tiếng Anh + 480 câu Khoa học + 1000 câu Toán) tách khỏi mã ứng dụng để trình duyệt cache riêng.
     chunkSizeWarningLimit: 1500,
     rolldownOptions: {
       output: {
@@ -14,6 +14,7 @@ export default defineConfig({
           groups: [
             { name: 'english-questions', test: /src[\\/]data[\\/]english/ },
             { name: 'science-questions', test: /src[\\/]data[\\/]questions/ },
+            { name: 'math-questions', test: /src[\\/]data[\\/]math/, priority: 1 },
           ],
         },
       },

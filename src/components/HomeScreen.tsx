@@ -7,7 +7,7 @@ import { useSubject } from '../context/SubjectContext'
 import { DRESSES, DRESSES_PER_SUBJECT, nextDressIn, unlockedCount } from '../data/dresses'
 import { STUDY_BLOCK_SECONDS, formatClock, useWardrobe } from '../utils/wardrobe'
 import { currentStreak } from '../utils/storage'
-import { ENGLISH_MOCK_SIZE, MOCK_MINUTES, MOCK_SIZE } from '../utils/quiz'
+import { MOCK_MINUTES_BY_SUBJECT, MOCK_SIZE_BY_SUBJECT } from '../utils/quiz'
 import { playClick, unlockAudio } from '../utils/sound'
 import BilingualText from './BilingualText'
 import DressCard from './wardrobe/DressCard'
@@ -36,13 +36,15 @@ export default function HomeScreen({ progress, onStartTopic, onStartMock }: Prop
   const streak = currentStreak(progress)
   const { subject } = useSubject()
   const isEnglish = subject === 'english'
+  const isMath = subject === 'math'
   const meta = SUBJECTS[subject]
   const topicIds = SUBJECT_TOPICS[subject]
   const dressCount = unlockedCount(progress, subject)
   const dressesLeft = nextDressIn(progress, subject)
   const nextDress = DRESSES[subject][dressCount]
   const { studySeconds, bankSeconds } = useWardrobe()
-  const mockSize = isEnglish ? ENGLISH_MOCK_SIZE : MOCK_SIZE
+  const mockSize = MOCK_SIZE_BY_SUBJECT[subject]
+  const mockMinutes = MOCK_MINUTES_BY_SUBJECT[subject]
   const subjectTotals = topicIds.reduce(
     (acc, id) => ({ correct: acc.correct + progress.topicStats[id].correct, total: acc.total + progress.topicStats[id].total }),
     { correct: 0, total: 0 },
@@ -60,6 +62,8 @@ export default function HomeScreen({ progress, onStartTopic, onStartMock }: Prop
         <h1 className="text-2xl sm:text-4xl font-black leading-tight">
           {isEnglish ? (
             <BilingualText vi="Chào bé! Cùng học Tiếng Anh nhé! 🇬🇧" en="Hi there! Let’s learn English! 🇬🇧" subClassName="!text-white/85 !not-italic" />
+          ) : isMath ? (
+            <BilingualText vi="Chào bé! Cùng chinh phục Toán TIMO nhé! 🧮" en="Hi there! Let’s conquer TIMO maths! 🧮" subClassName="!text-white/85 !not-italic" />
           ) : (
             <BilingualText vi="Chào bé! Cùng khám phá khoa học nhé! 🚀" en="Hi there! Let’s explore science! 🚀" subClassName="!text-white/85 !not-italic" />
           )}
@@ -102,7 +106,7 @@ export default function HomeScreen({ progress, onStartTopic, onStartMock }: Prop
         <h2 id="topics-h" className="mb-3 text-xl sm:text-2xl font-black text-slate-800">
           <BilingualText vi="Luyện theo chủ đề" en="Practise by topic" />
         </h2>
-        <div className={`grid gap-4 sm:grid-cols-2 ${isEnglish ? 'lg:grid-cols-3' : ''}`}>
+        <div className={`grid gap-4 sm:grid-cols-2 ${isEnglish || isMath ? 'lg:grid-cols-3' : ''}`}>
           {topicIds.map((id, i) => {
             const t = TOPICS[id]
             const stat = progress.topicStats[id]
@@ -149,7 +153,7 @@ export default function HomeScreen({ progress, onStartTopic, onStartMock }: Prop
               : '—'}
           </p>
         </div>
-        <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <ul className={`grid gap-3 sm:grid-cols-2 ${isMath ? 'lg:grid-cols-5' : 'lg:grid-cols-4'}`}>
           {topicIds.map((id) => {
             const t = TOPICS[id]
             const st = progress.topicStats[id]
@@ -180,8 +184,20 @@ export default function HomeScreen({ progress, onStartTopic, onStartMock }: Prop
             </h2>
             <BilingualText
               as="p"
-              vi={isEnglish ? `${mockSize} câu trộn cả 3 thì, có cả câu bẫy dễ nhầm như đề thi thật.` : `${mockSize} câu ngẫu nhiên từ cả 4 chủ đề, giống đề thi thật.`}
-              en={isEnglish ? `${mockSize} questions mixing all 3 tenses, with tricky tense-contrast items like the real exam.` : `${mockSize} random questions from all 4 topics, just like the real exam.`}
+              vi={
+                isEnglish
+                  ? `${mockSize} câu trộn cả 3 thì, có cả câu bẫy dễ nhầm như đề thi thật.`
+                  : isMath
+                    ? `${mockSize} câu như vòng loại TIMO: 5 câu mỗi mảng, xếp từ dễ đến khó, ${mockMinutes} phút.`
+                    : `${mockSize} câu ngẫu nhiên từ cả 4 chủ đề, giống đề thi thật.`
+              }
+              en={
+                isEnglish
+                  ? `${mockSize} questions mixing all 3 tenses, with tricky tense-contrast items like the real exam.`
+                  : isMath
+                    ? `${mockSize} questions like the TIMO heat round: 5 from each area, easy to hard, ${mockMinutes} minutes.`
+                    : `${mockSize} random questions from all 4 topics, just like the real exam.`
+              }
               className="font-semibold text-slate-600"
               subClassName="!text-[0.9em]"
             />
@@ -199,8 +215,8 @@ export default function HomeScreen({ progress, onStartTopic, onStartMock }: Prop
               <span className={`absolute top-1 size-6 rounded-full bg-white shadow transition-all ${timerOn ? 'left-7' : 'left-1'}`} />
             </span>
             <BilingualText
-              vi={timerOn ? `Đồng hồ ${MOCK_MINUTES} phút: BẬT` : 'Đồng hồ: TẮT'}
-              en={timerOn ? `${MOCK_MINUTES}-minute timer: ON` : 'Timer: OFF'}
+              vi={timerOn ? `Đồng hồ ${mockMinutes} phút: BẬT` : 'Đồng hồ: TẮT'}
+              en={timerOn ? `${mockMinutes}-minute timer: ON` : 'Timer: OFF'}
               subClassName="!text-[0.75em]"
             />
           </button>

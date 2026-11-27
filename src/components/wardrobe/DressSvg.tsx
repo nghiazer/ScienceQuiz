@@ -21,6 +21,31 @@ const HEM: Record<Silhouette, Hem> = {
   princess: { y: 272, hw: 68, b: 9 },
   cascade: { y: 290, hw: 86, b: 10 },
   hilo: { y: 268, hw: 70, b: -17 },
+  petal: { y: 286, hw: 84, b: 9 },
+  bustle: { y: 292, hw: 94, b: 10 },
+  crystal: { y: 288, hw: 86, b: 4 },
+}
+
+/** Gấu váy cánh hoa: các vòng cung phồng xuống giữa hai điểm (x từ phải sang trái). */
+function petalHem(hw: number, y: number, n: number, depth: number): string {
+  let d = ''
+  for (let i = n; i > 0; i--) {
+    const x1 = CX - hw + ((2 * hw) * (i - 1)) / n
+    const xm = CX - hw + ((2 * hw) * (i - 0.5)) / n
+    d += ` Q${xm.toFixed(1)} ${(y + depth).toFixed(1)} ${x1.toFixed(1)} ${y}`
+  }
+  return d
+}
+
+/** Gấu váy cắt kim cương: răng cưa nhọn xuống. */
+function crystalHem(hw: number, y: number, n: number, depth: number): string {
+  let d = ''
+  for (let i = n; i > 0; i--) {
+    const x1 = CX - hw + ((2 * hw) * (i - 1)) / n
+    const xm = CX - hw + ((2 * hw) * (i - 0.5)) / n
+    d += ` L${xm.toFixed(1)} ${(y + (i % 2 ? depth : depth * 0.6)).toFixed(1)} L${x1.toFixed(1)} ${y}`
+  }
+  return d
 }
 
 const SKIRT_PATH: Record<Exclude<Silhouette, 'tiered'>, string> = {
@@ -32,6 +57,9 @@ const SKIRT_PATH: Record<Exclude<Silhouette, 'tiered'>, string> = {
   princess: 'M101 148 H139 C148 185 178 225 188 272 Q120 290 52 272 C62 225 92 185 101 148 Z',
   cascade: 'M101 148 H139 C152 190 196 232 206 290 Q120 310 34 290 C44 232 88 190 101 148 Z',
   hilo: 'M101 148 H139 C148 185 178 220 190 268 Q120 234 50 268 C62 220 92 185 101 148 Z',
+  petal: `M101 148 H139 C150 188 192 228 204 282${petalHem(84, 282, 7, 14)} C48 228 90 188 101 148 Z`,
+  bustle: 'M101 148 H139 C160 170 192 196 196 214 C206 240 212 266 214 292 Q120 312 26 292 C28 266 34 240 44 214 C48 196 80 170 101 148 Z',
+  crystal: `M101 148 H139 C152 190 196 232 206 284${crystalHem(86, 284, 10, 12)} C44 232 88 190 101 148 Z`,
 }
 
 const TIERS = [
@@ -56,7 +84,13 @@ const FOLDS: Record<Silhouette, { t: number[]; endY: number; endHw: number }> = 
   grand: { t: [-0.9, -0.7, -0.5, -0.3, -0.1, 0.1, 0.3, 0.5, 0.7, 0.9], endY: 288, endHw: 92 },
   cascade: { t: [-0.8, -0.5, -0.25, 0, 0.25, 0.5, 0.8], endY: 284, endHw: 76 },
   hilo: { t: [-0.8, -0.45, -0.15, 0.15, 0.45, 0.8], endY: 252, endHw: 62 },
+  petal: { t: [-0.86, -0.57, -0.29, 0, 0.29, 0.57, 0.86], endY: 280, endHw: 74 },
+  bustle: { t: [-0.85, -0.6, -0.35, -0.12, 0.12, 0.35, 0.6, 0.85], endY: 286, endHw: 84 },
+  crystal: { t: [-0.8, -0.6, -0.4, -0.2, 0, 0.2, 0.4, 0.6, 0.8], endY: 282, endHw: 78 },
 }
+
+/** Dáng váy xòe rộng (lấp lánh nhiều hơn, lớp voan nới ít hơn). */
+const WIDE = new Set<Silhouette>(['grand', 'cascade', 'bustle', 'petal', 'crystal'])
 
 type Pt = [number, number]
 
@@ -155,6 +189,35 @@ function PatternDef({ id, kind, color }: { id: string; kind: DressPattern; color
       </>
     ),
     swirls: <path d="M3 17 C3 8 15 8 15 14 C15 18 9 18 9 14 M17 5 C21 5 21 10 17 10" {...line} strokeWidth="1.6" />,
+    diamonds: (
+      <>
+        <path d="M12 2 L18 12 L12 22 L6 12 Z" {...line} strokeWidth="1.2" />
+        <path d="M12 7 L15 12 L12 17 L9 12 Z" />
+      </>
+    ),
+    hexagons: <path d="M8 3 H16 L20 10 L16 17 H8 L4 10 Z M12 17 V24" {...line} strokeWidth="1.2" />,
+    numbers: (
+      <>
+        <text x="6" y="10" fontSize="8" fontWeight="800" textAnchor="middle" fontFamily="Nunito, sans-serif">1</text>
+        <text x="18" y="10" fontSize="8" fontWeight="800" textAnchor="middle" fontFamily="Nunito, sans-serif">+</text>
+        <text x="6" y="22" fontSize="8" fontWeight="800" textAnchor="middle" fontFamily="Nunito, sans-serif">π</text>
+        <text x="18" y="22" fontSize="8" fontWeight="800" textAnchor="middle" fontFamily="Nunito, sans-serif">7</text>
+      </>
+    ),
+    filigree: (
+      <>
+        <path d="M12 2 C6 6 6 10 12 12 C18 10 18 6 12 2 M12 12 C8 16 4 15 2 20 M12 12 C16 16 20 15 22 20" {...line} strokeWidth="1" />
+        <circle cx="12" cy="12" r="1.4" />
+        <circle cx="2" cy="20" r="1" /><circle cx="22" cy="20" r="1" />
+      </>
+    ),
+    crystals: (
+      <>
+        <path d="M6 4 L9 9 L6 16 L3 9 Z" />
+        <path d="M17 10 L20 14 L17 21 L14 14 Z" opacity="0.7" />
+        <path d="M6 4 L6 16 M17 10 L17 21" stroke="#fff" strokeOpacity="0.6" strokeWidth="0.6" />
+      </>
+    ),
   }
   return (
     <pattern id={id} width="24" height="24" patternUnits="userSpaceOnUse">
@@ -285,11 +348,11 @@ export function PrincessSvg({ look, className = '', title, still = false }: { lo
   const id = (k: string) => `${k}${uid}`
   const skirtFill = look.skirt.length > 1 ? `url(#${id('sk')})` : look.skirt[0]
   const lastSkirt = look.skirt[look.skirt.length - 1]
-  const sparkleCount = look.sparkle ? (sil === 'grand' || sil === 'cascade' ? 11 : 8) : 0
+  const sparkleCount = look.sparkle ? (WIDE.has(sil) ? 11 : 8) : 0
   const neck = look.neckline ?? 'scoop'
   const bodicePath = `${NECK_TOP[neck]} L141 ${waistY} L99 ${waistY} Z`
   const skirtPaths = sil === 'tiered' ? null : SKIRT_PATH[sil]
-  const layerScale = sil === 'grand' || sil === 'cascade' ? 0.025 : 0.05
+  const layerScale = WIDE.has(sil) ? 0.025 : 0.05
   const hairColor = look.hairColor ?? HAIR
   const hairStyle = look.hair ?? 'bun'
   const sleeve = look.sleeves
@@ -391,6 +454,23 @@ export function PrincessSvg({ look, className = '', title, still = false }: { lo
         </>
       )}
 
+      {look.veil && (
+        <g>
+          <path d="M96 44 C70 120 52 220 40 316 Q120 330 200 316 C188 220 170 120 144 44 Q120 30 96 44 Z" fill={look.veil} opacity="0.32" stroke="#fff" strokeOpacity="0.7" strokeWidth="1" />
+          <path d="M104 50 C88 140 76 230 68 312 M136 50 C152 140 164 230 172 312 M120 46 V318" fill="none" stroke="#fff" strokeOpacity="0.35" strokeWidth="1.2" />
+          <path d="M40 316 Q120 330 200 316" fill="none" stroke="#fff" strokeWidth="2" strokeDasharray="1.5 3" strokeLinecap="round" opacity="0.8" />
+        </g>
+      )}
+      {sil === 'bustle' && (
+        <g>
+          <path d="M100 150 C40 160 22 220 30 286 Q120 300 210 286 C218 220 200 160 140 150 Z" fill={lastSkirt} />
+          <path d="M100 150 C40 160 22 220 30 286 Q120 300 210 286 C218 220 200 160 140 150 Z" fill="#000" opacity="0.18" />
+        </g>
+      )}
+      {look.petticoat && sil !== 'tiered' && (
+        <path d={scallopBand(edgePoints(hem, Math.max(8, Math.round(hem.hw / 7)), -7), 5, 12)} fill={look.petticoat} stroke="#fff" strokeWidth="0.8" strokeOpacity="0.9" />
+      )}
+
       {/* Tóc phía sau */}
       {hairStyle === 'bun' && <circle cx={CX} cy="33" r="14" fill={hairColor} />}
       {hairStyle === 'braid' && <circle cx={CX} cy="33" r="12" fill={hairColor} />}
@@ -473,6 +553,37 @@ export function PrincessSvg({ look, className = '', title, still = false }: { lo
               <path key={i} d={scallopBand(pts, 8, 11)} fill="#fff" fillOpacity={0.34 - i * 0.04} stroke={look.accent} strokeOpacity="0.55" strokeWidth="0.9" />
             )
           })}
+        {sil === 'petal' &&
+          [-3, -2, -1, 0, 1, 2, 3].map((k) => {
+            const xb = CX + (k * 84 * 2) / 7
+            const w = 84 / 7
+            return (
+              <path
+                key={k}
+                d={`M${CX + k * 4} ${waistY + 4} C${xb - w * 1.3} ${waistY + H * 0.45} ${xb - w * 1.1} ${hem.y - 6} ${xb} ${hem.y + 10} C${xb + w * 1.1} ${hem.y - 6} ${xb + w * 1.3} ${waistY + H * 0.45} ${CX + k * 4} ${waistY + 4} Z`}
+                fill="#fff" fillOpacity={k % 2 ? 0.16 : 0.08} stroke={look.accent} strokeOpacity="0.45" strokeWidth="0.9"
+              />
+            )
+          })}
+        {sil === 'bustle' && (
+          <g fill="none" strokeLinecap="round">
+            {[0.18, 0.34].map((f, i) => (
+              <path key={i} d={`M${CX - 30 - f * 60} ${waistY + f * H} Q${CX} ${waistY + f * H + 26} ${CX + 30 + f * 60} ${waistY + f * H}`} stroke={look.accent} strokeOpacity="0.7" strokeWidth={7 - i * 2} />
+            ))}
+            {[0.18, 0.34].map((f, i) => (
+              <path key={`h${i}`} d={`M${CX - 30 - f * 60} ${waistY + f * H - 2} Q${CX} ${waistY + f * H + 23} ${CX + 30 + f * 60} ${waistY + f * H - 2}`} stroke="#fff" strokeOpacity="0.45" strokeWidth="1.4" />
+            ))}
+          </g>
+        )}
+        {sil === 'crystal' && (
+          <g fill="#fff" stroke="#fff" strokeOpacity="0.5" strokeWidth="0.7">
+            {[-4, -3, -2, -1, 0, 1, 2, 3, 4].map((k) => {
+              const x = CX + k * 19
+              const y = waistY + H * (0.55 + (Math.abs(k) % 2) * 0.18)
+              return <path key={k} d={`M${x} ${y - 16} L${x + 9} ${y} L${x} ${y + 16} L${x - 9} ${y} Z`} fillOpacity={k % 2 ? 0.1 : 0.2} />
+            })}
+          </g>
+        )}
         {look.drape && (
           <g>
             <path
@@ -493,6 +604,13 @@ export function PrincessSvg({ look, className = '', title, still = false }: { lo
 
       {/* Viền gấu váy */}
       {sil !== 'tiered' && <HemTrim h={hem} look={look} />}
+      {look.hemJewels && (
+        <g>
+          {edgePoints(sil === 'tiered' ? TIER_HEMS[2] : hem, 7, 16).map(([x, y], i) => (
+            <Gem key={i} x={x} y={y} r={i % 2 ? 3.6 : 5} fill={i % 2 ? '#38bdf8' : look.accent} />
+          ))}
+        </g>
+      )}
 
       {/* Tay */}
       <g fill="none" stroke={SKIN} strokeWidth="9" strokeLinecap="round">
@@ -533,6 +651,26 @@ export function PrincessSvg({ look, className = '', title, still = false }: { lo
         fill="none" stroke="#000" strokeOpacity="0.14" strokeWidth="1.3"
       />
       <path d={`M99 ${waistY - 9} Q120 ${waistY - 3} 141 ${waistY - 9}`} fill="none" stroke="#000" strokeOpacity="0.1" strokeWidth="3" strokeLinecap="round" />
+      {look.corset && (
+        <g>
+          <path
+            d={Array.from({ length: 5 }, (_, i) => {
+              const y = 121 + ((waistY - 125) * i) / 4
+              return `M114 ${y} L126 ${y + (waistY - 125) / 8} M126 ${y} L114 ${y + (waistY - 125) / 8}`
+            }).join(' ')}
+            fill="none" stroke={look.accent} strokeWidth="1.4" strokeLinecap="round"
+          />
+          {Array.from({ length: 5 }, (_, i) => {
+            const y = 121 + ((waistY - 125) * i) / 4
+            return (
+              <g key={i} fill="#fff" stroke={look.accent} strokeWidth="0.6">
+                <circle cx="114" cy={y} r="1.3" />
+                <circle cx="126" cy={y} r="1.3" />
+              </g>
+            )
+          })}
+        </g>
+      )}
       <path d={NECK_TOP[neck]} fill="none" stroke="#fff" strokeWidth="2" opacity="0.7" />
       <path d={`M99 ${waistY} H141`} stroke={look.accent} strokeWidth="1.6" opacity="0.75" />
 
@@ -627,6 +765,17 @@ export function PrincessSvg({ look, className = '', title, still = false }: { lo
         </>
       )}
 
+      {look.scepter && (
+        <g>
+          <path d="M160 124 L150 250" stroke={`url(#${id('gd')})`} strokeWidth="4.5" strokeLinecap="round" />
+          <path d="M160 124 L150 250" stroke={GOLD_DARK} strokeWidth="0.8" strokeOpacity="0.6" />
+          <circle cx="161" cy="118" r="8" fill={`url(#${id('gd')})`} stroke={GOLD_DARK} strokeWidth="1" />
+          <Gem x={161} y={118} r={5} fill={look.accent} />
+          <path d="M155 136 Q160 132 165 137" fill="none" stroke={GOLD_DARK} strokeWidth="1.6" />
+          <circle cx="152" cy="174" r="5.8" fill={look.gloves ? '#fff' : SKIN} />
+        </g>
+      )}
+
       {/* Đầu */}
       <circle cx={CX} cy="64" r="27" fill={SKIN} />
       <path d="M93 66 Q96 90 120 91 Q144 90 147 66 Q140 86 120 86 Q100 86 93 66Z" fill={SKIN_SHADE} opacity="0.3" />
@@ -696,6 +845,19 @@ export function PrincessSvg({ look, className = '', title, still = false }: { lo
           <Gem x={120} y={36} r={7} fill="#a855f7" />
           <Gem x={107} y={44} r={3.4} fill="#38bdf8" />
           <Gem x={133} y={44} r={3.4} fill="#38bdf8" />
+        </g>
+      )}
+      {look.tiara === 'crown' && (
+        <g>
+          <path d="M98 48 L96 26 Q108 14 120 26 Q132 14 144 26 L142 48 Q120 55 98 48Z" fill={`url(#${id('gd')})`} stroke={GOLD_DARK} strokeWidth="1.2" />
+          <path d="M100 28 Q120 8 140 28" fill="none" stroke={`url(#${id('gd')})`} strokeWidth="4" />
+          <path d="M100 28 Q120 8 140 28 M120 18 V40" fill="none" stroke={GOLD_DARK} strokeWidth="0.8" />
+          <path d="M98 44 Q120 50 142 44" fill="none" stroke="#fff" strokeWidth="2.6" strokeDasharray="0.1 4.5" strokeLinecap="round" />
+          <circle cx="120" cy="14" r="4.5" fill={`url(#${id('gd')})`} stroke={GOLD_DARK} strokeWidth="0.8" />
+          <path d="M120 9 V2 M116.5 5 H123.5" stroke={GOLD_DARK} strokeWidth="1.6" strokeLinecap="round" />
+          <Gem x={120} y={32} r={6.5} fill="#ef4444" />
+          <Gem x={105} y={36} r={3.6} fill="#22c55e" />
+          <Gem x={135} y={36} r={3.6} fill="#22c55e" />
         </g>
       )}
       {!look.tiara && <Bow x={CX + 14} y={30} color={look.accent} />}

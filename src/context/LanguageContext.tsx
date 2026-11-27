@@ -5,6 +5,7 @@ import { useSubject } from './SubjectContext'
 const KEYS: Record<Subject, string> = {
   science: 'asmo-quiz-lang',
   english: 'asmo-quiz-lang-english',
+  math: 'asmo-quiz-lang-math',
 }
 
 interface Ctx {
@@ -32,6 +33,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const [modes, setModes] = useState<Record<Subject, LangMode>>(() => ({
     science: readInitial('science'),
     english: readInitial('english'),
+    math: readInitial('math'),
   }))
   const setMode = useCallback(
     (m: LangMode) => {

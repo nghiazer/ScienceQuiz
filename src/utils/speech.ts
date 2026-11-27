@@ -1,5 +1,5 @@
 /** Đọc to bằng Web Speech API (speechSynthesis). */
-import type { EnglishQuestion, LangMode, Question, ScienceQuestion } from '../types/quiz'
+import type { BilingualQuestion, EnglishQuestion, LangMode, Question } from '../types/quiz'
 
 export const speechSupported =
   typeof window !== 'undefined' && 'speechSynthesis' in window && typeof SpeechSynthesisUtterance !== 'undefined'
@@ -56,7 +56,7 @@ export function speak(text: string, lang: 'vi' | 'en'): void {
   window.speechSynthesis.speak(utter(text, lang))
 }
 
-function questionText(q: ScienceQuestion, lang: 'vi' | 'en'): string {
+function questionText(q: BilingualQuestion, lang: 'vi' | 'en'): string {
   const opts = lang === 'vi' ? q.options_vi : q.options_en
   const q0 = lang === 'vi' ? q.question_vi : q.question_en
   return `${q0} ${opts.map((o, i) => `${LABELS[i]}. ${o}.`).join(' ')}`
@@ -68,7 +68,7 @@ function englishQuestionText(q: EnglishQuestion): string {
   return `${head} ${opts}`
 }
 
-/** Đọc câu hỏi + 4 đáp án. Môn Tiếng Anh luôn đọc bằng tiếng Anh; Khoa học song ngữ đọc Việt rồi Anh. */
+/** Đọc câu hỏi + 4 đáp án. Môn Tiếng Anh luôn đọc bằng tiếng Anh; Khoa học và Toán song ngữ đọc Việt rồi Anh. */
 export function speakQuestion(q: Question, mode: LangMode): void {
   if (!speechSupported) return
   const synth = window.speechSynthesis
