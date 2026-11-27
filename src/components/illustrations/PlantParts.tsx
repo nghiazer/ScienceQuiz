@@ -1,5 +1,14 @@
 import Frame from './Frame'
 
+// Số đặt cạnh bộ phận (không đè lên lá hay hoa), nối bằng một đường ngắn.
+const BADGES: [string, number, number, number, number][] = [
+  // [số, tâm x, tâm y, điểm chỉ x, điểm chỉ y]
+  ['1', 100, 216, 150, 215],
+  ['2', 262, 172, 207, 172],
+  ['3', 70, 118, 139, 152],
+  ['4', 290, 50, 232, 68],
+]
+
 export default function PlantParts() {
   return (
     <Frame label="Cây có rễ, thân, lá và hoa. Số 1 là rễ, 2 là thân, 3 là lá, 4 là hoa / Plant with roots, stem, leaf and flower; 1 root, 2 stem, 3 leaf, 4 flower">
@@ -12,8 +21,12 @@ export default function PlantParts() {
         <circle key={a} cx={200 + 16 * Math.cos((a * Math.PI) / 180)} cy={75 + 16 * Math.sin((a * Math.PI) / 180)} r="12" fill="#f472b6" />
       ))}
       <circle cx="200" cy="75" r="9" fill="#facc15" />
-      {[['1', 60, 222], ['2', 222, 165], ['3', 300, 110], ['4', 262, 40]].map(([n, x, y]) => (
-        <text key={n as string} x={x as number} y={y as number} fontSize="22" fontWeight="800" fill={n === '1' ? '#fff' : '#334155'}>{n}</text>
+      {BADGES.map(([n, x, y, px, py]) => (
+        <g key={n}>
+          <line x1={x} y1={y} x2={px} y2={py} stroke="#334155" strokeWidth="2.5" strokeLinecap="round" />
+          <circle cx={x} cy={y} r="16" fill="#fff" stroke="#334155" strokeWidth="3" />
+          <text x={x} y={y + 7} textAnchor="middle" fontSize="22" fontWeight="800" fill="#334155">{n}</text>
+        </g>
       ))}
     </Frame>
   )
