@@ -2,21 +2,20 @@ import Frame from './Frame'
 
 export default function EnergyBall() {
   return (
-    <Frame label="Quả bóng ở trên cao có thế năng; khi rơi, thế năng chuyển thành động năng / A ball high up has potential energy; as it falls, potential energy turns into kinetic energy">
-      <line x1="60" y1="210" x2="150" y2="210" stroke="#94a3b8" strokeWidth="4" />
-      <circle cx="100" cy="50" r="22" fill="#f97316" />
-      <path d="M100 80 V150" stroke="#64748b" strokeWidth="4" strokeDasharray="6 6" markerEnd="url(#eb)" />
-      <defs>
-        <marker id="eb" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto">
-          <path d="M0 0 L10 5 L0 10 z" fill="#64748b" />
-        </marker>
-      </defs>
-      <circle cx="100" cy="186" r="22" fill="#f97316" />
-      <text x="100" y="236" textAnchor="middle" fontSize="18" fontWeight="800" fill="#334155">1</text>
-      <line x1="230" y1="210" x2="350" y2="210" stroke="#94a3b8" strokeWidth="4" />
-      <circle cx="290" cy="150" r="22" fill="#f97316" />
-      <path d="M270 140 L250 128 M270 160 L250 172" stroke="#2563eb" strokeWidth="5" strokeLinecap="round" />
-      <text x="290" y="236" textAnchor="middle" fontSize="18" fontWeight="800" fill="#334155">2</text>
+    <Frame label="Vị trí 1: quả bóng được tay giữ ở trên cao so với mặt đất. Vị trí 2: quả bóng đang rơi xuống, có các vạch chuyển động phía sau / Position 1: a ball held high above the ground by a hand. Position 2: the ball is falling, with motion lines behind it">
+      {/* vị trí 1: bóng được giữ cao */}
+      <line x1="40" y1="210" x2="160" y2="210" stroke="#94a3b8" strokeWidth="5" strokeLinecap="round" />
+      <line x1="14" y1="84" x2="80" y2="84" stroke="#fdba74" strokeWidth="16" strokeLinecap="round" />
+      <circle cx="104" cy="50" r="22" fill="#f97316" stroke="#c2410c" strokeWidth="3" />
+      <ellipse cx="104" cy="78" rx="30" ry="9" fill="#fdba74" stroke="#ea580c" strokeWidth="3" />
+      <ellipse cx="80" cy="60" rx="7" ry="13" fill="#fdba74" stroke="#ea580c" strokeWidth="3" transform="rotate(-20 80 60)" />
+      <text x="104" y="236" textAnchor="middle" fontSize="22" fontWeight="800" fill="#334155">1</text>
+
+      {/* vị trí 2: bóng đang rơi, vạch chuyển động ở phía trên bóng */}
+      <line x1="230" y1="210" x2="350" y2="210" stroke="#94a3b8" strokeWidth="5" strokeLinecap="round" />
+      <path d="M276 76 V104 M290 56 V104 M304 76 V104" stroke="#2563eb" strokeWidth="5" strokeLinecap="round" />
+      <circle cx="290" cy="140" r="22" fill="#f97316" stroke="#c2410c" strokeWidth="3" />
+      <text x="290" y="236" textAnchor="middle" fontSize="22" fontWeight="800" fill="#334155">2</text>
     </Frame>
   )
 }

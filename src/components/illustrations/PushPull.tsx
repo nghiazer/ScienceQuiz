@@ -1,24 +1,51 @@
 import Frame from './Frame'
 
+const SKIN = '#fcd9b6'
+const INK = '#92400e'
+
+/** Mũi tên đặc hướng sang phải, đầu mũi tên chạm đúng x = tipX. */
+function Arrow({ fromX, tipX, y }: { fromX: number; tipX: number; y: number }) {
+  return (
+    <g>
+      <line x1={fromX} y1={y} x2={tipX - 18} y2={y} stroke="#f97316" strokeWidth="8" />
+      <polygon points={`${tipX - 20},${y - 12} ${tipX},${y} ${tipX - 20},${y + 12}`} fill="#f97316" />
+    </g>
+  )
+}
+
+function Badge({ n, y }: { n: string; y: number }) {
+  return (
+    <g>
+      <circle cx="30" cy={y} r="17" fill="#f97316" />
+      <text x="30" y={y + 8} textAnchor="middle" fontSize="24" fontWeight="800" fill="#fff">{n}</text>
+    </g>
+  )
+}
+
 export default function PushPull() {
   return (
-    <Frame label="Lực số 1 đẩy hộp sang phải, lực số 2 kéo hộp sang trái / Force 1 pushes a box to the right, force 2 pulls a box to the left">
-      <defs>
-        <marker id="pp" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="10" refY="7" orient="auto">
-          <path d="M0 0 L14 7 L0 14 z" fill="#f97316" />
-        </marker>
-      </defs>
-      {/* left box, pushed right */}
-      <rect x="40" y="120" width="90" height="70" rx="8" fill="#fbbf24" stroke="#92400e" strokeWidth="4" />
-      <line x1="140" y1="150" x2="210" y2="150" stroke="#f97316" strokeWidth="8" markerEnd="url(#pp)" />
-      <circle cx="170" cy="92" r="18" fill="#f97316" />
-      <text x="170" y="99" textAnchor="middle" fontSize="22" fontWeight="800" fill="#fff">1</text>
-      {/* right box, pulled left */}
-      <rect x="270" y="120" width="90" height="70" rx="8" fill="#a78bfa" stroke="#5b21b6" strokeWidth="4" />
-      <line x1="260" y1="150" x2="190" y2="150" stroke="#f97316" strokeWidth="8" markerEnd="url(#pp)" />
-      <circle cx="230" cy="92" r="18" fill="#f97316" />
-      <text x="230" y="99" textAnchor="middle" fontSize="22" fontWeight="800" fill="#fff">2</text>
-      <line x1="0" y1="200" x2="400" y2="200" stroke="#94a3b8" strokeWidth="4" />
+    <Frame label="Hai hình. Hình 1: bàn tay chạm vào mặt trái của hộp, mũi tên chỉ sang phải. Hình 2: bàn tay cầm sợi dây nối với mặt phải của hộp, mũi tên trên hộp chỉ sang phải / Two pictures. Picture 1: a hand touches the left side of a box, arrow points right. Picture 2: a hand holds a string tied to the right side of a box, arrow points right">
+      {/* khung 1: tay chạm trực tiếp vào hộp */}
+      <rect x="6" y="6" width="388" height="110" rx="12" fill="#f8fafc" stroke="#cbd5e1" strokeWidth="3" />
+      <Badge n="1" y={32} />
+      <line x1="16" y1="100" x2="384" y2="100" stroke="#94a3b8" strokeWidth="4" />
+      <rect x="170" y="40" width="80" height="60" rx="8" fill="#fbbf24" stroke={INK} strokeWidth="4" />
+      <rect x="40" y="66" width="62" height="26" rx="6" fill="#60a5fa" stroke="#1e3a8a" strokeWidth="3" />
+      <rect x="98" y="62" width="70" height="34" rx="14" fill={SKIN} stroke={INK} strokeWidth="3" />
+      <path d="M142 74 H160 M142 80 H160 M142 86 H160" stroke={INK} strokeWidth="2.5" strokeLinecap="round" />
+      <Arrow fromX={100} tipX={168} y={50} />
+
+      {/* khung 2: tay cầm dây nối với hộp */}
+      <rect x="6" y="124" width="388" height="110" rx="12" fill="#f8fafc" stroke="#cbd5e1" strokeWidth="3" />
+      <Badge n="2" y={150} />
+      <line x1="16" y1="218" x2="384" y2="218" stroke="#94a3b8" strokeWidth="4" />
+      <rect x="70" y="158" width="80" height="60" rx="8" fill="#fbbf24" stroke={INK} strokeWidth="4" />
+      <line x1="152" y1="190" x2="272" y2="190" stroke="#78350f" strokeWidth="4" strokeLinecap="round" />
+      <circle cx="152" cy="190" r="5" fill="#78350f" />
+      <rect x="296" y="178" width="76" height="26" rx="6" fill="#60a5fa" stroke="#1e3a8a" strokeWidth="3" />
+      <rect x="258" y="172" width="46" height="38" rx="16" fill={SKIN} stroke={INK} strokeWidth="3" />
+      <path d="M266 182 V198" stroke={INK} strokeWidth="2.5" strokeLinecap="round" />
+      <Arrow fromX={162} tipX={232} y={170} />
     </Frame>
   )
 }

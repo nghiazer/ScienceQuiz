@@ -227,7 +227,7 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | phy-18 | vừa |  | Vì sao người ta thường bọc dây điện bằng nhựa hoặc cao su? | Để điện không chạy qua người chạm vào | ☐ |
 | phy-19 | vừa |  | Nếu em chạm vào dây điện bị hở vỏ bọc, điều gì nguy hiểm nhất? | Điện có thể chạy qua người em | ☐ |
 | phy-60 | dễ |  | Đèn pin không sáng dù đã bật công tắc và bóng đèn còn tốt. Em nên kiểm tra điều gì trước? | Pin còn điện hay không | ☐ |
-| phy-095 | vừa |  | Một chuỗi đèn có các bóng nối thành một vòng duy nhất. Khi tháo một bóng ra, cả chuỗi tắt… | Điện đi qua từng bóng, một chỗ đứt là hở mạch | ☐ |
+| phy-095 | vừa | series-circuit | Mạch có một chỗ bị đứt như hình. Bóng 1 và bóng 3 có sáng không? | Cả hai đều tắt | ☐ |
 | phy-096 | dễ |  | Vì sao cần tắt công tắc điện trước khi thay bóng đèn? | Để không bị điện giật khi chạm vào | ☐ |
 
 ### Vật dẫn và cách điện (10 câu)
@@ -250,7 +250,7 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
 | phy-06 | vừa |  | Âm thanh được tạo ra như thế nào? | Do vật rung động | ☐ |
-| phy-25 | dễ |  | Khi em gõ trống, điều gì tạo ra âm thanh? | Mặt trống rung nhanh | ☐ |
+| phy-25 | dễ | drum-sound | Hình vẽ người đang đánh trống. Âm thanh được tạo ra do điều gì? | Mặt trống rung | ☐ |
 | phy-26 | dễ |  | Khi hát, em thấy cổ rung nhẹ. Điều đó cho thấy điều gì? | Dây thanh quản đang rung | ☐ |
 | phy-27 | vừa |  | Âm thanh có thể truyền qua những gì? | Không khí, nước và chất rắn | ☐ |
 | phy-28 | vừa |  | Muốn tiếng đàn guitar to hơn, em nên làm gì? | Gảy mạnh hơn | ☐ |
@@ -279,7 +279,7 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 
 | id | độ khó | hình | câu hỏi | đáp án đúng | kiểm tra |
 | --- | --- | --- | --- | --- | --- |
-| phy-38 | dễ |  | Em ép tay vào phía sau một chiếc hộp (lực số 1) làm hộp trượt đi, rồi dùng dây kéo hộp về… | Lực đẩy | ☐ |
+| phy-38 | dễ | push-pull | Trong hình, bàn tay ở khung 1 và khung 2 tác động lên hộp thế nào? | Khung 1 đẩy, khung 2 kéo | ☐ |
 | phy-39 | dễ |  | Một chiếc xe đồ chơi đang đứng yên trên sàn. Muốn xe chạy, em nên làm gì? | Tác dụng một lực lên xe | ☐ |
 | phy-40 | dễ |  | Khi em kéo một sợi dây, vật gắn ở đầu dây sẽ thế nào? | Bị kéo về phía em | ☐ |
 | phy-41 | vừa |  | Lực nào làm quả bóng lăn chậm dần rồi dừng lại trên sân? | Ma sát với mặt đất | ☐ |
@@ -336,7 +336,7 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | phy-066 | dễ |  | Năng lượng nào đến từ Mặt Trời và giúp cây làm ra thức ăn? | Năng lượng ánh sáng | ☐ |
 | phy-067 | dễ |  | Pin của đèn pin biến năng lượng hóa học thành dạng năng lượng nào? | Điện năng, rồi ánh sáng và nhiệt | ☐ |
 | phy-068 | vừa |  | Em xoa hai bàn tay vào nhau thật nhanh thì tay nóng lên. Năng lượng chuyển động đã biến t… | Nhiệt làm tay nóng lên | ☐ |
-| phy-069 | vừa |  | Quả bóng giữ trên cao đang dự trữ năng lượng. Khi thả rơi, năng lượng ấy biến thành năng … | Năng lượng chuyển động | ☐ |
+| phy-069 | vừa | energy-ball | Quả bóng ở vị trí 1 được giữ cao. Khi rơi xuống vị trí 2, nó đang chuyển động. Năng lượng… | Năng lượng chuyển động | ☐ |
 | phy-070 | khó |  | Trong máy phát điện gió, dạng năng lượng nào được chuyển thành điện năng? | Năng lượng gió làm cánh quạt quay | ☐ |
 | phy-116 | dễ |  | Khi bật bếp điện, điện năng chuyển thành dạng nào để nấu chín thức ăn? | Nhiệt năng | ☐ |
 | phy-117 | vừa |  | Lò xo bị nén rồi thả ra làm đồ chơi nhảy lên. Năng lượng ấy đến từ đâu? | Từ lực nén đã dồn vào lò xo | ☐ |
@@ -360,7 +360,7 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | phy-077 | khó |  | Hòa tan muối vào nước cho đến khi muối không tan thêm được nữa. Dung dịch này gọi là gì? | Dung dịch bão hòa | ☐ |
 | phy-078 | vừa |  | Cát trộn với nước rồi để yên, cát lắng xuống đáy. Đây là loại hỗn hợp nào? | Không hòa tan, có thể lọc được | ☐ |
 | phy-079 | vừa |  | Muốn lấy lại muối từ nước muối, cách nào dễ nhất? | Đun cho nước bay hơi, còn lại muối | ☐ |
-| phy-080 | dễ |  | Trong ba chất đường, cát và dầu ăn, chất nào tan trong nước? | Chỉ đường | ☐ |
+| phy-080 | dễ | dissolve-cup | Trong hình, cốc nào có chất đã tan hết vào nước? | Cốc A | ☐ |
 | phy-119 | vừa |  | Làm thế nào để đường tan nhanh hơn trong cốc nước? | Khuấy đều và dùng nước ấm | ☐ |
 | phy-120 | khó |  | Nước đường đã bão hòa. Khi để nước bốc hơi bớt, điều gì xảy ra với đường? | Đường kết tinh, lắng xuống đáy | ☐ |
 
@@ -720,7 +720,7 @@ Dùng để chọn khái niệm chưa có trước khi soạn câu mới và là
 | --- | --- | --- | --- | --- | --- |
 | inq-069 | dễ |  | Đơn vị nào dùng để đo độ dài ngắn như chiều dài của bút chì? | Centimét (cm) | ☐ |
 | inq-070 | dễ |  | Đơn vị nào thường dùng để đo khối lượng của một quả táo? | Gam (g) | ☐ |
-| inq-071 | vừa |  | Một cốc nước thường có thể tích khoảng bao nhiêu? | Khoảng 200 mililít | ☐ |
+| inq-071 | vừa | measuring-cup | Nước trong cốc đong trong hình là bao nhiêu mililít? | 150 ml | ☐ |
 | inq-072 | vừa |  | Nhiệt độ của một ngày nắng ở Việt Nam thường khoảng bao nhiêu độ C? | Khoảng 30 °C | ☐ |
 | inq-073 | khó |  | Bạn muốn ước lượng chiều cao của lớp học. Cách nào hợp lý nhất? | So sánh với chiều cao người lớn | ☐ |
 
