@@ -6,7 +6,7 @@ description: Add, change or remove UI and gameplay features in ScienceQuiz (scre
 # UI and gameplay features
 
 ## Architecture (read before editing)
-- `src/App.tsx` is a tiny state machine: `Screen = home | wardrobe | quiz | result`; `progress` state is loaded once (`loadProgress`) and updated via `recordQuizResult` in `finish`. New screen → extend the `Screen` union, add a render branch, a `go…` handler with `window.scrollTo({ top: 0 })`, and an entry point (Header/Home/Result).
+- `src/App.tsx` is a tiny state machine: `Screen = home | wardrobe | parent | quiz | result`; `progress` state is loaded once (`loadProgress`) and updated via `recordQuizResult` in `finish`. New screen → extend the `Screen` union, add a render branch, a `go…` handler with `window.scrollTo({ top: 0 })`, and an entry point (Header/Home/Result).
 - Quiz construction: `src/utils/quiz.ts` (`buildTopicQuiz`, `buildMockFor`, `shuffleOptions`, `findMissed`; sizes `TOPIC_SESSION_SIZE`, `MOCK_SIZE`…). Scoring and unlocking: `src/utils/storage.ts` (`computeStars`, `recordQuizResult`). Both are pure functions — keep them pure and testable with `npx tsx -e`.
 - Language: `LanguageContext` (`vi|en|bi`; English subject only uses `vi|bi`, English text itself is never translated; Science and Maths are fully bilingual) and `SubjectContext`; render bilingual strings with `<BilingualText vi en />`. Every new user-visible string needs **both** `vi` and `en`.
 - Persistence keys: `asmo-quiz-progress-v1`, `asmo-quiz-subject`, `asmo-quiz-lang[-english|-math]`, `princess-wardrobe-v1`. Always wrap `localStorage` in try/catch (private mode). Changing saved shape → `/progress-storage`.

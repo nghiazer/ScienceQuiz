@@ -3,26 +3,30 @@ import { MotionConfig } from 'framer-motion'
 import type { AnswerRecord, Progress, Question, QuizConfig, QuizResult, Topic } from './types/quiz'
 import { useSubject } from './context/SubjectContext'
 import { TOPICS } from './data/topics'
-import { buildMockFor, buildTopicQuiz } from './utils/quiz'
+import { buildMistakeQuiz, buildMockFor, buildTopicQuiz } from './utils/quiz'
 import { loadProgress, recordQuizResult } from './utils/storage'
 import Header from './components/Header'
 import HomeScreen from './components/HomeScreen'
 import QuizArena from './components/QuizArena'
 import ResultScreen from './components/ResultScreen'
+import ParentScreen from './components/parent/ParentScreen'
+import PinModal from './components/parent/PinModal'
 import WardrobeScreen from './components/wardrobe/WardrobeScreen'
 
-type Screen = { name: 'home' } | { name: 'wardrobe' } | { name: 'quiz'; config: QuizConfig; runId: number } | { name: 'result'; result: QuizResult }
+type Screen = { name: 'home' } | { name: 'wardrobe' } | { name: 'parent' } | { name: 'quiz'; config: QuizConfig; runId: number } | { name: 'result'; result: QuizResult }
 
 export default function App() {
   const { subject } = useSubject()
   const [progress, setProgress] = useState<Progress>(loadProgress)
   const [screen, setScreen] = useState<Screen>({ name: 'home' })
   const [runId, setRunId] = useState(0)
+  // Mở khóa khu vực phụ huynh chỉ giữ trong bộ nhớ: tải lại trang là hỏi mã lại.
+  const [pinOpen, setPinOpen] = useState(false)
 
   const start = (config: QuizConfig) => {
     setRunId((n) => n + 1)
     // Chuỗi đúng liên tiếp hiện có của môn, để màn làm bài hiện tiếp tiến độ mở váy.
-    setScreen({ name: 'quiz', config: { ...config, dressRunStart: progress.correctRun[config.subject] ?? 0 }, runId: runId + 1 })
+    setScreen({ name: 'quiz', config: { ...config, dressRunStart: progress.correctRun[config.subject] ?? 0, startedAt: Date.now() }, runId: runId + 1 })
     window.scrollTo({ top: 0 })
   }
 
@@ -34,7 +38,14 @@ export default function App() {
     start({ kind: 'retry', subject: retrySubject, questions, timerEnabled: false })
 
   const finish = (config: QuizConfig, answers: AnswerRecord[]) => {
-    const out = recordQuizResult(progress, { kind: config.kind, subject: config.subject, questions: config.questions, answers })
+    const out = recordQuizResult(progress, {
+      kind: config.kind,
+      subject: config.subject,
+      topic: config.topic,
+      questions: config.questions,
+      answers,
+      startedAt: config.startedAt,
+    })
     setProgress(out.progress)
     setScreen({
       name: 'result',
@@ -48,6 +59,14 @@ export default function App() {
     window.scrollTo({ top: 0 })
   }
 
+  const openParentScreen = () => {
+    setScreen({ name: 'parent' })
+    window.scrollTo({ top: 0 })
+  }
+
+  // Lần nào mở Góc phụ huynh cũng phải nhập mã, để bé không tự vào được sau khi bố mẹ đã mở.
+  const requestParent = () => setPinOpen(true)
+
   const openWardrobe = () => {
     setScreen({ name: 'wardrobe' })
     window.scrollTo({ top: 0 })
@@ -58,8 +77,11 @@ export default function App() {
       <MotionConfig reducedMotion="user">
         <Header inQuiz={screen.name === 'quiz'} inWardrobe={screen.name === 'wardrobe'} onOpenWardrobe={openWardrobe} />
         <main>
-          {screen.name === 'home' && <HomeScreen progress={progress} onStartTopic={startTopic} onStartMock={startMock} />}
+          {screen.name === 'home' && <HomeScreen progress={progress} onStartTopic={startTopic} onStartMock={startMock} onOpenParent={requestParent} />}
           {screen.name === 'wardrobe' && <WardrobeScreen progress={progress} onHome={goHome} />}
+          {screen.name === 'parent' && (
+            <ParentScreen progress={progress} onHome={goHome} onRetry={(qs, s) => startRetry(buildMistakeQuiz(qs), s)} />
+          )}
           {screen.name === 'quiz' && (
             <QuizArena
               key={screen.runId}
@@ -83,6 +105,15 @@ export default function App() {
             />
           )}
         </main>
+        {pinOpen && (
+          <PinModal
+            onClose={() => setPinOpen(false)}
+            onSuccess={() => {
+              setPinOpen(false)
+              openParentScreen()
+            }}
+          />
+        )}
       </MotionConfig>
     </>
   )

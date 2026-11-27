@@ -119,6 +119,8 @@ export interface QuizConfig {
   timerEnabled: boolean
   /** chuỗi đúng liên tiếp của môn lúc bắt đầu bài (để hiện tiến độ mở váy trong lúc làm) */
   dressRunStart?: number
+  /** thời điểm bắt đầu bài (Date.now()), để ghi thời lượng làm bài vào lịch sử */
+  startedAt?: number
 }
 
 export interface QuizResult {
@@ -133,6 +135,28 @@ export interface QuizResult {
 export interface TopicStat {
   correct: number
   total: number
+}
+
+/** Một lượt làm bài đã hoàn thành, lưu để vẽ biểu đồ cho phụ huynh. */
+export interface SessionRecord {
+  /** thời điểm hoàn thành, dạng ISO */
+  at: string
+  /** ngày địa phương YYYY-MM-DD */
+  date: string
+  subject: Subject
+  kind: QuizKind
+  topic?: Topic
+  total: number
+  correct: number
+  /** thời lượng làm bài (giây), tối đa 3600 */
+  durationSec: number
+}
+
+/** Câu bé làm sai gần đây. selectedIndex tính theo thứ tự đáp án GỐC trong ngân hàng (không phải thứ tự đã xáo). */
+export interface MistakeRecord {
+  id: string
+  at: string
+  selectedIndex: OptionIndex | null
 }
 
 export interface Progress {
@@ -155,6 +179,14 @@ export interface Progress {
   unlockedDresses: string[]
   /** số câu đúng liên tiếp hiện tại của từng môn; đủ CORRECT_PER_DRESS thì mở 1 váy rồi đếm lại từ 0 */
   correctRun: Record<Subject, number>
+  /** các lượt làm bài, mới nhất ở cuối, tối đa 300 */
+  history: SessionRecord[]
+  /** thống kê cộng dồn theo id chuyên đề con */
+  subtopicStats: Record<string, TopicStat>
+  /** thống kê cộng dồn theo môn và độ khó */
+  difficultyStats: Record<Subject, Record<Difficulty, TopicStat>>
+  /** câu sai gần đây, mới nhất đứng đầu, không trùng id, tối đa 30 */
+  recentMistakes: MistakeRecord[]
 }
 
 export interface TopicMeta {

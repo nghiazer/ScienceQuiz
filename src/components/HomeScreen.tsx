@@ -17,6 +17,7 @@ interface Props {
   progress: Progress
   onStartTopic: (t: Topic) => void
   onStartMock: (timerEnabled: boolean) => void
+  onOpenParent: () => void
 }
 
 function Stat({ icon, value, vi, en, tone }: { icon: React.ReactNode; value: number | string; vi: string; en: string; tone: string }) {
@@ -31,7 +32,7 @@ function Stat({ icon, value, vi, en, tone }: { icon: React.ReactNode; value: num
   )
 }
 
-export default function HomeScreen({ progress, onStartTopic, onStartMock }: Props) {
+export default function HomeScreen({ progress, onStartTopic, onStartMock, onOpenParent }: Props) {
   const [timerOn, setTimerOn] = useState(true)
   const streak = currentStreak(progress)
   const { subject } = useSubject()
@@ -46,10 +47,6 @@ export default function HomeScreen({ progress, onStartTopic, onStartMock }: Prop
   const { studySeconds, bankSeconds } = useWardrobe()
   const mockSize = MOCK_SIZE_BY_SUBJECT[subject]
   const mockMinutes = MOCK_MINUTES_BY_SUBJECT[subject]
-  const subjectTotals = topicIds.reduce(
-    (acc, id) => ({ correct: acc.correct + progress.topicStats[id].correct, total: acc.total + progress.topicStats[id].total }),
-    { correct: 0, total: 0 },
-  )
 
   return (
     <div className="mx-auto max-w-5xl space-y-6 px-4 py-6">
@@ -143,37 +140,6 @@ export default function HomeScreen({ progress, onStartTopic, onStartMock }: Prop
         </div>
       </section>
 
-      <section aria-labelledby="parent-h" className="rounded-3xl bg-white p-5 shadow-soft">
-        <div className="mb-3 flex flex-wrap items-baseline justify-between gap-2">
-          <h2 id="parent-h" className="text-xl font-black text-slate-800">
-            <BilingualText vi={`Theo dõi cho phụ huynh · ${meta.short_vi}`} en={`For parents · ${meta.short_en}`} />
-          </h2>
-          <p className="text-sm font-extrabold text-slate-500 tabular-nums">
-            {subjectTotals.total > 0
-              ? `${subjectTotals.correct}/${subjectTotals.total} (${Math.round((subjectTotals.correct / subjectTotals.total) * 100)}%)`
-              : '—'}
-          </p>
-        </div>
-        <ul className={`grid gap-3 sm:grid-cols-2 ${isMath ? 'lg:grid-cols-5' : 'lg:grid-cols-4'}`}>
-          {topicIds.map((id) => {
-            const t = TOPICS[id]
-            const st = progress.topicStats[id]
-            const pct = st.total ? Math.round((st.correct / st.total) * 100) : 0
-            return (
-              <li key={id} className={`rounded-2xl p-3 ${t.soft}`}>
-                <p className={`text-sm font-black ${t.text}`}>{t.emoji} <BilingualText vi={t.name_vi} en={t.name_en} compact /></p>
-                <p className="mt-1 text-lg font-black tabular-nums text-slate-800">
-                  {st.total ? `${st.correct}/${st.total}` : '—'} <span className="text-sm font-bold text-slate-500">{st.total ? `· ${pct}%` : ''}</span>
-                </p>
-                <div className="mt-1 h-2 overflow-hidden rounded-full bg-white/70">
-                  <div className="h-full rounded-full" style={{ width: `${pct}%`, backgroundColor: t.hex }} />
-                </div>
-              </li>
-            )
-          })}
-        </ul>
-      </section>
-
       <section aria-labelledby="mock-h" className="rounded-3xl bg-white p-5 shadow-soft ring-4 ring-violet-200">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
           <div className="grid size-16 shrink-0 place-items-center rounded-2xl bg-violet-100 text-violet-600">
@@ -234,6 +200,17 @@ export default function HomeScreen({ progress, onStartTopic, onStartMock }: Prop
           </button>
         </div>
       </section>
+
+      <button
+        type="button"
+        onClick={() => {
+          playClick()
+          onOpenParent()
+        }}
+        className="flex min-h-16 w-full items-center justify-center gap-3 rounded-3xl bg-white p-4 text-lg font-black text-slate-700 shadow-soft transition hover:bg-slate-50 active:translate-y-0.5"
+      >
+        <BilingualText vi="👨‍👩‍👧 Dành cho bố mẹ" en="👨‍👩‍👧 For parents" />
+      </button>
     </div>
   )
 }

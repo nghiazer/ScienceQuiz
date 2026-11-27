@@ -197,3 +197,26 @@ export function findMissed(questions: Question[], answers: AnswerRecord[]): Ques
 export function buildRetryQuiz(questions: Question[], answers: AnswerRecord[]): Question[] {
   return shuffle(findMissed(questions, answers)).map(shuffleOptions)
 }
+
+const QUESTION_BY_ID = new Map<string, Question>(ALL_QUESTIONS.map((q) => [q.id, q]))
+
+/** Câu gốc trong ngân hàng (thứ tự đáp án chưa xáo) theo id; undefined nếu id không còn. */
+export function questionById(id: string): Question | undefined {
+  return QUESTION_BY_ID.get(id)
+}
+
+/**
+ * Đổi vị trí đáp án bé chọn (theo thứ tự đã xáo lúc làm bài) về vị trí trong câu gốc,
+ * để phụ huynh xem lại đúng nội dung. Đáp án trong một câu luôn khác nhau nên so khớp theo chữ.
+ */
+export function originalIndex(shown: Question, selected: OptionIndex): OptionIndex {
+  const orig = QUESTION_BY_ID.get(shown.id)
+  if (!orig) return selected
+  const at = orig.options_en.indexOf(shown.options_en[selected])
+  return at === -1 ? selected : (at as OptionIndex)
+}
+
+/** Lượt ôn lại các câu sai: xáo thứ tự câu và đáp án. */
+export function buildMistakeQuiz(questions: Question[]): Question[] {
+  return shuffle(questions).map(shuffleOptions)
+}
