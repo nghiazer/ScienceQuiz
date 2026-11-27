@@ -9,6 +9,10 @@ Saved data lives on kids' devices; losing it loses stars, streaks and unlocked d
 
 Keys: `asmo-quiz-progress-v1` (`Progress`, `src/utils/storage.ts`), `princess-wardrobe-v1` (`WardrobeState`, `src/utils/wardrobe.ts`), `asmo-quiz-subject` (`science|english|math`), `asmo-quiz-lang`, `asmo-quiz-lang-english`, `asmo-quiz-lang-math`.
 
+## Existing migration fields
+- `Progress.keptDresses`: dresses unlocked under the old per-subject wardrobe; `loadProgress` fills it from `legacyUnlockedIds` when an old save lacks it. Keep it forever.
+- `WardrobeState.wornId`: replaced the per-subject `worn` record; `load()` falls back to the first id in an old `worn`.
+
 ## Add a field
 1. Add it to the type (`src/types/quiz.ts` for `Progress`, `WardrobeState` in `wardrobe.ts`).
 2. Give it a default in `defaultProgress()` / `initial()`.

@@ -1,4 +1,4 @@
-import { DRESSES, unlockedCount } from '../data/dresses'
+import { WARDROBE, legacyUnlockedIds, unlockedIds } from '../data/dresses'
 import type { AnswerRecord, Progress, Question, QuizKind, Subject, Topic } from '../types/quiz'
 
 const KEY = 'asmo-quiz-progress-v1'
@@ -29,6 +29,7 @@ export const defaultProgress = (): Progress => ({
     combinatorics: emptyStats(),
   },
   seenIds: [],
+  keptDresses: [],
 })
 
 export function loadProgress(): Progress {
@@ -37,11 +38,14 @@ export function loadProgress(): Progress {
     if (!raw) return defaultProgress()
     const parsed = JSON.parse(raw) as Partial<Progress>
     const base = defaultProgress()
+    const topicStats = { ...base.topicStats, ...(parsed.topicStats ?? {}) }
     return {
       ...base,
       ...parsed,
-      topicStats: { ...base.topicStats, ...(parsed.topicStats ?? {}) },
+      topicStats,
       seenIds: Array.isArray(parsed.seenIds) ? parsed.seenIds : [],
+      // Tiến độ từ trước khi gộp tủ váy: ghi lại những váy bé đã mở theo luật cũ để không mất váy nào.
+      keptDresses: Array.isArray(parsed.keptDresses) ? parsed.keptDresses : legacyUnlockedIds({ topicStats }),
     }
   } catch {
     return defaultProgress()
@@ -144,10 +148,10 @@ export function recordQuizResult(prev: Progress, input: RecordInput, today = tod
     ])),
   }
 
-  // Cứ 10 câu đúng của một môn thì mở thêm một váy của môn đó.
-  const before = unlockedCount(prev, input.subject)
-  const after = unlockedCount(next, input.subject)
-  const newDresses = DRESSES[input.subject].slice(before, after).map((d) => d.id)
+  // Tủ váy chung: cứ 10 câu đúng (ở bất kỳ môn nào) thì mở thêm một váy.
+  const before = unlockedIds(prev)
+  const after = unlockedIds(next)
+  const newDresses = WARDROBE.filter((d) => after.has(d.id) && !before.has(d.id)).map((d) => d.id)
   saveProgress(next)
   return { progress: next, stars, percent, newDresses }
 }

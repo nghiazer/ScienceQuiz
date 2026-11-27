@@ -4,7 +4,7 @@ import { Flame, GraduationCap, Shirt, Star } from 'lucide-react'
 import type { Progress, Topic } from '../types/quiz'
 import { QUESTIONS_BY_SUBJECT, SUBJECTS, SUBJECT_TOPICS, TOPICS } from '../data/questions'
 import { useSubject } from '../context/SubjectContext'
-import { DRESSES, DRESSES_PER_SUBJECT, nextDressIn, unlockedCount } from '../data/dresses'
+import { WARDROBE_SIZE, nextDress as findNextDress, nextDressIn, unlockedCount } from '../data/dresses'
 import { STUDY_BLOCK_SECONDS, formatClock, useWardrobe } from '../utils/wardrobe'
 import { currentStreak } from '../utils/storage'
 import { MOCK_MINUTES_BY_SUBJECT, MOCK_SIZE_BY_SUBJECT } from '../utils/quiz'
@@ -39,9 +39,10 @@ export default function HomeScreen({ progress, onStartTopic, onStartMock }: Prop
   const isMath = subject === 'math'
   const meta = SUBJECTS[subject]
   const topicIds = SUBJECT_TOPICS[subject]
-  const dressCount = unlockedCount(progress, subject)
-  const dressesLeft = nextDressIn(progress, subject)
-  const nextDress = DRESSES[subject][dressCount]
+  // Tủ váy chung của cả ba môn: câu đúng ở môn nào cũng được tính.
+  const dressCount = unlockedCount(progress)
+  const dressesLeft = nextDressIn(progress)
+  const nextDress = findNextDress(progress)
   const { studySeconds, bankSeconds } = useWardrobe()
   const mockSize = MOCK_SIZE_BY_SUBJECT[subject]
   const mockMinutes = MOCK_MINUTES_BY_SUBJECT[subject]
@@ -71,7 +72,7 @@ export default function HomeScreen({ progress, onStartTopic, onStartMock }: Prop
         <div className="mt-5 flex flex-col gap-3 sm:flex-row">
           <Stat tone="bg-amber-100 text-amber-800" icon={<Star className="size-7 fill-amber-400 text-amber-500" />} value={progress.totalStars} vi="Tổng số sao" en="Total stars" />
           <Stat tone="bg-orange-100 text-orange-800" icon={<Flame className="size-7 fill-orange-400 text-orange-500" />} value={streak} vi="Ngày học liên tiếp" en="Day streak" />
-          <Stat tone="bg-pink-100 text-pink-800" icon={<Shirt className="size-7 text-pink-500" />} value={`${dressCount}/${DRESSES_PER_SUBJECT}`} vi="Váy dạ hội" en="Ball gowns" />
+          <Stat tone="bg-pink-100 text-pink-800" icon={<Shirt className="size-7 text-pink-500" />} value={`${dressCount}/${WARDROBE_SIZE}`} vi="Váy dạ hội" en="Ball gowns" />
         </div>
         <div className="mt-4 flex items-center gap-4 rounded-2xl bg-white/20 p-3">
           {nextDress ? (
@@ -89,7 +90,7 @@ export default function HomeScreen({ progress, onStartTopic, onStartMock }: Prop
                 subClassName="!text-white/80 !not-italic !text-xs"
               />
             ) : (
-              <BilingualText vi="Con đã mở hết váy của môn này! 🎉" en="You unlocked every dress in this subject! 🎉" subClassName="!text-white/80 !not-italic !text-xs" />
+              <BilingualText vi="Con đã mở hết cả tủ váy! 🎉" en="You unlocked the whole wardrobe! 🎉" subClassName="!text-white/80 !not-italic !text-xs" />
             )}
             <p className="mt-1 text-xs font-bold text-white/90">
               👗 Học {formatClock(STUDY_BLOCK_SECONDS - studySeconds)} nữa → +5 phút tủ quần áo
@@ -129,8 +130,8 @@ export default function HomeScreen({ progress, onStartTopic, onStartMock }: Prop
               >
                 <span className="grid size-16 shrink-0 place-items-center rounded-2xl bg-white/25 text-4xl" aria-hidden>{t.emoji}</span>
                 <span className="min-w-0 flex-1">
-                  <BilingualText vi={t.name_vi} en={t.name_en} className="text-xl font-black" subClassName="!text-white/85 !not-italic !text-[0.7em]" />
-                  <BilingualText vi={t.desc_vi} en={t.desc_en} className="mt-1 text-sm font-semibold text-white/90" subClassName="!text-white/75 !not-italic !text-[0.9em]" />
+                  <BilingualText vi={t.name_vi} en={t.name_en} className="block text-xl font-black" subClassName="!text-white/85 !not-italic !text-[0.7em]" />
+                  <BilingualText vi={t.desc_vi} en={t.desc_en} className="mt-1 block text-sm font-semibold text-white/90" subClassName="!text-white/75 !not-italic !text-[0.9em]" />
                   <span className="mt-2 flex items-center gap-2 text-xs font-extrabold">
                     <span className="rounded-full bg-white/25 px-2 py-0.5">Kho {n} câu</span>
                     {pct !== null && <span className="rounded-full bg-white/25 px-2 py-0.5">Đúng {pct}%</span>}

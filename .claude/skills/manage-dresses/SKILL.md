@@ -25,7 +25,9 @@ Preview all dresses with `npm run gallery` (optionally `-- --sub=science --from=
 Add the union member (`Silhouette`, `DressPattern`, `Sleeves`, `Trim`, `Tiara`, `Neckline`, `Hair`) in `types.ts`, then render it in `DressSvg.tsx` (the `HEM`/`SKIRT_PATH`/`FOLDS` tables per silhouette, `NECK_TOP`, `PatternDef` for patterns, `HemTrim` for trims). Use only gradients and paths — no SVG filters, up to 100 cards render at once. SVG stays self-contained, ids via `useId()` (several dresses render at once), viewBox width centered at `CX = 120`. Use it in at least one dress, otherwise it is dead code.
 
 ## Rules/economy
-- Unlock: every `CORRECT_PER_DRESS` (10) correct answers per subject (`unlockedCount`, derived from saved `topicStats`, so changes apply retroactively).
+- **Shared wardrobe**: `WARDROBE` in `src/data/dresses/index.ts` holds all 300 dresses sorted by tier, then `index`, then subject (science, english, maths interleaved); `orderOf(d)` is its 1…300 position shown on cards.
+- Unlock: every `CORRECT_PER_DRESS` (10) correct answers summed over ALL subjects (`totalCorrect`) unlock the next dress in `WARDROBE` order. `unlockedIds(p)` = `p.keptDresses` (dresses a kid had under the old per-subject rule, captured once by `loadProgress` via `legacyUnlockedIds`) topped up in wardrobe order until there are ⌊total/10⌋. Derived from saved `topicStats`, so changes apply retroactively — reordering `WARDROBE` changes which dress is next, never the count.
+- One worn dress for all subjects: `WardrobeState.wornId` (old saves with per-subject `worn` are read once as a fallback).
 - Play time: every `STUDY_BLOCK_SECONDS` (15 min) of study earns `REWARD_SECONDS` (5 min) in `src/utils/wardrobe.ts`; timer logic in `src/utils/useStudyTimer.ts` (idle limit 3 min).
 - Saved `worn` ids that no longer exist or are still locked fall back gracefully (`dressById` + unlocked check in `WardrobeScreen`), so removing/renaming ids is safe for saves; changing the **localStorage key** is not.
 

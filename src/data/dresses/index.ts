@@ -23,20 +23,74 @@ export const ALL_DRESSES: DressDef[] = [...SCIENCE_DRESSES, ...ENGLISH_DRESSES, 
 export const dressById = (id: string | null | undefined): DressDef | undefined =>
   id ? ALL_DRESSES.find((d) => d.id === id) : undefined
 
+/** Thứ tự môn khi xen kẽ váy trong tủ chung. */
+const SUBJECT_ORDER: Subject[] = ['science', 'english', 'math']
+
+/**
+ * Tủ váy chung của cả ba môn: xếp theo cấp (1 → 5); trong cùng cấp, váy của ba môn xen kẽ
+ * theo thứ tự (Khoa học 1, Tiếng Anh 1, Toán 1, Khoa học 2, …). Mở lần lượt từ đầu tủ.
+ */
+export const WARDROBE: DressDef[] = [...ALL_DRESSES].sort(
+  (a, b) => a.tier - b.tier || a.index - b.index || SUBJECT_ORDER.indexOf(a.subject) - SUBJECT_ORDER.indexOf(b.subject),
+)
+export const WARDROBE_SIZE = WARDROBE.length
+
+const ORDER = new Map(WARDROBE.map((d, i) => [d.id, i + 1]))
+/** Số thứ tự của váy trong tủ chung (1…WARDROBE_SIZE). */
+export const orderOf = (d: DressDef): number => ORDER.get(d.id) ?? 0
+
+type DressProgress = Pick<Progress, 'topicStats'> & Partial<Pick<Progress, 'keptDresses'>>
+
 /** Tổng số câu đúng của một môn (tính từ thống kê đã lưu, nên tiến độ cũ được tính luôn). */
 export function correctFor(p: Pick<Progress, 'topicStats'>, subject: Subject): number {
-  return SUBJECT_TOPICS[subject].reduce((sum, t) => sum + p.topicStats[t].correct, 0)
+  return SUBJECT_TOPICS[subject].reduce((sum, t) => sum + (p.topicStats[t]?.correct ?? 0), 0)
 }
 
-/** Số váy đã mở của một môn. */
-export function unlockedCount(p: Pick<Progress, 'topicStats'>, subject: Subject): number {
-  return Math.min(DRESSES_PER_SUBJECT, Math.floor(correctFor(p, subject) / CORRECT_PER_DRESS))
+/** Tổng số câu đúng của cả ba môn — câu đúng ở môn nào cũng góp vào tủ chung. */
+export function totalCorrect(p: Pick<Progress, 'topicStats'>): number {
+  return SUBJECT_ORDER.reduce((sum, s) => sum + correctFor(p, s), 0)
+}
+
+/**
+ * Luật cũ (mỗi môn có tủ riêng, 10 câu đúng của môn đó mở 1 váy của môn đó).
+ * Chỉ dùng một lần khi nạp tiến độ cũ, để bé giữ đúng những chiếc váy đã mở trước khi gộp tủ.
+ */
+export function legacyUnlockedIds(p: Pick<Progress, 'topicStats'>): string[] {
+  return SUBJECT_ORDER.flatMap((s) =>
+    DRESSES[s].slice(0, Math.min(DRESSES_PER_SUBJECT, Math.floor(correctFor(p, s) / CORRECT_PER_DRESS))).map((d) => d.id),
+  )
+}
+
+/**
+ * Các váy đã mở: những váy giữ lại từ trước khi gộp tủ, cộng thêm váy theo thứ tự tủ chung
+ * cho tới khi đủ ⌊tổng câu đúng / 10⌋ chiếc.
+ */
+export function unlockedIds(p: DressProgress): Set<string> {
+  const earned = Math.min(WARDROBE_SIZE, Math.floor(totalCorrect(p) / CORRECT_PER_DRESS))
+  const ids = new Set((p.keptDresses ?? []).filter((id) => ORDER.has(id)))
+  for (const d of WARDROBE) {
+    if (ids.size >= earned) break
+    ids.add(d.id)
+  }
+  return ids
+}
+
+/** Số váy đã mở trong tủ chung. */
+export function unlockedCount(p: DressProgress): number {
+  return unlockedIds(p).size
+}
+
+/** Chiếc váy sẽ mở tiếp theo (undefined nếu đã mở hết). */
+export function nextDress(p: DressProgress): DressDef | undefined {
+  const ids = unlockedIds(p)
+  return WARDROBE.find((d) => !ids.has(d.id))
 }
 
 /** Số câu đúng còn thiếu để mở váy kế tiếp (0 nếu đã mở hết). */
-export function nextDressIn(p: Pick<Progress, 'topicStats'>, subject: Subject): number {
-  if (unlockedCount(p, subject) >= DRESSES_PER_SUBJECT) return 0
-  return CORRECT_PER_DRESS - (correctFor(p, subject) % CORRECT_PER_DRESS)
+export function nextDressIn(p: DressProgress): number {
+  const n = unlockedCount(p)
+  if (n >= WARDROBE_SIZE) return 0
+  return Math.max(1, (n + 1) * CORRECT_PER_DRESS - totalCorrect(p))
 }
 
-export const isUnlocked = (p: Pick<Progress, 'topicStats'>, d: DressDef): boolean => d.index <= unlockedCount(p, d.subject)
+export const isUnlocked = (p: DressProgress, d: DressDef): boolean => unlockedIds(p).has(d.id)

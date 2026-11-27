@@ -1,5 +1,4 @@
 import { useSyncExternalStore } from 'react'
-import type { Subject } from '../types/quiz'
 
 const KEY = 'princess-wardrobe-v1'
 
@@ -12,22 +11,29 @@ export interface WardrobeState {
   studySeconds: number
   /** giây chơi tủ còn lại (đã cộng dồn) */
   bankSeconds: number
-  /** váy đang mặc theo từng môn */
-  worn: Record<Subject, string | null>
+  /** váy công chúa đang mặc (tủ chung của cả ba môn) */
+  wornId: string | null
 }
 
-const initial = (): WardrobeState => ({ studySeconds: 0, bankSeconds: 0, worn: { science: null, english: null, math: null } })
+const initial = (): WardrobeState => ({ studySeconds: 0, bankSeconds: 0, wornId: null })
+
+/** Dữ liệu cũ lưu váy đang mặc theo từng môn: lấy chiếc đầu tiên còn có. */
+function legacyWorn(worn: unknown): string | null {
+  if (!worn || typeof worn !== 'object') return null
+  const w = worn as Record<string, unknown>
+  for (const k of ['science', 'english', 'math']) if (typeof w[k] === 'string') return w[k] as string
+  return null
+}
 
 function load(): WardrobeState {
   try {
     const raw = localStorage.getItem(KEY)
     if (!raw) return initial()
-    const p = JSON.parse(raw) as Partial<WardrobeState>
-    const base = initial()
+    const p = JSON.parse(raw) as Partial<WardrobeState> & { worn?: unknown }
     return {
       studySeconds: Number.isFinite(p.studySeconds) ? Math.max(0, p.studySeconds as number) : 0,
       bankSeconds: Number.isFinite(p.bankSeconds) ? Math.max(0, p.bankSeconds as number) : 0,
-      worn: { ...base.worn, ...(p.worn ?? {}) },
+      wornId: typeof p.wornId === 'string' ? p.wornId : legacyWorn(p.worn),
     }
   } catch {
     return initial()
@@ -76,8 +82,8 @@ export function spendBankSeconds(n: number): number {
   return state.bankSeconds
 }
 
-export function wearDress(subject: Subject, dressId: string): void {
-  commit({ ...state, worn: { ...state.worn, [subject]: dressId } })
+export function wearDress(dressId: string): void {
+  commit({ ...state, wornId: dressId })
 }
 
 export function formatClock(seconds: number): string {

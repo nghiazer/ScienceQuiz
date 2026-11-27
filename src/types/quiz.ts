@@ -147,6 +147,8 @@ export interface Progress {
   topicStats: Record<Topic, TopicStat>
   /** id các câu đã trả lời, dùng để ưu tiên câu mới ở các lượt sau */
   seenIds: string[]
+  /** váy đã mở theo luật cũ (tủ riêng từng môn), giữ lại khi gộp thành tủ chung */
+  keptDresses: string[]
 }
 
 export interface TopicMeta {

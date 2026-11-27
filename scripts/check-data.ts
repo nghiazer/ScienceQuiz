@@ -7,7 +7,7 @@ import { ILLUSTRATIONS } from '../src/components/illustrations/registry'
 import type { Difficulty, Topic } from '../src/types/quiz'
 import { findDupes, type AllowEntry } from './lib/dupes'
 import { readFileSync } from 'node:fs'
-import { DRESSES, DRESSES_PER_SUBJECT } from '../src/data/dresses'
+import { DRESSES, DRESSES_PER_SUBJECT, WARDROBE, WARDROBE_SIZE } from '../src/data/dresses'
 
 const errors: string[] = []
 const fail = (msg: string) => errors.push(msg)
@@ -142,7 +142,13 @@ for (const [subj, list] of Object.entries(DRESSES)) {
     }
   })
 }
-console.log(`Váy dạ hội: ${Object.entries(DRESSES).map(([k, v]) => `${k} ${v.length}`).join(', ')}`)
+// Tủ chung: đủ váy của cả ba môn, mỗi váy một lần, cấp không giảm theo thứ tự mở.
+if (WARDROBE_SIZE !== DRESSES_PER_SUBJECT * Object.keys(DRESSES).length || new Set(WARDROBE.map((d) => d.id)).size !== WARDROBE_SIZE)
+  fail(`tủ váy chung: ${WARDROBE_SIZE} váy, cần ${DRESSES_PER_SUBJECT * Object.keys(DRESSES).length} váy khác nhau`)
+WARDROBE.forEach((d, i) => {
+  if (i > 0 && d.tier < WARDROBE[i - 1].tier) fail(`tủ váy chung: ${d.id} có cấp thấp hơn váy đứng trước`)
+})
+console.log(`Váy dạ hội: ${Object.entries(DRESSES).map(([k, v]) => `${k} ${v.length}`).join(', ')} · tủ chung ${WARDROBE_SIZE}`)
 
 // Tiếng Anh
 const en = checkEnglish()

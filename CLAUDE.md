@@ -1,7 +1,7 @@
 # ScienceQuiz
 
 Bilingual (vi / en / bilingual) quiz app for grade 2–3 children, built with Vite + React 19 + TypeScript + Tailwind 4 + framer-motion.
-Three subjects: **Science** (ASMO-style, 4 topics × 120 questions, Vietnamese + English), **English** (Cambridge KET/PET style, 3 tenses × 10 subtopics × 100 questions) and **Maths** (TIMO olympiad style, 5 areas × 5 subtopics × 40 questions = 1000, Vietnamese + English). Kids earn stars, streaks and princess ball gowns (`src/data/dresses/`, 100 per subject in 5 tiers, one unlocked per 10 correct answers; the maths line is the premium one).
+Three subjects: **Science** (ASMO-style, 4 topics × 120 questions, Vietnamese + English), **English** (Cambridge KET/PET style, 3 tenses × 10 subtopics × 100 questions) and **Maths** (TIMO olympiad style, 5 areas × 5 subtopics × 40 questions = 1000, Vietnamese + English). Kids earn stars, streaks and princess ball gowns (`src/data/dresses/`, 100 designed per subject in 5 tiers; all 300 live in **one shared wardrobe** — `WARDROBE`, ordered by tier with the three subjects interleaved — and every 10 correct answers in any subject unlock the next one; the maths line is the premium one).
 
 ## Commands
 - `npm run dev` / `npm run build` (`tsc -b && vite build`) / `npm run lint` (oxlint)
@@ -52,4 +52,4 @@ CRUD map — pick the skill by what you are doing:
 
 Agents: `question-writer` (new batch, one subtopic), `question-editor` (apply fixes to existing items, one file each), `question-reviewer` (read-only audit → fix list; run after any large batch, then hand the list to the editor), `illustrator` (SVG figures), `feature-developer` (multi-file UI/gameplay/wardrobe/storage work).
 
-Gotchas worth remembering: English and Maths question ids are positional (inserting/deleting mid-file renumbers the rest — edit in place or append); removing a topic lowers derived dress unlocks; the mock-test builders and `HomeScreen` copy assume 3 tenses / 4 science topics / 5 maths areas (maths mock = 25 questions, 5 per area, 90 min — `MOCK_SIZE_BY_SUBJECT`, `MOCK_MINUTES_BY_SUBJECT` in `src/utils/quiz.ts`); never change `asmo-quiz-progress-v1` without a migration.
+Gotchas worth remembering: English and Maths question ids are positional (inserting/deleting mid-file renumbers the rest — edit in place or append); removing a topic lowers derived dress unlocks; the mock-test builders and `HomeScreen` copy assume 3 tenses / 4 science topics / 5 maths areas (maths mock = 25 questions, 5 per area, 90 min — `MOCK_SIZE_BY_SUBJECT`, `MOCK_MINUTES_BY_SUBJECT` in `src/utils/quiz.ts`); never change `asmo-quiz-progress-v1` without a migration; `Progress.keptDresses` holds the dresses unlocked under the old per-subject rule (filled once by `loadProgress` for old saves) — never drop it, or kids lose dresses.

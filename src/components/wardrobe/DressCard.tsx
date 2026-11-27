@@ -1,5 +1,6 @@
 import { Lock } from 'lucide-react'
-import type { DressDef } from '../../data/dresses'
+import { orderOf, type DressDef } from '../../data/dresses'
+import { SUBJECTS } from '../../data/topics'
 import BilingualText from '../BilingualText'
 import { PrincessSvg } from './DressSvg'
 
@@ -19,8 +20,11 @@ const TIER_RING = ['ring-pink-200', 'ring-violet-300', 'ring-amber-300', 'ring-s
 export default function DressCard({ dress, unlocked, remaining, selected = false, highlight = false, onSelect }: Props) {
   const body = (
     <>
-      <span className="absolute left-2 top-2 rounded-full bg-white/80 px-2 py-0.5 text-xs font-black tabular-nums text-slate-500">
-        {dress.index}
+      <span
+        className="absolute left-2 top-2 rounded-full bg-white/80 px-2 py-0.5 text-xs font-black tabular-nums text-slate-500"
+        title={SUBJECTS[dress.subject].short_vi}
+      >
+        <span aria-hidden>{SUBJECTS[dress.subject].emoji}</span> {orderOf(dress)}
       </span>
       {!unlocked && <Lock className="absolute right-2 top-2 size-5 text-slate-500" aria-label="Chưa mở khóa" />}
       <div className={`mx-auto w-3/4 ${unlocked ? '' : 'grayscale opacity-45 brightness-95'}`}>

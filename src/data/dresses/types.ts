@@ -1,6 +1,6 @@
 import type { Subject } from '../../types/quiz'
 
-/** Số câu ĐÚNG cần có để mở thêm một váy (đếm riêng từng môn). */
+/** Số câu ĐÚNG (cộng cả ba môn) cần có để mở thêm một váy trong tủ chung. */
 export const CORRECT_PER_DRESS = 10
 export const DRESSES_PER_SUBJECT = 100
 
@@ -79,7 +79,7 @@ export type DressTier = 1 | 2 | 3 | 4 | 5
 export interface DressDef {
   id: string
   subject: Subject
-  /** thứ tự mở khóa, 1…DRESSES_PER_SUBJECT */
+  /** thứ tự trong bộ váy của môn, 1…DRESSES_PER_SUBJECT (thứ tự trong tủ chung: orderOf) */
   index: number
   tier: DressTier
   name_vi: string
