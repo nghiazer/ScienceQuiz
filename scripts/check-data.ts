@@ -88,6 +88,22 @@ checkPos('toàn kho', QUESTIONS)
 for (const t of TOPIC_ORDER as Topic[]) checkPos(`chủ đề ${t}`, QUESTIONS.filter((q) => q.topic === t))
 console.log(`Vị trí đáp án đúng A/B/C/D: ${posShare(QUESTIONS).map((x) => Math.round(x * 100) + '%').join(' / ')}`)
 
+// Khoa học: đáp án đúng không được là phương án dài nhất hẳn (bé đoán "chọn câu dài" sẽ đúng quá nhiều). Mục tiêu dưới 35%.
+{
+  const longShare = QUESTIONS.filter((q) => {
+    const L = q.options_vi.map((o) => o.length)
+    const sorted = [...L].sort((x, y) => y - x)
+    return L[q.correctIndex] === sorted[0] && sorted[0] >= sorted[1] * 1.3
+  }).length / Math.max(QUESTIONS.length, 1)
+  if (longShare >= 0.35) fail(`đáp án đúng là phương án dài nhất hẳn ở ${Math.round(longShare * 100)}% câu Khoa học (tối đa 35%)`)
+}
+
+// Khoa học: lời giải theo khung 💡 Vì sao / 📘 Ghi nhớ (vi) và 💡 Why / 📘 Remember (en).
+for (const q of QUESTIONS) {
+  if (!(q.explanation_vi.includes('💡 Vì sao:') && q.explanation_vi.includes('📘 Ghi nhớ:'))) fail(`${q.id}: explanation_vi thiếu khung "💡 Vì sao:" / "📘 Ghi nhớ:"`)
+  if (!(q.explanation_en.includes('💡 Why:') && q.explanation_en.includes('📘 Remember:'))) fail(`${q.id}: explanation_en thiếu khung "💡 Why:" / "📘 Remember:"`)
+}
+
 // Trùng lặp (xem scripts/lib/dupes.ts và scripts/dupes-allowlist.json)
 const allow = JSON.parse(readFileSync('scripts/dupes-allowlist.json', 'utf8')) as AllowEntry[]
 const dupes = findDupes(ALL_QUESTIONS, allow)

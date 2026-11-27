@@ -13,6 +13,7 @@
     "ledger": "tsx scripts/ledger.ts",
     "verify": "oxlint && tsx scripts/check-data.ts && tsc -b",
     "q": "tsx scripts/query.ts",
+    "audit:science": "tsx scripts/audit-science.ts",
     "gallery": "tsx --tsconfig tsconfig.app.json scripts/dress-gallery.ts"
   },
   "dependencies": {

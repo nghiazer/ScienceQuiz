@@ -6,13 +6,13 @@ import SpeakButton from './SpeakButton'
 import { speak } from '../utils/speech'
 import type { Question } from '../types/quiz'
 
-/** Tô đậm nhãn đầu mỗi ý: "Dấu hiệu" / "Quy tắc" (Tiếng Anh) hoặc "Ý tưởng" / "Lời giải" (Toán). */
+/** Tô đậm nhãn đầu mỗi ý: "Dấu hiệu" / "Quy tắc" (Tiếng Anh), "Ý tưởng" / "Lời giải" (Toán), "Vì sao" / "Ghi nhớ" (Khoa học). */
 function GrammarText({ text, className }: { text: string; className: string }) {
-  const parts = text.split(/((?:🔎|📘|🧠|✏️) [^:]+:)/g).filter(Boolean)
+  const parts = text.split(/((?:🔎|📘|🧠|✏️|💡) [^:]+:)/g).filter(Boolean)
   return (
     <p className={className}>
       {parts.map((p, i) =>
-        /^(?:🔎|📘|🧠|✏️) [^:]+:$/.test(p) ? (
+        /^(?:🔎|📘|🧠|✏️|💡) [^:]+:$/.test(p) ? (
           <strong key={i} className="mt-1 block font-black text-amber-800">{p}</strong>
         ) : (
           <span key={i} className="block">{p.trim()}</span>
@@ -28,7 +28,7 @@ export default function ExplanationBox({ question, correct }: { question: Questi
   const math = question.subject === 'math'
   const readExplanation = () => {
     if (mode === 'en') speak(question.explanation_en, 'en')
-    else speak(question.explanation_vi.replace(/🔎|📘|🧠|✏️/gu, ''), 'vi')
+    else speak(question.explanation_vi.replace(/🔎|📘|🧠|✏️|💡/gu, ''), 'vi')
   }
   return (
     <motion.section
@@ -65,7 +65,7 @@ export default function ExplanationBox({ question, correct }: { question: Questi
             <GrammarText text={question.explanation_en} className="mt-2 text-[0.95rem] font-semibold italic text-slate-500 leading-relaxed" />
           )}
         </>
-      ) : math ? (
+      ) : (
         <>
           {mode !== 'en' && (
             <GrammarText text={question.explanation_vi} className="text-base sm:text-lg font-semibold text-slate-700 leading-relaxed" />
@@ -77,8 +77,6 @@ export default function ExplanationBox({ question, correct }: { question: Questi
             />
           )}
         </>
-      ) : (
-        <BilingualText as="p" vi={question.explanation_vi} en={question.explanation_en} className="text-base sm:text-lg font-semibold text-slate-700 leading-relaxed" />
       )}
     </motion.section>
   )
