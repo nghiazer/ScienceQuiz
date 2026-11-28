@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import { Lock } from 'lucide-react'
 import { orderOf, type DressDef } from '../../data/dresses'
 import { SUBJECTS } from '../../data/topics'
@@ -11,13 +12,14 @@ interface Props {
   remaining?: number
   selected?: boolean
   highlight?: boolean
-  onSelect?: () => void
+  /** nhận lại chính chiếc váy, để nơi gọi truyền một hàm cố định cho mọi thẻ (thẻ được ghi nhớ bằng memo) */
+  onSelect?: (dress: DressDef) => void
 }
 
 const TIER_RING = ['ring-pink-200', 'ring-violet-300', 'ring-amber-300', 'ring-sky-300', 'ring-fuchsia-400'] as const
 
-/** Một chiếc váy trên móc: đã mở thì đủ màu, chưa mở thì xám và có khóa. */
-export default function DressCard({ dress, unlocked, remaining, selected = false, highlight = false, onSelect }: Props) {
+/** Một chiếc váy trên móc: đã mở thì đủ màu, chưa mở thì xám và có khóa. Ghi nhớ (memo) vì tủ có 300 thẻ. */
+function DressCard({ dress, unlocked, remaining, selected = false, highlight = false, onSelect }: Props) {
   const body = (
     <>
       <span
@@ -49,8 +51,10 @@ export default function DressCard({ dress, unlocked, remaining, selected = false
 
   if (!unlocked || !onSelect) return <div className={cls}>{body}</div>
   return (
-    <button type="button" onClick={onSelect} aria-pressed={selected} className={`${cls} hover:-translate-y-1 hover:shadow-pop`}>
+    <button type="button" onClick={() => onSelect(dress)} aria-pressed={selected} className={`${cls} hover:-translate-y-1 hover:shadow-pop`}>
       {body}
     </button>
   )
 }
+
+export default memo(DressCard)

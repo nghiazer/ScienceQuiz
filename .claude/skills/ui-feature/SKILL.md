@@ -16,6 +16,7 @@ description: Add, change or remove UI and gameplay features in ScienceQuiz (scre
 - Tailwind 4 utility classes as literal strings; icons from `lucide-react`; motion via `framer-motion` (app is wrapped in `MotionConfig reducedMotion="user"` — don't bypass it); sounds via `src/utils/sound.ts`, speech via `src/utils/speech.ts`.
 - Reuse existing components (`Header`, `OptionCard`, `ExplanationBox`, `RocketProgress`, `Timer`, `SpeakButton`, `SubjectSwitcher`, `LanguageSwitcher`) before creating new ones; keep components small and typed (no `any`).
 - Oxlint rules: hooks rules are errors; `react/only-export-components` warns (export non-components from utils).
+- Performance (tablets are slow): long lists of heavy cards (wardrobe dresses, accessory sets) wrap each item in `LazyMount` (`src/components/LazyMount.tsx` — same-size placeholder until ~800px from the viewport, one shared `IntersectionObserver`, stays mounted; the `id` sits on the placeholder so `scrollIntoView` still works). Memoize such cards with `React.memo` and give them primitive/stable props (module-level or `useCallback` handlers, `useMemo` sets). In big components read the wardrobe store with `useWardrobeSelector(s => …)` instead of `useWardrobe()` — `bankSeconds` changes every second; put anything that shows the clock in its own small component.
 
 ## Workflow
 1. Describe the behaviour change and the files it touches in 3–5 lines before coding.

@@ -1,5 +1,5 @@
 import { totalCorrect } from '../data/dresses'
-import { ACCESSORY_SLOTS, itemById, setById } from '../data/accessories'
+import { ACCESSORY_SLOTS, itemById, setById, type AccessorySet, type AccessorySlot } from '../data/accessories'
 import type { Progress } from '../types/quiz'
 import { saveProgress } from './storage'
 
@@ -28,6 +28,19 @@ export function setItemIds(setId: string): string[] {
   const set = setById(setId)
   return set ? ACCESSORY_SLOTS.map((slot) => set.items[slot].id) : []
 }
+
+/** Gói các ô của bộ thỏa `test` thành một số (bit i = ACCESSORY_SLOTS[i]): thẻ bộ (memo) nhận số thay vì Set/object. */
+export function slotMask(set: AccessorySet, test: (slot: AccessorySlot, itemId: string) => boolean): number {
+  return ACCESSORY_SLOTS.reduce((mask, slot, i) => (test(slot, set.items[slot].id) ? mask | (1 << i) : mask), 0)
+}
+
+/** Ô `slot` có trong `mask` không. */
+export function inMask(mask: number, slot: AccessorySlot): boolean {
+  return (mask & (1 << ACCESSORY_SLOTS.indexOf(slot))) !== 0
+}
+
+/** Mặt nạ đủ cả bốn ô. */
+export const ALL_SLOTS_MASK = (1 << ACCESSORY_SLOTS.length) - 1
 
 /** Giá "Mua cả bộ": chỉ tính những món của bộ chưa mua (0 nếu đã đủ, tối đa SET_PRICE). */
 export function setCost(p: ShopProgress, setId: string): number {

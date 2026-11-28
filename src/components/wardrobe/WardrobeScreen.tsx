@@ -1,14 +1,15 @@
-import { useEffect, useMemo, useState } from 'react'
+import { memo, useEffect, useMemo, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Clock, Home, Lock } from 'lucide-react'
 import type { Progress } from '../../types/quiz'
 import { useSubject } from '../../context/SubjectContext'
-import { CORRECT_PER_DRESS, WARDROBE, WARDROBE_SIZE, dressById, nextDress, nextDressIn, unlockedIds, type DressDef, type DressTier } from '../../data/dresses'
+import { CORRECT_PER_DRESS, WARDROBE, WARDROBE_SIZE, dressById, nextDress, nextDressIn, orderOf, unlockedIds, type DressDef, type DressTier } from '../../data/dresses'
 import { ACCESSORY_SLOTS, itemById, toWorn, type AccessoryItem, type AccessorySlot } from '../../data/accessories'
-import { formatClock, spendBankSeconds, useWardrobe, wearDress } from '../../utils/wardrobe'
+import { formatClock, spendBankSeconds, useWardrobeSelector, wearDress } from '../../utils/wardrobe'
 import { coinBalance } from '../../utils/shop'
 import { playClick } from '../../utils/sound'
 import BilingualText from '../BilingualText'
+import LazyMount from '../LazyMount'
 import AccessoryShop from './AccessoryShop'
 import DressCard from './DressCard'
 import Princess from './Princess'
@@ -37,6 +38,94 @@ function groupByTier(list: DressDef[]): { tier: DressTier; dresses: DressDef[] }
 
 type Tab = 'dresses' | 'shop'
 
+/** Chừng này thẻ đầu tủ vẫn hiện ra bằng hiệu ứng trượt lên; các thẻ sau là thẻ thường, chỉ gắn khi cuộn tới gần. */
+const ANIMATED_CARDS = 12
+/** Chiều cao ước lượng của một thẻ váy chưa vẽ (px). */
+const CARD_HEIGHT = 280
+const CARD_STYLE = { contentVisibility: 'auto', containIntrinsicSize: `auto ${CARD_HEIGHT}px` } as const
+
+/** Chọn váy để mặc: hàm cố định ngoài component nên các thẻ váy (memo) không phải vẽ lại. */
+function selectDress(d: DressDef): void {
+  playClick()
+  wearDress(d.id)
+}
+
+/** Đồng hồ giờ chơi: chỉ ô này vẽ lại mỗi giây. */
+function PlayClock() {
+  const bankSeconds = useWardrobeSelector((s) => s.bankSeconds)
+  const low = bankSeconds <= 60
+  return (
+    <div
+      role="timer"
+      aria-label="Thời gian còn lại"
+      className={`flex min-h-12 items-center gap-2 rounded-2xl px-5 text-2xl font-black tabular-nums shadow-soft ${
+        low ? 'animate-pulse bg-rose-500 text-white' : 'bg-white text-pink-600'
+      }`}
+    >
+      <Clock className="size-6" />
+      {formatClock(bankSeconds)}
+    </div>
+  )
+}
+
+interface TierProps {
+  tier: DressTier
+  dresses: DressDef[]
+  open: Set<string>
+  upcomingId: string | undefined
+  /** số câu đúng liên tiếp còn thiếu để mở váy `upcomingId` */
+  remaining: number
+  selectedId: string | undefined
+}
+
+/** Một tầng tủ (một cấp váy). Ghi nhớ để đổi váy đang mặc chỉ vẽ lại hai thẻ liên quan. */
+const TierSection = memo(function TierSection({ tier, dresses, open, upcomingId, remaining, selectedId }: TierProps) {
+  const openInTier = dresses.filter((d) => open.has(d.id)).length
+  return (
+    <div className="mb-4 last:mb-0">
+      <h3 className="mb-2 flex items-center justify-between rounded-xl bg-white/70 px-3 py-1.5 text-base font-black text-amber-900">
+        <span>
+          {TIER_LABEL[tier].emoji} <BilingualText vi={TIER_LABEL[tier].vi} en={TIER_LABEL[tier].en} compact />
+        </span>
+        <span className="rounded-full bg-amber-200 px-2 py-0.5 text-xs tabular-nums">
+          {openInTier}/{dresses.length}
+        </span>
+      </h3>
+      <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 xl:grid-cols-4">
+        {dresses.map((d) => {
+          const card = (
+            <DressCard
+              dress={d}
+              unlocked={open.has(d.id)}
+              remaining={d.id === upcomingId ? remaining : undefined}
+              selected={selectedId === d.id}
+              onSelect={selectDress}
+            />
+          )
+          // id `dress-…` có ngay cả khi thẻ chưa gắn, để cuộn tới váy sắp mở vẫn tìm được.
+          return orderOf(d) <= ANIMATED_CARDS ? (
+            <motion.li
+              key={d.id}
+              id={`dress-${d.id}`}
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: Math.min(d.index, 12) * 0.03 }}
+              style={CARD_STYLE}
+            >
+              {card}
+            </motion.li>
+          ) : (
+            // chỉ gắn thẻ khi cuộn tới gần, chưa tới thì là ô trống cùng cỡ → mượt dù có 300 váy
+            <LazyMount key={d.id} as="li" id={`dress-${d.id}`} placeholderHeight={CARD_HEIGHT} style={CARD_STYLE}>
+              {card}
+            </LazyMount>
+          )
+        })}
+      </ul>
+    </div>
+  )
+})
+
 interface Props {
   progress: Progress
   /** mua phụ kiện làm đổi tiến độ (xu đã tiêu, món đã mua) */
@@ -45,11 +134,13 @@ interface Props {
 }
 
 export default function WardrobeScreen({ progress, onProgressChange, onHome }: Props) {
-  const { bankSeconds, wornId, equipped } = useWardrobe()
+  // Chỉ đọc những phần cần: giờ chơi giảm mỗi giây nhưng màn hình chỉ vẽ lại khi hết giờ (PlayClock tự vẽ đồng hồ).
+  const wornId = useWardrobeSelector((s) => s.wornId)
+  const equipped = useWardrobeSelector((s) => s.equipped)
+  const timeUp = useWardrobeSelector((s) => s.bankSeconds <= 0)
   const [tab, setTab] = useState<Tab>('dresses')
   // Món đang thử (chưa mua): chỉ hiện trên sân khấu, mất khi mua, chọn món khác hoặc rời tab phụ kiện.
   const [tryOn, setTryOn] = useState<AccessoryItem | null>(null)
-  const timeUp = bankSeconds <= 0
 
   // Trừ giờ chơi mỗi giây khi còn giờ.
   useEffect(() => {
@@ -66,7 +157,9 @@ export default function WardrobeScreen({ progress, onProgressChange, onHome }: P
   }, [timeUp, onHome])
 
   // Tủ chung của cả ba môn
-  const open = useMemo(() => unlockedIds(progress), [progress])
+  // Mua phụ kiện tạo object tiến độ mới nhưng giữ nguyên danh sách váy → tủ váy không phải vẽ lại.
+  const unlockedList = progress.unlockedDresses
+  const open = useMemo(() => unlockedIds({ unlockedDresses: unlockedList }), [unlockedList])
   const unlocked = open.size
   const upcoming = nextDress(progress)
   const { subject } = useSubject()
@@ -74,7 +167,6 @@ export default function WardrobeScreen({ progress, onProgressChange, onHome }: P
   const wornDress = dressById(wornId)
   const lastOpen = [...WARDROBE].reverse().find((d) => open.has(d.id))
   const shown = wornDress && open.has(wornDress.id) ? wornDress : lastOpen
-  const low = bankSeconds <= 60
   const groups = useMemo(() => groupByTier(WARDROBE), [])
   const coins = coinBalance(progress)
 
@@ -103,7 +195,23 @@ export default function WardrobeScreen({ progress, onProgressChange, onHome }: P
   useEffect(() => {
     if (unlocked <= 8) return
     const target = upcoming ?? WARDROBE[WARDROBE_SIZE - 1]
-    document.getElementById(`dress-${target.id}`)?.scrollIntoView({ block: 'center' })
+    const el = document.getElementById(`dress-${target.id}`)
+    if (!el) return
+    el.scrollIntoView({ block: 'center' })
+    // Thẻ quanh đó vừa gắn thường thấp/cao hơn ô trống ước lượng nên trang đổi cỡ và thẻ trôi đi:
+    // trong 2 giây đầu, mỗi lần trang đổi cỡ thì căn giữa lại — trừ khi bé đã tự cuộn.
+    let y = window.scrollY
+    const ro = new ResizeObserver(() => {
+      if (Math.abs(window.scrollY - y) > 1) return ro.disconnect()
+      el.scrollIntoView({ block: 'center' })
+      y = window.scrollY
+    })
+    ro.observe(document.body)
+    const stop = window.setTimeout(() => ro.disconnect(), 2000)
+    return () => {
+      ro.disconnect()
+      window.clearTimeout(stop)
+    }
     // chỉ chạy khi mở màn hình, không chạy mỗi lần mở khóa thêm
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
@@ -126,16 +234,7 @@ export default function WardrobeScreen({ progress, onProgressChange, onHome }: P
           <p className="flex min-h-12 items-center gap-1 rounded-2xl bg-amber-300 px-4 text-xl font-black tabular-nums text-amber-950 shadow-soft">
             🪙 {coins} <BilingualText vi="xu" en={coins === 1 ? 'coin' : 'coins'} compact />
           </p>
-          <div
-            role="timer"
-            aria-label="Thời gian còn lại"
-            className={`flex min-h-12 items-center gap-2 rounded-2xl px-5 text-2xl font-black tabular-nums shadow-soft ${
-              low ? 'animate-pulse bg-rose-500 text-white' : 'bg-white text-pink-600'
-            }`}
-          >
-            <Clock className="size-6" />
-            {formatClock(bankSeconds)}
-          </div>
+          <PlayClock />
         </div>
       </div>
 
@@ -214,45 +313,17 @@ export default function WardrobeScreen({ progress, onProgressChange, onHome }: P
                     )}
                   </p>
                 </div>
-                {groups.map((g) => {
-                  const openInTier = g.dresses.filter((d) => open.has(d.id)).length
-                  return (
-                    <div key={g.tier} className="mb-4 last:mb-0">
-                      <h3 className="mb-2 flex items-center justify-between rounded-xl bg-white/70 px-3 py-1.5 text-base font-black text-amber-900">
-                        <span>
-                          {TIER_LABEL[g.tier].emoji} <BilingualText vi={TIER_LABEL[g.tier].vi} en={TIER_LABEL[g.tier].en} compact />
-                        </span>
-                        <span className="rounded-full bg-amber-200 px-2 py-0.5 text-xs tabular-nums">
-                          {openInTier}/{g.dresses.length}
-                        </span>
-                      </h3>
-                      <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 xl:grid-cols-4">
-                        {g.dresses.map((d) => (
-                          <motion.li
-                            key={d.id}
-                            id={`dress-${d.id}`}
-                            initial={{ opacity: 0, y: 14 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: Math.min(d.index, 12) * 0.03 }}
-                            // chỉ vẽ thẻ khi cuộn tới → mượt dù có 300 váy
-                            style={{ contentVisibility: 'auto', containIntrinsicSize: 'auto 280px' }}
-                          >
-                            <DressCard
-                              dress={d}
-                              unlocked={open.has(d.id)}
-                              remaining={d.id === upcoming?.id ? remaining : undefined}
-                              selected={shown?.id === d.id}
-                              onSelect={() => {
-                                playClick()
-                                wearDress(d.id)
-                              }}
-                            />
-                          </motion.li>
-                        ))}
-                      </ul>
-                    </div>
-                  )
-                })}
+                {groups.map((g) => (
+                  <TierSection
+                    key={g.tier}
+                    tier={g.tier}
+                    dresses={g.dresses}
+                    open={open}
+                    upcomingId={upcoming?.id}
+                    remaining={remaining}
+                    selectedId={shown?.id}
+                  />
+                ))}
               </>
             )}
           </div>

@@ -80,6 +80,15 @@ export function useWardrobe(): WardrobeState {
   return useSyncExternalStore(subscribe, getWardrobe)
 }
 
+/**
+ * Chỉ đọc một phần của tủ váy: component chỉ vẽ lại khi giá trị chọn ra đổi (so bằng Object.is),
+ * nên đồng hồ trừ giây mỗi giây không làm cả tủ vẽ lại.
+ * `select` phải trả về số/chuỗi/boolean hoặc một tham chiếu có sẵn trong state (vd. `s.equipped`), không tạo object mới.
+ */
+export function useWardrobeSelector<T>(select: (s: WardrobeState) => T): T {
+  return useSyncExternalStore(subscribe, () => select(state))
+}
+
 /** Cộng giây học; trả về số khối 15 phút vừa hoàn thành (mỗi khối thưởng 5 phút tủ). */
 export function addStudySeconds(n: number): number {
   const total = state.studySeconds + n

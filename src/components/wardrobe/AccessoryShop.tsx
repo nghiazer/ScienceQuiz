@@ -1,13 +1,14 @@
-import { memo, useState } from 'react'
+import { memo, useCallback, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Lock } from 'lucide-react'
 import type { Progress } from '../../types/quiz'
 import { ACCESSORY_SETS, ACCESSORY_SLOTS, SET_PRICE, itemById, type AccessoryItem, type AccessorySet, type AccessorySlot } from '../../data/accessories'
 import { dressById, type DressDef } from '../../data/dresses'
-import { buyItems, coinBalance, setCost, setItemIds } from '../../utils/shop'
+import { ALL_SLOTS_MASK, buyItems, coinBalance, inMask, setCost, setItemIds, slotMask } from '../../utils/shop'
 import { equipItem } from '../../utils/wardrobe'
 import { playClick, playCorrect, playWrong } from '../../utils/sound'
 import BilingualText from '../BilingualText'
+import LazyMount from '../LazyMount'
 import { AccessoryIcon } from './AccessoryIcon'
 import { PrincessSvg } from './DressSvg'
 
@@ -31,6 +32,10 @@ const DressThumb = memo(function DressThumb({ dress, unlocked }: { dress: DressD
     </div>
   )
 })
+
+/** Chiều cao ước lượng của một bộ chưa vẽ (px): đủ bốn món / chỉ một loại. */
+const SET_HEIGHT_ALL = 330
+const SET_HEIGHT_ONE = 170
 
 /** Đeo các món theo id (mỗi món vào ô của nó). */
 function equipAll(ids: string[]): void {
@@ -57,9 +62,16 @@ export default function AccessoryShop({ progress, onProgressChange, equipped, un
   // Lần mua gần nhất: để hiện "-N xu" bay lên và làm nảy ô vừa mua.
   const [lastBuy, setLastBuy] = useState<{ key: number; cost: number; ids: string[] } | null>(null)
   const balance = coinBalance(progress)
-  const owned = new Set(progress.ownedAccessories)
+  const owned = useMemo(() => new Set(progress.ownedAccessories), [progress.ownedAccessories])
 
-  const buy = (ids: string[]) => {
+  // Giá trị mới nhất cho các hàm xử lý bên dưới: hàm giữ nguyên qua các lần vẽ nên 300 thẻ bộ (memo) không phải vẽ lại.
+  const latest = useRef({ progress, owned, equipped, tryOnId, onProgressChange, onTryOn })
+  useLayoutEffect(() => {
+    latest.current = { progress, owned, equipped, tryOnId, onProgressChange, onTryOn }
+  })
+
+  const buy = useCallback((ids: string[]) => {
+    const { progress, onProgressChange, onTryOn } = latest.current
     const out = buyItems(progress, ids)
     if (out.bought.length === 0) {
       playWrong()
@@ -71,35 +83,43 @@ export default function AccessoryShop({ progress, onProgressChange, equipped, un
     equipAll(ids)
     onTryOn(null)
     setLastBuy((prev) => ({ key: (prev?.key ?? 0) + 1, cost: out.cost, ids: out.bought }))
-  }
+  }, [])
 
-  const wear = (item: AccessoryItem) => {
+  const wear = useCallback((item: AccessoryItem) => {
     playClick()
     equipItem(item.slot, item.id)
-    onTryOn(null)
-  }
+    latest.current.onTryOn(null)
+  }, [])
 
-  const wearSet = (ids: string[]) => {
+  const wearSet = useCallback((ids: string[]) => {
     playClick()
     equipAll(ids)
-    onTryOn(null)
-  }
+    latest.current.onTryOn(null)
+  }, [])
 
-  const takeOff = (slot: AccessorySlot) => {
+  const takeOff = useCallback((slot: AccessorySlot) => {
     playClick()
     equipItem(slot, null)
-  }
+  }, [])
 
-  const tapIcon = (item: AccessoryItem) => {
-    playClick()
-    if (owned.has(item.id)) {
-      if (equipped[item.slot] !== item.id) wear(item)
-      return
-    }
-    onTryOn(tryOnId === item.id ? null : item)
-  }
+  const tapIcon = useCallback(
+    (item: AccessoryItem) => {
+      const { owned, equipped, tryOnId, onTryOn } = latest.current
+      playClick()
+      if (owned.has(item.id)) {
+        if (equipped[item.slot] !== item.id) wear(item)
+        return
+      }
+      onTryOn(tryOnId === item.id ? null : item)
+    },
+    [wear],
+  )
 
-  const shownSlots = filter === 'all' ? ACCESSORY_SLOTS : [filter]
+  const shownSlots = useMemo(() => (filter === 'all' ? ACCESSORY_SLOTS : [filter]), [filter])
+  // Bộ có món đang thử / vừa mua: chỉ thẻ của bộ đó nhận các giá trị này, thẻ khác giữ nguyên.
+  const tryOnSetId = tryOnId ? itemById(tryOnId)?.setId : undefined
+  const boughtSetIds = useMemo(() => new Set(lastBuy?.ids.map((id) => itemById(id)?.setId)), [lastBuy])
+  const setHeight = filter === 'all' ? SET_HEIGHT_ALL : SET_HEIGHT_ONE
 
   return (
     <div>
@@ -160,25 +180,31 @@ export default function AccessoryShop({ progress, onProgressChange, equipped, un
 
       <ul className="space-y-3">
         {ACCESSORY_SETS.map((set) => (
-          <li key={set.id} style={{ contentVisibility: 'auto', containIntrinsicSize: `auto ${filter === 'all' ? 330 : 170}px` }}>
+          // chỉ gắn thẻ bộ khi cuộn tới gần, chưa tới thì là ô trống cùng cỡ
+          <LazyMount
+            key={set.id}
+            as="li"
+            placeholderHeight={setHeight}
+            style={{ contentVisibility: 'auto', containIntrinsicSize: `auto ${setHeight}px` }}
+          >
             <SetCard
               set={set}
               slots={shownSlots}
               showSetButton={filter === 'all'}
-              owned={owned}
-              equipped={equipped}
+              ownedMask={slotMask(set, (_, id) => owned.has(id))}
+              wornMask={slotMask(set, (slot, id) => equipped[slot] === id)}
               unlocked={unlockedDresses.has(set.dressId)}
-              tryOnId={tryOnId}
+              tryOnId={set.id === tryOnSetId ? tryOnId : null}
               balance={balance}
               cost={setCost(progress, set.id)}
-              justBought={lastBuy?.ids}
+              justBought={boughtSetIds.has(set.id) ? lastBuy?.ids : undefined}
               onTapIcon={tapIcon}
               onBuy={buy}
               onWear={wear}
               onWearSet={wearSet}
               onTakeOff={takeOff}
             />
-          </li>
+          </LazyMount>
         ))}
       </ul>
     </div>
@@ -189,13 +215,17 @@ interface CardProps {
   set: AccessorySet
   slots: AccessorySlot[]
   showSetButton: boolean
-  owned: Set<string>
-  equipped: Partial<Record<AccessorySlot, string>>
+  /** các ô của bộ đã mua (bit theo ACCESSORY_SLOTS) */
+  ownedMask: number
+  /** các ô của bộ đang đeo */
+  wornMask: number
   unlocked: boolean
+  /** món đang thử nếu thuộc bộ này, không thì null */
   tryOnId: string | null
   balance: number
   /** giá các món chưa mua của bộ */
   cost: number
+  /** id các món vừa mua (chỉ truyền cho bộ chứa chúng) */
   justBought?: string[]
   onTapIcon: (item: AccessoryItem) => void
   onBuy: (ids: string[]) => void
@@ -204,10 +234,11 @@ interface CardProps {
   onTakeOff: (slot: AccessorySlot) => void
 }
 
-function SetCard({ set, slots, showSetButton, owned, equipped, unlocked, tryOnId, balance, cost, justBought, onTapIcon, onBuy, onWear, onWearSet, onTakeOff }: CardProps) {
+/** Một bộ phụ kiện; ghi nhớ (memo) nên chỉ vẽ lại khi giá trị của chính bộ đó (hoặc số xu) đổi. */
+const SetCard = memo(function SetCard({ set, slots, showSetButton, ownedMask, wornMask, unlocked, tryOnId, balance, cost, justBought, onTapIcon, onBuy, onWear, onWearSet, onTakeOff }: CardProps) {
   const dress = dressById(set.dressId)
   const allIds = setItemIds(set.id)
-  const wearingAll = allIds.every((id) => Object.values(equipped).includes(id))
+  const wearingAll = wornMask === ALL_SLOTS_MASK
   return (
     <article className="rounded-3xl bg-white/90 p-3 shadow-soft ring-2 ring-amber-200">
       <header className="mb-2 flex items-center gap-3">
@@ -221,20 +252,16 @@ function SetCard({ set, slots, showSetButton, owned, equipped, unlocked, tryOnId
       <ul className={`grid gap-2 ${slots.length > 1 ? 'grid-cols-2 sm:grid-cols-4' : 'grid-cols-1'}`}>
         {slots.map((slot) => {
           const item = set.items[slot]
-          const isOwned = owned.has(item.id)
-          const isWorn = isOwned && equipped[slot] === item.id
+          const isOwned = inMask(ownedMask, slot)
+          const isWorn = isOwned && inMask(wornMask, slot)
           const trying = tryOnId === item.id
           const missing = item.price - balance
-          return (
-            <motion.li
-              key={`${item.id}-${justBought?.includes(item.id) ? 'new' : ''}`}
-              initial={justBought?.includes(item.id) ? { scale: 0.8 } : false}
-              animate={{ scale: 1 }}
-              transition={{ type: 'spring', stiffness: 300, damping: 12 }}
-              className={`flex flex-col rounded-2xl p-2 text-center ring-2 ${
-                isWorn ? 'bg-pink-50 ring-pink-400' : trying ? 'bg-sky-50 ring-sky-400' : 'bg-amber-50 ring-amber-100'
-              } ${slots.length === 1 ? 'sm:flex-row sm:items-center sm:gap-3 sm:text-left' : ''}`}
-            >
+          const isNew = justBought?.includes(item.id) ?? false
+          const className = `flex flex-col rounded-2xl p-2 text-center ring-2 ${
+            isWorn ? 'bg-pink-50 ring-pink-400' : trying ? 'bg-sky-50 ring-sky-400' : 'bg-amber-50 ring-amber-100'
+          } ${slots.length === 1 ? 'sm:flex-row sm:items-center sm:gap-3 sm:text-left' : ''}`
+          const content = (
+            <>
               <button
                 type="button"
                 onClick={() => onTapIcon(item)}
@@ -269,7 +296,23 @@ function SetCard({ set, slots, showSetButton, owned, equipped, unlocked, tryOnId
                   </button>
                 )}
               </div>
+            </>
+          )
+          // Món vừa mua nảy lên (key đổi → gắn lại); các món khác là thẻ thường, đỡ 1200 thẻ chuyển động.
+          return isNew ? (
+            <motion.li
+              key={`${item.id}-new`}
+              initial={{ scale: 0.8 }}
+              animate={{ scale: 1 }}
+              transition={{ type: 'spring', stiffness: 300, damping: 12 }}
+              className={className}
+            >
+              {content}
             </motion.li>
+          ) : (
+            <li key={`${item.id}-`} className={className}>
+              {content}
+            </li>
           )
         })}
       </ul>
@@ -307,4 +350,4 @@ function SetCard({ set, slots, showSetButton, owned, equipped, unlocked, tryOnId
       )}
     </article>
   )
-}
+})
