@@ -78,7 +78,7 @@ export default function App() {
         <Header inQuiz={screen.name === 'quiz'} inWardrobe={screen.name === 'wardrobe'} onOpenWardrobe={openWardrobe} />
         <main>
           {screen.name === 'home' && <HomeScreen progress={progress} onStartTopic={startTopic} onStartMock={startMock} onOpenParent={requestParent} />}
-          {screen.name === 'wardrobe' && <WardrobeScreen progress={progress} onHome={goHome} />}
+          {screen.name === 'wardrobe' && <WardrobeScreen progress={progress} onProgressChange={setProgress} onHome={goHome} />}
           {screen.name === 'parent' && (
             <ParentScreen progress={progress} onHome={goHome} onRetry={(qs, s) => startRetry(buildMistakeQuiz(qs), s)} />
           )}

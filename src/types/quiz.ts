@@ -187,6 +187,10 @@ export interface Progress {
   difficultyStats: Record<Subject, Record<Difficulty, TopicStat>>
   /** câu sai gần đây, mới nhất đứng đầu, không trùng id, tối đa 30 */
   recentMistakes: MistakeRecord[]
+  /** tổng số xu đã tiêu ở cửa hàng phụ kiện (số xu kiếm được = tổng số câu đúng, không lưu riêng) */
+  coinsSpent: number
+  /** id các món phụ kiện đã mua (`acc-<dressId>-<slot>`) */
+  ownedAccessories: string[]
 }
 
 export interface TopicMeta {

@@ -98,8 +98,14 @@ export default function ResultScreen({ result, onRetryWrong, onReplay, onHome, o
         <p className="mt-1 text-xl font-extrabold">
           {correctCount}/{questions.length} <BilingualText vi="câu đúng" en="correct" compact />
         </p>
-        <div className="mt-3 inline-flex items-center gap-2 rounded-full bg-white/30 px-5 py-2 text-2xl font-black">
-          <Star className="size-7 fill-yellow-300 text-yellow-400" /> +{stars}
+        <div className="mt-3 flex flex-wrap items-center justify-center gap-2">
+          <div className="inline-flex items-center gap-2 rounded-full bg-white/30 px-5 py-2 text-2xl font-black">
+            <Star className="size-7 fill-yellow-300 text-yellow-400" /> +{stars}
+          </div>
+          {/* Mỗi câu đúng = 1 xu để mua phụ kiện trong tủ quần áo */}
+          <div className="inline-flex items-center gap-2 rounded-full bg-white/30 px-5 py-2 text-2xl font-black">
+            <span aria-hidden>🪙</span> +{correctCount} <BilingualText vi="xu" en={correctCount === 1 ? 'coin' : 'coins'} compact />
+          </div>
         </div>
         <BilingualText as="p" vi={message.vi} en={message.en} className="mt-4 text-lg sm:text-xl font-extrabold" subClassName="!text-white/90 !not-italic" />
       </motion.section>

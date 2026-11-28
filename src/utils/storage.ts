@@ -1,4 +1,5 @@
 import { CORRECT_PER_DRESS, legacyUnlockedIds, nextDress, pooledUnlockedIds } from '../data/dresses'
+import { itemById } from '../data/accessories'
 import type { AnswerRecord, Difficulty, MistakeRecord, OptionIndex, Progress, Question, QuizKind, SessionRecord, Subject, Topic, TopicStat } from '../types/quiz'
 import { originalIndex } from './quiz'
 
@@ -49,9 +50,11 @@ export const defaultProgress = (): Progress => ({
   subtopicStats: {},
   difficultyStats: { science: emptyDifficultyStats(), english: emptyDifficultyStats(), math: emptyDifficultyStats() },
   recentMistakes: [],
+  coinsSpent: 0,
+  ownedAccessories: [],
 })
 
-/** Chỉ nhận số nguyên không âm cho chuỗi đúng; dữ liệu hỏng thì về 0. */
+/** Chỉ nhận số nguyên không âm (chuỗi đúng, số xu đã tiêu); dữ liệu hỏng thì về 0. */
 const runOf = (v: unknown): number => (Number.isInteger(v) && (v as number) >= 0 ? (v as number) : 0)
 
 const asRecord = (v: unknown): Record<string, unknown> =>
@@ -105,6 +108,12 @@ function parseDifficultyStats(v: unknown): Progress['difficultyStats'] {
   return { science: pick('science'), english: pick('english'), math: pick('math') }
 }
 
+/** Món phụ kiện đã mua: chỉ giữ id còn tồn tại, không trùng. */
+function parseOwned(v: unknown): string[] {
+  if (!Array.isArray(v)) return []
+  return [...new Set(v.filter((id): id is string => typeof id === 'string' && Boolean(itemById(id))))]
+}
+
 function parseMistakes(v: unknown): MistakeRecord[] {
   if (!Array.isArray(v)) return []
   const seen = new Set<string>()
@@ -146,6 +155,9 @@ export function loadProgress(): Progress {
       subtopicStats: parseSubtopicStats(parsed.subtopicStats),
       difficultyStats: parseDifficultyStats(parsed.difficultyStats),
       recentMistakes: parseMistakes(parsed.recentMistakes),
+      // Cửa hàng phụ kiện: bản lưu cũ chưa có thì chưa tiêu xu nào → số dư = tổng số câu đúng từ trước tới nay.
+      coinsSpent: runOf(parsed.coinsSpent),
+      ownedAccessories: parseOwned(parsed.ownedAccessories),
     }
   } catch {
     return defaultProgress()

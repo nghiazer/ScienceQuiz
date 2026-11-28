@@ -8,6 +8,10 @@ import type { Difficulty, Topic } from '../src/types/quiz'
 import { findDupes, type AllowEntry } from './lib/dupes'
 import { readFileSync } from 'node:fs'
 import { DRESSES, DRESSES_PER_SUBJECT, WARDROBE, WARDROBE_SIZE } from '../src/data/dresses'
+import {
+  ACCESSORY_ITEMS, ACCESSORY_SETS, ACCESSORY_SLOTS, EARRING_KINDS, HAND_KINDS, HEAD_KINDS, METALS, MOTIFS, NECKLACE_KINDS,
+  SET_PRICE, SHOE_KINDS, SLOT_PRICE, type AccessoryItem,
+} from '../src/data/accessories'
 
 const errors: string[] = []
 const fail = (msg: string) => errors.push(msg)
@@ -165,6 +169,50 @@ WARDROBE.forEach((d, i) => {
   if (i > 0 && d.tier < WARDROBE[i - 1].tier) fail(`tủ váy chung: ${d.id} có cấp thấp hơn váy đứng trước`)
 })
 console.log(`Váy dạ hội: ${Object.entries(DRESSES).map(([k, v]) => `${k} ${v.length}`).join(', ')} · tủ chung ${WARDROBE_SIZE}`)
+
+// Phụ kiện: mỗi váy một bộ (cùng thứ tự tủ chung), 4 món/bộ, giá cố định cộng lại đúng SET_PRICE,
+// id không trùng, màu hex 6 chữ số, kiểu/họa tiết/kim loại hợp lệ, tên đủ hai thứ tiếng và không trùng.
+if (ACCESSORY_SETS.length !== WARDROBE_SIZE) fail(`phụ kiện: ${ACCESSORY_SETS.length} bộ, cần ${WARDROBE_SIZE} (mỗi váy một bộ)`)
+if (ACCESSORY_SLOTS.reduce((n, s) => n + SLOT_PRICE[s], 0) !== SET_PRICE) fail(`phụ kiện: tổng giá 4 ô khác ${SET_PRICE} xu`)
+ACCESSORY_SETS.forEach((set, i) => {
+  const d = WARDROBE[i]
+  if (!d || set.dressId !== d.id || set.id !== `acc-${d.id}` || set.index !== i + 1) fail(`phụ kiện: bộ thứ ${i + 1} (${set.id}) không khớp váy ${d?.id} của tủ chung`)
+  if (!set.name_vi.trim() || !set.name_en.trim()) fail(`phụ kiện ${set.id}: thiếu tên bộ`)
+  for (const slot of ACCESSORY_SLOTS) {
+    const it = set.items[slot]
+    if (it.slot !== slot || it.id !== `${set.id}-${slot}` || it.setId !== set.id || it.dressId !== set.dressId) fail(`phụ kiện ${set.id}: món ô ${slot} sai id/ô`)
+  }
+})
+const accIds = new Set<string>()
+const accNames = new Set<string>()
+const oneOf = <T extends string>(list: readonly T[], v: string) => (list as readonly string[]).includes(v)
+const accColors = (it: AccessoryItem): string[] => {
+  switch (it.slot) {
+    case 'head': case 'hand': return [it.main, it.second, it.gem]
+    case 'jewelry': return [it.main, it.gem]
+    case 'feet': return [it.shoe, it.trim, ...(it.gloves ? [it.gloves] : [])]
+  }
+}
+for (const it of ACCESSORY_ITEMS) {
+  if (accIds.has(it.id)) fail(`phụ kiện trùng id: ${it.id}`)
+  accIds.add(it.id)
+  if (it.price !== SLOT_PRICE[it.slot]) fail(`phụ kiện ${it.id}: giá ${it.price}, cần ${SLOT_PRICE[it.slot]}`)
+  if (!it.name_vi.trim() || !it.name_en.trim() || !it.label_vi.trim() || !it.label_en.trim()) fail(`phụ kiện ${it.id}: thiếu tên`)
+  for (const n of [it.name_vi, it.name_en]) {
+    if (accNames.has(n.toLowerCase())) fail(`phụ kiện ${it.id}: tên trùng "${n}"`)
+    accNames.add(n.toLowerCase())
+  }
+  for (const c of accColors(it)) if (!HEX.test(c)) fail(`phụ kiện ${it.id}: màu không hợp lệ "${c}"`)
+  const kindOk =
+    it.slot === 'head' ? oneOf(HEAD_KINDS, it.kind)
+      : it.slot === 'jewelry' ? oneOf(NECKLACE_KINDS, it.kind) && oneOf(EARRING_KINDS, it.earrings)
+        : it.slot === 'feet' ? oneOf(SHOE_KINDS, it.kind)
+          : oneOf(HAND_KINDS, it.kind)
+  if (!kindOk) fail(`phụ kiện ${it.id}: kiểu không hợp lệ`)
+  if (it.slot !== 'feet' && !(oneOf(METALS, it.metal) && oneOf(MOTIFS, it.motif))) fail(`phụ kiện ${it.id}: kim loại/họa tiết không hợp lệ`)
+}
+if (accIds.size !== WARDROBE_SIZE * ACCESSORY_SLOTS.length) fail(`phụ kiện: ${accIds.size} món khác nhau, cần ${WARDROBE_SIZE * ACCESSORY_SLOTS.length}`)
+console.log(`Phụ kiện: ${ACCESSORY_SETS.length} bộ · ${accIds.size} món · cả bộ ${SET_PRICE} xu (${ACCESSORY_SLOTS.map((s) => `${s} ${SLOT_PRICE[s]}`).join(', ')})`)
 
 // Tiếng Anh
 const en = checkEnglish()

@@ -1,4 +1,5 @@
 import { useSyncExternalStore } from 'react'
+import { ACCESSORY_SLOTS, itemById, type AccessorySlot } from '../data/accessories'
 
 const KEY = 'princess-wardrobe-v1'
 
@@ -13,9 +14,23 @@ export interface WardrobeState {
   bankSeconds: number
   /** váy công chúa đang mặc (tủ chung của cả ba môn) */
   wornId: string | null
+  /** phụ kiện đang đeo theo từng ô (dùng chung cho mọi váy); món chưa mua thì giao diện bỏ qua */
+  equipped: Partial<Record<AccessorySlot, string>>
 }
 
-const initial = (): WardrobeState => ({ studySeconds: 0, bankSeconds: 0, wornId: null })
+const initial = (): WardrobeState => ({ studySeconds: 0, bankSeconds: 0, wornId: null, equipped: {} })
+
+/** Chỉ giữ những ô có id phụ kiện còn tồn tại và đúng ô của món đó (bản lưu cũ chưa có → rỗng). */
+function parseEquipped(v: unknown): WardrobeState['equipped'] {
+  if (!v || typeof v !== 'object' || Array.isArray(v)) return {}
+  const saved = v as Record<string, unknown>
+  const out: WardrobeState['equipped'] = {}
+  for (const slot of ACCESSORY_SLOTS) {
+    const id = saved[slot]
+    if (typeof id === 'string' && itemById(id)?.slot === slot) out[slot] = id
+  }
+  return out
+}
 
 /** Dữ liệu cũ lưu váy đang mặc theo từng môn: lấy chiếc đầu tiên còn có. */
 function legacyWorn(worn: unknown): string | null {
@@ -34,6 +49,7 @@ function load(): WardrobeState {
       studySeconds: Number.isFinite(p.studySeconds) ? Math.max(0, p.studySeconds as number) : 0,
       bankSeconds: Number.isFinite(p.bankSeconds) ? Math.max(0, p.bankSeconds as number) : 0,
       wornId: typeof p.wornId === 'string' ? p.wornId : legacyWorn(p.worn),
+      equipped: parseEquipped(p.equipped),
     }
   } catch {
     return initial()
@@ -84,6 +100,14 @@ export function spendBankSeconds(n: number): number {
 
 export function wearDress(dressId: string): void {
   commit({ ...state, wornId: dressId })
+}
+
+/** Đeo món `itemId` vào ô `slot` (null = tháo ra). */
+export function equipItem(slot: AccessorySlot, itemId: string | null): void {
+  const equipped = { ...state.equipped }
+  if (itemId && itemById(itemId)?.slot === slot) equipped[slot] = itemId
+  else delete equipped[slot]
+  commit({ ...state, equipped })
 }
 
 export function formatClock(seconds: number): string {

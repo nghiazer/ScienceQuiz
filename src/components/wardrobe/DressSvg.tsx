@@ -1,5 +1,8 @@
 import { useId, type ReactNode } from 'react'
 import type { DressLook, DressPattern, Neckline, Silhouette } from '../../data/dresses'
+import type { Metal, WornAccessories } from '../../data/accessories'
+import { Bracelet, Earrings, HeadPiece, HeldItem, HeldItemBack, MetalDefs, Necklace, ShoeDecor } from './AccessoryParts'
+import { Bow, Gem } from './svgParts'
 
 const CX = 120
 const SKIN = '#ffe2cc'
@@ -240,27 +243,6 @@ function Sparkle({ x, y, s = 1, delay = 0, still }: { x: number; y: number; s?: 
   )
 }
 
-function Gem({ x, y, r = 3.2, fill }: { x: number; y: number; r?: number; fill: string }) {
-  return (
-    <g>
-      <path d={`M${x} ${y - r} L${x + r * 0.8} ${y} L${x} ${y + r} L${x - r * 0.8} ${y} Z`} fill={fill} stroke="#fff" strokeWidth="0.8" />
-      <path d={`M${x} ${y - r} L${x + r * 0.8} ${y} L${x} ${y} Z`} fill="#fff" opacity="0.4" />
-    </g>
-  )
-}
-
-function Bow({ x, y, color }: { x: number; y: number; color: string }) {
-  return (
-    <g>
-      <path d={`M${x} ${y} L${x - 13} ${y - 8} Q${x - 17} ${y} ${x - 13} ${y + 8} Z`} fill={color} />
-      <path d={`M${x} ${y} L${x + 13} ${y - 8} Q${x + 17} ${y} ${x + 13} ${y + 8} Z`} fill={color} />
-      <path d={`M${x} ${y} L${x - 9} ${y + 12} M${x} ${y} L${x + 9} ${y + 12}`} stroke={color} strokeWidth="3.4" strokeLinecap="round" />
-      <path d={`M${x - 12} ${y - 5} L${x - 3} ${y - 1} M${x + 12} ${y - 5} L${x + 3} ${y - 1}`} stroke="#000" strokeOpacity="0.15" strokeWidth="1" />
-      <circle cx={x} cy={y} r="3.4" fill={color} stroke="#fff" strokeWidth="1" />
-    </g>
-  )
-}
-
 /** Viền gấu váy (hoặc viền đáy từng tầng) theo kiểu `look.trim`. */
 function HemTrim({ h, look }: { h: Hem; look: DressLook }) {
   const trim = look.trim
@@ -338,8 +320,21 @@ function HemTrim({ h, look }: { h: Hem; look: DressLook }) {
   }
 }
 
+interface PrincessProps {
+  look: DressLook
+  className?: string
+  title?: string
+  still?: boolean
+  /**
+   * Phụ kiện đang đeo theo từng ô. Ô nào có món thì món đó THAY phần tương ứng của váy:
+   * đầu → vương miện/nơ tóc; trang sức → vòng cổ + hoa tai (+ vòng tay); chân → màu giày + găng tay; tay → quyền trượng.
+   * Không truyền (hoặc rỗng) thì hình vẽ giữ nguyên như váy gốc.
+   */
+  accessories?: WornAccessories
+}
+
 /** Công chúa mặc váy `look`, vẽ bằng SVG (khung 240×330). `still` tắt hiệu ứng động (dùng cho thẻ nhỏ). */
-export function PrincessSvg({ look, className = '', title, still = false }: { look: DressLook; className?: string; title?: string; still?: boolean }) {
+export function PrincessSvg({ look, className = '', title, still = false, accessories }: PrincessProps) {
   const uid = useId().replace(/[^a-zA-Z0-9]/g, '')
   const sil = look.silhouette
   const hem = HEM[sil]
@@ -359,6 +354,12 @@ export function PrincessSvg({ look, className = '', title, still = false }: { lo
   const longSleeve = sleeve === 'long' || sleeve === 'bishop'
   const fold = FOLDS[sil]
   const H = hem.y - waistY
+  const acc = accessories ?? {}
+  const hasAcc = Boolean(acc.head || acc.jewelry || acc.feet || acc.hand)
+  const metal = (m: Metal) => `url(#${id('mt')}-${m})`
+  // Găng tay: món ở ô chân quyết định (có hoặc không); không có món thì theo váy.
+  const gloveColor = acc.feet ? acc.feet.gloves : look.gloves ? '#fff' : undefined
+  const cuffColor = acc.feet ? acc.feet.trim : look.accent
 
   const clipShapes = sil === 'tiered' ? TIERS : [skirtPaths!]
   const folds = fold.t.map((t) => {
@@ -419,6 +420,7 @@ export function PrincessSvg({ look, className = '', title, still = false }: { lo
         <clipPath id={id('cl')}>
           {clipShapes.map((d, i) => <path key={i} d={d} />)}
         </clipPath>
+        {hasAcc && <MetalDefs id={id('mt')} />}
       </defs>
 
       {/* Vầng sáng, cánh, áo choàng, đuôi váy (phía sau) */}
@@ -471,6 +473,8 @@ export function PrincessSvg({ look, className = '', title, still = false }: { lo
         <path d={scallopBand(edgePoints(hem, Math.max(8, Math.round(hem.hw / 7)), -7), 5, 12)} fill={look.petticoat} stroke="#fff" strokeWidth="0.8" strokeOpacity="0.9" />
       )}
 
+      {acc.hand && <HeldItemBack item={acc.hand} metal={metal} />}
+
       {/* Tóc phía sau */}
       {hairStyle === 'bun' && <circle cx={CX} cy="33" r="14" fill={hairColor} />}
       {hairStyle === 'braid' && <circle cx={CX} cy="33" r="12" fill={hairColor} />}
@@ -491,10 +495,11 @@ export function PrincessSvg({ look, className = '', title, still = false }: { lo
       <rect x="124" y="236" width="9" height="66" rx="4" fill={SKIN} />
       <rect x="107" y="236" width="3" height="66" rx="1.5" fill={SKIN_SHADE} opacity="0.35" />
       <rect x="124" y="236" width="3" height="66" rx="1.5" fill={SKIN_SHADE} opacity="0.35" />
-      <ellipse cx="110" cy="304" rx="10" ry="5.5" fill={look.accent} />
-      <ellipse cx="130" cy="304" rx="10" ry="5.5" fill={look.accent} />
+      <ellipse cx="110" cy="304" rx="10" ry="5.5" fill={acc.feet?.shoe ?? look.accent} />
+      <ellipse cx="130" cy="304" rx="10" ry="5.5" fill={acc.feet?.shoe ?? look.accent} />
       <ellipse cx="107" cy="302.5" rx="4" ry="1.6" fill="#fff" opacity="0.4" />
       <ellipse cx="127" cy="302.5" rx="4" ry="1.6" fill="#fff" opacity="0.4" />
+      {acc.feet && <ShoeDecor item={acc.feet} />}
 
       {/* Cổ + vai */}
       <rect x="113" y="84" width="14" height="26" rx="6" fill={SKIN} />
@@ -619,18 +624,18 @@ export function PrincessSvg({ look, className = '', title, still = false }: { lo
       </g>
       <circle cx="88" cy="174" r="5.5" fill={SKIN} />
       <circle cx="152" cy="174" r="5.5" fill={SKIN} />
-      {look.gloves && (
+      {gloveColor && (
         <g>
-          <g fill="none" stroke="#fff" strokeWidth="9.6" strokeLinecap="round">
+          <g fill="none" stroke={gloveColor} strokeWidth="9.6" strokeLinecap="round">
             <path d="M84.5 145 Q83.5 158.5 88 172" />
             <path d="M155.5 145 Q156.5 158.5 152 172" />
           </g>
-          <g fill="none" stroke={look.accent} strokeWidth="1.4" strokeOpacity="0.55">
+          <g fill="none" stroke={cuffColor} strokeWidth="1.4" strokeOpacity="0.55">
             <path d="M79.5 146 Q84 148 89.5 146" />
             <path d="M150.5 146 Q156 148 160.5 146" />
           </g>
-          <circle cx="88" cy="174" r="5.8" fill="#fff" />
-          <circle cx="152" cy="174" r="5.8" fill="#fff" />
+          <circle cx="88" cy="174" r="5.8" fill={gloveColor} />
+          <circle cx="152" cy="174" r="5.8" fill={gloveColor} />
         </g>
       )}
 
@@ -765,14 +770,14 @@ export function PrincessSvg({ look, className = '', title, still = false }: { lo
         </>
       )}
 
-      {look.scepter && (
+      {look.scepter && !acc.hand && (
         <g>
           <path d="M160 124 L150 250" stroke={`url(#${id('gd')})`} strokeWidth="4.5" strokeLinecap="round" />
           <path d="M160 124 L150 250" stroke={GOLD_DARK} strokeWidth="0.8" strokeOpacity="0.6" />
           <circle cx="161" cy="118" r="8" fill={`url(#${id('gd')})`} stroke={GOLD_DARK} strokeWidth="1" />
           <Gem x={161} y={118} r={5} fill={look.accent} />
           <path d="M155 136 Q160 132 165 137" fill="none" stroke={GOLD_DARK} strokeWidth="1.6" />
-          <circle cx="152" cy="174" r="5.8" fill={look.gloves ? '#fff' : SKIN} />
+          <circle cx="152" cy="174" r="5.8" fill={gloveColor ?? SKIN} />
         </g>
       )}
 
@@ -791,7 +796,8 @@ export function PrincessSvg({ look, className = '', title, still = false }: { lo
       <path d="M113 79 Q120 86 127 79 Z" fill="#fb7185" stroke="#c2410c" strokeWidth="1.6" strokeLinejoin="round" />
       <path d="M104 60 Q109 57 114 59M126 59 Q131 57 136 60" fill="none" stroke={hairColor} strokeWidth="1.8" strokeLinecap="round" />
       <ellipse cx="120" cy="92" rx="5" ry="2" fill={SKIN_SHADE} opacity="0.5" />
-      {look.earrings && (
+      {acc.jewelry && <Earrings item={acc.jewelry} metal={metal} />}
+      {look.earrings && !acc.jewelry && (
         <g stroke="#fff" strokeWidth="0.7">
           <circle cx="93" cy="74" r="2.2" fill={GOLD} />
           <circle cx="147" cy="74" r="2.2" fill={GOLD} />
@@ -818,14 +824,15 @@ export function PrincessSvg({ look, className = '', title, still = false }: { lo
         </g>
       )}
 
-      {/* Vương miện / nơ tóc */}
-      {look.tiara === 'simple' && (
+      {/* Vương miện / nơ tóc (đồ đội đầu đang đeo thì thay hẳn) */}
+      {acc.head && <HeadPiece item={acc.head} metal={metal} />}
+      {!acc.head && look.tiara === 'simple' && (
         <g>
           <path d="M104 44 L107 31 L114 39 L120 27 L126 39 L133 31 L136 44 Q120 49 104 44Z" fill={`url(#${id('gd')})`} stroke={GOLD_DARK} strokeWidth="1" />
           <circle cx="120" cy="36" r="2.6" fill="#f472b6" />
         </g>
       )}
-      {look.tiara === 'jeweled' && (
+      {!acc.head && look.tiara === 'jeweled' && (
         <g>
           <path d="M101 46 L104 28 L112 38 L120 22 L128 38 L136 28 L139 46 Q120 52 101 46Z" fill={`url(#${id('gd')})`} stroke={GOLD_DARK} strokeWidth="1" />
           <circle cx="104" cy="28" r="2.6" fill="#fff" stroke={GOLD_DARK} strokeWidth="0.6" />
@@ -835,7 +842,7 @@ export function PrincessSvg({ look, className = '', title, still = false }: { lo
           <Gem x={130} y={43} r={3} fill="#f472b6" />
         </g>
       )}
-      {look.tiara === 'grand' && (
+      {!acc.head && look.tiara === 'grand' && (
         <g>
           <path d="M97 47 L100 24 L109 36 L113 14 L120 30 L127 14 L131 36 L140 24 L143 47 Q120 54 97 47Z" fill={`url(#${id('gd')})`} stroke={GOLD_DARK} strokeWidth="1.2" />
           <circle cx="100" cy="24" r="3" fill="#fff" stroke={GOLD_DARK} strokeWidth="0.6" />
@@ -847,7 +854,7 @@ export function PrincessSvg({ look, className = '', title, still = false }: { lo
           <Gem x={133} y={44} r={3.4} fill="#38bdf8" />
         </g>
       )}
-      {look.tiara === 'crown' && (
+      {!acc.head && look.tiara === 'crown' && (
         <g>
           <path d="M98 48 L96 26 Q108 14 120 26 Q132 14 144 26 L142 48 Q120 55 98 48Z" fill={`url(#${id('gd')})`} stroke={GOLD_DARK} strokeWidth="1.2" />
           <path d="M100 28 Q120 8 140 28" fill="none" stroke={`url(#${id('gd')})`} strokeWidth="4" />
@@ -860,15 +867,24 @@ export function PrincessSvg({ look, className = '', title, still = false }: { lo
           <Gem x={135} y={36} r={3.6} fill="#22c55e" />
         </g>
       )}
-      {!look.tiara && <Bow x={CX + 14} y={30} color={look.accent} />}
+      {!acc.head && !look.tiara && <Bow x={CX + 14} y={30} color={look.accent} />}
 
       {/* Vòng cổ */}
-      {look.necklace && (
+      {acc.jewelry && (
+        <g>
+          <Necklace item={acc.jewelry} metal={metal} />
+          {acc.jewelry.bracelet && <Bracelet item={acc.jewelry} />}
+        </g>
+      )}
+      {look.necklace && !acc.jewelry && (
         <g>
           <path d="M104 100 Q120 120 136 100" fill="none" stroke="#fff" strokeWidth="3" strokeDasharray="0.1 5" strokeLinecap="round" />
           <Gem x={CX} y={116} r={4.5} fill="#f472b6" />
         </g>
       )}
+
+      {/* Đồ cầm tay: vẽ sau tóc tết để không bị nơ đuôi tóc che */}
+      {acc.hand && <HeldItem item={acc.hand} metal={metal} handFill={gloveColor ?? SKIN} />}
 
       {/* Lấp lánh */}
       {SPARKLES.slice(0, sparkleCount).map(([x, y], i) => (
