@@ -2,7 +2,8 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Flame, GraduationCap, Shirt, Star } from 'lucide-react'
 import type { Progress, Topic } from '../types/quiz'
-import { QUESTIONS_BY_SUBJECT, SUBJECTS, SUBJECT_TOPICS, TOPICS } from '../data/questions'
+import { SUBJECTS, SUBJECT_TOPICS, TOPICS } from '../data/topics'
+import { useBank } from '../data/questionBank'
 import { useSubject } from '../context/SubjectContext'
 import { WARDROBE_SIZE, nextDress as findNextDress, nextDressIn, unlockedCount } from '../data/dresses'
 import { STUDY_BLOCK_SECONDS, formatClock, useWardrobe } from '../utils/wardrobe'
@@ -47,6 +48,8 @@ export default function HomeScreen({ progress, onStartTopic, onStartMock, onOpen
   const { studySeconds, bankSeconds } = useWardrobe()
   const mockSize = MOCK_SIZE_BY_SUBJECT[subject]
   const mockMinutes = MOCK_MINUTES_BY_SUBJECT[subject]
+  // Kho của môn tải sau khi trang chủ đã hiện; trong lúc chờ, số câu hiện "…".
+  const bank = useBank(subject)
 
   return (
     <div className="mx-auto max-w-5xl space-y-6 px-4 py-6">
@@ -109,7 +112,7 @@ export default function HomeScreen({ progress, onStartTopic, onStartMock, onOpen
             const t = TOPICS[id]
             const stat = progress.topicStats[id]
             const pct = stat.total ? Math.round((stat.correct / stat.total) * 100) : null
-            const n = QUESTIONS_BY_SUBJECT[subject].filter((q) => q.topic === id).length
+            const n = bank ? bank.filter((q) => q.topic === id).length : '…'
             return (
               <motion.button
                 key={id}

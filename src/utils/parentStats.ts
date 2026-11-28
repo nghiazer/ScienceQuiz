@@ -36,6 +36,17 @@ export function shortDate(date: string): string {
   return `${d}/${m}`
 }
 
+/**
+ * Giờ:phút địa phương dạng "07:05" — giống hệt toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' })
+ * nhưng không gọi Intl: lần gọi Intl đầu tiên phải nạp dữ liệu ngôn ngữ, tốn ~70 ms trên máy tính bảng yếu khi mở Góc phụ huynh.
+ */
+export function shortTime(iso: string): string {
+  const d = new Date(iso)
+  // chuỗi thời gian hỏng: giữ nguyên cách hiển thị cũ
+  if (Number.isNaN(d.getTime())) return d.toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' })
+  return `${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`
+}
+
 /** Môn hiển thị cho phụ huynh: các môn đang mở, cộng thêm Toán nếu bé đã có dữ liệu Toán. */
 export function parentSubjects(p: Progress): Subject[] {
   const mathUsed =

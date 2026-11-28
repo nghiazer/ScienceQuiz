@@ -15,14 +15,16 @@ Three subjects: **Science** (ASMO-style, 4 topics × 120 questions, Vietnamese +
 ## Layout
 - `src/types/quiz.ts` — all types (`EnglishTopic`, `EnglishSubtopicId`, `IllustrationId`, `Progress`, …)
 - `src/data/topics.ts` — `TOPICS`, `SUBTOPICS`, `SUBJECTS`, `SUBJECT_TOPICS`
-- `src/data/questions/{living,physical,earth,inquiry}.ts` — Science (id `liv-/phy-/ear-/inq-NN`), bilingual objects
+- `src/data/questions/{living,physical,earth,inquiry}.ts` → `src/data/questions/science.ts` — Science (id `liv-/phy-/ear-/inq-NN`), bilingual objects
 - `src/data/english/<tense>/<subtopic>.ts` → `<tense>/index.ts` → `src/data/englishQuestions.ts` → `src/data/questions/index.ts`; written with the `section()` helper in `src/data/english/helpers.ts`
 - `src/data/math/<area>/<subtopic>.ts` → `<area>/index.ts` → `src/data/mathQuestions.ts` → `src/data/questions/index.ts`; written with `mathSection()` in `src/data/math/helpers.ts` (ids `<subtopic>-NN`, positional)
+- `src/data/questions/index.ts` — loads all three banks **synchronously**; for `scripts/` only (check-data, ledger, query…). App code must never import it (nor `englishQuestions`/`mathQuestions`/`questions/science` directly): `src/data/questionBank.ts` loads each subject's bank on demand with dynamic `import()` (`loadBank`, `useBank`, `useBanksReady`, `bankOf`, `questionById`). The current subject's bank starts loading in `main.tsx`; the other visible subject is preloaded when idle; Maths only when needed (e.g. parent dashboard with Maths data). Quiz builders take the bank as an argument (`buildTopicQuiz(bank, topic, seen)`, `buildMockFor(subject, bank, seen)`).
+- `src/screens.ts` — screens not on the home page (`QuizArena`, `ResultScreen`, `ParentScreen`, `WardrobeScreen`) are `React.lazy` chunks, preloaded when idle (`preloadScreens`); `App` wraps them in `ScreenBoundary` + `Suspense` with `LoadingOverlay` as fallback.
 - `src/components/illustrations/*` + `registry.tsx` — SVG figures; `Record<IllustrationId, …>` forces every id to be registered
 - `src/components/parent/` — parent dashboard (`ParentScreen`, hand-made SVG/Tailwind charts in `Charts.tsx`/`ui.tsx`, `PinModal`), opened from the bottom of `HomeScreen` as `{ name: 'parent' }`; pure helpers in `src/utils/parentStats.ts`. `PARENT_PIN` (`src/utils/parent.ts`) is only a child lock, not security; the unlock lives in React state in `App` until reload. It reads `Progress.history / subtopicStats / difficultyStats / recentMistakes` (see `progress-storage`).
 - `src/utils/storage.ts` — progress in localStorage key `asmo-quiz-progress-v1`. New fields/topics must stay backward-compatible (`loadProgress` merges onto defaults) — do not bump the key casually, it wipes kids' progress.
 - `scripts/` — validators (`check-data.ts`, `lib/english-checks.ts`, `lib/math-checks.ts`, `lib/dupes.ts`) and ledger generator
-- `vite.config.ts` splits question data into its own chunks by path (`src/data/english`, `src/data/questions`, `src/data/math`).
+- `vite.config.ts` names the question-bank chunks by path (`src/data/english`, `src/data/questions`, `src/data/math`); they are loaded on demand, never at startup.
 
 ## Content rules (enforced by `check:data`)
 - Science: `question/options/explanation` in both vi and en; exactly 4 distinct options per language; digits identical vi↔en; `subtopic` must belong to `topic`; exactly 120 per topic and ≥5 per subtopic.

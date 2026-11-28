@@ -4,6 +4,7 @@ import type { Difficulty, Progress, Question, Subject, SubtopicId } from '../../
 import { SUBJECTS, SUBJECT_TOPICS, SUBTOPICS, TOPICS } from '../../data/topics'
 import { CORRECT_PER_DRESS, WARDROBE_SIZE, unlockedCount } from '../../data/dresses'
 import { TOPIC_SESSION_SIZE, questionById } from '../../utils/quiz'
+import { useBanksReady } from '../../data/questionBank'
 import { currentStreak, todayStr } from '../../utils/storage'
 import {
   SUBJECT_COLOR,
@@ -16,6 +17,7 @@ import {
   rankSubtopics,
   recentMocks,
   shortDate,
+  shortTime,
   totalMinutes,
   totalsByDate,
   weeklyAccuracy,
@@ -79,7 +81,7 @@ export default function ParentScreen({ progress, onHome, onRetry }: Props) {
   const overallPct = pctOf(all)
   const last = progress.history[progress.history.length - 1]
   const lastLabel = last
-    ? `${new Date(last.at).toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' })} · ${shortDate(last.date)}`
+    ? `${shortTime(last.at)} · ${shortDate(last.date)}`
     : progress.lastPlayedDate
       ? shortDate(progress.lastPlayedDate)
       : '—'
@@ -103,13 +105,17 @@ export default function ParentScreen({ progress, onHome, onRetry }: Props) {
   const mockRows = mocksBySubject.flatMap((m) => m.list).sort((a, b) => b.at.localeCompare(a.at))
   const mockLen = Math.max(0, ...mocksBySubject.map((m) => m.list.length))
 
+  // Câu sai gần đây cần kho câu hỏi của các môn (thường đã tải sẵn trong lúc bố mẹ nhập mã).
+  const banksReady = useBanksReady(subjects)
   const mistakes = useMemo(
     () =>
-      progress.recentMistakes.flatMap((m) => {
-        const q = questionById(m.id)
-        return q && subjects.includes(q.subject) ? [{ m, q }] : []
-      }),
-    [progress.recentMistakes, subjects],
+      banksReady
+        ? progress.recentMistakes.flatMap((m) => {
+            const q = questionById(m.id)
+            return q && subjects.includes(q.subject) ? [{ m, q }] : []
+          })
+        : [],
+    [progress.recentMistakes, subjects, banksReady],
   )
   const retrySubjects = subjects.filter((s) => mistakes.some((x) => x.q.subject === s))
 
@@ -326,7 +332,9 @@ export default function ParentScreen({ progress, onHome, onRetry }: Props) {
       )}
 
       <Card id="p-mistakes" vi="Câu sai gần đây" en="Recent mistakes">
-        {mistakes.length === 0 ? (
+        {!banksReady ? (
+          <Empty text="Đang tải câu hỏi…" />
+        ) : mistakes.length === 0 ? (
           <Empty text="Chưa có câu sai nào được ghi lại." />
         ) : (
           <>

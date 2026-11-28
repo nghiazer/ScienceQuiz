@@ -6,7 +6,8 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   build: {
-    // Kho câu hỏi (3000 câu Tiếng Anh + 480 câu Khoa học + 1000 câu Toán) tách khỏi mã ứng dụng để trình duyệt cache riêng.
+    // Kho câu hỏi (3000 câu Tiếng Anh + 480 câu Khoa học + 1000 câu Toán) tách khỏi mã ứng dụng để trình duyệt cache riêng;
+    // ứng dụng tải từng kho khi cần bằng import() động (src/data/questionBank.ts), các nhóm dưới đây chỉ đặt tên chunk.
     chunkSizeWarningLimit: 1500,
     rolldownOptions: {
       output: {

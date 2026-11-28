@@ -1,4 +1,5 @@
-import { ALL_QUESTIONS, ENGLISH_QUESTIONS, MATH_QUESTIONS, SCIENCE_QUESTIONS, SUBJECT_TOPICS, TOPIC_ORDER } from '../data/questions'
+import { SUBJECT_TOPICS, TOPIC_ORDER } from '../data/topics'
+import { questionById } from '../data/questionBank'
 import type { AnswerRecord, Difficulty, OptionIndex, Options, Question, Subject, Topic } from '../types/quiz'
 
 export function shuffle<T>(arr: readonly T[]): T[] {
@@ -82,8 +83,9 @@ function unseenFirst(pool: Question[], seen: ReadonlySet<string>): Question[] {
   return [...shuffle(pool.filter((q) => !seen.has(q.id))), ...shuffle(pool.filter((q) => seen.has(q.id)))]
 }
 
-export function buildTopicQuiz(topic: Topic, seen: ReadonlySet<string>): Question[] {
-  const pool = ALL_QUESTIONS.filter((q) => q.topic === topic)
+/** `bank`: kho câu hỏi của môn chứa chủ đề (xem src/data/questionBank.ts). */
+export function buildTopicQuiz(bank: readonly Question[], topic: Topic, seen: ReadonlySet<string>): Question[] {
+  const pool = bank.filter((q) => q.topic === topic)
   return unseenFirst(pool, seen).slice(0, TOPIC_SESSION_SIZE).map(shuffleOptions)
 }
 
@@ -91,13 +93,13 @@ export function buildTopicQuiz(topic: Topic, seen: ReadonlySet<string>): Questio
  * 15 câu bao phủ cả 4 chủ đề (4+4+4+3) và đúng phân bổ độ khó.
  * Với mỗi ô (chủ đề, độ khó) ưu tiên câu chưa gặp; nếu hết thì nới dần điều kiện.
  */
-export function buildMockTest(seen: ReadonlySet<string>): Question[] {
+export function buildMockTest(bank: readonly Question[], seen: ReadonlySet<string>): Question[] {
   const topicSlots: Topic[] = shuffle(TOPIC_ORDER.flatMap((t, i) => Array<Topic>(i === 0 ? 3 : 4).fill(t)))
   const diffSlots = shuffle(MOCK_DIFFICULTY_PLAN)
   const used = new Set<string>()
   const picked: Question[] = []
 
-  const take = (candidates: Question[]) => {
+  const take = (candidates: readonly Question[]) => {
     const ordered = unseenFirst(candidates.filter((q) => !used.has(q.id)), seen)
     const q = ordered[0]
     if (q) {
@@ -108,11 +110,11 @@ export function buildMockTest(seen: ReadonlySet<string>): Question[] {
 
   topicSlots.forEach((topic, i) => {
     const diff = diffSlots[i]
-    const exact = SCIENCE_QUESTIONS.filter((q) => q.topic === topic && q.difficulty === diff)
+    const exact = bank.filter((q) => q.topic === topic && q.difficulty === diff)
     if (exact.some((q) => !used.has(q.id))) return take(exact)
-    const sameTopic = SCIENCE_QUESTIONS.filter((q) => q.topic === topic)
+    const sameTopic = bank.filter((q) => q.topic === topic)
     if (sameTopic.some((q) => !used.has(q.id))) return take(sameTopic)
-    take(SCIENCE_QUESTIONS)
+    take(bank)
   })
   return shuffle(picked).map(shuffleOptions)
 }
@@ -121,7 +123,7 @@ export function buildMockTest(seen: ReadonlySet<string>): Question[] {
  * Đề thi thử Tiếng Anh: 15 câu trộn 3 thì (5 + 5 + 5), phân bổ độ khó 6/6/3,
  * ưu tiên ít nhất 5 câu "bẫy" phân biệt các thì và câu chưa gặp.
  */
-export function buildEnglishMockTest(seen: ReadonlySet<string>): Question[] {
+export function buildEnglishMockTest(bank: readonly Question[], seen: ReadonlySet<string>): Question[] {
   const TRAPS = 5
   const topics = SUBJECT_TOPICS.english
   const used = new Set<string>()
@@ -138,7 +140,7 @@ export function buildEnglishMockTest(seen: ReadonlySet<string>): Question[] {
   // 1) Câu bẫy: mỗi thì có ít nhất 1 câu, hai thì ngẫu nhiên có thêm 1 câu.
   const trapTopics = shuffle([topics[0], topics[1], topics[2], ...shuffle(topics).slice(0, 2)])
   for (const t of trapTopics.slice(0, TRAPS)) {
-    pick(ENGLISH_QUESTIONS.filter((q) => q.topic === t && q.trap))
+    pick(bank.filter((q) => q.topic === t && q.subject === 'english' && q.trap))
   }
 
   // 2) Phần còn lại: mỗi thì đủ 5 câu, theo kế hoạch độ khó 6/6/3 cho cả đề.
@@ -148,8 +150,8 @@ export function buildEnglishMockTest(seen: ReadonlySet<string>): Question[] {
   for (const t of shuffle(topics)) {
     while (perTopic(t) < ENGLISH_MOCK_SIZE / topics.length) {
       const wanted = (['easy', 'medium', 'hard'] as Difficulty[]).find((d) => diffCount(d) < need[d]) ?? 'easy'
-      const exact = ENGLISH_QUESTIONS.filter((q) => q.topic === t && q.difficulty === wanted)
-      if (!pick(exact) && !pick(ENGLISH_QUESTIONS.filter((q) => q.topic === t))) break
+      const exact = bank.filter((q) => q.topic === t && q.difficulty === wanted)
+      if (!pick(exact) && !pick(bank.filter((q) => q.topic === t))) break
     }
   }
   return shuffle(picked).map(shuffleOptions)
@@ -159,7 +161,7 @@ export function buildEnglishMockTest(seen: ReadonlySet<string>): Question[] {
  * Đề thi thử Toán TIMO: 25 câu, mỗi mảng 5 câu, độ khó cả đề 10 dễ / 10 vừa / 5 khó.
  * Mỗi mảng lấy 2 dễ + 2 vừa + 1 khó; thiếu ô nào thì lấy câu bất kỳ của mảng đó. Ưu tiên câu chưa gặp.
  */
-export function buildMathMockTest(seen: ReadonlySet<string>): Question[] {
+export function buildMathMockTest(bank: readonly Question[], seen: ReadonlySet<string>): Question[] {
   const PLAN: Difficulty[] = ['easy', 'easy', 'medium', 'medium', 'hard']
   const used = new Set<string>()
   const picked: Question[] = []
@@ -171,7 +173,7 @@ export function buildMathMockTest(seen: ReadonlySet<string>): Question[] {
     return true
   }
   for (const t of SUBJECT_TOPICS.math) {
-    const pool = MATH_QUESTIONS.filter((q) => q.topic === t)
+    const pool = bank.filter((q) => q.topic === t)
     for (const d of PLAN) {
       if (!pick(pool.filter((q) => q.difficulty === d))) pick(pool)
     }
@@ -181,10 +183,11 @@ export function buildMathMockTest(seen: ReadonlySet<string>): Question[] {
   return shuffle(picked).sort((a, b) => rank[a.difficulty] - rank[b.difficulty]).map(shuffleOptions)
 }
 
-export function buildMockFor(subject: Subject, seen: ReadonlySet<string>): Question[] {
-  if (subject === 'english') return buildEnglishMockTest(seen)
-  if (subject === 'math') return buildMathMockTest(seen)
-  return buildMockTest(seen)
+/** `bank`: kho câu hỏi của môn `subject` (xem src/data/questionBank.ts). */
+export function buildMockFor(subject: Subject, bank: readonly Question[], seen: ReadonlySet<string>): Question[] {
+  if (subject === 'english') return buildEnglishMockTest(bank, seen)
+  if (subject === 'math') return buildMathMockTest(bank, seen)
+  return buildMockTest(bank, seen)
 }
 
 /** Các câu sai hoặc chưa làm, giữ nguyên thứ tự và đáp án như bé đã thấy (dùng để hiển thị ôn tập). */
@@ -198,19 +201,14 @@ export function buildRetryQuiz(questions: Question[], answers: AnswerRecord[]): 
   return shuffle(findMissed(questions, answers)).map(shuffleOptions)
 }
 
-const QUESTION_BY_ID = new Map<string, Question>(ALL_QUESTIONS.map((q) => [q.id, q]))
-
-/** Câu gốc trong ngân hàng (thứ tự đáp án chưa xáo) theo id; undefined nếu id không còn. */
-export function questionById(id: string): Question | undefined {
-  return QUESTION_BY_ID.get(id)
-}
+export { questionById }
 
 /**
  * Đổi vị trí đáp án bé chọn (theo thứ tự đã xáo lúc làm bài) về vị trí trong câu gốc,
- * để phụ huynh xem lại đúng nội dung. Đáp án trong một câu luôn khác nhau nên so khớp theo chữ.
+ * để phụ huynh xem lại đúng nội dung. Kho của môn phải đã tải (câu đang làm luôn lấy từ kho đã tải). Đáp án trong một câu luôn khác nhau nên so khớp theo chữ.
  */
 export function originalIndex(shown: Question, selected: OptionIndex): OptionIndex {
-  const orig = QUESTION_BY_ID.get(shown.id)
+  const orig = questionById(shown.id)
   if (!orig) return selected
   const at = orig.options_en.indexOf(shown.options_en[selected])
   return at === -1 ? selected : (at as OptionIndex)

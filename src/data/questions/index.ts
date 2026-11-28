@@ -1,21 +1,15 @@
-import type { Question, ScienceQuestion, Subject } from '../../types/quiz'
-import { LIVING_QUESTIONS } from './living'
-import { PHYSICAL_QUESTIONS } from './physical'
-import { EARTH_QUESTIONS } from './earth'
-import { INQUIRY_QUESTIONS } from './inquiry'
+import type { Question, Subject } from '../../types/quiz'
+import { SCIENCE_QUESTIONS } from './science'
 import { ENGLISH_QUESTIONS } from '../englishQuestions'
 import { MATH_QUESTIONS } from '../mathQuestions'
 
-export { TOPICS, TOPIC_ORDER, SUBTOPICS, SUBJECTS, SUBJECT_TOPICS } from '../topics'
-export { ENGLISH_QUESTIONS, MATH_QUESTIONS }
+/*
+ * Nạp ĐỒNG BỘ cả ba kho — chỉ dành cho scripts/ (check-data, ledger, query…).
+ * Ứng dụng không import file này: kho từng môn được tải khi cần qua src/data/questionBank.ts.
+ */
 
-/** Ngân hàng câu hỏi Khoa học. Các câu cũ mặc định thuộc môn 'science'. */
-export const SCIENCE_QUESTIONS: ScienceQuestion[] = [
-  ...LIVING_QUESTIONS,
-  ...PHYSICAL_QUESTIONS,
-  ...EARTH_QUESTIONS,
-  ...INQUIRY_QUESTIONS,
-].map((q) => ({ ...q, subject: 'science' as const }))
+export { TOPICS, TOPIC_ORDER, SUBTOPICS, SUBJECTS, SUBJECT_TOPICS } from '../topics'
+export { SCIENCE_QUESTIONS, ENGLISH_QUESTIONS, MATH_QUESTIONS }
 
 /** Giữ tên cũ: chỉ gồm câu hỏi Khoa học, để mã nguồn và script hiện có không đổi. */
 export const QUESTIONS = SCIENCE_QUESTIONS

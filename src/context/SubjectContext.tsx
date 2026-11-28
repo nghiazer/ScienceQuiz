@@ -13,7 +13,9 @@ interface Ctx {
 
 const SubjectContext = createContext<Ctx | null>(null)
 
-function readInitial(): Subject {
+/** Môn đã lưu (hoặc môn mặc định) — môn sẽ mở khi vào app. */
+// eslint-disable-next-line react-refresh/only-export-components
+export function savedSubject(): Subject {
   try {
     const v = localStorage.getItem(KEY)
     if (v && (VISIBLE_SUBJECTS as string[]).includes(v)) return v as Subject
@@ -24,7 +26,7 @@ function readInitial(): Subject {
 }
 
 export function SubjectProvider({ children }: { children: ReactNode }) {
-  const [subject, setSubjectState] = useState<Subject>(readInitial)
+  const [subject, setSubjectState] = useState<Subject>(savedSubject)
   const setSubject = useCallback((s: Subject) => {
     setSubjectState(s)
     try {
